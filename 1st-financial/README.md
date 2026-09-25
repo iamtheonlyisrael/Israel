@@ -24,5 +24,5 @@ Two static pages. No build step, no dependencies.
 
 ## Publishing
 
-- **GHL funnel:** paste the part of `index.html` between `<body>` and `</body>` into a Custom Code element.
+- **GHL funnel:** paste all of `ghl-embed.html` into a Custom Code element. It starts with `<div>` and has the HTML, CSS and script in one block.
 - **Any static host** (Netlify, Vercel, GitHub Pages, cPanel): upload this folder as-is.

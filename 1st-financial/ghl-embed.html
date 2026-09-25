@@ -1,6 +1,6 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <div class="ffc-wrap" id="ffc-top">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 .ffc-wrap{background:transparent !important;font-family:'Poppins',sans-serif !important;color:#0B1A3A !important;width:100% !important;max-width:1180px !important;margin:0 auto !important;padding:0 14px 90px !important;box-sizing:border-box !important;overflow-x:hidden !important;-webkit-font-smoothing:antialiased !important;}
 .ffc-wrap *{box-sizing:border-box !important;font-family:'Poppins',sans-serif !important;}
 .ffc-wrap h1,.ffc-wrap h2,.ffc-wrap h3,.ffc-wrap h4,.ffc-wrap p{margin:0 !important;padding:0 !important;letter-spacing:normal !important;}
@@ -265,6 +265,42 @@
   .ffc-ribbon{font-size:9px !important;padding:5px 44px !important;top:12px !important;right:-46px !important;}
   .ffc-pass-body{padding:20px 18px !important;}
   .ffc-stub{padding:16px 18px 20px !important;}
+}
+/* ===== FLUID FIT (all screen sizes) ===== */
+.ffc-board{container-type:inline-size !important;}
+@supports (width:1cqi){
+  .ffc-board .ffc-row:not(.ffc-board-head){font-size:max(6px,min(15px,calc((100cqi - 60px) / 33.2))) !important;}
+}
+.ffc-wrap .ffc-hero-grid>div,.ffc-wrap .ffc-calc>div,.ffc-wrap .ffc-passes>div{min-width:0 !important;}
+@media (max-width:360px){
+  .ffc-wrap{padding:0 8px 90px !important;}
+  .ffc-panel{padding:30px 14px !important;}
+  .ffc-hero{padding:26px 12px 22px !important;}
+  .ffc-header{padding:14px 12px !important;}
+  .ffc-call-chip{font-size:13px !important;padding:9px 12px !important;}
+  .ffc-route{gap:6px !important;}
+  .ffc-route div b{font-size:21px !important;}
+  .ffc-meta b{font-size:12px !important;}
+  .ffc-meta small{font-size:8.5px !important;letter-spacing:1px !important;}
+  .ffc-price b{font-size:40px !important;}
+  .ffc-pass-body{padding:18px 14px !important;}
+  .ffc-stub{padding:14px 14px 18px !important;}
+  .ffc-btn{padding:15px 16px !important;font-size:15px !important;}
+  .ffc-calc-in{padding:18px !important;}
+  .ffc-calc-val{font-size:30px !important;}
+  .ffc-seg button{min-width:0 !important;}
+  .ffc-tile{padding:18px 14px !important;}
+  .ffc-stop{gap:10px !important;}
+  .ffc-stop-c{padding:14px !important;}
+  .ffc-q button{padding:16px 48px 16px 14px !important;font-size:15px !important;}
+  .ffc-modal-body{padding:18px 16px 20px !important;}
+  .ffc-modal-top h3{font-size:20px !important;}
+  .ffc-path-legend{font-size:11px !important;}
+  .ffc-ribbon{font-size:7.5px !important;letter-spacing:1px !important;padding:4px 40px !important;top:9px !important;right:-44px !important;}
+}
+@media (max-height:500px) and (orientation:landscape){
+  .ffc-modal{align-items:flex-start !important;overflow-y:auto !important;}
+  .ffc-modal-box{max-height:none !important;margin:8px auto !important;}
 }
 @media (prefers-reduced-motion:reduce){
   .ffc-ticker-track,.ffc-dot,.ffc-row.ffc-s-red .ffc-st{animation:none !important;}
