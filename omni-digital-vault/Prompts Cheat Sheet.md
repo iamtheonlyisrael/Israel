@@ -10,6 +10,7 @@ Type these to Claude (Claude Desktop, connected to this vault).
 | Anytime | `Blocked: need Meta ad account access for Little Sprouts` |
 | Anytime | `What's my job tonight?` |
 | 4:30 AM | `Clock me out 5:00am and write my EOD` |
+| 4:45 AM | `Send it` → emails the EOD (with a Send on WhatsApp button) |
 | Friday shift | `Clock me out 5:00am and write my weekly summary` |
 | Weekly | `How many hours did I work this week?` |
 | Before a 1:1 | `Summarize my last 2 weeks of EOD notes` |

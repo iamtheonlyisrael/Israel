@@ -21,7 +21,7 @@ You prompt, Claude writes: clock-in, check-in, EOD and weekly summary.
 4. **Fully quit and reopen Claude Desktop.**
 5. **Create a Claude Project** called `Omni Digital – Breaker`. In its instructions paste:
    > Before every reply, read "AI Instructions.md" in my Obsidian vault and follow it. Use the vault files as my work log.
-6. Optional: in claude.ai **Settings → Connectors**, connect **Gmail** so Claude can create the EOD email as a draft for you.
+6. In claude.ai **Settings → Connectors**, connect **Make** so Claude can run your "Omni Digital – Send EOD" scenario. It emails the EOD, and the email includes a **Send on WhatsApp** button.
 7. Fill in [[Task Board]] with your current tasks.
 
 ## Every shift

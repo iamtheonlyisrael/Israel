@@ -33,7 +33,14 @@ Update [[Task Board]] and tonight's shift note: move finished items to "Finished
 5. Give Breaker two copy-paste blocks:
    - **WhatsApp version**: short, max about 10 lines.
    - **Email version**: subject line `EOD Report – Breaker – <Mon D, YYYY>`, then the full template.
-6. If a Gmail connector is available, create the email as a **draft** to Ronin (do not send it without Breaker saying "send").
+6. **Sending (only when Breaker says "send" / "send it"):** run the Make scenario **"Omni Digital – Send EOD (Email + WhatsApp link)"** (scenario ID 6436326) through the Make connector with these inputs:
+   - `email_subject`: the subject line
+   - `email_body`: the full email version
+   - `whatsapp_text`: the WhatsApp version
+   - `to_email`: leave empty (test default: gonzagabreaker0@gmail.com; Breaker will change this to Ronin's email)
+   - `whatsapp_number`: leave empty (default 639488604019)
+   Make sends the email from iamtheonlyisrael@gmail.com. The email has a green **Send on WhatsApp** button that opens WhatsApp with the short report filled in. Tell Breaker to tap it.
+   If the Make connector is not available, show the two copy-paste blocks instead.
 7. **Friday shift:** write the weekly summary with [[Templates/Weekly Summary]] instead of the EOD (it replaces that day's EOD), save it in `Weekly/Week of YYYY-MM-DD.md`, and total the hours from [[Time Log]] for the week.
 
 ### "What's my job tonight?" / "Plan"
