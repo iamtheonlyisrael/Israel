@@ -1,0 +1,734 @@
+<div id="faith-fades-hero">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+    #faith-fades-hero {
+      --aqua: #81d8d0;
+      --black: #252525;
+      --white: #ffffff;
+      --sticky-bg: #1a130f;
+
+      width: 100%;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--black);
+      font-family: "Poppins", sans-serif;
+      line-height: 1.5;
+    }
+
+    #faith-fades-hero *,
+    #faith-fades-hero *::before,
+    #faith-fades-hero *::after {
+      box-sizing: border-box;
+    }
+
+    #faith-fades-hero a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #faith-fades-hero button {
+      font-family: inherit;
+    }
+
+    #faith-fades-hero img,
+    #faith-fades-hero video {
+      display: block;
+      max-width: 100%;
+    }
+
+    #faith-fades-hero .ffh-shell {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    #faith-fades-hero .ffh-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: #c9a96e;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-hero .ffh-eyebrow::before {
+      width: 32px;
+      height: 2px;
+      background: currentColor;
+      content: "";
+    }
+
+    #faith-fades-hero .ffh-button {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 24px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    #faith-fades-hero .ffh-button:hover {
+      transform: translateY(-3px);
+      background: var(--aqua);
+      color: var(--black);
+    }
+
+    #faith-fades-hero .ffh-button--light {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    #faith-fades-hero .ffh-button--outline {
+      border-color: rgba(255, 255, 255, 0.45);
+      background: transparent;
+      color: var(--white);
+    }
+
+    #faith-fades-hero .ffh-button--outline:hover {
+      border-color: var(--aqua);
+      background: var(--aqua);
+      color: var(--black);
+    }
+
+    /* Navigation */
+    #faith-fades-hero .ffh-nav {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      right: 0;
+      left: 0;
+      padding: 28px 0;
+      background: transparent;
+      color: var(--white);
+      transition: background-color 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    /* Sticky state — added via JS once the page scrolls past the hero */
+    #faith-fades-hero .ffh-nav.ffh-nav--scrolled {
+      padding: 14px 0;
+      background: var(--sticky-bg);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    #faith-fades-hero .ffh-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    /* Bigger logo */
+    #faith-fades-hero .ffh-logo {
+      display: inline-flex;
+      width: 240px;
+      flex-shrink: 0;
+      align-items: center;
+      line-height: 0;
+      transition: width 0.35s ease;
+    }
+
+    #faith-fades-hero .ffh-logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 84px;
+      object-fit: contain;
+      object-position: left center;
+      transition: max-height 0.35s ease;
+    }
+
+    #faith-fades-hero .ffh-nav.ffh-nav--scrolled .ffh-logo {
+      width: 190px;
+    }
+
+    #faith-fades-hero .ffh-nav.ffh-nav--scrolled .ffh-logo img {
+      max-height: 64px;
+    }
+
+    #faith-fades-hero .ffh-nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(16px, 2.8vw, 34px);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    #faith-fades-hero .ffh-nav-links a {
+      opacity: 0.85;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    #faith-fades-hero .ffh-nav-links a:hover {
+      color: var(--aqua);
+      opacity: 1;
+    }
+
+    #faith-fades-hero .ffh-menu {
+      display: none;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    #faith-fades-hero .ffh-menu-lines,
+    #faith-fades-hero .ffh-menu-lines::before,
+    #faith-fades-hero .ffh-menu-lines::after {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin: auto;
+      background: currentColor;
+      content: "";
+    }
+
+    #faith-fades-hero .ffh-menu-lines::before {
+      transform: translateY(-6px);
+    }
+
+    #faith-fades-hero .ffh-menu-lines::after {
+      transform: translateY(4px);
+    }
+
+    /* Hero */
+    #faith-fades-hero .ffh-hero {
+      position: relative;
+      display: flex;
+      min-height: 100vh;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--black);
+      color: var(--white);
+      text-align: center;
+    }
+
+    #faith-fades-hero .ffh-hero-video {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      object-position: center center;
+      opacity: 0.68;
+      pointer-events: none;
+    }
+
+    #faith-fades-hero .ffh-hero-overlay {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(18, 18, 18, 0.75) 0%, rgba(18, 18, 18, 0.55) 45%, rgba(18, 18, 18, 0.8) 100%);
+    }
+
+    #faith-fades-hero .ffh-hero-content {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 110px;
+      padding-bottom: 70px;
+    }
+
+    #faith-fades-hero .ffh-hero-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #faith-fades-hero .ffh-eyebrow {
+      justify-content: center;
+    }
+
+    #faith-fades-hero .ffh-hero-heading {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(38px, 6vw, 80px);
+      font-weight: 900;
+      letter-spacing: -0.075em;
+      line-height: 0.98;
+      text-align: center;
+    }
+
+    #faith-fades-hero .ffh-hero-heading em {
+      color: var(--aqua);
+      font-style: normal;
+    }
+
+    #faith-fades-hero .ffh-hero-copy {
+      max-width: 570px;
+      margin: 28px auto 34px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    #faith-fades-hero .ffh-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    #faith-fades-hero .ffh-scroll {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+    }
+
+    #faith-fades-hero .ffh-scroll::after {
+      width: 1px;
+      height: 42px;
+      background: var(--aqua);
+      content: "";
+    }
+
+    /* Scroll reveal */
+    #faith-fades-hero [data-ffh-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    #faith-fades-hero [data-ffh-reveal].ffh-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Tablet */
+    @media (max-width: 1020px) {
+      #faith-fades-hero .ffh-hero-heading {
+        font-size: clamp(36px, 5.5vw, 66px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      #faith-fades-hero .ffh-hero-content {
+        align-items: center;
+      }
+
+      #faith-fades-hero .ffh-hero-heading {
+        max-width: 100%;
+        font-size: clamp(42px, 8vw, 68px);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      #faith-fades-hero .ffh-shell {
+        width: min(100% - 32px, 1160px);
+      }
+
+      #faith-fades-hero .ffh-nav {
+        padding: 18px 0;
+      }
+
+      #faith-fades-hero .ffh-nav.ffh-nav--scrolled {
+        padding: 12px 0;
+      }
+
+      #faith-fades-hero .ffh-logo {
+        width: 170px;
+      }
+
+      #faith-fades-hero .ffh-logo img {
+        max-height: 58px;
+      }
+
+      #faith-fades-hero .ffh-nav.ffh-nav--scrolled .ffh-logo {
+        width: 140px;
+      }
+
+      #faith-fades-hero .ffh-nav.ffh-nav--scrolled .ffh-logo img {
+        max-height: 46px;
+      }
+
+      #faith-fades-hero .ffh-nav-links {
+        position: absolute;
+        top: 70px;
+        right: 16px;
+        left: 16px;
+        display: grid;
+        gap: 0;
+        padding: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 18px;
+        background: rgba(26, 19, 15, 0.97);
+        backdrop-filter: blur(16px);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+
+      #faith-fades-hero .ffh-nav-links.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      #faith-fades-hero .ffh-nav-links a {
+        padding: 14px;
+      }
+
+      #faith-fades-hero .ffh-nav .ffh-button {
+        display: none;
+      }
+
+      #faith-fades-hero .ffh-menu {
+        display: block;
+      }
+
+      #faith-fades-hero .ffh-hero {
+        min-height: 100svh;
+        height: 100svh;
+      }
+
+      #faith-fades-hero .ffh-hero-content {
+        gap: 36px;
+        padding-top: 120px;
+        padding-bottom: 50px;
+      }
+
+      #faith-fades-hero .ffh-hero-heading {
+        font-size: clamp(42px, 12.5vw, 70px);
+        line-height: 0.98;
+      }
+
+      #faith-fades-hero .ffh-hero-copy {
+        font-size: 14px;
+      }
+
+      #faith-fades-hero .ffh-scroll {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #faith-fades-hero *,
+      #faith-fades-hero *::before,
+      #faith-fades-hero *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <!-- Navigation -->
+  <nav class="ffh-nav" aria-label="Main navigation">
+    <div class="ffh-shell ffh-nav-inner">
+      <a class="ffh-logo" href="#custom-code-dOAolmoabL" aria-label="Faith Fades home">
+        <img
+          src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aab121f37639ce00caad7d2.png"
+          alt="Faith Fades"
+        />
+      </a>
+
+      <div class="ffh-nav-links" id="ffh-navigation">
+        <a href="#custom-code-dOAolmoabL">Home</a>
+        <a href="#section-rxYbwKC4Xd">Plan</a>
+        <a href="#services">Services</a>
+        <a href="#section-Ig0DXiHjQ6">Booking</a>
+        <a href="#faq">FAQ</a>
+        <a href="#section-t_XwWKPcto">Contact</a>
+      </div>
+
+      <a class="ffh-button ffh-button--light" href="#section-Ig0DXiHjQ6">
+        Book Your Cut <span>↗</span>
+      </a>
+
+      <button
+        class="ffh-menu"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="ffh-navigation"
+      >
+        <span class="ffh-menu-lines"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="ffh-hero" id="home">
+    <!--
+      Background video (Google Drive file 1XrqFVw19WcMiveZNm0UYzBULpjym9EAe).
+      The Drive file must be shared as "Anyone with the link".
+      For the most reliable playback, upload the video to GHL Media Library
+      and paste that URL into the src below instead.
+    -->
+    <video
+      class="ffh-hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      disablepictureinpicture
+      preload="auto"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <source
+        src="https://drive.google.com/uc?export=download&id=1XrqFVw19WcMiveZNm0UYzBULpjym9EAe"
+        type="video/mp4"
+      />
+    </video>
+
+    <div class="ffh-hero-overlay"></div>
+
+    <div class="ffh-shell ffh-hero-content">
+      <div class="ffh-hero-inner" data-ffh-reveal>
+        <p class="ffh-eyebrow">Private Las Vegas Studio</p>
+
+        <h1 class="ffh-hero-heading">
+          Precision cuts. <em>Elevated style.</em>
+        </h1>
+
+        <p class="ffh-hero-copy">
+          A modern barbering experience built around precision, consistency,
+          and personal style. Come in for the cut you trust and leave feeling
+          sharp, polished, and confident.
+        </p>
+
+        <div class="ffh-hero-actions">
+          <a class="ffh-button ffh-button--light" href="#section-Ig0DXiHjQ6">
+            Book Your Experience <span>↗</span>
+          </a>
+
+          <a class="ffh-button ffh-button--outline" href="#services">
+            Explore Services
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ffh-scroll">Scroll to explore</div>
+  </section>
+
+  <script>
+    (function () {
+      try {
+        var root = document.querySelector("#faith-fades-hero");
+        if (!root) return;
+
+        /* Background video: force muted autoplay (some page builders strip the attributes) */
+        var bgVideo = root.querySelector(".ffh-hero-video");
+        if (bgVideo) {
+          bgVideo.muted = true;
+          bgVideo.defaultMuted = true;
+          bgVideo.setAttribute("muted", "");
+          var startVideo = function () {
+            var p = bgVideo.play();
+            if (p && p.catch) p.catch(function () {});
+          };
+          if (bgVideo.readyState >= 2) {
+            startVideo();
+          } else {
+            bgVideo.addEventListener("canplay", startVideo, { once: true });
+          }
+          /* iOS low-power mode blocks autoplay — start on first touch instead */
+          document.addEventListener("touchstart", startVideo, { once: true, passive: true });
+        }
+
+        /* Mobile navigation */
+        var menuButton = root.querySelector(".ffh-menu");
+        var navLinks = root.querySelector(".ffh-nav-links");
+
+        if (menuButton && navLinks) {
+          menuButton.addEventListener("click", function () {
+            var isOpen = navLinks.classList.toggle("is-open");
+
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.setAttribute(
+              "aria-label",
+              isOpen ? "Close navigation" : "Open navigation"
+            );
+          });
+
+          navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              navLinks.classList.remove("is-open");
+              menuButton.setAttribute("aria-expanded", "false");
+              menuButton.setAttribute("aria-label", "Open navigation");
+            });
+          });
+        }
+
+        /* Home links (logo + Home menu): never animate when already at the top */
+        var HOME_ID = "#custom-code-dOAolmoabL";
+
+        root.querySelectorAll('a[href="' + HOME_ID + '"]').forEach(function (link) {
+          link.addEventListener(
+            "click",
+            function (event) {
+              /* Block the browser's hash jump and any page-builder scroll handler */
+              event.preventDefault();
+              event.stopPropagation();
+              event.stopImmediatePropagation();
+
+              /* Close the mobile menu if it is open */
+              if (navLinks && menuButton) {
+                navLinks.classList.remove("is-open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-label", "Open navigation");
+              }
+
+              var homeTarget = document.querySelector(HOME_ID);
+              var homeTop = homeTarget
+                ? homeTarget.getBoundingClientRect().top + window.pageYOffset
+                : 0;
+              var current = window.pageYOffset;
+
+              /* Refresh effect: replay the hero entrance animation and restart the video */
+              var replayHero = function () {
+                var items = root.querySelectorAll(".ffh-hero [data-ffh-reveal]");
+
+                items.forEach(function (item) {
+                  item.style.transition = "none";
+                  item.classList.remove("ffh-visible");
+                });
+
+                void root.offsetWidth; /* force reflow so the reset applies instantly */
+
+                requestAnimationFrame(function () {
+                  items.forEach(function (item) {
+                    item.style.transition = "";
+                    item.classList.add("ffh-visible");
+                  });
+                });
+
+                var heroVideo = root.querySelector(".ffh-hero-video");
+                if (heroVideo) {
+                  try {
+                    heroVideo.currentTime = 0;
+                    var playing = heroVideo.play();
+                    if (playing && playing.catch) playing.catch(function () {});
+                  } catch (err) {}
+                }
+              };
+
+              /* At the top / inside the hero: no scrolling, just the refresh effect */
+              if (current <= 5 || Math.abs(current - homeTop) < 2) {
+                replayHero();
+                return;
+              }
+
+              /* Still inside the hero: jump instantly, then refresh effect */
+              if (current < homeTop + window.innerHeight) {
+                window.scrollTo({ top: homeTop, behavior: "instant" });
+                replayHero();
+                return;
+              }
+
+              /* Far below the hero: smooth scroll up, then refresh effect */
+              window.scrollTo({ top: homeTop, behavior: "smooth" });
+              setTimeout(replayHero, 700);
+            },
+            true
+          );
+        });
+
+        /* Smooth internal navigation */
+        root.querySelectorAll('a[href^="#"]').forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            var targetId = link.getAttribute("href");
+            if (!targetId || targetId === "#" || targetId === HOME_ID) return;
+
+            var target = document.querySelector(targetId);
+            if (!target) return;
+
+            event.preventDefault();
+
+            var targetTop = target.getBoundingClientRect().top + window.pageYOffset;
+
+            /* Offset for the fixed nav so it doesn't cover the section top */
+            var navOffset = window.innerWidth <= 640 ? 70 : 92;
+
+            window.scrollTo({ top: targetTop - navOffset, behavior: "smooth" });
+          });
+        });
+
+        /* Sticky nav background on scroll */
+        var nav = root.querySelector(".ffh-nav");
+        var scrollThreshold = 60;
+
+        function updateNavState() {
+          if (window.scrollY > scrollThreshold) {
+            nav.classList.add("ffh-nav--scrolled");
+          } else {
+            nav.classList.remove("ffh-nav--scrolled");
+          }
+        }
+
+        if (nav) {
+          updateNavState();
+          window.addEventListener("scroll", updateNavState, { passive: true });
+        }
+
+        /* Scroll reveal */
+        var revealItems = root.querySelectorAll("[data-ffh-reveal]");
+
+        if ("IntersectionObserver" in window) {
+          var observer = new IntersectionObserver(
+            function (entries, observerInstance) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("ffh-visible");
+                  observerInstance.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12 }
+          );
+
+          revealItems.forEach(function (item) {
+            observer.observe(item);
+          });
+        } else {
+          revealItems.forEach(function (item) {
+            item.classList.add("ffh-visible");
+          });
+        }
+      } catch (e) {
+        /* fail silently — nav still renders and functions without JS enhancements */
+      }
+    })();
+  </script>
+</div>
