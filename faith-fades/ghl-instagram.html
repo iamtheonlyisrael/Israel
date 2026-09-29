@@ -251,23 +251,21 @@
       box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.7);
     }
 
-    /* Shows only the client photo from the Instagram screenshot */
+    /* Instagram video embed */
     #faith-fades-instagram .ffi-feature-media {
       position: relative;
       overflow: hidden;
-      min-height: 380px;
-      background: #111;
+      min-height: 640px;
+      background: #ffffff;
     }
 
-    #faith-fades-instagram .ffi-feature-media img {
+    #faith-fades-instagram .ffi-feature-media iframe {
       position: absolute;
-      top: 0;
-      left: -4%;
-      width: 196%;
+      inset: 0;
+      display: block;
+      width: 100%;
       height: 100%;
-      max-width: none;
-      object-fit: cover;
-      object-position: 0 30%;
+      border: 0;
     }
 
     #faith-fades-instagram .ffi-feature-body {
@@ -421,8 +419,7 @@
       }
 
       #faith-fades-instagram .ffi-feature-media {
-        min-height: 0;
-        aspect-ratio: 1 / 1;
+        min-height: 600px;
       }
 
       #faith-fades-instagram .ffi-quotes {
@@ -530,7 +527,15 @@
       <div class="ffi-reviews">
         <article class="ffi-feature">
           <div class="ffi-feature-media">
-            <img src="https://cdn.jsdelivr.net/gh/iamtheonlyisrael/Israel@b91b7ce88f6e9e48634741be0241f16adf9292c5/faith-fades/img/ig-comment-2.webp" alt="Fresh fade by Faith Fades on client @simplyroni" loading="lazy" />
+            <iframe
+              src="https://www.instagram.com/p/DcT0uGLRRXu/embed/"
+              title="Faith Fades on Instagram"
+              loading="lazy"
+              scrolling="no"
+              allowtransparency="true"
+              allow="encrypted-media; picture-in-picture; clipboard-write"
+              allowfullscreen
+            ></iframe>
           </div>
 
           <div class="ffi-feature-body">
