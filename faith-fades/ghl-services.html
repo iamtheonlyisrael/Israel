@@ -1,0 +1,455 @@
+<div id="faith-fades-services">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+    #faith-fades-services {
+      --aqua: #81d8d0;
+      --gold: #c9a96e;
+      --black: #252525;
+      --white: #ffffff;
+      --muted: #b7b7b7;
+      --card-bg: #1a1a1a;
+      --card-border: rgba(201, 169, 110, 0.35);
+
+      width: 100%;
+      overflow: hidden;
+      color: var(--white);
+      background: transparent;
+      font-family: "Poppins", sans-serif;
+      line-height: 1.5;
+    }
+
+    #faith-fades-services *,
+    #faith-fades-services *::before,
+    #faith-fades-services *::after {
+      box-sizing: border-box;
+    }
+
+    #faith-fades-services a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #faith-fades-services img {
+      display: block;
+      max-width: 100%;
+    }
+
+    #faith-fades-services .ffs-shell {
+      width: min(1240px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    #faith-fades-services .ffs-section {
+      padding: 100px 0;
+      background: transparent;
+    }
+
+    #faith-fades-services .ffs-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-services .ffs-eyebrow::before {
+      width: 32px;
+      height: 2px;
+      background: currentColor;
+      content: "";
+    }
+
+    #faith-fades-services .ffs-head {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    #faith-fades-services .ffs-heading {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 84px);
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      line-height: 0.98;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-services .ffs-heading span {
+      color: var(--gold);
+    }
+
+    #faith-fades-services .ffs-copy {
+      max-width: 620px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.85;
+      text-align: center;
+    }
+
+    #faith-fades-services .ffs-button {
+      display: inline-flex;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+      padding: 14px 26px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    #faith-fades-services .ffs-button:hover {
+      transform: translateY(-3px);
+      border-color: var(--aqua);
+      background: var(--aqua);
+      color: var(--black);
+    }
+
+    #faith-fades-services .ffs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 70px;
+    }
+
+    #faith-fades-services .ffs-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 26px;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      background: var(--card-bg);
+      box-shadow: 0 24px 50px -20px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(129, 216, 208, 0.06);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    #faith-fades-services .ffs-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(129, 216, 208, 0.55);
+      box-shadow: 0 32px 60px -18px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(129, 216, 208, 0.18);
+    }
+
+    #faith-fades-services .ffs-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    #faith-fades-services .ffs-card-title {
+      margin: 0;
+      color: var(--gold);
+      font-size: clamp(20px, 2vw, 26px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-services .ffs-card-number {
+      display: flex;
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    #faith-fades-services .ffs-card-copy {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    #faith-fades-services .ffs-card-media {
+      position: relative;
+      overflow: hidden;
+      margin-top: auto;
+      border-radius: 10px;
+      aspect-ratio: 4 / 5;
+      isolation: isolate;
+    }
+
+    #faith-fades-services .ffs-card-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    #faith-fades-services .ffs-card:hover .ffs-card-media img {
+      transform: scale(1.06);
+    }
+
+    #faith-fades-services .ffs-card-media::after {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(37, 37, 37, 0) 55%, rgba(37, 37, 37, 0.55) 100%);
+      content: "";
+    }
+
+    #faith-fades-services .ffs-card-tag {
+      position: absolute;
+      z-index: 2;
+      bottom: 12px;
+      left: 12px;
+      display: inline-flex;
+      padding: 6px 11px;
+      border: 1px solid rgba(129, 216, 208, 0.6);
+      border-radius: 999px;
+      background: rgba(37, 37, 37, 0.5);
+      backdrop-filter: blur(6px);
+      color: var(--aqua);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /*
+      Scroll reveal — visible by default.
+      JS adds .ffs-pre-reveal right before observing, then removes it
+      when the element scrolls into view. If JS never runs (e.g. in a
+      sandboxed builder/preview), content simply stays visible.
+    */
+    #faith-fades-services .ffs-pre-reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    #faith-fades-services .ffs-pre-reveal.ffs-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Tablet: 2 x 2 */
+    @media (max-width: 1100px) {
+      #faith-fades-services .ffs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      #faith-fades-services .ffs-card-title {
+        font-size: clamp(22px, 3vw, 28px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      #faith-fades-services .ffs-section {
+        padding: 80px 0;
+      }
+
+      #faith-fades-services .ffs-grid {
+        gap: 20px;
+        margin-top: 50px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      #faith-fades-services .ffs-shell {
+        width: min(100% - 32px, 1240px);
+      }
+
+      #faith-fades-services .ffs-section {
+        padding: 64px 0;
+      }
+
+      #faith-fades-services .ffs-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 40px;
+      }
+
+      #faith-fades-services .ffs-card {
+        padding: 24px;
+      }
+
+      #faith-fades-services .ffs-card-media {
+        aspect-ratio: 16 / 11;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #faith-fades-services *,
+      #faith-fades-services *::before,
+      #faith-fades-services *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <section class="ffs-section" id="services">
+    <div class="ffs-shell">
+      <div class="ffs-head" data-ffs-reveal>
+        <p class="ffs-eyebrow">Signature Services</p>
+
+        <h2 class="ffs-heading">My <span>Services</span></h2>
+
+        <p class="ffs-copy">
+          Every service begins with a consultation and finishes with the
+          details that make your look feel like yours — precision, care,
+          and a barber you can trust long-term.
+        </p>
+
+        <a class="ffs-button" href="#booking">
+          Our Services <span>→</span>
+        </a>
+      </div>
+
+      <div class="ffs-grid">
+        <!-- 01 Regular Haircut -->
+        <article class="ffs-card" data-ffs-reveal>
+          <div class="ffs-card-head">
+            <h3 class="ffs-card-title">Haircut</h3>
+            <span class="ffs-card-number">01</span>
+          </div>
+
+          <p class="ffs-card-copy">
+            Adopt an impeccable style with a precision fade or cut tailored
+            to your hair, face shape, and personal wishes.
+          </p>
+
+          <div class="ffs-card-media">
+            <img
+              src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa97f9e196984c40801ba0b.jpg"
+              alt="Precision barber haircut"
+              loading="lazy"
+            />
+            <span class="ffs-card-tag">Fades &amp; Cuts</span>
+          </div>
+        </article>
+
+        <!-- 02 Hot Towel Straight Razor -->
+        <article class="ffs-card" data-ffs-reveal>
+          <div class="ffs-card-head">
+            <h3 class="ffs-card-title">Hot Towel Straight Razor</h3>
+            <span class="ffs-card-number">02</span>
+          </div>
+
+          <p class="ffs-card-copy">
+            Relax with a warm towel and a classic straight razor shave for a
+            smooth, clean, and refined finish.
+          </p>
+
+          <div class="ffs-card-media">
+            <img
+              src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6abc195710a2b7bc2b277001.jpg"
+              alt="Hot towel straight razor shave"
+              loading="lazy"
+            />
+            <span class="ffs-card-tag">Hot Towel Shave</span>
+          </div>
+        </article>
+
+        <!-- 03 Senior Haircut -->
+        <article class="ffs-card" data-ffs-reveal>
+          <div class="ffs-card-head">
+            <h3 class="ffs-card-title">Senior Haircut</h3>
+            <span class="ffs-card-number">03</span>
+          </div>
+
+          <p class="ffs-card-copy">
+            A clean, classic cut for our seniors — done with patience, care,
+            and the same precision every time.
+          </p>
+
+          <div class="ffs-card-media">
+            <img
+              src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6abc195617104c529a73586f.jpg"
+              alt="Senior haircut"
+              loading="lazy"
+            />
+            <span class="ffs-card-tag">Seniors</span>
+          </div>
+        </article>
+
+        <!-- 04 Haircut & Beard Combo -->
+        <article class="ffs-card" data-ffs-reveal>
+          <div class="ffs-card-head">
+            <h3 class="ffs-card-title">Haircut &amp; Beard Combo</h3>
+            <span class="ffs-card-number">04</span>
+          </div>
+
+          <p class="ffs-card-copy">
+            The full refresh — a precision haircut plus a sharp beard trim
+            and lineup so everything looks clean together.
+          </p>
+
+          <div class="ffs-card-media">
+            <img
+              src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6abc195560c7466bcf7b2712.jpg"
+              alt="Haircut and beard combo"
+              loading="lazy"
+            />
+            <span class="ffs-card-tag">Cut + Beard</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      try {
+        var root = document.querySelector("#faith-fades-services");
+        if (!root) return;
+
+        var revealItems = root.querySelectorAll("[data-ffs-reveal]");
+        if (!revealItems.length) return;
+
+        if ("IntersectionObserver" in window) {
+          revealItems.forEach(function (item) {
+            item.classList.add("ffs-pre-reveal");
+          });
+
+          var observer = new IntersectionObserver(
+            function (entries, observerInstance) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("ffs-visible");
+                  observerInstance.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12 }
+          );
+
+          revealItems.forEach(function (item) {
+            observer.observe(item);
+          });
+        }
+      } catch (e) {
+        /* Fail silently — content is visible by default either way. */
+      }
+    })();
+  </script>
+</div>
