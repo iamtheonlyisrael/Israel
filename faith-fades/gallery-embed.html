@@ -386,6 +386,87 @@
       box-shadow: 0 18px 40px rgba(201, 169, 110, .6), 0 0 0 3px rgba(129, 216, 208, .35);
     }
 
+
+    /* ===== Extra pop: watermark, ribbon, sparkles, tilt ===== */
+    #faith-fades-gallery .ffg-watermark {
+      position: absolute;
+      top: clamp(20px, 5vw, 60px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      font-size: clamp(70px, 17vw, 230px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(201, 169, 110, 0.16);
+      opacity: .9;
+    }
+    #faith-fades-gallery .ffg-shell { position: relative; z-index: 1; }
+
+    #faith-fades-gallery .ffg-ribbon {
+      position: relative;
+      margin: 0 -24px clamp(26px, 4vw, 40px);
+      padding: 12px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      transform: rotate(-1.6deg);
+      background: linear-gradient(90deg, #141414, #1f1a12 50%, #141414);
+      border-top: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .5), 0 0 30px rgba(201, 169, 110, .18);
+    }
+    #faith-fades-gallery .ffg-ribbon-track {
+      display: inline-flex;
+      animation: ffg-marquee 24s linear infinite;
+    }
+    #faith-fades-gallery .ffg-ribbon span {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+      padding: 0 18px;
+      font-size: clamp(13px, 1.8vw, 17px);
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    #faith-fades-gallery .ffg-ribbon span i {
+      font-style: normal;
+      color: var(--gold);
+      font-size: 1.2em;
+    }
+    #faith-fades-gallery .ffg-ribbon span:nth-child(even) { color: var(--aqua); }
+    @keyframes ffg-marquee { to { transform: translateX(-50%); } }
+
+    #faith-fades-gallery .ffg-spark {
+      position: absolute;
+      z-index: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold-hi);
+      box-shadow: 0 0 10px 2px rgba(243, 228, 193, .7);
+      pointer-events: none;
+      opacity: 0;
+      animation: ffg-float var(--d, 9s) ease-in-out var(--dl, 0s) infinite;
+    }
+    #faith-fades-gallery .ffg-spark.ffg-aq { background: var(--aqua); box-shadow: 0 0 10px 2px rgba(129, 216, 208, .7); }
+    @keyframes ffg-float {
+      0% { opacity: 0; transform: translateY(20px) scale(.6); }
+      20% { opacity: .9; }
+      80% { opacity: .7; }
+      100% { opacity: 0; transform: translateY(-120px) scale(1.1); }
+    }
+
+    #faith-fades-gallery .ffg-tilt {
+      transition: transform .5s cubic-bezier(.2,.8,.2,1);
+      transform: perspective(1400px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    }
+
     /* Reveal on scroll */
     #faith-fades-gallery .ffg-rv { opacity: 0; transform: translateY(30px) scale(.98); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1); }
     #faith-fades-gallery .ffg-rv.ffg-in { opacity: 1; transform: none; }
@@ -410,6 +491,8 @@
       #faith-fades-gallery .ffg-tile { margin-bottom: 8px; border-radius: 8px; }
       #faith-fades-gallery .ffg-tile::before { width: 28px; height: 28px; font-size: 13px; right: 7px; bottom: 7px; }
       #faith-fades-gallery .ffg-cta { width: 100%; justify-content: center; }
+      #faith-fades-gallery .ffg-ribbon { margin: 0 -14px 26px; padding: 10px 0; }
+      #faith-fades-gallery .ffg-ribbon span { gap: 12px; padding: 0 12px; letter-spacing: .14em; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -418,7 +501,9 @@
       #faith-fades-gallery .ffg-stripe-bar::before,
       #faith-fades-gallery .ffg-frame-wrap::before,
       #faith-fades-gallery .ffg-heading span,
-      #faith-fades-gallery .ffg-section::before { animation: none; }
+      #faith-fades-gallery .ffg-section::before,
+      #faith-fades-gallery .ffg-ribbon-track { animation: none; }
+      #faith-fades-gallery .ffg-spark { display: none; }
       #faith-fades-gallery .ffg-rv { opacity: 1; transform: none; }
     }
 
@@ -508,6 +593,7 @@
   </style>
 
   <section class="ffg-section" id="gallery">
+    <div class="ffg-watermark" aria-hidden="true">Faith Fades</div>
     <div class="ffg-shell">
       <div class="ffg-head-row ffg-rv">
         <!-- Left barber pole -->
@@ -534,8 +620,21 @@
         </div>
       </div>
 
-      <div class="ffg-frame-wrap ffg-rv">
-        <div class="ffg-frame" id="ffg-frame"></div>
+      <div class="ffg-rv"><div class="ffg-ribbon" aria-hidden="true">
+        <div class="ffg-ribbon-track" id="ffg-ribbon">
+          <span>Fresh Fades <i>&#9986;</i></span>
+          <span>Sharp Line-Ups <i>&#9986;</i></span>
+          <span>Beard Sculpts <i>&#9986;</i></span>
+          <span>Clean Tapers <i>&#9986;</i></span>
+          <span>Kids Cuts <i>&#9986;</i></span>
+          <span>Hot Towel Shaves <i>&#9986;</i></span>
+        </div>
+      </div></div>
+
+      <div class="ffg-rv">
+        <div class="ffg-frame-wrap ffg-tilt" id="ffg-tilt">
+          <div class="ffg-frame" id="ffg-frame"></div>
+        </div>
       </div>
 
       <div class="ffg-foot ffg-rv">
@@ -618,6 +717,42 @@
     build();
     var rt;
     window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(build, 150); });
+
+
+    /* Ribbon: repeat the words so the scroll never shows a gap */
+    var rib = root.querySelector("#ffg-ribbon");
+    if (rib) { var once = rib.innerHTML; rib.innerHTML = once + once + once + once; }
+
+    /* Floating sparkles */
+    var sec = root.querySelector(".ffg-section");
+    var motionOK = !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    if (motionOK) {
+      for (var p = 0; p < 16; p++) {
+        var sp = document.createElement("span");
+        sp.className = "ffg-spark" + (p % 3 === 0 ? " ffg-aq" : "");
+        sp.style.left = (Math.random() * 100).toFixed(1) + "%";
+        sp.style.top = (15 + Math.random() * 80).toFixed(1) + "%";
+        sp.style.setProperty("--d", (7 + Math.random() * 6).toFixed(1) + "s");
+        sp.style.setProperty("--dl", (-Math.random() * 12).toFixed(1) + "s");
+        sec.appendChild(sp);
+      }
+    }
+
+    /* 3D tilt toward the mouse (desktop only) */
+    var tilt = root.querySelector("#ffg-tilt");
+    if (tilt && motionOK && window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      tilt.addEventListener("mousemove", function (e) {
+        var r = tilt.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        var y = (e.clientY - r.top) / r.height - 0.5;
+        tilt.style.setProperty("--ry", (x * 5).toFixed(2) + "deg");
+        tilt.style.setProperty("--rx", (-y * 4).toFixed(2) + "deg");
+      });
+      tilt.addEventListener("mouseleave", function () {
+        tilt.style.setProperty("--ry", "0deg");
+        tilt.style.setProperty("--rx", "0deg");
+      });
+    }
 
     /* Booking button */
     var cta = root.querySelector("#ffg-cta");
