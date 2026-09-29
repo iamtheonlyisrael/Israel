@@ -235,6 +235,87 @@
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
     }
 
+    /* Comments from Instagram */
+    #faith-fades-instagram .ffi-comments {
+      margin-top: 56px;
+    }
+
+    #faith-fades-instagram .ffi-comments-label {
+      margin: 0 0 22px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-instagram .ffi-comments-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    #faith-fades-instagram .ffi-comment {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 22px 22px 20px;
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(6px);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    #faith-fades-instagram .ffi-comment:hover {
+      transform: translateY(-4px);
+      border-color: var(--aqua);
+    }
+
+    #faith-fades-instagram .ffi-comment-mark {
+      color: var(--aqua);
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 0.6;
+    }
+
+    #faith-fades-instagram .ffi-comment-text {
+      flex: 1;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    #faith-fades-instagram .ffi-comment-user {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    #faith-fades-instagram .ffi-comment-user svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      color: var(--aqua);
+    }
+
+    @media (max-width: 900px) {
+      #faith-fades-instagram .ffi-comments-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        padding: 0 20px;
+      }
+    }
+
     @keyframes ffi-scroll-x {
       from {
         transform: translateX(0);
@@ -354,6 +435,37 @@
           </a>
           <a class="ffi-tile" href="https://www.instagram.com/faith_fades/" target="_blank" rel="noopener">
             <img src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa94a66a19db9abccae5a50.jpg" alt="Faith Fades client" loading="lazy" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Real comments from @faith_fades posts -->
+      <div class="ffi-comments">
+        <p class="ffi-comments-label">Straight From The Comments</p>
+        <div class="ffi-comments-grid">
+          <a class="ffi-comment" href="https://www.instagram.com/simplyroni/" target="_blank" rel="noopener">
+            <span class="ffi-comment-mark" aria-hidden="true">&ldquo;</span>
+            <p class="ffi-comment-text">Honestly fire your barber fellas &amp; book her!</p>
+            <span class="ffi-comment-user">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none" /></svg>
+              @simplyroni
+            </span>
+          </a>
+          <a class="ffi-comment" href="https://www.instagram.com/christineferea/" target="_blank" rel="noopener">
+            <span class="ffi-comment-mark" aria-hidden="true">&ldquo;</span>
+            <p class="ffi-comment-text">🔥 She&rsquo;s the best 🔥</p>
+            <span class="ffi-comment-user">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none" /></svg>
+              @christineferea
+            </span>
+          </a>
+          <a class="ffi-comment" href="https://www.instagram.com/thatoneboyalex/" target="_blank" rel="noopener">
+            <span class="ffi-comment-mark" aria-hidden="true">&ldquo;</span>
+            <p class="ffi-comment-text">Get it right get it tight 🔥✨</p>
+            <span class="ffi-comment-user">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none" /></svg>
+              @thatoneboyalex
+            </span>
           </a>
         </div>
       </div>
