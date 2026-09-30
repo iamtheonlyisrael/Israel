@@ -1,0 +1,759 @@
+<div id="faith-fades-instagram">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap");
+
+    #faith-fades-instagram {
+      --aqua: #81d8d0;
+      --gold: #c9a96e;
+      --black: #252525;
+      --white: #ffffff;
+      --muted: #c9c9c9;
+
+      width: 100%;
+      overflow: hidden;
+      color: var(--white);
+      font-family: "Poppins", sans-serif;
+      line-height: 1.5;
+    }
+
+    #faith-fades-instagram *,
+    #faith-fades-instagram *::before,
+    #faith-fades-instagram *::after {
+      box-sizing: border-box;
+    }
+
+    #faith-fades-instagram a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #faith-fades-instagram img {
+      display: block;
+      max-width: 100%;
+    }
+
+    #faith-fades-instagram .ffi-shell {
+      width: min(1300px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    #faith-fades-instagram .ffi-section {
+      position: relative;
+      overflow: hidden;
+      padding: 70px 0 80px;
+      background: var(--black);
+      isolation: isolate;
+    }
+
+    #faith-fades-instagram .ffi-bg-image {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      object-position: center 30%;
+      opacity: 0.35;
+      filter: blur(1px);
+    }
+
+    #faith-fades-instagram .ffi-bg-overlay {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(37, 37, 37, 0.88) 0%,
+        rgba(37, 37, 37, 0.75) 35%,
+        rgba(37, 37, 37, 0.94) 100%
+      );
+    }
+
+    #faith-fades-instagram .ffi-head {
+      margin: 0 0 44px;
+      text-align: center;
+    }
+
+    #faith-fades-instagram .ffi-icon-row {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-instagram .ffi-icon-row svg,
+    #faith-fades-instagram .ffi-handle svg {
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+    }
+
+    #faith-fades-instagram .ffi-live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #e1306c;
+      box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.6);
+      animation: ffi-pulse 1.8s ease-out infinite;
+    }
+
+    #faith-fades-instagram .ffi-heading {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    #faith-fades-instagram .ffi-heading em {
+      color: var(--aqua);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    #faith-fades-instagram .ffi-handle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 9px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 600;
+      transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    #faith-fades-instagram .ffi-handle:hover {
+      border-color: var(--aqua);
+      background: var(--aqua);
+      color: var(--black);
+    }
+
+    /* Marquee */
+    #faith-fades-instagram .ffi-marquee {
+      position: relative;
+      width: 100%;
+    }
+
+    #faith-fades-instagram .ffi-marquee::before,
+    #faith-fades-instagram .ffi-marquee::after {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      bottom: 0;
+      width: 90px;
+      content: "";
+      pointer-events: none;
+    }
+
+    #faith-fades-instagram .ffi-marquee::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--black) 0%, rgba(37, 37, 37, 0) 100%);
+    }
+
+    #faith-fades-instagram .ffi-marquee::after {
+      right: 0;
+      background: linear-gradient(270deg, var(--black) 0%, rgba(37, 37, 37, 0) 100%);
+    }
+
+    #faith-fades-instagram .ffi-track {
+      display: flex;
+      width: max-content;
+      gap: 16px;
+      animation: ffi-scroll-x 42s linear infinite;
+    }
+
+    #faith-fades-instagram .ffi-track:hover {
+      animation-play-state: paused;
+    }
+
+    #faith-fades-instagram .ffi-tile {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      width: clamp(130px, 14vw, 190px);
+      aspect-ratio: 1 / 1;
+      flex-shrink: 0;
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 10px;
+      background: #111;
+    }
+
+    #faith-fades-instagram .ffi-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    #faith-fades-instagram .ffi-tile:hover img {
+      transform: scale(1.08);
+    }
+
+    #faith-fades-instagram .ffi-tile-overlay {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 10px;
+      background: linear-gradient(180deg, rgba(37, 37, 37, 0) 55%, rgba(37, 37, 37, 0.75) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #faith-fades-instagram .ffi-tile:hover .ffi-tile-overlay {
+      opacity: 1;
+    }
+
+    #faith-fades-instagram .ffi-tile-overlay svg {
+      width: 18px;
+      height: 18px;
+      color: var(--white);
+    }
+
+    /* Play / carousel badge in the corner of video and multi-photo posts */
+    #faith-fades-instagram .ffi-badge {
+      position: absolute;
+      z-index: 1;
+      top: 8px;
+      right: 8px;
+      width: 18px;
+      height: 18px;
+      color: var(--white);
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+    }
+
+    /* Client reviews (real Instagram comments) */
+    #faith-fades-instagram .ffi-reviews {
+      max-width: 1100px;
+      margin: 0 auto 64px;
+    }
+
+    #faith-fades-instagram .ffi-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      overflow: hidden;
+      border: 1px solid rgba(201, 169, 110, 0.35);
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+      box-shadow: 0 30px 60px -25px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Instagram video embed */
+    #faith-fades-instagram .ffi-feature-media {
+      position: relative;
+      overflow: hidden;
+      min-height: 640px;
+      background: #ffffff;
+    }
+
+    #faith-fades-instagram .ffi-feature-media iframe {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    #faith-fades-instagram .ffi-feature-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+      padding: clamp(28px, 4vw, 56px);
+    }
+
+    #faith-fades-instagram .ffi-stars {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-instagram .ffi-source {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-instagram .ffi-source svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    #faith-fades-instagram .ffi-feature-quote {
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    #faith-fades-instagram .ffi-feature-quote::before {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--aqua);
+      font-size: 72px;
+      font-style: normal;
+      line-height: 0.7;
+      content: "\201C";
+    }
+
+    #faith-fades-instagram .ffi-person {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    #faith-fades-instagram .ffi-avatar {
+      display: flex;
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f58529, #dd2a7b 55%, #8134af);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    #faith-fades-instagram .ffi-person-name {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    #faith-fades-instagram .ffi-person-meta {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    #faith-fades-instagram .ffi-quotes {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    #faith-fades-instagram .ffi-quote {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    #faith-fades-instagram .ffi-quote:hover {
+      transform: translateY(-4px);
+      border-color: var(--aqua);
+    }
+
+    #faith-fades-instagram .ffi-quote p {
+      flex: 1;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 15px;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.55;
+    }
+
+    #faith-fades-instagram .ffi-quote .ffi-avatar {
+      width: 34px;
+      height: 34px;
+      font-size: 13px;
+    }
+
+    #faith-fades-instagram .ffi-feed-label {
+      margin: 0 0 22px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      #faith-fades-instagram .ffi-reviews {
+        padding: 0 16px;
+      }
+
+      #faith-fades-instagram .ffi-feature {
+        grid-template-columns: 1fr;
+      }
+
+      #faith-fades-instagram .ffi-feature-media {
+        min-height: 600px;
+      }
+
+      #faith-fades-instagram .ffi-quotes {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @keyframes ffi-scroll-x {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes ffi-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.6);
+      }
+      100% {
+        box-shadow: 0 0 0 8px rgba(225, 48, 108, 0);
+      }
+    }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      #faith-fades-instagram .ffi-section {
+        padding: 56px 0 64px;
+      }
+
+      #faith-fades-instagram .ffi-marquee::before,
+      #faith-fades-instagram .ffi-marquee::after {
+        width: 50px;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      #faith-fades-instagram .ffi-shell {
+        width: 100%;
+      }
+
+      #faith-fades-instagram .ffi-head {
+        margin-bottom: 30px;
+        padding: 0 20px;
+      }
+
+      #faith-fades-instagram .ffi-tile {
+        width: 120px;
+      }
+
+      #faith-fades-instagram .ffi-track {
+        gap: 10px;
+      }
+
+      #faith-fades-instagram .ffi-marquee::before,
+      #faith-fades-instagram .ffi-marquee::after {
+        width: 32px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #faith-fades-instagram .ffi-track,
+      #faith-fades-instagram .ffi-live-dot {
+        animation: none;
+      }
+
+      #faith-fades-instagram .ffi-marquee {
+        overflow-x: auto;
+      }
+    }
+  </style>
+
+  <section class="ffi-section" id="instagram">
+    <img
+      class="ffi-bg-image"
+      src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa95003bc55ee8d56916de9.jpg"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+    />
+    <div class="ffi-bg-overlay"></div>
+
+    <div class="ffi-shell">
+      <div class="ffi-head">
+        <p class="ffi-icon-row">
+          <span class="ffi-live-dot" aria-hidden="true"></span>
+          Live From Instagram
+        </p>
+
+        <h2 class="ffi-heading"><strong>Instagram</strong> <em>Space</em></h2>
+
+        <a class="ffi-handle" href="https://www.instagram.com/faith_fades/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none" />
+          </svg>
+          @faith_fades
+        </a>
+      </div>
+
+      <!-- Client reviews: real comments from @faith_fades on Instagram -->
+      <div class="ffi-reviews">
+        <article class="ffi-feature">
+          <div class="ffi-feature-media">
+            <iframe
+              src="https://www.instagram.com/p/DcT0uGLRRXu/embed/"
+              title="Faith Fades on Instagram"
+              loading="lazy"
+              scrolling="no"
+              allowtransparency="true"
+              allow="encrypted-media; picture-in-picture; clipboard-write"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="ffi-feature-body">
+            <div class="ffi-stars">
+              <span>Client Review</span>
+              <span class="ffi-source"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /></svg> Instagram</span>
+            </div>
+
+            <blockquote class="ffi-feature-quote">
+              Honestly fire your barber fellas &amp; book her!
+            </blockquote>
+
+            <div class="ffi-person">
+              <span class="ffi-avatar" aria-hidden="true">s</span>
+              <span>
+                <span class="ffi-person-name">@simplyroni</span>
+                <span class="ffi-person-meta">Client &middot; &ldquo;Fresh fade. Fresh energy. Fresh attitude.&rdquo;</span>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <div class="ffi-quotes">
+          <a class="ffi-quote" href="https://www.instagram.com/christineferea/" target="_blank" rel="noopener">
+            <p>&ldquo;She&rsquo;s the best 🔥&rdquo;</p>
+            <span class="ffi-person">
+              <span class="ffi-avatar" aria-hidden="true">c</span>
+              <span>
+                <span class="ffi-person-name">@christineferea</span>
+                <span class="ffi-person-meta">Instagram comment</span>
+              </span>
+            </span>
+          </a>
+          <a class="ffi-quote" href="https://www.instagram.com/thatoneboyalex/" target="_blank" rel="noopener">
+            <p>&ldquo;Get it right, get it tight 🔥✨&rdquo;</p>
+            <span class="ffi-person">
+              <span class="ffi-avatar" aria-hidden="true">t</span>
+              <span>
+                <span class="ffi-person-name">@thatoneboyalex</span>
+                <span class="ffi-person-meta">Instagram comment</span>
+              </span>
+            </span>
+          </a>
+          <a class="ffi-quote" href="https://www.instagram.com/mr_olegun/" target="_blank" rel="noopener">
+            <p>&ldquo;I&rsquo;m not going to comment&hellip; you already know how I feel.&rdquo;</p>
+            <span class="ffi-person">
+              <span class="ffi-avatar" aria-hidden="true">m</span>
+              <span>
+                <span class="ffi-person-name">@mr_olegun</span>
+                <span class="ffi-person-meta">Instagram comment</span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <p class="ffi-feed-label">Latest From The Chair</p>
+
+      <div class="ffi-marquee">
+        <!--
+          These photos show instantly and stay as a backup.
+          Once the live feed loads, they are replaced with her latest Instagram posts.
+        -->
+        <div class="ffi-track">
+          <a class="ffi-tile" href="https://www.instagram.com/faith_fades/" target="_blank" rel="noopener">
+            <img src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa97f9e196984c40801ba0b.jpg" alt="Faith Fades client" loading="lazy" />
+          </a>
+          <a class="ffi-tile" href="https://www.instagram.com/faith_fades/" target="_blank" rel="noopener">
+            <img src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa97fb847854373d7ac9f35.jpg" alt="Faith Fades client" loading="lazy" />
+          </a>
+          <a class="ffi-tile" href="https://www.instagram.com/faith_fades/" target="_blank" rel="noopener">
+            <img src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa963b8cb032a1c8efdd1a4.jpg" alt="Faith Fades client" loading="lazy" />
+          </a>
+          <a class="ffi-tile" href="https://www.instagram.com/faith_fades/" target="_blank" rel="noopener">
+            <img src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa951319f8b31b6ab245474.jpg" alt="Faith Fades client" loading="lazy" />
+          </a>
+          <a class="ffi-tile" href="https://www.instagram.com/faith_fades/" target="_blank" rel="noopener">
+            <img src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa95003bc55ee8d56916de9.jpg" alt="Faith Fades client" loading="lazy" />
+          </a>
+          <a class="ffi-tile" href="https://www.instagram.com/faith_fades/" target="_blank" rel="noopener">
+            <img src="https://assets.cdn.filesafe.space/akKeFcXF2AF7rtTSJEpy/media/6aa94a66a19db9abccae5a50.jpg" alt="Faith Fades client" loading="lazy" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      /* ============================================================
+         LIVE FEED SETUP — paste ONE of these below, then save:
+
+         Option A (easiest, free): Behold.so
+           1. Sign up at https://behold.so and connect @faith_fades
+           2. Create a feed → choose "JSON"
+           3. Copy the feed URL (https://feeds.behold.so/XXXXXXXX)
+
+         Option B: Instagram API token (Business/Creator account)
+           https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,permalink,caption&limit=12&access_token=YOUR_TOKEN
+         ============================================================ */
+      var FEED_URL = "";
+      var MAX_POSTS = 12;
+      var PROFILE_URL = "https://www.instagram.com/faith_fades/";
+      var SECONDS_PER_TILE = 7;
+
+      var root = document.querySelector("#faith-fades-instagram");
+      if (!root) return;
+
+      var track = root.querySelector(".ffi-track");
+      if (!track) return;
+
+      var HEART =
+        '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.4 2.2 5 5.6 5c2 0 3.4 1 4.4 2.4C11 6 12.4 5 14.4 5 17.8 5 19.5 8.4 22 11.9 19.5 16.4 12 21 12 21z"/></svg>';
+      var PLAY =
+        '<svg class="ffi-badge" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+      var CAROUSEL =
+        '<svg class="ffi-badge" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 7h11a2 2 0 0 1 2 2v11H6a2 2 0 0 1-2-2V7zm4-4h10a2 2 0 0 1 2 2v10h-1.5V5.5H8V3z"/></svg>';
+
+      function escapeAttr(str) {
+        return String(str || "")
+          .replace(/&/g, "&amp;")
+          .replace(/"/g, "&quot;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      /* Turn Behold or Instagram API data into one simple format */
+      function normalize(data) {
+        var list = Array.isArray(data) ? data : (data && (data.posts || data.data)) || [];
+
+        return list
+          .map(function (p) {
+            var type = String(p.mediaType || p.media_type || "IMAGE").toUpperCase();
+            var isVideo = type === "VIDEO";
+            var image =
+              (p.sizes && p.sizes.medium && p.sizes.medium.mediaUrl) ||
+              (isVideo ? p.thumbnailUrl || p.thumbnail_url : p.mediaUrl || p.media_url) ||
+              p.thumbnailUrl ||
+              p.thumbnail_url;
+
+            return {
+              image: image,
+              link: p.permalink || PROFILE_URL,
+              caption: (p.prunedCaption || p.caption || "Faith Fades on Instagram").slice(0, 120),
+              type: type
+            };
+          })
+          .filter(function (p) {
+            return p.image;
+          })
+          .slice(0, MAX_POSTS);
+      }
+
+      function tileHTML(post, isCopy) {
+        var badge = post.type === "VIDEO" ? PLAY : post.type === "CAROUSEL_ALBUM" ? CAROUSEL : "";
+
+        return (
+          '<a class="ffi-tile" href="' + escapeAttr(post.link) + '" target="_blank" rel="noopener"' +
+          (isCopy ? ' aria-hidden="true" tabindex="-1"' : "") + ">" +
+          '<img src="' + escapeAttr(post.image) + '" alt="' + (isCopy ? "" : escapeAttr(post.caption)) +
+          '" loading="lazy" referrerpolicy="no-referrer" />' +
+          badge +
+          '<div class="ffi-tile-overlay">' + HEART + "</div>" +
+          "</a>"
+        );
+      }
+
+      /* Build the track twice so the marquee loops seamlessly */
+      function render(posts) {
+        var first = posts.map(function (p) { return tileHTML(p, false); }).join("");
+        var copy = posts.map(function (p) { return tileHTML(p, true); }).join("");
+
+        track.innerHTML = first + copy;
+        track.style.animationDuration = Math.max(posts.length * SECONDS_PER_TILE, 20) + "s";
+      }
+
+      /* Start with the backup photos */
+      var fallback = Array.prototype.map.call(track.querySelectorAll(".ffi-tile img"), function (img) {
+        return { image: img.getAttribute("src"), link: PROFILE_URL, caption: img.alt, type: "IMAGE" };
+      });
+      render(fallback);
+
+      if (!FEED_URL) return;
+
+      /* Pull the live feed (cached for 30 minutes to keep the page fast) */
+      var CACHE_KEY = "ffi-feed-cache";
+      var CACHE_MS = 30 * 60 * 1000;
+
+      try {
+        var cached = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
+        if (cached && cached.url === FEED_URL && Date.now() - cached.time < CACHE_MS && cached.posts.length) {
+          render(cached.posts);
+          return;
+        }
+      } catch (e) {}
+
+      fetch(FEED_URL)
+        .then(function (res) {
+          if (!res.ok) throw new Error("Feed error " + res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          var posts = normalize(data);
+          if (!posts.length) return;
+
+          render(posts);
+
+          try {
+            localStorage.setItem(
+              CACHE_KEY,
+              JSON.stringify({ url: FEED_URL, time: Date.now(), posts: posts })
+            );
+          } catch (e) {}
+        })
+        .catch(function () {
+          /* keep the backup photos if the feed can't load */
+        });
+    })();
+  </script>
+</div>
