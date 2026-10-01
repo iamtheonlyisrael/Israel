@@ -4,6 +4,27 @@ Brand: navy `#0B1F3A`, gold `#D4AF37`, white `#FFFFFF`, charcoal `#1F2933`.
 Fonts: Montserrat (headings), Inter (body).
 Dark gold for small text on white: `#7A6210`. Brand gold on white is too light to read.
 
+## About page
+
+| # | Section | Build | Notes |
+|---|---|---|---|
+| 1 | Top bar | Native | Navy `#0B1F3A` background, white 12px Montserrat, letter-spacing 2px (currently black on white) |
+| 2 | Header | Native | Same as every page: add a gold **Book Your AI Demo** button, nav text `#1F2933` |
+| 3 | Hero | **Custom code** | `about/01-hero.html` replaces the plain white "AI Automation That Keeps Business Moving." block |
+| 4 | Mission + Vision + Five principles | **Custom code** | `about/02-mission-values.html` replaces both sections. It fixes the duplicate "Simplicity" (5th is now **Partnership**), removes the empty 6th cell, and replaces the black borders and gray side strips with brand cards |
+| 5 | Why transportation-specific | **Custom code** | `about/03-why-transportation.html` keeps your copy and adds a Generic vs Luxon comparison and the "why operators choose Luxon" row |
+| 6 | CTA band | Native | Keep the navy box. Turn "BOOK YOUR AI DEMO" into a real gold button (gold `#D4AF37` background, navy text, 8px radius, about 54px tall) and add an outline button "See Luxon Limo AI in Action" |
+| 7 | Footer | Native | Navy background, white logo version, page links, contact and social icons |
+
+### Off-brand colors to fix on every page
+- **Black `#000` headings** → navy `#0B1F3A`
+- **Black 1px borders** around cards and grids → light gray `#E4E7EB` with 16–20px rounded corners, or no border
+- **Blue-gray side strips** (`#C9D4E0`-style) → remove
+- **Light gray body text** → `#3E4C59` (easier to read)
+- **Gold eyebrow labels on white** (`#D4AF37`) → `#7A6210`. Keep `#D4AF37` for labels on navy only
+- **Dark divider line** above the footer → remove, or use `#E4E7EB`
+- **Fonts:** Poppins / Roboto → Montserrat (headings) and Inter (body)
+
 ## Home page
 
 Most sections are built with native GHL elements so the client can edit them.
