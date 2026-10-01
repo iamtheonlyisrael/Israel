@@ -4,17 +4,38 @@ Brand: navy `#0B1F3A`, gold `#D4AF37`, white `#FFFFFF`, charcoal `#1F2933`.
 Fonts: Montserrat (headings), Inter (body).
 Dark gold for small text on white: `#7A6210`. Brand gold on white is too light to read.
 
+## Shared blocks (every page)
+
+| File | What it is |
+|---|---|
+| `shared/header.html` | Navy top bar + white header: logo, menu with a **Luxon Limo AI** dropdown (the 4 feature pages), gold **Book Your AI Demo** button. Turns into a ☰ menu on phones |
+| `shared/cta-band.html` | "Let's talk about your business." navy box with two real buttons |
+| `shared/footer.html` | Navy footer: logo, tagline, social icons, product links, company links, contact, legal links |
+
+**Before pasting, replace:**
+- `PASTE-LOGO-URL` (header): the regular logo, from the GHL media library
+- `PASTE-LIGHT-LOGO-URL` (footer): a **white/light** version of the logo, because the navy logo won't show on navy. Until then, a text logo appears
+- `PASTE-FACEBOOK-URL`, `PASTE-INSTAGRAM-URL`, `PASTE-LINKEDIN-URL`, `PASTE-YOUTUBE-URL`: delete any icon the client doesn't use
+- `[Business email]`, `[Business phone]`, `[hours]`
+- Page links (`/about`, `/ai-receptionist`, ...): change them if your GHL page paths are different
+
+In GHL, either paste the header and footer into each page's first and last section, or save them once as a **Global Section** so you only edit them in one place.
+
+## Full-page mockups
+
+`mockups/about.html` is the full About page (header, all sections, footer) in one file. Open it in any browser.
+Run `./build-mockups.sh` to rebuild it after editing a block.
+
 ## About page
 
 | # | Section | Build | Notes |
 |---|---|---|---|
-| 1 | Top bar | Native | Navy `#0B1F3A` background, white 12px Montserrat, letter-spacing 2px (currently black on white) |
-| 2 | Header | Native | Same as every page: add a gold **Book Your AI Demo** button, nav text `#1F2933` |
+| 1–2 | Top bar + header | **Custom code** | `shared/header.html` |
 | 3 | Hero | **Custom code** | `about/01-hero.html` replaces the plain white "AI Automation That Keeps Business Moving." block |
 | 4 | Mission + Vision + Five principles | **Custom code** | `about/02-mission-values.html` replaces both sections. It fixes the duplicate "Simplicity" (5th is now **Partnership**), removes the empty 6th cell, and replaces the black borders and gray side strips with brand cards |
 | 5 | Why transportation-specific | **Custom code** | `about/03-why-transportation.html` keeps your copy and adds a Generic vs Luxon comparison and the "why operators choose Luxon" row |
-| 6 | CTA band | Native | Keep the navy box. Turn "BOOK YOUR AI DEMO" into a real gold button (gold `#D4AF37` background, navy text, 8px radius, about 54px tall) and add an outline button "See Luxon Limo AI in Action" |
-| 7 | Footer | Native | Navy background, white logo version, page links, contact and social icons |
+| 6 | CTA band | **Custom code** | `shared/cta-band.html` |
+| 7 | Footer | **Custom code** | `shared/footer.html` |
 
 ### Off-brand colors to fix on every page
 - **Black `#000` headings** → navy `#0B1F3A`

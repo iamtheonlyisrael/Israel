@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Assembles the paste-ready blocks into full-page mockups you can open in a browser.
+# Usage: ./build-mockups.sh
+set -euo pipefail
+cd "$(dirname "$0")"
+
+page() { # page <output> <title> <block files...>
+  local out="$1" title="$2"; shift 2
+  {
+    printf '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+    printf '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+    printf '<title>%s</title>\n' "$title"
+    printf '<style>html{scroll-behavior:smooth}body{margin:0;background:#FFFFFF}</style>\n</head>\n<body>\n'
+    for f in "$@"; do printf '\n<!-- ===== %s ===== -->\n' "$f"; cat "$f"; done
+    printf '\n</body>\n</html>\n'
+  } > "$out"
+  echo "built $out"
+}
+
+page mockups/about.html "About Us | Luxon Digital" \
+  shared/header.html about/01-hero.html about/02-mission-values.html \
+  about/03-why-transportation.html shared/cta-band.html shared/footer.html
