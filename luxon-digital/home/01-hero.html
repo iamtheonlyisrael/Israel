@@ -1,0 +1,92 @@
+<div class="lxh">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+.lxh{background:#0B1F3A !important;color:#FFFFFF !important;font-family:'Inter',sans-serif !important;padding:80px 20px 110px !important;overflow:hidden !important;box-sizing:border-box !important;width:100% !important}
+.lxh *,.lxh *::before,.lxh *::after{box-sizing:border-box !important}
+.lxh h1,.lxh p{margin:0 !important;padding:0 !important}
+.lxh a{text-decoration:none !important}
+.lxh .lx-grid{max-width:1200px !important;margin:0 auto !important;display:grid !important;grid-template-columns:1.1fr .9fr !important;gap:60px !important;align-items:center !important}
+.lxh .lx-pill{display:inline-flex !important;align-items:center !important;gap:10px !important;padding:8px 14px !important;border:1px solid rgba(212,175,55,.45) !important;border-radius:999px !important;font-family:'Montserrat',sans-serif !important;font-weight:600 !important;font-size:12px !important;letter-spacing:.16em !important;color:#D4AF37 !important;text-transform:uppercase !important}
+.lxh .lx-pill i{width:8px !important;height:8px !important;border-radius:50% !important;background:#D4AF37 !important}
+.lxh h1{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(36px,5vw,62px) !important;line-height:1.06 !important;letter-spacing:-.02em !important;margin:26px 0 22px !important;color:#FFFFFF !important}
+.lxh h1 span{color:#D4AF37 !important}
+.lxh .lx-sub{font-size:clamp(16px,1.6vw,19px) !important;line-height:1.65 !important;color:rgba(255,255,255,.82) !important;max-width:560px !important}
+.lxh .lx-ctas{display:flex !important;flex-wrap:wrap !important;gap:14px !important;margin-top:34px !important}
+.lxh .lx-btn{display:inline-flex !important;align-items:center !important;gap:10px !important;min-height:56px !important;padding:0 28px !important;border-radius:8px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:15px !important;transition:transform .2s ease,box-shadow .2s ease !important}
+.lxh .lx-gold{background:#D4AF37 !important;color:#0B1F3A !important;box-shadow:0 10px 30px rgba(212,175,55,.3) !important}
+.lxh .lx-gold:hover{transform:translateY(-2px) !important;box-shadow:0 16px 40px rgba(212,175,55,.45) !important}
+.lxh .lx-ghost{border:1px solid rgba(255,255,255,.35) !important;color:#FFFFFF !important}
+.lxh .lx-ghost:hover{background:rgba(255,255,255,.06) !important}
+.lxh .lx-checks{display:flex !important;flex-wrap:wrap !important;gap:10px 24px !important;margin-top:32px !important;font-size:14px !important;color:rgba(255,255,255,.82) !important}
+.lxh .lx-checks span{display:flex !important;align-items:center !important;gap:8px !important}
+/* visual */
+.lxh .lx-vis{position:relative !important;display:flex !important;justify-content:center !important;padding:56px 0 20px !important}
+.lxh .lx-phone{width:300px !important;max-width:100% !important;border-radius:44px !important;background:#050E1C !important;padding:12px !important;border:1px solid rgba(212,175,55,.4) !important;box-shadow:0 40px 90px rgba(0,0,0,.5) !important}
+.lxh .lx-screen{border-radius:34px !important;background:#F6F7F9 !important;overflow:hidden !important}
+.lxh .lx-head{background:#FFFFFF !important;padding:22px 18px 14px !important;border-bottom:1px solid #E4E7EB !important;display:flex !important;align-items:center !important;gap:10px !important;color:#1F2933 !important}
+.lxh .lx-av{width:36px !important;height:36px !important;border-radius:50% !important;background:#0B1F3A !important;color:#D4AF37 !important;display:flex !important;align-items:center !important;justify-content:center !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:14px !important}
+.lxh .lx-msgs{padding:16px 14px 20px !important;display:flex !important;flex-direction:column !important;gap:10px !important;font-size:13px !important;line-height:1.45 !important}
+.lxh .lx-missed{align-self:center !important;font-size:11px !important;color:#52606D !important}
+.lxh .lx-in{align-self:flex-start !important;max-width:85% !important;background:#0B1F3A !important;color:#FFFFFF !important;padding:10px 12px !important;border-radius:16px 16px 16px 4px !important;opacity:0;animation:lxPop .5s ease forwards}
+.lxh .lx-out{align-self:flex-end !important;max-width:85% !important;background:#FFFFFF !important;border:1px solid #E4E7EB !important;color:#1F2933 !important;padding:10px 12px !important;border-radius:16px 16px 4px 16px !important;opacity:0;animation:lxPop .5s ease forwards}
+.lxh .d1{animation-delay:.4s}.lxh .d2{animation-delay:1.2s}.lxh .d3{animation-delay:2s}.lxh .d4{animation-delay:2.8s}
+.lxh .lx-trip{position:absolute !important;right:0 !important;bottom:-4px !important;width:235px !important;background:#FFFFFF !important;color:#1F2933 !important;border-radius:16px !important;padding:16px 18px !important;box-shadow:0 24px 60px rgba(0,0,0,.35) !important;border-top:3px solid #D4AF37 !important;opacity:0;animation:lxPop .6s ease 3.4s forwards}
+.lxh .lx-trip b{font-family:'Montserrat',sans-serif !important;font-size:13px !important}
+.lxh .lx-tag{font-size:11px !important;font-weight:600 !important;color:#0B6B3A !important;background:#E3F4EA !important;padding:3px 8px !important;border-radius:999px !important}
+.lxh .lx-rows{display:grid !important;grid-template-columns:70px 1fr !important;gap:5px !important;font-size:12.5px !important;margin-top:10px !important}
+.lxh .lx-rows span:nth-child(odd){color:#52606D !important}
+.lxh .lx-rows span:nth-child(even){font-weight:600 !important}
+.lxh .lx-fast{position:absolute !important;left:0 !important;top:0 !important;background:#0F2647 !important;border:1px solid rgba(212,175,55,.45) !important;border-radius:14px !important;padding:12px 14px !important;display:flex !important;align-items:center !important;gap:10px !important;box-shadow:0 18px 40px rgba(0,0,0,.35) !important}
+.lxh .lx-fast em{width:34px !important;height:34px !important;border-radius:10px !important;background:#D4AF37 !important;display:flex !important;align-items:center !important;justify-content:center !important}
+@keyframes lxPop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (max-width:900px){
+  .lxh .lx-grid{grid-template-columns:1fr !important;gap:48px !important}
+  .lxh{padding:56px 18px 80px !important}
+}
+@media (max-width:520px){
+  .lxh .lx-fast{display:none !important}
+  .lxh .lx-trip{position:relative !important;right:auto !important;bottom:auto !important;margin:-30px auto 0 !important}
+  .lxh .lx-vis{flex-direction:column !important;align-items:center !important}
+  .lxh .lx-btn{width:100% !important;justify-content:center !important}
+}
+@media (prefers-reduced-motion:reduce){.lxh .lx-in,.lxh .lx-out,.lxh .lx-trip{animation:none !important;opacity:1 !important}}
+</style>
+
+<div class="lx-grid">
+  <div>
+    <span class="lx-pill"><i></i>Luxon Limo AI · For transportation companies</span>
+    <h1>Never Lose Another Customer Because You <span>Missed the Call.</span></h1>
+    <p class="lx-sub">Luxon Digital helps limo and private transportation companies answer inquiries, capture trip information, follow up automatically, and generate more reviews with done-for-you AI automation.</p>
+    <div class="lx-ctas">
+      <a class="lx-btn lx-gold" href="/contact">Book Your AI Demo
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="lx-btn lx-ghost" href="/demo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#D4AF37" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>See Luxon Limo AI in Action</a>
+    </div>
+    <div class="lx-checks">
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Done-for-you setup</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Human handoff built in</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Works with your booking software</span>
+    </div>
+  </div>
+
+  <div class="lx-vis" aria-hidden="true">
+    <div class="lx-phone"><div class="lx-screen">
+      <div class="lx-head"><div class="lx-av">L</div><div><div style="font-weight:600;font-size:14px">Your Limo Co.</div><div style="font-size:11px;color:#52606D">Text message · 11:42 PM</div></div></div>
+      <div class="lx-msgs">
+        <div class="lx-missed">✕ Missed call · (555) 214-0193</div>
+        <div class="lx-in d1">Hi, this is Your Limo Co. Sorry we missed your call! Where can we pick you up, and when?</div>
+        <div class="lx-out d2">JFK Terminal 4, Saturday 6:30 PM. 3 people, going to Midtown.</div>
+        <div class="lx-in d3">Got it. SUV or sedan? Our team will confirm your quote shortly.</div>
+        <div class="lx-out d4">SUV please!</div>
+      </div>
+    </div></div>
+    <div class="lx-fast"><em><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></em>
+      <div><div style="font-size:12px;color:rgba(255,255,255,.75)">Replied in</div><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px">under a minute</div></div></div>
+    <div class="lx-trip">
+      <div style="display:flex;justify-content:space-between;align-items:center"><b>Trip captured</b><span class="lx-tag">New lead</span></div>
+      <div class="lx-rows"><span>Pickup</span><span>JFK Terminal 4</span><span>Drop-off</span><span>Midtown</span><span>When</span><span>Sat · 6:30 PM</span><span>Party</span><span>3 passengers</span><span>Vehicle</span><span>SUV</span></div>
+    </div>
+  </div>
+</div>
+</div>
