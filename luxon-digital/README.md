@@ -64,13 +64,11 @@ Run `./build-mockups.sh` to rebuild it after editing a block.
 
 ## Home page
 
-Most sections are built with native GHL elements so the client can edit them.
-Only two sections use a Custom Code element.
+Custom code is used where it adds the most visual impact. The rest stays native GHL so the client can edit it.
 
 | # | Section | Build | Notes |
 |---|---|---|---|
-| 1 | Top bar | Native | Navy background, white 12px Montserrat text, letter-spacing 2px: "AI AUTOMATION THAT KEEPS BUSINESS MOVING" |
-| 2 | Header | Native | Add a gold button on the right: **Book Your AI Demo** (navy text, 8px radius) |
+| 1–2 | Top bar + header | **Custom code** | `shared/header.html` |
 | 3 | Hero | **Custom code** | `home/01-hero.html` |
 | 4 | Missed call vs. Luxon | **Custom code** | `home/02-missed-call.html` |
 | 5 | How it works | Native | Light gray `#F6F7F9` section, 4 columns: 01 Answers · 02 Captures the trip · 03 Follows up · 04 Helps convert. Big gold numbers, white cards; make the 4th card navy |
@@ -81,11 +79,6 @@ Only two sections use a Custom Code element.
 | 10 | Founder story (replaces testimonials) | **Custom code** | `home/03-founder-story.html` |
 | 11 | CTA band | **Custom code** | `shared/cta-band.html` |
 | 12 | Footer | **Custom code** | `shared/footer.html` |
-| – | (old footer row) | Native | Add columns: Luxon Limo AI pages · Company pages · contact + social icons. Navy background |
-
-Move **Our Mission / Our Vision** and the **values** grid to the About page.
-On the values grid, the 5th card repeats "Simplicity". It should be **Partnership**:
-"Work alongside clients and support their long-term growth." Use 5 equal columns, or 3 + 2 centered, so there's no empty cell.
 
 ## Pasting a custom code block
 
