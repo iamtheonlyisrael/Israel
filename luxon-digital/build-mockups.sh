@@ -20,3 +20,7 @@ page() { # page <output> <title> <block files...>
 page mockups/about.html "About Us | Luxon Digital" \
   shared/header.html about/01-hero.html about/02-mission-values.html \
   about/03-why-transportation.html shared/cta-band.html shared/footer.html
+
+page mockups/home.html "Luxon Digital | AI Automation for Limo & Transportation Companies" \
+  shared/header.html home/01-hero.html home/02-missed-call.html home/03-founder-story.html \
+  shared/cta-band.html shared/footer.html

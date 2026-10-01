@@ -4,6 +4,22 @@ Brand: navy `#0B1F3A`, gold `#D4AF37`, white `#FFFFFF`, charcoal `#1F2933`.
 Fonts: Montserrat (headings), Inter (body).
 Dark gold for small text on white: `#7A6210`. Brand gold on white is too light to read.
 
+## Updates from the Oct 1 client call
+
+- **CTAs, site-wide:** only two labels: **Book Your AI Demo** (gold gradient button) and **Watch the Demo Here** (gold-outline button). Every code block now uses these. Change any native GHL buttons to match, including the CTA on the Automated Lead Follow-Up page.
+- **Gold gradient button:** `linear-gradient(135deg, #B8922A 0%, #D4AF37 40%, #F5DC85 70%, #D4AF37 100%)`, navy text `#0B1F3A`. The shine slides across on hover.
+- **No unrealistic numbers or promises:** the home hero badge now says "Missed call, answered automatically" (it was "Replied in under a minute"). Remove "6 missed callbacks" and similar stats from any native sections.
+- **Home testimonials:** replace the empty testimonials section with `home/03-founder-story.html` (founder photo + story + 3 "behind the technology" cards). It needs the founder's name, photo and story.
+- **Top bar:** "Founding Partner Spots Open" was replaced with "Done-For-You AI for Limo & Chauffeur Companies" (not a confirmed offer).
+
+### Google Ads safety checklist (the client had a rejection before)
+- [ ] Every code block was tested in a browser: no JavaScript errors, no failed requests, no sideways scrolling on phones.
+- [ ] No placeholder images load until a real URL is pasted. The logo and founder photo `<img>` lines are commented out.
+- [ ] Before publishing, replace or delete **every** `PASTE-...-URL` link (social icons). A placeholder link leads to a broken page.
+- [ ] Fill in or remove `[Business email]`, `[Business phone]`, `[hours]`, `[Founder name]`, `[Founder story]`.
+- [ ] Privacy Policy and Terms pages must be live and linked in the footer before running ads.
+- [ ] Each button links to a page that exists (`/contact`, `/demo`, and so on).
+
 ## Shared blocks (every page)
 
 | File | What it is |
@@ -23,7 +39,7 @@ In GHL, either paste the header and footer into each page's first and last secti
 
 ## Full-page mockups
 
-`mockups/about.html` is the full About page (header, all sections, footer) in one file. Open it in any browser.
+`mockups/home.html` and `mockups/about.html` are full pages (header, all sections, footer) in one file. Open it in any browser.
 Run `./build-mockups.sh` to rebuild it after editing a block.
 
 ## About page
@@ -62,8 +78,10 @@ Only two sections use a Custom Code element.
 | 7 | Who it's for | Native | Navy section, 3 cards (`#0F2647`, thin gold border): Owner-Operator · Growing Fleet Owner · Operations Manager |
 | 8 | Why transportation-specific | Native | Keep the existing copy. Put it in 2 columns with a photo on the right (black car / chauffeur) |
 | 9 | Guardrails | Native | "It never guesses. It hands off." plus 4 small cards: Never invents prices · A person when it matters · You approve it first · Tested before go-live |
-| 10 | CTA band | Native | Keep it. Make "Book Your AI Demo" a real gold button and add a second outline button "See Luxon Limo AI in Action" |
-| 11 | Footer | Native | Add columns: Luxon Limo AI pages · Company pages · contact + social icons. Navy background |
+| 10 | Founder story (replaces testimonials) | **Custom code** | `home/03-founder-story.html` |
+| 11 | CTA band | **Custom code** | `shared/cta-band.html` |
+| 12 | Footer | **Custom code** | `shared/footer.html` |
+| – | (old footer row) | Native | Add columns: Luxon Limo AI pages · Company pages · contact + social icons. Navy background |
 
 Move **Our Mission / Our Vision** and the **values** grid to the About page.
 On the values grid, the 5th card repeats "Simplicity". It should be **Partnership**:
