@@ -15,8 +15,30 @@
 .lxhd{width:100% !important;font-family:'Inter',sans-serif !important;box-sizing:border-box !important;position:relative !important;z-index:50 !important}
 .lxhd *,.lxhd *::before,.lxhd *::after{box-sizing:border-box !important}
 .lxhd a{text-decoration:none !important}
-.lxhd .lx-top{background:#0B1F3A !important;color:#FFFFFF !important;text-align:center !important;padding:10px 16px !important;font-family:'Montserrat',sans-serif !important;font-weight:600 !important;font-size:12px !important;letter-spacing:.2em !important;text-transform:uppercase !important}
-.lxhd .lx-top b{color:#D4AF37 !important;font-weight:700 !important}
+/* ---------- billboard top bar ---------- */
+.lxhd .lx-top{position:relative !important;display:block !important;background:#071528 !important;padding:7px 0 !important;color:#FFFFFF !important;border-bottom:1px solid rgba(212,175,55,.55) !important;box-shadow:inset 0 -12px 24px rgba(212,175,55,.08) !important;overflow:hidden !important}
+.lxhd .lx-top:hover .lx-tpanel{filter:brightness(1.08) !important}
+.lxhd .lx-tbulbs{position:absolute !important;left:0 !important;right:0 !important;height:6px !important;pointer-events:none !important;z-index:3 !important;background:radial-gradient(circle at 9px 50%,#FFF3C4 0 2.2px,transparent 3px),radial-gradient(circle at 27px 50%,rgba(212,175,55,.35) 0 2px,transparent 2.8px) !important;background-size:36px 100% !important;background-repeat:repeat-x !important;filter:drop-shadow(0 0 3px rgba(255,215,106,.9)) !important;animation:lxtChase .8s steps(2) infinite}
+.lxhd .lx-tbulbs.t{top:1px !important}
+.lxhd .lx-tbulbs.b{bottom:1px !important;animation-direction:reverse}
+.lxhd .lx-tpanel{position:relative !important;max-width:1240px !important;margin:0 auto !important;height:34px !important;display:flex !important;perspective:2400px !important;container-type:inline-size !important;transition:filter .2s !important}
+.lxhd .lx-tslat{position:relative !important;flex:1 1 0 !important;height:100% !important;transform-style:preserve-3d !important;animation:lxtTri 12s cubic-bezier(.75,0,.25,1) infinite;animation-delay:calc(var(--i) * .05s)}
+.lxhd .lx-tface{position:absolute !important;inset:0 !important;overflow:hidden !important;backface-visibility:hidden !important;-webkit-backface-visibility:hidden !important;transform:rotateY(calc(var(--k) * 120deg)) translateZ(calc(6.25cqw * .2887)) !important}
+.lxhd .lx-tmsg{position:absolute !important;top:0 !important;bottom:0 !important;width:1600% !important;left:calc(var(--i) * -100%) !important;display:flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:clamp(10px,2.6cqw,13px) !important;letter-spacing:.18em !important;text-transform:uppercase !important;white-space:nowrap !important}
+.lxhd .lx-tmsg em{font-style:normal !important}
+.lxhd .lx-tmsg .s{display:none !important}
+.lxhd .lx-tmsg.m0{background:#0B1F3A !important;color:#FFFFFF !important}
+.lxhd .lx-tmsg.m0 em{color:#D4AF37 !important}
+.lxhd .lx-tmsg.m1{background:#D4AF37 !important;color:#0B1F3A !important}
+.lxhd .lx-tmsg.m2{background:#FFFFFF !important;color:#0B1F3A !important}
+.lxhd .lx-tmsg.m2 em{color:#7A6210 !important}
+.lxhd .lx-tmsg i{display:inline-block !important;width:6px !important;height:6px !important;transform:rotate(45deg) !important;background:currentColor !important;opacity:.55 !important;flex:0 0 6px !important}
+.lxhd .lx-tglare{position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:2 !important;background:linear-gradient(100deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%) !important;background-size:300% 100% !important;animation:lxtGlare 6s ease-in-out infinite;mix-blend-mode:screen}
+@container (max-width:640px){.lxhd .lx-tmsg .l{display:none !important}.lxhd .lx-tmsg .s{display:inline !important}.lxhd .lx-tmsg{letter-spacing:.12em !important}}
+@keyframes lxtTri{0%,27%{transform:rotateY(0)}33.33%,60%{transform:rotateY(-120deg)}66.66%,93%{transform:rotateY(-240deg)}100%{transform:rotateY(-360deg)}}
+@keyframes lxtChase{to{background-position:36px 0}}
+@keyframes lxtGlare{0%,50%{background-position:120% 0}100%{background-position:-120% 0}}
+@media (prefers-reduced-motion:reduce){.lxhd .lx-tslat,.lxhd .lx-tbulbs,.lxhd .lx-tglare{animation:none !important}}
 .lxhd .lx-bar{background:#FFFFFF !important;border-bottom:1px solid #E4E7EB !important}
 .lxhd .lx-in{max-width:1200px !important;margin:0 auto !important;padding:14px 20px !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:24px !important}
 .lxhd .lx-logo{display:flex !important;align-items:center !important;gap:10px !important;color:#0B1F3A !important}
@@ -46,11 +68,18 @@
   .lxhd .lx-mob a{display:block !important;padding:14px 4px !important;border-bottom:1px solid #F0F2F5 !important;color:#1F2933 !important;font-weight:500 !important;font-size:16px !important}
   .lxhd .lx-mob .lx-sub{padding-left:18px !important;font-size:15px !important;color:#3E4C59 !important}
   .lxhd .lx-mob a.lx-cta{display:flex !important;justify-content:center !important;margin-top:16px !important;border:0 !important;color:#0B1F3A !important;font-weight:700 !important;font-size:15px !important}
-  .lxhd .lx-top{font-size:10.5px !important;letter-spacing:.14em !important}
 }
 </style>
 
-<div class="lx-top">AI Automation That <b>Keeps Business Moving</b></div>
+<!-- Billboard top bar: edit the 3 messages in the script at the bottom of this block -->
+<a class="lx-top" href="/contact" aria-label="AI Automation That Keeps Business Moving. Book Your AI Demo">
+  <span class="lx-tbulbs t" aria-hidden="true"></span>
+  <span class="lx-tpanel" aria-hidden="true">
+    <span class="lx-tmsg m0" style="width:100% !important;left:0 !important"><span class="l">AI Automation That <em>Keeps Business Moving</em></span><span class="s">AI That <em>Keeps Business Moving</em></span></span>
+  </span>
+  <span class="lx-tglare" aria-hidden="true"></span>
+  <span class="lx-tbulbs b" aria-hidden="true"></span>
+</a>
 <input type="checkbox" id="lx-tog" class="lx-tog" aria-hidden="true">
 <div class="lx-bar">
   <div class="lx-in">
@@ -97,179 +126,83 @@
   <a href="/contact">Contact</a>
   <a class="lx-cta" href="/contact">Book Your AI Demo</a>
 </div>
+<script>
+(function () {
+  /* ---- Top bar billboard messages (exactly 3). "long" = desktop, "short" = phones. <em> = gold words ---- */
+  var MESSAGES = [
+    { long: 'AI Automation That <em>Keeps Business Moving</em>',            short: 'AI That <em>Keeps Business Moving</em>' },
+    { long: 'Never Miss Another Call <i></i> Never Lose Another Reservation', short: 'Never Miss Another Call' },
+    { long: 'Founding Partner Spots Open <i></i> <em>Book Your AI Demo &rarr;</em>', short: '<em>Book Your AI Demo &rarr;</em>' }
+  ];
+  var SLATS = 16;
+  var panels = document.querySelectorAll('.lxhd .lx-tpanel:not([data-built])');
+  for (var p = 0; p < panels.length; p++) {
+    var panel = panels[p], html = '';
+    panel.setAttribute('data-built', '1');
+    for (var i = 0; i < SLATS; i++) {
+      html += '<span class="lx-tslat" style="--i:' + i + '">';
+      for (var k = 0; k < 3; k++) {
+        html += '<span class="lx-tface" style="--k:' + k + '"><span class="lx-tmsg m' + k + '">' +
+          '<span class="l">' + MESSAGES[k].long + '</span><span class="s">' + MESSAGES[k].short + '</span></span></span>';
+      }
+      html += '</span>';
+    }
+    panel.innerHTML = html;
+  }
+})();
+</script>
 </div>
 
 <!-- ===== about/01-hero.html ===== -->
 <div class="lxa">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
-.lxa{position:relative !important;background:radial-gradient(ellipse at 15% 0%,rgba(30,70,130,.45),rgba(11,31,58,0) 55%),#0B1F3A !important;color:#FFFFFF !important;font-family:'Inter',sans-serif !important;padding:88px 20px 120px !important;box-sizing:border-box !important;width:100% !important;overflow:hidden !important}
+.lxa{background:#0B1F3A !important;color:#FFFFFF !important;font-family:'Inter',sans-serif !important;padding:88px 20px 100px !important;box-sizing:border-box !important;width:100% !important;overflow:hidden !important}
 .lxa *,.lxa *::before,.lxa *::after{box-sizing:border-box !important}
 .lxa h1,.lxa p{margin:0 !important;padding:0 !important}
 .lxa a{text-decoration:none !important}
-.lxa .lx-grid{position:relative !important;z-index:2 !important;max-width:1200px !important;margin:0 auto !important;display:grid !important;grid-template-columns:1fr 1.05fr !important;gap:56px !important;align-items:center !important}
-
-/* ---------- copy ---------- */
+.lxa .lx-grid{max-width:1200px !important;margin:0 auto !important;display:grid !important;grid-template-columns:1.1fr .9fr !important;gap:60px !important;align-items:center !important}
 .lxa .lx-eye{display:inline-flex !important;align-items:center !important;gap:12px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:12px !important;letter-spacing:.24em !important;color:#D4AF37 !important;text-transform:uppercase !important}
 .lxa .lx-eye::before{content:'' !important;width:28px !important;height:2px !important;background:#D4AF37 !important}
-.lxa h1{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(36px,4.6vw,56px) !important;line-height:1.07 !important;letter-spacing:-.02em !important;margin:22px 0 20px !important;color:#FFFFFF !important}
-.lxa h1 .lx-shine{background:linear-gradient(100deg,#B8922A 0%,#D4AF37 35%,#FFF0B8 50%,#D4AF37 65%,#B8922A 100%) !important;background-size:220% auto !important;-webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;-webkit-text-fill-color:transparent !important;animation:lxShine 5s linear infinite}
-.lxa .lx-sub{font-size:clamp(16px,1.6vw,19px) !important;line-height:1.65 !important;color:rgba(255,255,255,.82) !important;max-width:520px !important}
+.lxa h1{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(36px,4.8vw,58px) !important;line-height:1.07 !important;letter-spacing:-.02em !important;margin:22px 0 20px !important;color:#FFFFFF !important}
+.lxa h1 span{color:#D4AF37 !important}
+.lxa .lx-sub{font-size:clamp(16px,1.6vw,19px) !important;line-height:1.65 !important;color:rgba(255,255,255,.82) !important;max-width:540px !important}
 .lxa .lx-ctas{display:flex !important;flex-wrap:wrap !important;gap:14px !important;margin-top:32px !important}
-.lxa .lx-btn{display:inline-flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;min-height:54px !important;padding:0 26px !important;border-radius:8px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:15px !important;transition:transform .2s ease,box-shadow .2s ease !important}
+.lxa .lx-btn{display:inline-flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;min-height:54px !important;padding:0 26px !important;border-radius:8px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:15px !important;transition:transform .2s ease !important}
 .lxa .lx-btn:hover{transform:translateY(-2px) !important}
-.lxa .lx-gold{background:#D4AF37 !important;color:#0B1F3A !important;box-shadow:0 10px 30px rgba(212,175,55,.3) !important;animation:lxPulse 2.8s ease-in-out infinite}
+.lxa .lx-gold{background:#D4AF37 !important;color:#0B1F3A !important}
 .lxa .lx-ghost{border:1px solid rgba(255,255,255,.35) !important;color:#FFFFFF !important}
-.lxa .lx-serve{margin-top:36px !important;padding-top:24px !important;border-top:1px solid rgba(255,255,255,.12) !important}
-.lxa .lx-serve-t{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:11px !important;letter-spacing:.2em !important;color:#D4AF37 !important;margin-bottom:12px !important}
-.lxa .lx-chips{display:flex !important;flex-wrap:wrap !important;gap:8px !important}
-.lxa .lx-chip{display:inline-flex !important;align-items:center !important;gap:8px !important;padding:8px 14px !important;border-radius:999px !important;background:rgba(255,255,255,.05) !important;border:1px solid rgba(212,175,55,.3) !important;font-size:13.5px !important;color:rgba(255,255,255,.9) !important}
-.lxa .lx-chip::before{content:'' !important;width:6px !important;height:6px !important;border-radius:50% !important;background:#D4AF37 !important}
-.lxa .lx-fit{margin-top:14px !important;font-size:13.5px !important;color:rgba(255,255,255,.7) !important}
-.lxa .lx-fit b{color:#FFFFFF !important}
-
-/* ---------- billboard ---------- */
-.lxa .lx-bb{position:relative !important;padding-bottom:120px !important}
-.lxa .lx-frame{position:relative !important;z-index:2 !important;padding:22px !important;border-radius:14px !important;background:linear-gradient(180deg,#14305A,#0A1A31) !important;border:2px solid #D4AF37 !important;box-shadow:0 0 0 6px #08162B,0 0 60px rgba(212,175,55,.25),0 40px 90px rgba(0,0,0,.55) !important}
-.lxa .lx-bulbs{position:absolute !important;pointer-events:none !important;filter:drop-shadow(0 0 4px rgba(255,215,106,.9)) !important}
-.lxa .lx-bulbs.h{left:14px !important;right:14px !important;height:14px !important;background:radial-gradient(circle at 11px 50%,#FFF3C4 0 3.5px,transparent 4.5px),radial-gradient(circle at 33px 50%,rgba(212,175,55,.35) 0 3px,transparent 4px) !important;background-size:44px 100% !important;background-repeat:repeat-x !important;animation:lxChaseX .9s steps(2) infinite}
-.lxa .lx-bulbs.v{top:14px !important;bottom:14px !important;width:14px !important;background:radial-gradient(circle at 50% 11px,#FFF3C4 0 3.5px,transparent 4.5px),radial-gradient(circle at 50% 33px,rgba(212,175,55,.35) 0 3px,transparent 4px) !important;background-size:100% 44px !important;background-repeat:repeat-y !important;animation:lxChaseY .9s steps(2) infinite}
-.lxa .lx-bulbs.t{top:4px !important}.lxa .lx-bulbs.b{bottom:4px !important;animation-direction:reverse}
-.lxa .lx-bulbs.l{left:4px !important;animation-direction:reverse}.lxa .lx-bulbs.r{right:4px !important}
-
-.lxa .lx-panel{position:relative !important;height:clamp(190px,26vw,260px) !important;display:flex !important;perspective:1100px !important;container-type:inline-size !important;border-radius:6px !important;overflow:hidden !important;background:#061426 !important}
-.lxa .lx-slat{position:relative !important;flex:1 1 0 !important;height:100% !important;transform-style:preserve-3d !important;animation:lxTri 10.5s cubic-bezier(.75,0,.25,1) infinite;animation-delay:calc(var(--i) * .07s)}
-.lxa .lx-face{position:absolute !important;inset:0 !important;overflow:hidden !important;backface-visibility:hidden !important;-webkit-backface-visibility:hidden !important;transform:rotateY(calc(var(--k) * 120deg)) translateZ(calc(10cqw * .2887)) !important}
-.lxa .lx-msg{position:absolute !important;top:0 !important;bottom:0 !important;width:1000% !important;left:calc(var(--i) * -100%) !important;display:flex !important;flex-direction:column !important;justify-content:center !important;padding:0 7cqw !important}
-.lxa .lx-msg .k{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:clamp(10px,2.3cqw,13px) !important;letter-spacing:.24em !important;text-transform:uppercase !important;margin-bottom:2cqw !important}
-.lxa .lx-msg b{display:block !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(24px,7.6cqw,46px) !important;line-height:1.05 !important;letter-spacing:-.01em !important}
-.lxa .lx-msg b span{display:block !important}
-.lxa .lx-msg.m0{background:#0B1F3A !important;color:#FFFFFF !important}
-.lxa .lx-msg.m0 .k,.lxa .lx-msg.m0 b span:last-child{color:#D4AF37 !important}
-.lxa .lx-msg.m1{background:#D4AF37 !important;color:#0B1F3A !important}
-.lxa .lx-msg.m1 .k{color:#0B1F3A !important;opacity:.75}
-.lxa .lx-msg.m2{background:#FFFFFF !important;color:#0B1F3A !important}
-.lxa .lx-msg.m2 .k{color:#7A6210 !important}
-.lxa .lx-msg.m2 b span:last-child{color:#7A6210 !important}
-.lxa .lx-msg::after{content:'' !important;position:absolute !important;right:6cqw !important;top:50% !important;width:16cqw !important;height:16cqw !important;transform:translateY(-50%) !important;border-radius:50% !important;border:2px solid currentColor !important;opacity:.12 !important}
-.lxa .lx-glare{position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:3 !important;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.22) 48%,transparent 60%) !important;background-size:300% 100% !important;animation:lxGlare 5.5s ease-in-out infinite;mix-blend-mode:screen}
-.lxa .lx-dots{display:flex !important;justify-content:center !important;gap:8px !important;margin-top:14px !important;position:relative !important;z-index:2 !important}
-.lxa .lx-dots i{width:26px !important;height:4px !important;border-radius:4px !important;background:rgba(255,255,255,.18) !important;overflow:hidden !important;position:relative !important}
-.lxa .lx-dots i::after{content:'' !important;position:absolute !important;inset:0 !important;background:#D4AF37 !important;transform:scaleX(0);transform-origin:left !important;animation:lxDot 10.5s linear infinite;animation-delay:calc(var(--d) * 3.5s)}
-
-/* posts, lamps, beams */
-.lxa .lx-posts{position:absolute !important;left:0 !important;right:0 !important;bottom:0 !important;height:120px !important;display:flex !important;justify-content:space-between !important;padding:0 22% !important;z-index:1 !important}
-.lxa .lx-posts span{width:16px !important;height:100% !important;background:linear-gradient(90deg,#0E2443,#1A3A68 50%,#0E2443) !important;border-left:1px solid rgba(212,175,55,.35) !important;border-right:1px solid rgba(212,175,55,.2) !important}
-.lxa .lx-posts::after{content:'' !important;position:absolute !important;left:20% !important;right:20% !important;top:36px !important;height:8px !important;background:#132D52 !important;border-top:1px solid rgba(212,175,55,.35) !important}
-.lxa .lx-lamp{position:absolute !important;top:calc(100% - 132px) !important;width:34px !important;height:12px !important;border-radius:4px 4px 8px 8px !important;background:#1E3A66 !important;border-top:2px solid #D4AF37 !important;z-index:4 !important}
-.lxa .lx-lamp.a{left:24% !important}.lxa .lx-lamp.b{right:24% !important}
-.lxa .lx-lamp::before{content:'' !important;position:absolute !important;bottom:100% !important;left:50% !important;width:260px !important;height:300px !important;transform:translateX(-50%) !important;background:linear-gradient(0deg,rgba(255,236,170,.2),rgba(255,236,170,0) 75%) !important;clip-path:polygon(46% 100%,54% 100%,100% 0,0 0) !important;pointer-events:none !important;mix-blend-mode:screen;animation:lxFlicker 6s ease-in-out infinite}
-.lxa .lx-lamp.b::before{animation-delay:1.7s}
-
-/* headlight streaks */
-.lxa .lx-road{position:absolute !important;left:0 !important;right:0 !important;bottom:0 !important;height:140px !important;z-index:1 !important;pointer-events:none !important;background:linear-gradient(0deg,rgba(6,20,38,.9),rgba(6,20,38,0)) !important}
-.lxa .lx-road i{position:absolute !important;left:-30% !important;height:2px !important;width:180px !important;border-radius:2px !important;background:linear-gradient(90deg,rgba(255,255,255,0),#FFF6D6) !important;box-shadow:0 0 12px rgba(255,230,160,.8) !important;animation:lxDrive linear infinite}
-.lxa .lx-road i.red{background:linear-gradient(270deg,rgba(255,80,80,0),#FF6B6B) !important;box-shadow:0 0 12px rgba(255,90,90,.7) !important;animation-name:lxDriveBack}
-.lxa .lx-road i:nth-child(1){bottom:28px !important;animation-duration:5.5s}
-.lxa .lx-road i:nth-child(2){bottom:44px !important;width:120px !important;animation-duration:7s;animation-delay:2s}
-.lxa .lx-road i:nth-child(3){bottom:18px !important;animation-duration:6.2s;animation-delay:3.4s}
-.lxa .lx-road i:nth-child(4){bottom:56px !important;width:90px !important;animation-duration:8s;animation-delay:1s}
-.lxa .lx-road i:nth-child(5){bottom:36px !important;width:140px !important;animation-duration:6.8s;animation-delay:4.2s}
-.lxa .lx-stars{position:absolute !important;inset:0 !important;z-index:0 !important;pointer-events:none !important;background-image:radial-gradient(1.5px 1.5px at 12% 18%,rgba(255,255,255,.5),transparent),radial-gradient(1.5px 1.5px at 38% 8%,rgba(212,175,55,.7),transparent),radial-gradient(1px 1px at 62% 22%,rgba(255,255,255,.4),transparent),radial-gradient(1.5px 1.5px at 84% 12%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 92% 40%,rgba(212,175,55,.6),transparent),radial-gradient(1px 1px at 6% 52%,rgba(255,255,255,.35),transparent);animation:lxTwinkle 4s ease-in-out infinite alternate}
-
-.lxa .lx-sr{position:absolute !important;width:1px !important;height:1px !important;overflow:hidden !important;clip:rect(0 0 0 0) !important;white-space:nowrap !important}
-
-@keyframes lxTri{0%,27%{transform:rotateY(0)}33.33%,60%{transform:rotateY(-120deg)}66.66%,93%{transform:rotateY(-240deg)}100%{transform:rotateY(-360deg)}}
-@keyframes lxChaseX{to{background-position:44px 0}}
-@keyframes lxChaseY{to{background-position:0 44px}}
-@keyframes lxGlare{0%,55%{background-position:120% 0}100%{background-position:-120% 0}}
-@keyframes lxDot{0%{transform:scaleX(0)}30%{transform:scaleX(1)}33.33%,100%{transform:scaleX(0)}}
-@keyframes lxFlicker{0%,100%{opacity:.85}45%{opacity:1}48%{opacity:.6}52%{opacity:1}}
-@keyframes lxDrive{from{left:-30%}to{left:110%}}
-@keyframes lxDriveBack{from{left:110%}to{left:-30%}}
-@keyframes lxShine{to{background-position:-220% center}}
-@keyframes lxPulse{0%,100%{box-shadow:0 10px 30px rgba(212,175,55,.3)}50%{box-shadow:0 10px 40px rgba(212,175,55,.55),0 0 0 6px rgba(212,175,55,.12)}}
-@keyframes lxTwinkle{to{opacity:.4}}
-
-@media (max-width:960px){.lxa .lx-grid{grid-template-columns:1fr !important;gap:48px !important}.lxa{padding:60px 18px 100px !important}}
-@media (max-width:520px){.lxa .lx-btn{width:100% !important}.lxa .lx-frame{padding:18px !important}.lxa .lx-lamp::before{width:180px !important}.lxa .lx-posts{padding:0 18% !important}}
-@media (prefers-reduced-motion:reduce){.lxa *{animation:none !important}}
+.lxa .lx-card{background:#0F2647 !important;border:1px solid rgba(212,175,55,.4) !important;border-radius:24px !important;padding:32px !important;box-shadow:0 30px 80px rgba(0,0,0,.4) !important}
+.lxa .lx-card-t{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:13px !important;letter-spacing:.18em !important;color:#D4AF37 !important;margin-bottom:18px !important}
+.lxa .lx-list{display:flex !important;flex-direction:column !important;gap:10px !important}
+.lxa .lx-item{display:flex !important;align-items:center !important;gap:14px !important;padding:14px 16px !important;border-radius:14px !important;background:rgba(255,255,255,.04) !important;border:1px solid rgba(255,255,255,.08) !important;font-weight:600 !important;font-size:15.5px !important;color:#FFFFFF !important}
+.lxa .lx-ico{flex:0 0 38px !important;height:38px !important;border-radius:10px !important;background:#D4AF37 !important;color:#0B1F3A !important;display:flex !important;align-items:center !important;justify-content:center !important}
+.lxa .lx-foot{margin-top:18px !important;padding-top:18px !important;border-top:1px solid rgba(255,255,255,.12) !important;font-size:14px !important;line-height:1.55 !important;color:rgba(255,255,255,.75) !important}
+.lxa .lx-foot b{color:#FFFFFF !important}
+@media (max-width:900px){.lxa .lx-grid{grid-template-columns:1fr !important;gap:44px !important}.lxa{padding:60px 18px 72px !important}}
+@media (max-width:520px){.lxa .lx-btn{width:100% !important}.lxa .lx-card{padding:24px !important}}
 </style>
-
-<div class="lx-stars" aria-hidden="true"></div>
-<div class="lx-road" aria-hidden="true"><i></i><i class="red"></i><i></i><i class="red"></i><i></i></div>
-
 <div class="lx-grid">
   <div>
     <div class="lx-eye">About Luxon Digital</div>
-    <h1>Your AI automation partner for <span class="lx-shine">transportation.</span></h1>
+    <h1>Your AI automation partner for <span>transportation.</span></h1>
     <p class="lx-sub">We help limo and private transportation companies capture more business with simple, done-for-you AI. You don't need to become a tech expert. That's our job.</p>
     <div class="lx-ctas">
-      <a class="lx-btn lx-gold" href="/contact">Book Your AI Demo
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="lx-btn lx-gold" href="/contact">Book Your AI Demo</a>
       <a class="lx-btn lx-ghost" href="/demo">See Luxon Limo AI in Action</a>
     </div>
-    <div class="lx-serve">
-      <div class="lx-serve-t">WHO WE SERVE</div>
-      <div class="lx-chips">
-        <span class="lx-chip">Limo &amp; black-car</span>
-        <span class="lx-chip">Chauffeur &amp; executive</span>
-        <span class="lx-chip">Airport transfers</span>
-        <span class="lx-chip">Private transportation</span>
-      </div>
-      <p class="lx-fit">Best fit: <b>1–20 vehicle operators</b> where the owner or a small team still handles calls, quotes and bookings.</p>
-    </div>
   </div>
-
-  <div class="lx-bb">
-    <span class="lx-lamp a" aria-hidden="true"></span><span class="lx-lamp b" aria-hidden="true"></span>
-    <div class="lx-frame">
-      <span class="lx-bulbs h t" aria-hidden="true"></span><span class="lx-bulbs h b" aria-hidden="true"></span>
-      <span class="lx-bulbs v l" aria-hidden="true"></span><span class="lx-bulbs v r" aria-hidden="true"></span>
-      <!-- Billboard messages: edit the three lines in the script below -->
-      <div class="lx-panel" aria-hidden="true">
-        <div class="lx-msg m0" style="width:100% !important;left:0 !important"><span class="k">Luxon Limo AI</span><b><span>Never miss</span><span>an opportunity.</span></b></div>
-      </div>
-      <div class="lx-glare" aria-hidden="true"></div>
+  <div class="lx-card">
+    <div class="lx-card-t">WHO WE SERVE</div>
+    <div class="lx-list">
+      <div class="lx-item"><span class="lx-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M3 13l2-6h14l2 6v4H3z"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></span>Limo &amp; black-car companies</div>
+      <div class="lx-item"><span class="lx-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>Chauffeur &amp; executive transportation</div>
+      <div class="lx-item"><span class="lx-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16l20-6-3-3-6 2-6-5-2 1 4 6-5 2-2-2-2 1z"/></svg></span>Airport transfer operators</div>
+      <div class="lx-item"><span class="lx-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>Private transportation businesses</div>
     </div>
-    <div class="lx-dots" aria-hidden="true"><i style="--d:0"></i><i style="--d:1"></i><i style="--d:2"></i></div>
-    <ul class="lx-sr"><li>Never miss an opportunity.</li><li>Capture more leads.</li><li>Simple AI. Real business results.</li></ul>
-    <div class="lx-posts" aria-hidden="true"><span></span><span></span></div>
+    <div class="lx-foot">Best fit: <b>1–20 vehicle operators</b> where the owner or a small team still handles calls, quotes and bookings.</div>
   </div>
 </div>
-
-<script>
-(function () {
-  /* ---- Edit the billboard messages here (exactly 3) ---- */
-  var MESSAGES = [
-    { kicker: 'Luxon Limo AI',              line1: 'Never miss',  line2: 'an opportunity.' },
-    { kicker: 'Answer · Capture · Follow up', line1: 'Capture more', line2: 'leads.' },
-    { kicker: 'Done for you',               line1: 'Simple AI.',  line2: 'Real business results.' }
-  ];
-  var SLATS = 10;
-  var panels = document.querySelectorAll('.lxa .lx-panel:not([data-built])');
-  for (var p = 0; p < panels.length; p++) {
-    var panel = panels[p];
-    panel.setAttribute('data-built', '1');
-    panel.innerHTML = '';
-    for (var i = 0; i < SLATS; i++) {
-      var slat = document.createElement('div');
-      slat.className = 'lx-slat';
-      slat.style.setProperty('--i', i);
-      for (var k = 0; k < 3; k++) {
-        var m = MESSAGES[k];
-        var face = document.createElement('div');
-        face.className = 'lx-face';
-        face.style.setProperty('--k', k);
-        face.innerHTML = '<div class="lx-msg m' + k + '"><span class="k">' + m.kicker + '</span><b><span>' +
-          m.line1 + '</span><span>' + m.line2 + '</span></b></div>';
-        slat.appendChild(face);
-      }
-      panel.appendChild(slat);
-    }
-  }
-})();
-</script>
 </div>
 
 <!-- ===== about/02-mission-values.html ===== -->

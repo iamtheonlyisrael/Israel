@@ -8,7 +8,7 @@ Dark gold for small text on white: `#7A6210`. Brand gold on white is too light t
 
 | File | What it is |
 |---|---|
-| `shared/header.html` | Navy top bar + white header: logo, menu with a **Luxon Limo AI** dropdown (the 4 feature pages), gold **Book Your AI Demo** button. Turns into a ☰ menu on phones |
+| `shared/header.html` | Billboard-style top bar (flipping slats, chasing marquee lights, light sweep; links to /contact; edit its 3 messages in the `MESSAGES` list at the bottom) + white header: logo, menu with a **Luxon Limo AI** dropdown (the 4 feature pages), gold **Book Your AI Demo** button. Turns into a ☰ menu on phones |
 | `shared/cta-band.html` | "Let's talk about your business." navy box with two real buttons |
 | `shared/footer.html` | Navy footer: logo, tagline, social icons, product links, company links, contact, legal links |
 
@@ -31,7 +31,7 @@ Run `./build-mockups.sh` to rebuild it after editing a block.
 | # | Section | Build | Notes |
 |---|---|---|---|
 | 1–2 | Top bar + header | **Custom code** | `shared/header.html` |
-| 3 | Hero | **Custom code** | `about/01-hero.html` replaces the plain white hero. Includes an animated tri-vision billboard (flipping slats, marquee lights, spotlights, headlight streaks). Edit the 3 billboard messages in the `MESSAGES` list at the bottom of the file |
+| 3 | Hero | **Custom code** | `about/01-hero.html` replaces the plain white "AI Automation That Keeps Business Moving." block |
 | 4 | Mission + Vision + Five principles | **Custom code** | `about/02-mission-values.html` replaces both sections. It fixes the duplicate "Simplicity" (5th is now **Partnership**), removes the empty 6th cell, and replaces the black borders and gray side strips with brand cards |
 | 5 | Why transportation-specific | **Custom code** | `about/03-why-transportation.html` keeps your copy and adds a Generic vs Luxon comparison and the "why operators choose Luxon" row |
 | 6 | CTA band | **Custom code** | `shared/cta-band.html` |
