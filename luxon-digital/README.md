@@ -31,7 +31,7 @@ Run `./build-mockups.sh` to rebuild it after editing a block.
 | # | Section | Build | Notes |
 |---|---|---|---|
 | 1–2 | Top bar + header | **Custom code** | `shared/header.html` |
-| 3 | Hero | **Custom code** | `about/01-hero.html` replaces the plain white "AI Automation That Keeps Business Moving." block |
+| 3 | Hero | **Custom code** | `about/01-hero.html` replaces the plain white hero. Includes an animated tri-vision billboard (flipping slats, marquee lights, spotlights, headlight streaks). Edit the 3 billboard messages in the `MESSAGES` list at the bottom of the file |
 | 4 | Mission + Vision + Five principles | **Custom code** | `about/02-mission-values.html` replaces both sections. It fixes the duplicate "Simplicity" (5th is now **Partnership**), removes the empty 6th cell, and replaces the black borders and gray side strips with brand cards |
 | 5 | Why transportation-specific | **Custom code** | `about/03-why-transportation.html` keeps your copy and adds a Generic vs Luxon comparison and the "why operators choose Luxon" row |
 | 6 | CTA band | **Custom code** | `shared/cta-band.html` |
