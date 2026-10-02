@@ -1,0 +1,360 @@
+<div class="mwg-upload-wrap">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+.mwg-upload-wrap{
+  --gold:#C9A84C;
+  --gold-lt:#E3C977;
+  --gold-dk:#A88A35;
+  --black:#0B0B0B;
+  --panel:#141414;
+  --field:#1C1C1C;
+  --line:rgba(201,168,76,.35);
+  --text:#F5F1E6;
+  --muted:#BDB5A1;
+  background:transparent;
+  width:100%;
+  box-sizing:border-box;
+  padding:24px 16px;
+  font-family:'Poppins',sans-serif;
+  color:var(--text);
+}
+.mwg-upload-wrap *,.mwg-upload-wrap *::before,.mwg-upload-wrap *::after{box-sizing:border-box;}
+
+/* ---------- Gold-bordered card around the whole form ---------- */
+.mwg-card{
+  max-width:700px;margin:0 auto;
+  background:var(--black);
+  border:3px solid var(--gold);
+  border-radius:16px;
+  box-shadow:0 0 0 1px rgba(201,168,76,.25), 0 0 28px rgba(201,168,76,.22), 0 24px 60px rgba(0,0,0,.35);
+  overflow:hidden;
+  position:relative;
+}
+
+/* ---------- Branded header ---------- */
+.mwg-upload-head{
+  text-align:center;
+  padding:34px 24px 10px;
+  background:transparent;
+  position:relative;
+}
+.mwg-upload-head::before{
+  content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:120px;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.mwg-eyebrow{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:7px 16px;margin-bottom:18px;
+}
+.mwg-upload-head h2{
+  font-family:'Poppins',sans-serif;font-weight:700;color:#fff;
+  font-size:clamp(28px,6vw,40px);line-height:1.15;margin:0 0 10px;
+}
+.mwg-upload-head h2 span{color:var(--gold);}
+.mwg-upload-head p{
+  font-size:15px;line-height:1.6;color:var(--muted);max-width:500px;margin:0 auto;
+}
+.mwg-upload-head em{
+  display:block;margin-top:14px;font-family:'Poppins',sans-serif;font-style:italic;
+  font-size:18px;color:var(--gold-lt);
+}
+.mwg-secure{
+  display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+  font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.04em;
+}
+.mwg-secure svg{width:14px;height:14px;fill:var(--gold);}
+
+/* ---------- Re-upload notice ---------- */
+.mwg-reupload{
+  display:flex;align-items:center;gap:14px;
+  max-width:520px;margin:6px auto 16px;padding:14px 18px;
+  background:rgba(201,168,76,.12);
+  border:1px solid var(--gold);border-left:5px solid var(--gold);
+  border-radius:10px;text-align:left;
+  box-shadow:0 0 18px rgba(201,168,76,.15);
+  animation:mwgPulse 2.4s ease-in-out infinite;
+}
+.mwg-reupload-icon{
+  flex:0 0 38px;width:38px;height:38px;border-radius:50%;
+  background:var(--gold);display:flex;align-items:center;justify-content:center;
+}
+.mwg-reupload-icon svg{width:20px;height:20px;fill:var(--black);}
+.mwg-reupload strong{
+  display:block;color:var(--gold);font-size:14px;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px;
+}
+.mwg-reupload span{display:block;font-size:14px;line-height:1.5;color:var(--text);}
+@keyframes mwgPulse{
+  0%,100%{box-shadow:0 0 12px rgba(201,168,76,.12);}
+  50%{box-shadow:0 0 24px rgba(201,168,76,.32);}
+}
+
+/* ---------- Form card (overrides inline styles) ---------- */
+.mwg-upload-wrap form{
+  max-width:100% !important;
+  min-height:0 !important;
+  margin:0 !important;
+  padding:20px 22px 28px !important;
+  background:transparent !important;
+  border:none !important;
+  border-radius:0 !important;
+  font-family:'Poppins',sans-serif !important;
+  color:var(--text) !important;
+  box-shadow:none;
+  overflow:hidden;
+}
+.mwg-upload-wrap form > p:empty{display:none !important;}
+
+/* grid -> responsive */
+.mwg-upload-wrap form > div[style*="grid"]{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:6px 14px;
+}
+.mwg-upload-wrap form > div[style*="grid"] > div{
+  margin:8px 0 !important;
+  background:var(--panel);
+  border:1px solid rgba(201,168,76,.18);
+  border-radius:12px;
+  padding:14px 14px 16px;
+  transition:border-color .2s ease;
+}
+.mwg-upload-wrap form > div[style*="grid"] > div:focus-within{border-color:var(--gold);}
+
+/* labels */
+.mwg-upload-wrap form label{
+  display:block !important;
+  margin-bottom:8px !important;
+  color:var(--gold) !important;
+  font-size:12px !important;
+  font-weight:700 !important;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+/* text / email inputs */
+.mwg-upload-wrap form input[type="text"],
+.mwg-upload-wrap form input[type="email"]{
+  width:100% !important;
+  height:48px !important;
+  padding:10px 14px !important;
+  background:var(--field) !important;
+  border:1px solid rgba(255,255,255,.08) !important;
+  border-radius:8px !important;
+  color:#fff !important;
+  font-family:'Poppins',sans-serif !important;
+  font-size:16px !important;
+  font-weight:500 !important;
+  outline:none;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.mwg-upload-wrap form input[type="text"]:focus,
+.mwg-upload-wrap form input[type="email"]:focus{
+  border-color:var(--gold) !important;
+  box-shadow:0 0 0 3px rgba(201,168,76,.18);
+}
+
+/* file inputs + clear "X" */
+.mwg-upload-wrap form input[type="file"]{
+  width:calc(100% - 34px) !important;
+  height:auto !important;
+  min-height:48px;
+  padding:8px !important;
+  background:var(--field) !important;
+  border:1px dashed var(--line) !important;
+  border-radius:8px !important;
+  color:var(--muted) !important;
+  font-family:'Poppins',sans-serif !important;
+  font-size:13px !important;
+  font-weight:500 !important;
+  cursor:pointer;
+}
+.mwg-upload-wrap form input[type="file"]::file-selector-button{
+  margin-right:10px;padding:8px 14px;border:none;border-radius:6px;
+  background:var(--gold);color:var(--black);
+  font-family:'Poppins',sans-serif;font-weight:700;font-size:12px;letter-spacing:.04em;
+  cursor:pointer;transition:background .2s ease;
+}
+.mwg-upload-wrap form input[type="file"]::file-selector-button:hover{background:var(--gold-lt);}
+.mwg-upload-wrap form input[type="file"] + span{
+  width:26px !important;height:26px;
+  margin-top:11px !important;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);border-radius:50%;
+  color:var(--gold);font-size:11px;line-height:1;
+  transition:background .2s ease,color .2s ease;
+}
+.mwg-upload-wrap form input[type="file"] + span:hover{background:var(--gold);color:var(--black);}
+.mwg-upload-wrap form input[type="file"] ~ *:last-child::after{content:"";display:block;clear:both;}
+.mwg-upload-wrap form div:has(> input[type="file"])::after{content:"";display:block;clear:both;}
+
+/* submit */
+.mwg-upload-wrap form > div[style*="float: left"]{
+  float:none !important;
+  margin:18px 0 0 !important;
+  clear:both;
+}
+.mwg-upload-wrap form button[type="submit"]{
+  width:100% !important;
+  padding:16px 20px !important;
+  border:none !important;
+  border-radius:10px !important;
+  background:linear-gradient(135deg,var(--gold-lt),var(--gold) 50%,var(--gold-dk)) !important;
+  color:var(--black) !important;
+  font-family:'Poppins',sans-serif !important;
+  font-size:16px !important;
+  font-weight:700 !important;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  line-height:1.2 !important;
+  box-shadow:0 10px 26px rgba(201,168,76,.28);
+  transition:transform .15s ease, box-shadow .2s ease;
+}
+.mwg-upload-wrap form button[type="submit"]:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 32px rgba(201,168,76,.38);
+}
+
+/* ---------- Footer ---------- */
+.mwg-upload-foot{
+  max-width:700px;margin:18px auto 0;text-align:center;
+  font-size:13px;line-height:1.7;color:var(--muted);
+}
+.mwg-upload-foot a{color:var(--gold);text-decoration:none;font-weight:600;}
+.mwg-upload-foot .mwg-tag{
+  display:block;margin-top:6px;font-family:'Poppins',sans-serif;font-style:italic;
+  font-size:16px;color:var(--gold);
+}
+
+.mwg-status{
+  display:none;margin:12px 0 0;padding:12px 14px;border-radius:8px;text-align:center;
+  font-size:14px;font-weight:500;line-height:1.5;
+  background:rgba(201,168,76,.10);border:1px solid var(--line);color:var(--gold-lt);
+}
+.mwg-status.show{display:block;}
+.mwg-upload-wrap form button[type="submit"][disabled]{opacity:.75;cursor:wait !important;transform:none;}
+
+/* ---------- Responsive ---------- */
+@media (max-width:640px){
+  .mwg-upload-wrap{padding:16px 12px;}
+  .mwg-upload-head{padding:28px 18px 6px;}
+  .mwg-card{border-width:2px;border-radius:14px;}
+  .mwg-secure{text-align:left;max-width:260px;}
+  .mwg-reupload{padding:12px 14px;gap:12px;}
+  .mwg-reupload strong{font-size:13px;letter-spacing:.08em;}
+  .mwg-reupload span{font-size:13px;}
+  .mwg-upload-wrap form{padding:22px 14px !important;}
+  .mwg-upload-wrap form > div[style*="grid"]{grid-template-columns:1fr !important;}
+}
+@media (max-width:380px){
+  .mwg-reupload{flex-direction:column;text-align:center;}
+  .mwg-upload-wrap form input[type="file"]::file-selector-button{display:block;margin:0 0 6px;width:100%;}
+}
+</style>
+
+<div class="mwg-card">
+<div class="mwg-upload-head">
+  <span class="mwg-eyebrow">Boss Up The Major Way</span>
+  <h2>Secure <span>Document</span> Upload</h2>
+  <div class="mwg-reupload">
+    <div class="mwg-reupload-icon"><svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.96 7.96 0 0 0 12 4a8 8 0 1 0 7.73 10h-2.08A6 6 0 1 1 12 6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg></div>
+    <div>
+      <strong>Upload Your Documents Again</strong>
+      <span>to update your client record in DisputeFox.</span>
+    </div>
+  </div>
+  <p>Upload your documents below so our team can get your file started. Clear photos or PDFs, under 10MB each.</p>
+  <em>If it ain't Major, it's minor.</em>
+  <div class="mwg-secure"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 6a3 3 0 0 1 3 3v1h1v6H8v-6h1v-1a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v1h2v-1a1 1 0 0 0-1-1z"/></svg>Your information is encrypted &amp; kept confidential</div>
+</div>
+
+<form action="https://pulse.disputeprocess.com/CustumFieldController" onsubmit="return submitForm(this);" enctype="multipart/form-data" method="POST" style="width: 100%;max-width: 700px;min-height: 100px;min-width: auto; margin: 49px auto 50px; padding: 36px 10px 90px;clear: both; border: 5px solid #dae0eb; border-radius: 5px; font-family: Lato, sans-serif; color: #363d4b; line-height: 18px;"><input type="hidden" name="method" value="addWebFormData"><input type="hidden" name="tab_info_id" value="MkVOL3J4NGU2UFJVRkVZL2REMTBpZz09"><input type="hidden" name="redirect_url" value=""><input type="hidden" name="company_id" value="V0cvUy9vM1hvRXRJMEMxY3F3M1JLQT09"><input type="hidden" name="cust_type" value="2"><input type="hidden" name="add_affiliate_flag" value="0"><input type="hidden" name="assignedto_id" value="-1"><input type="hidden" name="sales_representative_id" value="-1"><input type="hidden" name="workflow_statusid" value="30"><input type="hidden" name="folder_statusid" value="1"><input type="hidden" name="customer_statusid" value="13725"><input type="hidden" name="portalAccess" value="1"><input type="hidden" name="customerAgreementIDs" value="35783"><p style="margin-bottom: 4px; text-align: center; font-size: 30px; line-height: 30px; font-weight: 700;" ></p><p style="margin-bottom: 20px; font-size: 15px; text-align: center;" ></p><div style="display: grid; grid-template-columns: auto auto;"><div style="margin: 10px;"><label style=" margin-bottom: 0px; color: #475572; font-size: 13px; line-height: 16px; font-weight: 700;">First Name</label><div style=""><input type="text" class="form-control" name = "firstName" required style = "height: 45px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border: 1px none #dae0eb; border-radius: 4px; background-color: rgba(241, 243, 246, 0.73); color: #242b3a; font-size: 16px; font-weight: 700;display: block; width: 100%;"></div></div><div style="margin: 10px;"><label style=" margin-bottom: 0px; color: #475572; font-size: 13px; line-height: 16px; font-weight: 700;">Last Name</label><div style=""><input type="text" class="form-control" name = "lastName" required style = "height: 45px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border: 1px none #dae0eb; border-radius: 4px; background-color: rgba(241, 243, 246, 0.73); color: #242b3a; font-size: 16px; font-weight: 700;display: block; width: 100%;"></div></div><div style="margin: 10px;"><label style="margin-bottom: 0px; color: #475572; font-size: 13px; line-height: 16px; font-weight: 700;">Email</label><div><input type="email" name="email" required style = "height: 45px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border: 1px none #dae0eb; border-radius: 4px; background-color: rgba(241, 243, 246, 0.73); color: #242b3a; font-size: 16px; font-weight: 700;display: block; width: 100%;"></div></div><div style="margin: 10px;"><label style=" margin-bottom: 0px; color: #475572; font-size: 13px; line-height: 16px; font-weight: 700;">State ID</label><div style=""><input type="file" class="form-control" onchange="convertToBinaryData(this)" accept=".jpg,.png,.jpeg,.heic,.heif,.pdf,.html,.htm" name = "uploadDocument1" id = "uploadDocument1" required style = "height: 45px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border: 1px none #dae0eb; border-radius: 4px; background-color: rgba(241, 243, 246, 0.73); color: #242b3a; font-size: 16px; font-weight: 700;display: block; width: 95%; float: left;"> <span style="width: 1%;cursor: pointer;font-weight: 900;margin-top: 13px !important;float: right;" onclick="document.getElementById('uploadDocument1').value='';"> X </span></div></div><div style="margin: 10px;"><label style=" margin-bottom: 0px; color: #475572; font-size: 13px; line-height: 16px; font-weight: 700;">Driver's License</label><div style=""><input type="file" class="form-control" onchange="convertToBinaryData(this)" accept=".jpg,.png,.jpeg,.heic,.heif,.pdf,.html,.htm" name = "uploadDocument2" id = "uploadDocument2" required style = "height: 45px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border: 1px none #dae0eb; border-radius: 4px; background-color: rgba(241, 243, 246, 0.73); color: #242b3a; font-size: 16px; font-weight: 700;display: block; width: 95%; float: left;"> <span style="width: 1%;cursor: pointer;font-weight: 900;margin-top: 13px !important;float: right;" onclick="document.getElementById('uploadDocument2').value='';"> X </span></div></div><div style="margin: 10px;"><label style=" margin-bottom: 0px; color: #475572; font-size: 13px; line-height: 16px; font-weight: 700;">Utility Bill</label><div style=""><input type="file" class="form-control" onchange="convertToBinaryData(this)" accept=".jpg,.png,.jpeg,.heic,.heif,.pdf,.html,.htm" name = "uploadDocument3" id = "uploadDocument3" required style = "height: 45px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border: 1px none #dae0eb; border-radius: 4px; background-color: rgba(241, 243, 246, 0.73); color: #242b3a; font-size: 16px; font-weight: 700;display: block; width: 95%; float: left;"> <span style="width: 1%;cursor: pointer;font-weight: 900;margin-top: 13px !important;float: right;" onclick="document.getElementById('uploadDocument3').value='';"> X </span></div></div><div style="margin: 10px;"><label style=" margin-bottom: 0px; color: #475572; font-size: 13px; line-height: 16px; font-weight: 700;">Social Security Card</label><div style=""><input type="file" class="form-control" onchange="convertToBinaryData(this)" accept=".jpg,.png,.jpeg,.heic,.heif,.pdf,.html,.htm" name = "uploadDocument4" id = "uploadDocument4" required style = "height: 45px; margin-bottom: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 12px; border: 1px none #dae0eb; border-radius: 4px; background-color: rgba(241, 243, 246, 0.73); color: #242b3a; font-size: 16px; font-weight: 700;display: block; width: 95%; float: left;"> <span style="width: 1%;cursor: pointer;font-weight: 900;margin-top: 13px !important;float: right;" onclick="document.getElementById('uploadDocument4').value='';"> X </span></div></div></div><div style="margin: 10px; float: left;"><button type="submit" class="btn btn-info"style = "display: block; margin-top: 0px;padding-top: 20px; padding-bottom: 20px;border-radius: 8px; background-color: #1192f4; font-size: 15px; font-weight: 900;padding: 9px 15px;color: white;border: 0;line-height: 33px;text-decoration: none;cursor: pointer;"> Submit </button></div></form> <script> var formData1 = new FormData(); const submitForm = function submitForm(form) { var elements = form; var formData = new FormData(); var firstName="", lastName="",currentAddress="",city="",state="",zipCode="",mobilePhone="",email="", userPassword=""; for (var i = 0; i < elements.length; i++) { var currentElement = elements[i].name; if(currentElement.includes("firstName")) firstName = elements[i].value.length > 0 && elements[i].value != undefined? elements[i].value : ""; if(currentElement.includes("lastName")) lastName = elements[i].value.length > 0 && elements[i].value != undefined ? elements[i].value : ""; if(currentElement.includes("currentAddress")) currentAddress = elements[i].value.length > 0 && elements[i].value != undefined ? elements[i].value : ""; if(currentElement.includes("city")) city = elements[i].value.length > 0 && elements[i].value != undefined ? elements[i].value : ""; if(currentElement.includes("state")) state = elements[i].value.length > 0 && elements[i].value != undefined ? elements[i].value : ""; if(currentElement.includes("zipCode")) zipCode = elements[i].value.length > 0 && elements[i].value != undefined ? elements[i].value : ""; if(currentElement.includes("mobilePhone")) mobilePhone = elements[i].value.length > 0 && elements[i].value != undefined ? elements[i].value : ""; if(currentElement.includes("monitoringUsername")) email = elements[i].value.length > 0 && elements[i].value != undefined ? elements[i].value : ""; if(currentElement.includes("password")) userPassword = elements[i].value.length > 0 && elements[i].value != undefined ? elements[i].value : ""; if (currentElement.includes("socialSecurityNumber")) { if(elements[i].value.length > 0){ var ssnValidResult = SSNValidation(elements[i].value); if(!ssnValidResult) return false; } } if (currentElement.includes("selectBoxes")) { var obj = {}; obj[elements[i].value] = elements[i].checked ? true : false; try { formData.append(elements[i].name, JSON.stringify(obj)); } catch (error) { formData.append(elements[i].name, elements[i].value); } } else if (currentElement.includes("uploadDocument")) { formData.append(currentElement, elements[i].value+"~~~~"+formData1.get(currentElement)); } else if (currentElement.includes("radio")) { if (elements[i].checked) { formData.append(elements[i].name, elements[i].value); } } else if (currentElement.includes("checkbox")) { formData.append(elements[i].name, elements[i].checked ); }else { formData.append(elements[i].name, elements[i].value); } } var xmlHttp = new XMLHttpRequest(); xmlHttp.onreadystatechange = function() { if (xmlHttp.readyState == 4 && xmlHttp.status == 200) { redirectUrl = xmlHttp.responseText; if (redirectUrl != "" && ! redirectUrl.includes("Account is in-activated")) { if(redirectUrl.includes("para=1")) redirectUrl += "&firstname="+firstName+"&lastname="+lastName+"&bill_address="+currentAddress+"&bill_city="+city+"&bill_state="+state+"&bill_zip="+zipCode+"&phone="+mobilePhone+"&email="+email+"&pGUID="+btoa(userPassword); redirectUrl = redirectUrl.indexOf("http") > -1 ? redirectUrl : "http://"+redirectUrl; window.location.replace(redirectUrl); } if (redirectUrl != "" && redirectUrl.includes("Account is in-activated")) { alert("Account Inactive: We apologize, but the service associated with this link is currently inactive. Please contact the business or individual who provided you with this link for further assistance. Thank you for your understanding"); } } }; xmlHttp.open("post", "https://pulse.disputeprocess.com/CustumFieldController?method=addWebFormData"); xmlHttp.send(formData); alert("Submission Complete"); return false; }; function SSNValidation(ssn) { var matchArr = ssn.match(/^[0-9]+$/); if (matchArr == null) { alert("Invalid SSN. Digits only."); return false; } else if(matchArr[0].length > 9){ alert("SSN number should be 9 digits only."); return false; }else if(matchArr[0].length < 4){ alert("Please enter last 4 digits of SSN."); return false; } else{ return true; } } var convertToBinaryData=function(thisEle) { if((thisEle.files[0].size/ (1024*1024)).toFixed(2)>10){ thisEle.style.border="1px solid red"; thisEle.value=''; setTimeout(function(){thisEle.style.border="1px none rgb(218, 224, 235)"; }, 5000); alert("File upload size should be less than 10MB" ); return false; }else if(thisEle.files[0].name.includes('.heic') || ["png","jpg","jpeg","heic","heif","pdf","html","htm"].includes(thisEle.files[0].type.split("/")[1]) ) { const f = thisEle.files[0]; const reader = new FileReader(); reader.onload = function(evt) { const contents = evt.target.result; formData1.append(thisEle.name, contents); }; reader.readAsDataURL(f); }else { thisEle.value=''; thisEle.style.border="1px solid red"; setTimeout(function(){thisEle.style.border="1px none rgb(218, 224, 235)"; }, 5000); alert("Please upload .png, .jpg, .jpeg, .heic, .pdf, .html, .htm format file types only" ); return false; } }</script>
+<script>
+/* Auto-fill + hide First Name, Last Name and Email when they arrive in the page link,
+   e.g. ?first_name=Maria&last_name=Lopez&email=maria@email.com
+   The values are still sent to DisputeFox so the documents attach to the right client.
+   If the link has no details, the fields stay visible so the client can type them. */
+(function(){
+  var wrap = document.currentScript ? document.currentScript.closest('.mwg-upload-wrap') : null;
+  wrap = wrap || document.querySelector('.mwg-upload-wrap');
+  if (!wrap) return;
+  var form = wrap.querySelector('form');
+  if (!form) return;
+  var q = new URLSearchParams(window.location.search);
+  function pick(keys){ for (var i = 0; i < keys.length; i++){ var v = q.get(keys[i]); if (v && v.trim() && v.indexOf('{{') === -1) return v.trim(); } return ''; }
+  var values = {
+    firstName: pick(['first_name','firstName','firstname','fname']),
+    lastName:  pick(['last_name','lastName','lastname','lname']),
+    email:     pick(['email','Email','contact_email'])
+  };
+  Object.keys(values).forEach(function(name){
+    var input = form.querySelector('input[name="' + name + '"]');
+    if (!input || !values[name]) return;
+    input.value = values[name];
+    var cell = input.closest('div[style*="margin: 10px"]');
+    if (cell) cell.style.setProperty('display', 'none', 'important');
+  });
+})();
+</script>
+<script>
+/* Sends the client to the thank-you page AFTER DisputeFox confirms the upload.
+   The DisputeFox form code above is untouched. */
+(function(){
+  var THANK_YOU_URL = 'https://bossupthemajorway.com/thank-you-8091-page';
+  if (window.__mwgRedirectHook) return; window.__mwgRedirectHook = true;
+
+  var wrap = document.currentScript ? document.currentScript.closest('.mwg-upload-wrap') : null;
+  wrap = wrap || document.querySelector('.mwg-upload-wrap');
+  var form = wrap.querySelector('form');
+  var btn = form.querySelector('button[type="submit"]');
+  var btnText = btn.innerHTML;
+  var status = document.createElement('div');
+  status.className = 'mwg-status';
+  btn.parentNode.appendChild(status);
+
+  function say(msg){ status.innerHTML = msg; status.classList.add('show'); }
+
+  /* Hide DisputeFox's early "Submission Complete" browser pop-up.
+     All other DisputeFox alerts (file size, file type, inactive account) still show. */
+  var origAlert = window.alert;
+  window.alert = function(msg){
+    if (String(msg).trim().toLowerCase() === 'submission complete') return;
+    return origAlert.apply(window, arguments);
+  };
+
+  var origOpen = XMLHttpRequest.prototype.open;
+  var origSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.open = function(method, url){
+    this.__mwgDF = /disputeprocess\.com/i.test(String(url));
+    return origOpen.apply(this, arguments);
+  };
+  XMLHttpRequest.prototype.send = function(){
+    if (this.__mwgDF){
+      var xhr = this;
+      btn.disabled = true;
+      btn.innerHTML = 'Uploading&hellip; please wait';
+      say('Uploading your documents. Please keep this page open.');
+      xhr.addEventListener('loadend', function(){
+        var txt = '';
+        try { txt = xhr.responseText || ''; } catch(e){}
+        if (xhr.status === 200 && txt.indexOf('Account is in-activated') === -1){
+          say('Upload complete! Taking you to the next page&hellip;');
+          window.location.href = THANK_YOU_URL;
+        } else {
+          btn.disabled = false;
+          btn.innerHTML = btnText;
+          say('Your upload did not go through. Please check your connection and try again, or call 864-536-0006.');
+        }
+      });
+    }
+    return origSend.apply(this, arguments);
+  };
+})();
+</script>
+</div>
+
+<div class="mwg-upload-foot">
+  Need help? Call <a href="tel:8645360006">864-536-0006</a> (Mon–Fri 9:30–6) or text <a href="sms:6784441298">MAJOR to 678-444-1298</a>
+  <span class="mwg-tag">bossupthemajorway.com</span>
+</div>
+</div>
