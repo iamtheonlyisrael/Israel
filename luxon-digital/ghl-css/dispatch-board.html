@@ -1,0 +1,109 @@
+<!-- Luxon live dispatch board: paste into ONE Custom Code element (e.g. the right column of the hero) -->
+<div class="lxdb">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+.lxdb{width:100% !important;font-family:'Inter',sans-serif !important;box-sizing:border-box !important}
+.lxdb *,.lxdb *::before,.lxdb *::after{box-sizing:border-box !important}
+.lxdb p{margin:0 !important}
+/* ---- live dispatch board ---- */
+.lxdb .lx-board{position:relative !important;width:100% !important;max-width:560px !important;margin:0 auto !important;border-radius:22px !important;padding:22px !important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03)) !important;border:1px solid rgba(255,255,255,.18) !important;backdrop-filter:blur(10px) !important;-webkit-backdrop-filter:blur(10px) !important;box-shadow:0 40px 90px rgba(0,0,0,.5),0 0 0 1px rgba(212,175,55,.12) inset !important}
+.lxdb .lx-bh{display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px !important;padding-bottom:16px !important;border-bottom:1px solid rgba(255,255,255,.12) !important}
+.lxdb .lx-bh b{display:block !important;font-family:'Montserrat',sans-serif !important;font-size:15px !important;color:#FFFFFF !important}
+.lxdb .lx-bh small{display:block !important;font-size:12px !important;color:rgba(255,255,255,.62) !important;margin-top:2px !important}
+.lxdb .lx-clock{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:22px !important;letter-spacing:.04em !important;color:#F5DC85 !important;font-variant-numeric:tabular-nums !important;padding:6px 12px !important;border-radius:10px !important;background:rgba(6,18,38,.6) !important;border:1px solid rgba(212,175,55,.3) !important}
+.lxdb .lx-live{display:inline-flex !important;align-items:center !important;gap:6px !important;font-size:11px !important;font-weight:700 !important;color:#3DDC97 !important;letter-spacing:.1em !important;margin-left:10px !important}
+.lxdb .lx-live i{width:7px !important;height:7px !important;border-radius:50% !important;background:#3DDC97 !important;animation:lxdbBlink 1.4s ease-in-out infinite}
+.lxdb .lx-cols,.lxdb .lx-row{display:grid !important;grid-template-columns:64px 1fr 84px 116px !important;gap:12px !important;align-items:center !important}
+.lxdb .lx-cols{padding:12px 6px 8px !important;font-size:10.5px !important;font-weight:700 !important;letter-spacing:.16em !important;color:rgba(255,255,255,.5) !important}
+.lxdb .lx-rows{display:flex !important;flex-direction:column !important;gap:8px !important;min-height:262px !important}
+.lxdb .lx-row{padding:12px 10px !important;border-radius:12px !important;background:rgba(6,18,38,.55) !important;border:1px solid rgba(255,255,255,.07) !important;font-size:13.5px !important;color:#FFFFFF !important}
+.lxdb .lx-row.new{animation:lxdbIn .6s cubic-bezier(.2,.8,.2,1) both}
+.lxdb .lx-row.out{animation:lxdbOut .5s ease forwards}
+.lxdb .lx-t{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;color:#F5DC85 !important;font-variant-numeric:tabular-nums !important}
+.lxdb .lx-trip b{display:block !important;font-weight:600 !important}
+.lxdb .lx-trip span{display:block !important;font-size:11.5px !important;color:rgba(255,255,255,.6) !important}
+.lxdb .lx-veh{font-size:12.5px !important;color:rgba(255,255,255,.8) !important}
+.lxdb .lx-st{justify-self:start !important;display:inline-flex !important;align-items:center !important;gap:6px !important;padding:5px 10px !important;border-radius:999px !important;font-size:10.5px !important;font-weight:800 !important;letter-spacing:.1em !important;transform-origin:50% 50% !important}
+.lxdb .lx-st::before{content:'' !important;width:6px !important;height:6px !important;border-radius:50% !important;background:currentColor !important}
+.lxdb .lx-st.flip{animation:lxdbFlip .5s ease}
+.lxdb .s-ringing{background:rgba(229,72,77,.18) !important;color:#FF8A8E !important}
+.lxdb .s-ringing::before{animation:lxdbBlink .6s ease-in-out infinite}
+.lxdb .s-answered{background:rgba(91,141,239,.2) !important;color:#A9C6FF !important}
+.lxdb .s-quoted{background:rgba(212,175,55,.2) !important;color:#F5DC85 !important}
+.lxdb .s-booked{background:rgba(61,220,151,.18) !important;color:#6BE6AE !important}
+.lxdb .lx-lane{position:relative !important;height:60px !important;margin-top:16px !important;border-radius:12px !important;background:rgba(6,18,38,.6) !important;overflow:hidden !important}
+.lxdb .lx-lane::before{content:'' !important;position:absolute !important;left:0 !important;right:0 !important;top:auto !important;bottom:9px !important;height:2px !important;margin-top:-1px !important;background:repeating-linear-gradient(90deg,rgba(245,220,133,.55) 0 18px,transparent 18px 34px);animation:lxdbRoad 1.2s linear infinite}
+.lxdb .lx-car{position:absolute !important;bottom:6px !important;left:-120px;width:112px !important;height:49px !important;animation:lxdbDrive 8s linear infinite;filter:drop-shadow(0 4px 10px rgba(0,0,0,.45)) !important}
+.lxdb .lx-foot{display:flex !important;justify-content:space-between !important;margin-top:10px !important;font-size:11px !important;color:rgba(255,255,255,.5) !important;font-style:italic !important}
+@keyframes lxdbBlink{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes lxdbIn{from{opacity:0;transform:translateY(-14px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes lxdbOut{to{opacity:0;transform:translateY(10px)}}
+@keyframes lxdbFlip{0%{transform:rotateX(0)}50%{transform:rotateX(90deg)}100%{transform:rotateX(0)}}
+@keyframes lxdbRoad{to{background-position:-34px 0}}
+@keyframes lxdbDrive{from{left:-120px}to{left:calc(100% + 20px)}}
+@media (max-width:600px){
+  .lxdb .lx-board{padding:16px !important}
+  .lxdb .lx-cols,.lxdb .lx-row{grid-template-columns:58px 1fr 92px !important;gap:8px !important}
+  .lxdb .lx-veh,.lxdb .lx-cols .v{display:none !important}
+  .lxdb .lx-clock{font-size:17px !important}
+}
+@media (prefers-reduced-motion:reduce){.lxdb *,.lxdb *::before,.lxdb *::after{animation:none !important}}
+</style>
+  <div class="lx-board" role="img" aria-label="Example dispatch board: new inquiries are answered by Luxon Limo AI, then quoted and booked">
+    <div class="lx-bh">
+      <div><b>Tonight's inquiries <span class="lx-live"><i></i>LIVE</span></b><small>Answered by Luxon Limo AI</small></div>
+      <span class="lx-clock" aria-hidden="true">11:42 PM</span>
+    </div>
+    <div class="lx-cols" aria-hidden="true"><span>TIME</span><span>TRIP</span><span class="v">VEHICLE</span><span>STATUS</span></div>
+    <div class="lx-rows" aria-hidden="true">
+      <div class="lx-row"><span class="lx-t">11:42</span><span class="lx-trip"><b>JFK T4 → Midtown</b><span>3 guests · Sat 6:30 PM</span></span><span class="lx-veh">SUV</span><span class="lx-st s-answered">ANSWERED</span></div>
+      <div class="lx-row"><span class="lx-t">11:18</span><span class="lx-trip"><b>Wedding · Hotel → Venue</b><span>2 cars · Jun 14</span></span><span class="lx-veh">2 sedans</span><span class="lx-st s-quoted">QUOTED</span></div>
+      <div class="lx-row"><span class="lx-t">10:51</span><span class="lx-trip"><b>Corporate · Hourly</b><span>Downtown meetings</span></span><span class="lx-veh">Sedan</span><span class="lx-st s-booked">BOOKED</span></div>
+      <div class="lx-row"><span class="lx-t">10:27</span><span class="lx-trip"><b>LGA → Upper East Side</b><span>2 guests · Fri 9:15 AM</span></span><span class="lx-veh">Sedan</span><span class="lx-st s-booked">BOOKED</span></div>
+    </div>
+    <div class="lx-lane" aria-hidden="true"><svg class="lx-car" viewBox="0 0 80 35"><rect x="38" y="9.5" width="4" height="4" fill="#B8922A"/><rect x="23" y="0.5" width="34" height="10" rx="2.5" fill="#D4AF37"/><text x="40" y="7.9" text-anchor="middle" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="7" letter-spacing=".6" fill="#0B1F3A">LUXON</text><path d="M4 26 L9 17 C10.5 14.5 13 13 16 13 H52 C55 13 57.5 14.2 59.5 16.3 L65 21 H73 C75.8 21 77.5 22.8 77.5 25.5 V28 C77.5 29.2 76.6 30 75.5 30 H69.5 A5.5 5.5 0 0 0 58.5 30 H23.5 A5.5 5.5 0 0 0 12.5 30 H5.5 C4.4 30 3.5 29.2 3.5 28 Z" fill="#FFFFFF"/><path d="M16 15.5 H34 V20.5 H11.5 Z M36.5 15.5 H51.5 C53.5 15.5 55 16.3 56.5 17.8 L59 20.5 H36.5 Z" fill="#0B1F3A"/><rect x="8" y="23.3" width="66" height="1.6" fill="#D4AF37"/><circle cx="18" cy="30" r="4.3" fill="#0B1F3A"/><circle cx="18" cy="30" r="1.8" fill="#8DB4FF"/><circle cx="64" cy="30" r="4.3" fill="#0B1F3A"/><circle cx="64" cy="30" r="1.8" fill="#8DB4FF"/><rect x="74.5" y="22" width="3" height="2" rx="1" fill="#FFF3C4"/></svg></div>
+    <div class="lx-foot"><span>Sample data</span><span>Updates as inquiries come in</span></div>
+  </div>
+<script>
+(function () {
+  /* Dispatch board: sample trips cycle through Ringing -> Answered -> Quoted -> Booked */
+  var TRIPS = [
+    ['JFK T4 → Midtown', '3 guests · Sat 6:30 PM', 'SUV'],
+    ['Prom night · 4 stops', '8 guests · May 16', 'Stretch'],
+    ['EWR → Hoboken', '1 guest · Tue 7:05 AM', 'Sedan'],
+    ['Concert · Round trip', '10 guests · Fri 7 PM', 'Sprinter'],
+    ['Airport meet & greet', '2 guests · Sun 4:40 PM', 'SUV'],
+    ['Corporate · Hourly', 'Downtown meetings', 'Sedan']
+  ];
+  var ORDER = ['ringing', 'answered', 'quoted', 'booked'];
+  var boards = document.querySelectorAll('.lxdb .lx-rows:not([data-live])');
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  for (var b = 0; b < boards.length; b++) (function (rows) {
+    rows.setAttribute('data-live', '1');
+    var n = 1, mins = 43, clock = rows.parentNode.querySelector('.lx-clock');
+    function setStatus(pill, st) {
+      pill.className = 'lx-st s-' + st + ' flip';
+      pill.textContent = st.toUpperCase();
+      setTimeout(function () { pill.classList.remove('flip'); }, 520);
+    }
+    function tick() {
+      var all = rows.querySelectorAll('.lx-row:not(.out)');
+      for (var i = 0; i < all.length; i++) {
+        var p = all[i].querySelector('.lx-st'), cur = ORDER.indexOf(p.className.match(/s-(\w+)/)[1]);
+        if (cur > 0 && cur < 3 && Math.random() < .6) setStatus(p, ORDER[cur + 1]);
+      }
+      var t = TRIPS[n++ % TRIPS.length], h = 11, m = mins++ % 60;
+      var row = document.createElement('div');
+      row.className = 'lx-row new';
+      row.innerHTML = '<span class="lx-t">' + h + ':' + (m < 10 ? '0' : '') + m + '</span><span class="lx-trip"><b>' + t[0] + '</b><span>' + t[1] + '</span></span><span class="lx-veh">' + t[2] + '</span><span class="lx-st s-ringing">RINGING</span>';
+      rows.insertBefore(row, rows.firstChild);
+      if (clock) clock.textContent = h + ':' + (m < 10 ? '0' : '') + m + ' PM';
+      setTimeout(function () { setStatus(row.querySelector('.lx-st'), 'answered'); }, 1300);
+      var last = rows.querySelectorAll('.lx-row:not(.out)');
+      if (last.length > 4) { var old = last[last.length - 1]; old.classList.add('out'); setTimeout(function () { if (old.parentNode) old.parentNode.removeChild(old); }, 500); }
+    }
+    setTimeout(function () { tick(); setInterval(tick, 3600); }, 1200);
+  })(boards[b]);
+})();
+</script>
+</div>

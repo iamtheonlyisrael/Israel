@@ -1,0 +1,25 @@
+/* ===== Luxon headline style for GHL Heading #heading-5Vqia78ZKS =====
+   Paste into: Page Settings > Custom CSS.
+   In the heading text, "Missed the Call." must have its own color applied in GHL
+   (select those words > pick any color, as now), so it gets the gradient. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+/* headline: white, brand font, sized so it fits in 3 lines */
+#heading-5Vqia78ZKS h1,#heading-5Vqia78ZKS h2,#heading-5Vqia78ZKS h3{
+  font-family:'Montserrat',sans-serif !important;font-weight:800 !important;
+  font-size:clamp(36px,4.6vw,60px) !important;line-height:1.06 !important;letter-spacing:-.02em !important;
+  color:#FFFFFF !important;margin:0 !important
+}
+
+/* "Missed the Call." gold → blue animated gradient */
+#heading-5Vqia78ZKS span[style*="color"],#heading-5Vqia78ZKS strong,#heading-5Vqia78ZKS b,
+#heading-5Vqia78ZKS font[color]{
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#8DB4FF 75%,#5B8DEF 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  animation:lxHeadShift 8s ease-in-out infinite alternate
+}
+@keyframes lxHeadShift{to{background-position:100% center}}
+
+@media (prefers-reduced-motion:reduce){#heading-5Vqia78ZKS span,#heading-5Vqia78ZKS strong,#heading-5Vqia78ZKS b{animation:none !important}}
