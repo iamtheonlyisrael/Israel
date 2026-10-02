@@ -99,7 +99,7 @@ Every section is now a Custom Code block, so the whole page shares one colorful 
 | # | Section | File | Background / effect |
 |---|---|---|---|
 | 1 | Top bar + header | `shared/header.html` | Billboard top bar, gold gradient button |
-| 2 | Hero | `home/01-hero.html` | Navy→blue gradient with drifting glows. Live graphic: "Luxon Limo AI · LIVE" card with a car driving a route, animated connector lines to 4 event cards (missed call, trip captured, follow-up, 5★ review). Labeled "Sample data" |
+| 2 | Hero | `home/01-hero.html` | Navy→blue gradient with drifting glows. Live dispatch board ("Tonight's inquiries"): new trips slide in as RINGING, flip to ANSWERED, then QUOTED and BOOKED; clock follows the newest inquiry; a car drives the lane below. Labeled "Sample data" |
 | 3 | Missed call vs. Luxon | `home/02-missed-call.html` | Light blue→white→soft gold gradient |
 | 4 | How it works | `home/03-how-it-works.html` | Dark gradient, dot grid, light running along the 4 steps, steps pulse in turn |
 | 5 | What's included | `home/04-features.html` | Light gradient, gradient-border cards, pulsing icon rings |
