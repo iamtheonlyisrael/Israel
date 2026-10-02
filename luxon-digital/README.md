@@ -9,7 +9,7 @@ Dark gold for small text on white: `#7A6210`. Brand gold on white is too light t
 - **CTAs, site-wide:** only two labels: **Book Your AI Demo** (gold gradient button) and **Watch the Demo Here** (gold-outline button). Every code block now uses these. Change any native GHL buttons to match, including the CTA on the Automated Lead Follow-Up page.
 - **Gold gradient button:** `linear-gradient(135deg, #B8922A 0%, #D4AF37 40%, #F5DC85 70%, #D4AF37 100%)`, navy text `#0B1F3A`. The shine slides across on hover.
 - **No unrealistic numbers or promises:** the home hero badge now says "Missed call, answered automatically" (it was "Replied in under a minute"). Remove "6 missed callbacks" and similar stats from any native sections.
-- **Home testimonials:** replace the empty testimonials section with `home/03-founder-story.html` (founder photo + story + 3 "behind the technology" cards). It needs the founder's name, photo and story.
+- **Home testimonials:** replace the empty testimonials section with `home/07-founder-story.html` (founder photo + story + 3 "behind the technology" cards). It needs the founder's name, photo and story.
 - **Top bar:** "Founding Partner Spots Open" was replaced with "Done-For-You AI for Limo & Chauffeur Companies" (not a confirmed offer).
 
 ### Google Ads safety checklist (the client had a rejection before)
@@ -64,21 +64,24 @@ Run `./build-mockups.sh` to rebuild it after editing a block.
 
 ## Home page
 
-Custom code is used where it adds the most visual impact. The rest stays native GHL so the client can edit it.
+Every section is now a Custom Code block, so the whole page shares one colorful style. Paste them in this order:
 
-| # | Section | Build | Notes |
+| # | Section | File | Background / effect |
 |---|---|---|---|
-| 1–2 | Top bar + header | **Custom code** | `shared/header.html` |
-| 3 | Hero | **Custom code** | `home/01-hero.html` |
-| 4 | Missed call vs. Luxon | **Custom code** | `home/02-missed-call.html` |
-| 5 | How it works | Native | Light gray `#F6F7F9` section, 4 columns: 01 Answers · 02 Captures the trip · 03 Follows up · 04 Helps convert. Big gold numbers, white cards; make the 4th card navy |
-| 6 | Features | Native | White section, 2×2 cards linking to AI Receptionist, Lead Follow-Up, Review Automation, Lead Management. Navy square icon tile with gold icon. Light gray border `#E4E7EB`, 20px radius, no black borders |
-| 7 | Who it's for | Native | Navy section, 3 cards (`#0F2647`, thin gold border): Owner-Operator · Growing Fleet Owner · Operations Manager |
-| 8 | Why transportation-specific | Native | Keep the existing copy. Put it in 2 columns with a photo on the right (black car / chauffeur) |
-| 9 | Guardrails | Native | "It never guesses. It hands off." plus 4 small cards: Never invents prices · A person when it matters · You approve it first · Tested before go-live |
-| 10 | Founder story (replaces testimonials) | **Custom code** | `home/03-founder-story.html` |
-| 11 | CTA band | **Custom code** | `shared/cta-band.html` |
-| 12 | Footer | **Custom code** | `shared/footer.html` |
+| 1 | Top bar + header | `shared/header.html` | Billboard top bar, gold gradient button |
+| 2 | Hero | `home/01-hero.html` | Navy→blue gradient with drifting glows. Live graphic: "Luxon Limo AI · LIVE" card with a car driving a route, animated connector lines to 4 event cards (missed call, trip captured, follow-up, 5★ review). Labeled "Sample data" |
+| 3 | Missed call vs. Luxon | `home/02-missed-call.html` | Light blue→white→soft gold gradient |
+| 4 | How it works | `home/03-how-it-works.html` | Dark gradient, dot grid, light running along the 4 steps, steps pulse in turn |
+| 5 | What's included | `home/04-features.html` | Light gradient, gradient-border cards, pulsing icon rings |
+| 6 | Who it's for | `home/05-who-its-for.html` | Blue/gold gradient, glass cards with moving gradient top bar |
+| 7 | Guardrails | `home/06-guardrails.html` | Light gradient, shield with radar pulse |
+| 8 | Founder story (replaces testimonials) | `home/07-founder-story.html` | Warm gold→white gradient |
+| 9 | Let's talk band | `shared/cta-band.html` | Blue/gold gradient box with light sheen |
+| 10 | Footer | `shared/footer.html` | |
+
+All sections fade in on scroll. Visitors who have "reduce motion" turned on in their device settings see everything still.
+
+**Colors used:** navy `#0B1F3A`, deep navy `#071528`, brand blue `#1E4FA8` / `#2F6FE4` / `#8DB4FF`, gold `#D4AF37` / `#F5DC85` / `#B8922A`.
 
 ## Pasting a custom code block
 

@@ -1,53 +1,78 @@
 <div class="lxm">
 <style>
-.lxm{background:#FFFFFF !important;font-family:'Inter',sans-serif !important;color:#1F2933 !important;padding:100px 20px !important;box-sizing:border-box !important;width:100% !important}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+.lxm{position:relative !important;overflow:hidden !important;width:100% !important;box-sizing:border-box !important;padding:96px 20px !important;font-family:'Inter',sans-serif !important;color:#1F2933 !important;
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 70%),linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 55%,#FFF8E6 100%) !important}
 .lxm *,.lxm *::before,.lxm *::after{box-sizing:border-box !important}
 .lxm h2,.lxm h3,.lxm p{margin:0 !important;padding:0 !important}
 .lxm .lx-wrap{max-width:1200px !important;margin:0 auto !important}
-.lxm .lx-top{text-align:center !important;max-width:760px !important;margin:0 auto 56px !important}
-.lxm .lx-eye{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:12px !important;letter-spacing:.24em !important;color:#7A6210 !important;text-transform:uppercase !important}
-.lxm h2{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:clamp(30px,3.6vw,44px) !important;line-height:1.12 !important;color:#0B1F3A !important;margin:14px 0 16px !important}
+.lxm .lx-top{text-align:center !important;max-width:780px !important;margin:0 auto 56px !important}
+.lxm .lx-pill{display:inline-block !important;padding:7px 16px !important;border-radius:999px !important;background:#FFFFFF !important;border:1px solid #E4E7EB !important;box-shadow:0 6px 18px rgba(11,31,58,.06) !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:12px !important;letter-spacing:.18em !important;color:#1E4FA8 !important;text-transform:uppercase !important}
+.lxm h2{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(32px,4vw,50px) !important;line-height:1.1 !important;letter-spacing:-.02em !important;color:#0B1F3A !important;margin:18px 0 16px !important}
+.lxm .lx-gt{background:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 45%,#B8922A 100%) !important;-webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;-webkit-text-fill-color:transparent !important}
 .lxm .lx-lead{font-size:18px !important;line-height:1.65 !important;color:#3E4C59 !important}
 .lxm .lx-cols{display:grid !important;grid-template-columns:1fr 1fr !important;gap:28px !important}
-.lxm .lx-card{border-radius:20px !important;padding:36px !important}
-.lxm .lx-bad{background:#F6F7F9 !important;border:1px solid #E4E7EB !important}
-.lxm .lx-good{background:#0B1F3A !important;color:#FFFFFF !important}
-.lxm .lx-label{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:13px !important;letter-spacing:.16em !important;margin-bottom:24px !important}
-.lxm .lx-bad .lx-label{color:#B42318 !important}
-.lxm .lx-good .lx-label{color:#D4AF37 !important}
-.lxm .lx-step{display:flex !important;gap:16px !important;align-items:flex-start !important;padding-bottom:22px !important}
+.lxm .lx-card{position:relative !important;border-radius:22px !important;padding:36px !important;overflow:hidden !important}
+.lxm .lx-bad{background:#FFFFFF !important;border:1px solid #E4E7EB !important;box-shadow:0 20px 50px rgba(11,31,58,.06) !important}
+.lxm .lx-good{background:linear-gradient(150deg,#0E2B5E 0%,#0B1F3A 60%,#071528 100%) !important;color:#FFFFFF !important;box-shadow:0 30px 70px rgba(11,31,58,.3) !important}
+.lxm .lx-good::before{content:'' !important;position:absolute !important;right:-80px !important;top:-80px !important;width:260px !important;height:260px !important;border-radius:50% !important;background:radial-gradient(circle,rgba(212,175,55,.35),rgba(212,175,55,0) 70%) !important;animation:lxmGlow 6s ease-in-out infinite alternate}
+.lxm .lx-label{position:relative !important;display:inline-block !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:12.5px !important;letter-spacing:.16em !important;padding:6px 12px !important;border-radius:999px !important;margin-bottom:26px !important}
+.lxm .lx-bad .lx-label{background:#FDECEA !important;color:#B42318 !important}
+.lxm .lx-good .lx-label{background:rgba(212,175,55,.16) !important;color:#F5DC85 !important}
+.lxm .lx-steps{position:relative !important}
+.lxm .lx-step{position:relative !important;display:flex !important;gap:16px !important;align-items:flex-start !important;padding-bottom:24px !important}
 .lxm .lx-step:last-child{padding-bottom:0 !important}
-.lxm .lx-n{flex:0 0 40px !important;height:40px !important;border-radius:50% !important;display:flex !important;align-items:center !important;justify-content:center !important;font-weight:800 !important}
-.lxm .lx-bad .lx-n{background:#FFFFFF !important;border:1px solid #E4E7EB !important;color:#52606D !important}
+.lxm .lx-step:not(:last-child)::after{content:'' !important;position:absolute !important;left:19px !important;top:44px !important;bottom:4px !important;width:2px !important}
+.lxm .lx-bad .lx-step:not(:last-child)::after{background:#E4E7EB !important}
+.lxm .lx-good .lx-step:not(:last-child)::after{background:linear-gradient(180deg,#D4AF37,rgba(212,175,55,.15)) !important}
+.lxm .lx-n{flex:0 0 40px !important;height:40px !important;border-radius:50% !important;display:flex !important;align-items:center !important;justify-content:center !important;font-weight:800 !important;font-family:'Montserrat',sans-serif !important}
+.lxm .lx-bad .lx-n{background:#F6F7F9 !important;border:1px solid #E4E7EB !important;color:#52606D !important}
 .lxm .lx-bad .lx-step:last-child .lx-n{background:#FDECEA !important;border-color:#F5C2BC !important;color:#B42318 !important}
-.lxm .lx-good .lx-n{background:#D4AF37 !important;color:#0B1F3A !important}
-.lxm h3{font-weight:600 !important;font-size:17px !important;font-family:'Inter',sans-serif !important}
+.lxm .lx-good .lx-n{background:linear-gradient(135deg,#B8922A,#F5DC85) !important;color:#0B1F3A !important;box-shadow:0 0 0 6px rgba(212,175,55,.12) !important}
+.lxm h3{font-family:'Inter',sans-serif !important;font-weight:600 !important;font-size:17.5px !important}
 .lxm .lx-bad h3{color:#1F2933 !important}
 .lxm .lx-good h3{color:#FFFFFF !important}
 .lxm .lx-step p{font-size:15px !important;margin-top:4px !important;line-height:1.5 !important}
 .lxm .lx-bad .lx-step p{color:#52606D !important}
 .lxm .lx-good .lx-step p{color:rgba(255,255,255,.8) !important}
-@media (max-width:860px){.lxm .lx-cols{grid-template-columns:1fr !important}.lxm{padding:70px 18px !important}.lxm .lx-card{padding:28px !important}}
+.lxm .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.lxm .rv.in{opacity:1;transform:none}
+.lxm .rv.d2{transition-delay:.15s}
+@keyframes lxmGlow{from{transform:scale(1);opacity:.7}to{transform:scale(1.25);opacity:1}}
+@media (max-width:860px){.lxm .lx-cols{grid-template-columns:1fr !important}.lxm{padding:72px 18px !important}.lxm .lx-card{padding:28px !important}}
+@media (prefers-reduced-motion:reduce){.lxm *,.lxm *::before{animation:none !important}.lxm .rv{opacity:1 !important;transform:none !important}}
 </style>
 <div class="lx-wrap">
-  <div class="lx-top">
-    <div class="lx-eye">The real cost of a missed call</div>
-    <h2>Missed call. Lost reservation.</h2>
+  <div class="lx-top rv">
+    <span class="lx-pill">The real cost of a missed call</span>
+    <h2>Missed call. <span class="lx-gt">Lost reservation.</span></h2>
     <p class="lx-lead">You can't answer every call while you're driving, dispatching, or asleep. Your next customer won't wait. They call the next company on Google.</p>
   </div>
   <div class="lx-cols">
-    <div class="lx-card lx-bad">
-      <div class="lx-label">WITHOUT LUXON</div>
-      <div class="lx-step"><div class="lx-n">1</div><div><h3>The phone rings while you're on a ride</h3><p>You can't pick up safely.</p></div></div>
-      <div class="lx-step"><div class="lx-n">2</div><div><h3>It goes to voicemail</h3><p>Many callers hang up without leaving a message.</p></div></div>
-      <div class="lx-step"><div class="lx-n">3</div><div><h3>They book someone else</h3><p>The reservation, and the repeat business, is gone.</p></div></div>
+    <div class="lx-card lx-bad rv">
+      <span class="lx-label">WITHOUT LUXON</span>
+      <div class="lx-steps">
+        <div class="lx-step"><div class="lx-n">1</div><div><h3>The phone rings while you're on a ride</h3><p>You can't pick up safely.</p></div></div>
+        <div class="lx-step"><div class="lx-n">2</div><div><h3>It goes to voicemail</h3><p>Many callers hang up without leaving a message.</p></div></div>
+        <div class="lx-step"><div class="lx-n">3</div><div><h3>They book someone else</h3><p>The reservation, and the repeat business, is gone.</p></div></div>
+      </div>
     </div>
-    <div class="lx-card lx-good">
-      <div class="lx-label">WITH LUXON LIMO AI</div>
-      <div class="lx-step"><div class="lx-n">1</div><div><h3>AI answers when you can't</h3><p>Day, night, weekends, and overflow.</p></div></div>
-      <div class="lx-step"><div class="lx-n">2</div><div><h3>The trip details are captured</h3><p>Pickup, drop-off, date, passengers, vehicle.</p></div></div>
-      <div class="lx-step"><div class="lx-n">3</div><div><h3>You get a ready-to-quote lead</h3><p>Plus automatic follow-up until they book.</p></div></div>
+    <div class="lx-card lx-good rv d2">
+      <span class="lx-label">WITH LUXON LIMO AI</span>
+      <div class="lx-steps">
+        <div class="lx-step"><div class="lx-n">1</div><div><h3>AI answers when you can't</h3><p>Day, night, weekends, and overflow.</p></div></div>
+        <div class="lx-step"><div class="lx-n">2</div><div><h3>The trip details are captured</h3><p>Pickup, drop-off, date, passengers, vehicle.</p></div></div>
+        <div class="lx-step"><div class="lx-n">3</div><div><h3>You get a ready-to-quote lead</h3><p>Plus automatic follow-up until they book.</p></div></div>
+      </div>
     </div>
   </div>
 </div>
+<script>
+(function () {
+  var els = document.querySelectorAll('.lxm .rv:not(.in)');
+  if (!('IntersectionObserver' in window)) { for (var i = 0; i < els.length; i++) els[i].classList.add('in'); return; }
+  var io = new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .12 });
+  for (var j = 0; j < els.length; j++) io.observe(els[j]);
+})();
+</script>
 </div>

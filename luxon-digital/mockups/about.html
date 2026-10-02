@@ -349,15 +349,20 @@
 <div class="lxcta">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
-.lxcta{background:#FFFFFF !important;padding:40px 20px 96px !important;font-family:'Inter',sans-serif !important;box-sizing:border-box !important;width:100% !important}
+.lxcta{background:linear-gradient(180deg,#FFFFFF 0%,#EEF4FF 100%) !important;padding:56px 20px 96px !important;font-family:'Inter',sans-serif !important;box-sizing:border-box !important;width:100% !important}
 .lxcta *,.lxcta *::before,.lxcta *::after{box-sizing:border-box !important}
 .lxcta h2,.lxcta p{margin:0 !important;padding:0 !important}
 .lxcta a{text-decoration:none !important}
-.lxcta .lx-box{max-width:1200px !important;margin:0 auto !important;background:#0B1F3A !important;border-radius:24px !important;padding:clamp(36px,6vw,64px) !important;display:flex !important;flex-wrap:wrap !important;align-items:center !important;justify-content:space-between !important;gap:32px !important;position:relative !important;overflow:hidden !important;border:1px solid rgba(212,175,55,.45) !important}
-.lxcta .lx-box::after{content:'' !important;position:absolute !important;right:-120px !important;top:-120px !important;width:320px !important;height:320px !important;border-radius:50% !important;border:1px solid rgba(212,175,55,.25) !important;pointer-events:none !important}
+.lxcta .lx-box{max-width:1200px !important;margin:0 auto !important;background:radial-gradient(600px 300px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 70%),radial-gradient(500px 300px at 100% 100%,rgba(212,175,55,.3),rgba(212,175,55,0) 70%),linear-gradient(135deg,#0E2B5E,#0B1F3A 55%,#071528) !important;box-shadow:0 40px 90px rgba(11,31,58,.35) !important;border-radius:24px !important;padding:clamp(36px,6vw,64px) !important;display:flex !important;flex-wrap:wrap !important;align-items:center !important;justify-content:space-between !important;gap:32px !important;position:relative !important;overflow:hidden !important;border:1px solid rgba(212,175,55,.45) !important}
+.lxcta .lx-box::after{content:'' !important;position:absolute !important;right:-120px !important;top:-120px !important;width:320px !important;height:320px !important;border-radius:50% !important;border:1px solid rgba(212,175,55,.3) !important;box-shadow:0 0 0 40px rgba(212,175,55,.04),0 0 0 80px rgba(47,111,228,.05) !important;pointer-events:none !important;animation:lxctaSpin 12s ease-in-out infinite alternate}
+.lxcta .lx-box::before{content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:-40% !important;width:30% !important;background:linear-gradient(100deg,transparent,rgba(255,255,255,.08),transparent) !important;pointer-events:none !important;animation:lxctaSheen 7s ease-in-out infinite}
+@keyframes lxctaSpin{to{transform:scale(1.15) translate(-20px,20px)}}
+@keyframes lxctaSheen{0%,60%{left:-40%}100%{left:120%}}
+@media (prefers-reduced-motion:reduce){.lxcta .lx-box::before,.lxcta .lx-box::after{animation:none !important}}
 .lxcta .lx-txt{flex:1 1 440px !important;position:relative !important;z-index:1 !important}
 .lxcta .lx-eye{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:12px !important;letter-spacing:.24em !important;color:#D4AF37 !important;text-transform:uppercase !important}
-.lxcta h2{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:clamp(28px,3.4vw,42px) !important;line-height:1.12 !important;color:#FFFFFF !important;margin:14px 0 12px !important}
+.lxcta h2 span{background:linear-gradient(90deg,#F5DC85,#D4AF37 40%,#8DB4FF) !important;-webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;-webkit-text-fill-color:transparent !important}
+.lxcta h2{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(28px,3.4vw,42px) !important;line-height:1.12 !important;color:#FFFFFF !important;margin:14px 0 12px !important}
 .lxcta p{font-size:17px !important;line-height:1.6 !important;color:rgba(255,255,255,.82) !important}
 .lxcta .lx-btns{display:flex !important;flex-direction:column !important;gap:12px !important;flex:0 1 290px !important;position:relative !important;z-index:1 !important}
 .lxcta .lx-btn{display:flex !important;align-items:center !important;justify-content:center !important;min-height:56px !important;padding:0 26px !important;border-radius:8px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:15px !important;transition:transform .2s !important}
@@ -371,7 +376,7 @@
 <div class="lx-box">
   <div class="lx-txt">
     <div class="lx-eye">Never miss an opportunity</div>
-    <h2>Let's talk about your business.</h2>
+    <h2>Let's talk about <span>your business.</span></h2>
     <p>See what Luxon Limo AI could look like for your company. A short, friendly demo with no tech talk.</p>
   </div>
   <div class="lx-btns">

@@ -1,92 +1,144 @@
 <div class="lxh">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
-.lxh{background:#0B1F3A !important;color:#FFFFFF !important;font-family:'Inter',sans-serif !important;padding:80px 20px 110px !important;overflow:hidden !important;box-sizing:border-box !important;width:100% !important}
+.lxh{position:relative !important;overflow:hidden !important;width:100% !important;box-sizing:border-box !important;padding:96px 20px 110px !important;color:#FFFFFF !important;font-family:'Inter',sans-serif !important;
+  background:radial-gradient(900px 600px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 60%),radial-gradient(700px 520px at 100% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 60%),linear-gradient(135deg,#061226 0%,#0B1F3A 45%,#0E2B5E 100%) !important}
 .lxh *,.lxh *::before,.lxh *::after{box-sizing:border-box !important}
 .lxh h1,.lxh p{margin:0 !important;padding:0 !important}
 .lxh a{text-decoration:none !important}
-.lxh .lx-grid{max-width:1200px !important;margin:0 auto !important;display:grid !important;grid-template-columns:1.1fr .9fr !important;gap:60px !important;align-items:center !important}
-.lxh .lx-pill{display:inline-flex !important;align-items:center !important;gap:10px !important;padding:8px 14px !important;border:1px solid rgba(212,175,55,.45) !important;border-radius:999px !important;font-family:'Montserrat',sans-serif !important;font-weight:600 !important;font-size:12px !important;letter-spacing:.16em !important;color:#D4AF37 !important;text-transform:uppercase !important}
-.lxh .lx-pill i{width:8px !important;height:8px !important;border-radius:50% !important;background:#D4AF37 !important}
-.lxh h1{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(36px,5vw,62px) !important;line-height:1.06 !important;letter-spacing:-.02em !important;margin:26px 0 22px !important;color:#FFFFFF !important}
-.lxh h1 span{color:#D4AF37 !important}
-.lxh .lx-sub{font-size:clamp(16px,1.6vw,19px) !important;line-height:1.65 !important;color:rgba(255,255,255,.82) !important;max-width:560px !important}
+.lxh .lx-aura{position:absolute !important;width:520px !important;height:520px !important;border-radius:50% !important;filter:blur(90px) !important;opacity:.35 !important;pointer-events:none !important;z-index:0 !important}
+.lxh .lx-aura.a{left:-160px !important;top:-140px !important;background:#2F6FE4 !important;animation:lxhFloat 14s ease-in-out infinite}
+.lxh .lx-aura.b{right:-180px !important;bottom:-200px !important;background:#E8C55A !important;opacity:.13 !important;animation:lxhFloat 18s ease-in-out infinite reverse}
+.lxh .lx-grid{position:relative !important;z-index:1 !important;max-width:1200px !important;margin:0 auto !important;display:grid !important;grid-template-columns:1fr 1fr !important;gap:48px !important;align-items:center !important}
+.lxh .lx-pill{display:inline-flex !important;align-items:center !important;gap:10px !important;padding:8px 16px !important;border-radius:999px !important;background:rgba(255,255,255,.06) !important;border:1px solid rgba(212,175,55,.45) !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:12px !important;letter-spacing:.16em !important;color:#F5DC85 !important;text-transform:uppercase !important}
+.lxh .lx-pill i{width:8px !important;height:8px !important;border-radius:50% !important;background:#3DDC97 !important;box-shadow:0 0 0 0 rgba(61,220,151,.6);animation:lxhPing 2s ease-out infinite}
+.lxh h1{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(38px,5vw,62px) !important;line-height:1.05 !important;letter-spacing:-.025em !important;margin:24px 0 22px !important;color:#FFFFFF !important}
+.lxh .lx-grad{background:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#8DB4FF 75%,#5B8DEF 100%) !important;background-size:200% auto !important;-webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;-webkit-text-fill-color:transparent !important;animation:lxhShift 8s ease-in-out infinite alternate}
+.lxh .lx-sub{font-size:clamp(16px,1.6vw,19px) !important;line-height:1.65 !important;color:rgba(255,255,255,.84) !important;max-width:540px !important}
 .lxh .lx-ctas{display:flex !important;flex-wrap:wrap !important;gap:14px !important;margin-top:34px !important}
-.lxh .lx-btn{display:inline-flex !important;align-items:center !important;gap:10px !important;min-height:56px !important;padding:0 28px !important;border-radius:8px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:15px !important;transition:transform .2s ease,box-shadow .2s ease !important}
-.lxh .lx-gold:hover{transform:translateY(-2px) !important;background-position:100% 50% !important;box-shadow:0 16px 40px rgba(212,175,55,.5),inset 0 1px 0 rgba(255,255,255,.45) !important}
-.lxh .lx-ghost:hover{transform:translateY(-2px) !important;background:rgba(212,175,55,.16) !important}
-.lxh .lx-gold{background:linear-gradient(135deg,#B8922A 0%,#D4AF37 40%,#F5DC85 70%,#D4AF37 100%) !important;background-size:220% 100% !important;background-position:0% 50% !important;color:#0B1F3A !important;box-shadow:0 10px 30px rgba(212,175,55,.35),inset 0 1px 0 rgba(255,255,255,.45) !important;transition:transform .25s ease,box-shadow .25s ease,background-position .6s ease !important}
-.lxh .lx-ghost{border:1.5px solid #D4AF37 !important;color:#FFFFFF !important;background:rgba(212,175,55,.06) !important;transition:transform .25s ease,background .25s ease !important}
-.lxh .lx-checks{display:flex !important;flex-wrap:wrap !important;gap:10px 24px !important;margin-top:32px !important;font-size:14px !important;color:rgba(255,255,255,.82) !important}
+.lxh .lx-btn{display:inline-flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;min-height:56px !important;padding:0 28px !important;border-radius:10px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:15px !important}
+.lxh .lx-gold{background:linear-gradient(135deg,#B8922A 0%,#D4AF37 40%,#F5DC85 70%,#D4AF37 100%) !important;background-size:220% 100% !important;background-position:0% 50% !important;color:#0B1F3A !important;box-shadow:0 12px 34px rgba(212,175,55,.4),inset 0 1px 0 rgba(255,255,255,.5) !important;transition:transform .25s ease,box-shadow .25s ease,background-position .6s ease !important}
+.lxh .lx-gold:hover{transform:translateY(-2px) !important;background-position:100% 50% !important;box-shadow:0 18px 44px rgba(212,175,55,.55),inset 0 1px 0 rgba(255,255,255,.5) !important}
+.lxh .lx-ghost{border:1.5px solid rgba(141,180,255,.6) !important;color:#FFFFFF !important;background:rgba(47,111,228,.12) !important;transition:transform .25s ease,background .25s ease !important}
+.lxh .lx-ghost:hover{transform:translateY(-2px) !important;background:rgba(47,111,228,.25) !important}
+.lxh .lx-checks{display:flex !important;flex-wrap:wrap !important;gap:10px 24px !important;margin-top:30px !important;font-size:14.5px !important;color:rgba(255,255,255,.85) !important}
 .lxh .lx-checks span{display:flex !important;align-items:center !important;gap:8px !important}
-/* visual */
-.lxh .lx-vis{position:relative !important;display:flex !important;justify-content:center !important;padding:56px 0 20px !important}
-.lxh .lx-phone{width:300px !important;max-width:100% !important;border-radius:44px !important;background:#050E1C !important;padding:12px !important;border:1px solid rgba(212,175,55,.4) !important;box-shadow:0 40px 90px rgba(0,0,0,.5) !important}
-.lxh .lx-screen{border-radius:34px !important;background:#F6F7F9 !important;overflow:hidden !important}
-.lxh .lx-head{background:#FFFFFF !important;padding:22px 18px 14px !important;border-bottom:1px solid #E4E7EB !important;display:flex !important;align-items:center !important;gap:10px !important;color:#1F2933 !important}
-.lxh .lx-av{width:36px !important;height:36px !important;border-radius:50% !important;background:#0B1F3A !important;color:#D4AF37 !important;display:flex !important;align-items:center !important;justify-content:center !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:14px !important}
-.lxh .lx-msgs{padding:16px 14px 20px !important;display:flex !important;flex-direction:column !important;gap:10px !important;font-size:13px !important;line-height:1.45 !important}
-.lxh .lx-missed{align-self:center !important;font-size:11px !important;color:#52606D !important}
-.lxh .lx-in{align-self:flex-start !important;max-width:85% !important;background:#0B1F3A !important;color:#FFFFFF !important;padding:10px 12px !important;border-radius:16px 16px 16px 4px !important;opacity:0;animation:lxPop .5s ease forwards}
-.lxh .lx-out{align-self:flex-end !important;max-width:85% !important;background:#FFFFFF !important;border:1px solid #E4E7EB !important;color:#1F2933 !important;padding:10px 12px !important;border-radius:16px 16px 4px 16px !important;opacity:0;animation:lxPop .5s ease forwards}
-.lxh .d1{animation-delay:.4s}.lxh .d2{animation-delay:1.2s}.lxh .d3{animation-delay:2s}.lxh .d4{animation-delay:2.8s}
-.lxh .lx-trip{position:absolute !important;right:0 !important;bottom:-4px !important;width:235px !important;background:#FFFFFF !important;color:#1F2933 !important;border-radius:16px !important;padding:16px 18px !important;box-shadow:0 24px 60px rgba(0,0,0,.35) !important;border-top:3px solid #D4AF37 !important;opacity:0;animation:lxPop .6s ease 3.4s forwards}
-.lxh .lx-trip b{font-family:'Montserrat',sans-serif !important;font-size:13px !important}
-.lxh .lx-tag{font-size:11px !important;font-weight:600 !important;color:#0B6B3A !important;background:#E3F4EA !important;padding:3px 8px !important;border-radius:999px !important}
-.lxh .lx-rows{display:grid !important;grid-template-columns:70px 1fr !important;gap:5px !important;font-size:12.5px !important;margin-top:10px !important}
-.lxh .lx-rows span:nth-child(odd){color:#52606D !important}
-.lxh .lx-rows span:nth-child(even){font-weight:600 !important}
-.lxh .lx-fast{position:absolute !important;left:0 !important;top:0 !important;background:#0F2647 !important;border:1px solid rgba(212,175,55,.45) !important;border-radius:14px !important;padding:12px 14px !important;display:flex !important;align-items:center !important;gap:10px !important;box-shadow:0 18px 40px rgba(0,0,0,.35) !important}
-.lxh .lx-fast em{width:34px !important;height:34px !important;border-radius:10px !important;background:#D4AF37 !important;display:flex !important;align-items:center !important;justify-content:center !important}
-@keyframes lxPop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-@media (max-width:900px){
-  .lxh .lx-grid{grid-template-columns:1fr !important;gap:48px !important}
-  .lxh{padding:56px 18px 80px !important}
+
+/* ---- live graphic ---- */
+.lxh .lx-stage{position:relative !important;width:100% !important;max-width:560px !important;height:480px !important;margin:0 auto !important}
+.lxh .lx-lines{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;overflow:visible !important}
+.lxh .lx-lines path{fill:none !important;stroke:rgba(141,180,255,.35) !important;stroke-width:1.5 !important;stroke-dasharray:4 6 !important;animation:lxhDash 1.6s linear infinite}
+.lxh .lx-node{position:absolute !important;width:12px !important;height:12px !important;margin:-6px 0 0 -6px !important;border-radius:50% !important;background:#8DB4FF !important;box-shadow:0 0 0 5px rgba(141,180,255,.18),0 0 18px rgba(141,180,255,.9) !important}
+.lxh .lx-node.g{background:#F5DC85 !important;box-shadow:0 0 0 5px rgba(212,175,55,.2),0 0 18px rgba(245,220,133,.9) !important}
+.lxh .lx-core{position:absolute !important;left:50% !important;top:50% !important;width:230px !important;transform:translate(-50%,-50%) !important;border-radius:20px !important;padding:18px !important;background:linear-gradient(160deg,rgba(255,255,255,.14),rgba(255,255,255,.04)) !important;border:1px solid rgba(255,255,255,.22) !important;backdrop-filter:blur(10px) !important;-webkit-backdrop-filter:blur(10px) !important;box-shadow:0 30px 70px rgba(0,0,0,.45),0 0 0 1px rgba(212,175,55,.15) inset !important}
+.lxh .lx-core-top{display:flex !important;align-items:center !important;justify-content:space-between !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:14px !important}
+.lxh .lx-live{display:inline-flex !important;align-items:center !important;gap:6px !important;font-size:11px !important;font-weight:700 !important;color:#3DDC97 !important;letter-spacing:.08em !important}
+.lxh .lx-live i{width:7px !important;height:7px !important;border-radius:50% !important;background:#3DDC97 !important;animation:lxhBlink 1.4s ease-in-out infinite}
+.lxh .lx-route{margin:12px 0 10px !important;border-radius:12px !important;background:rgba(6,18,38,.55) !important;height:84px !important;position:relative !important;overflow:hidden !important}
+.lxh .lx-route svg{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important}
+.lxh .lx-route-l{position:absolute !important;bottom:6px !important;font-size:10px !important;color:rgba(255,255,255,.7) !important}
+.lxh .lx-bars{display:grid !important;grid-template-columns:58px 1fr !important;gap:7px 10px !important;align-items:center !important;font-size:12px !important;color:rgba(255,255,255,.8) !important}
+.lxh .lx-bar{height:6px !important;border-radius:6px !important;background:rgba(255,255,255,.1) !important;overflow:hidden !important}
+.lxh .lx-bar b{display:block !important;height:100% !important;border-radius:6px !important;background:linear-gradient(90deg,#5B8DEF,#8DB4FF) !important;animation:lxhGrow 4s ease-in-out infinite alternate}
+.lxh .lx-bar b.g{background:linear-gradient(90deg,#D4AF37,#F5DC85) !important}
+.lxh .lx-sample{margin-top:10px !important;font-size:10.5px !important;font-style:italic !important;color:rgba(255,255,255,.55) !important}
+.lxh .lx-ev{position:absolute !important;display:flex !important;align-items:center !important;gap:10px !important;padding:11px 14px !important;border-radius:14px !important;background:#FFFFFF !important;color:#1F2933 !important;box-shadow:0 18px 40px rgba(0,0,0,.35) !important;min-width:190px !important;animation:lxhBob 6s ease-in-out infinite,lxhHi 8s ease-in-out infinite}
+.lxh .lx-ev b{display:block !important;font-family:'Montserrat',sans-serif !important;font-size:13.5px !important;color:#0B1F3A !important}
+.lxh .lx-ev span{display:block !important;font-size:12px !important;color:#52606D !important;margin-top:2px !important}
+.lxh .lx-ev em{flex:0 0 34px !important;width:34px !important;height:34px !important;border-radius:10px !important;display:flex !important;align-items:center !important;justify-content:center !important;font-style:normal !important}
+.lxh .lx-ev .ic-b{background:#EAF1FF !important;color:#2F6FE4 !important}
+.lxh .lx-ev .ic-g{background:#FBF3D9 !important;color:#9A7A1E !important}
+.lxh .e1{left:0 !important;top:6px !important;animation-delay:0s,0s}
+.lxh .e2{right:0 !important;top:6px !important;animation-delay:1.5s,2s}
+.lxh .e3{left:0 !important;bottom:6px !important;animation-delay:.8s,4s}
+.lxh .e4{right:0 !important;bottom:6px !important;animation-delay:2.2s,6s}
+.lxh .rv{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
+.lxh .rv.in{opacity:1;transform:none}
+@keyframes lxhFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
+@keyframes lxhShift{to{background-position:100% center}}
+@keyframes lxhPing{0%{box-shadow:0 0 0 0 rgba(61,220,151,.6)}100%{box-shadow:0 0 0 10px rgba(61,220,151,0)}}
+@keyframes lxhBlink{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes lxhDash{to{stroke-dashoffset:-20}}
+@keyframes lxhGrow{from{width:var(--a)}to{width:var(--b)}}
+@keyframes lxhBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes lxhHi{0%,10%,30%,100%{box-shadow:0 18px 40px rgba(0,0,0,.35)}18%{box-shadow:0 18px 40px rgba(0,0,0,.35),0 0 0 3px rgba(212,175,55,.85),0 0 30px rgba(245,220,133,.6)}}
+@media (max-width:980px){.lxh .lx-grid{grid-template-columns:1fr !important;gap:56px !important}.lxh{padding:64px 18px 80px !important}}
+@media (max-width:600px){
+  .lxh .lx-stage{height:auto !important;display:grid !important;grid-template-columns:1fr 1fr !important;gap:10px !important}
+  .lxh .lx-lines,.lxh .lx-node{display:none !important}
+  .lxh .lx-core{position:relative !important;left:auto !important;top:auto !important;transform:none !important;width:100% !important;grid-column:1 / -1 !important;order:-1 !important}
+  .lxh .lx-ev{position:relative !important;left:auto !important;right:auto !important;top:auto !important;bottom:auto !important;min-width:0 !important;flex-direction:column !important;align-items:flex-start !important;animation:lxhHi 8s ease-in-out infinite}
+  .lxh .lx-btn{width:100% !important}
 }
-@media (max-width:520px){
-  .lxh .lx-fast{display:none !important}
-  .lxh .lx-trip{position:relative !important;right:auto !important;bottom:auto !important;margin:-30px auto 0 !important}
-  .lxh .lx-vis{flex-direction:column !important;align-items:center !important}
-  .lxh .lx-btn{width:100% !important;justify-content:center !important}
-}
-@media (prefers-reduced-motion:reduce){.lxh .lx-in,.lxh .lx-out,.lxh .lx-trip{animation:none !important;opacity:1 !important}}
+@media (prefers-reduced-motion:reduce){.lxh *,.lxh *::before,.lxh *::after{animation:none !important}.lxh .rv{opacity:1 !important;transform:none !important}}
 </style>
+<span class="lx-aura a" aria-hidden="true"></span><span class="lx-aura b" aria-hidden="true"></span>
 
 <div class="lx-grid">
-  <div>
+  <div class="rv">
     <span class="lx-pill"><i></i>Luxon Limo AI · For transportation companies</span>
-    <h1>Never Lose Another Customer Because You <span>Missed the Call.</span></h1>
+    <h1>Never Lose Another Customer Because You <span class="lx-grad">Missed the Call.</span></h1>
     <p class="lx-sub">Luxon Digital helps limo and private transportation companies answer inquiries, capture trip information, follow up automatically, and generate more reviews with done-for-you AI automation.</p>
     <div class="lx-ctas">
       <a class="lx-btn lx-gold" href="/contact">Book Your AI Demo
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="lx-btn lx-ghost" href="/demo">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="#D4AF37" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch the Demo Here</a>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5DC85" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch the Demo Here</a>
     </div>
     <div class="lx-checks">
-      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Done-for-you setup</span>
-      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Human handoff built in</span>
-      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Works with your booking software</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5DC85" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Done-for-you setup</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5DC85" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Human handoff built in</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5DC85" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Works with your booking software</span>
     </div>
   </div>
 
-  <div class="lx-vis" aria-hidden="true">
-    <div class="lx-phone"><div class="lx-screen">
-      <div class="lx-head"><div class="lx-av">L</div><div><div style="font-weight:600;font-size:14px">Your Limo Co.</div><div style="font-size:11px;color:#52606D">Text message · 11:42 PM</div></div></div>
-      <div class="lx-msgs">
-        <div class="lx-missed">✕ Missed call · (555) 214-0193</div>
-        <div class="lx-in d1">Hi, this is Your Limo Co. Sorry we missed your call! Where can we pick you up, and when?</div>
-        <div class="lx-out d2">JFK Terminal 4, Saturday 6:30 PM. 3 people, going to Midtown.</div>
-        <div class="lx-in d3">Got it. SUV or sedan? Our team will confirm your quote shortly.</div>
-        <div class="lx-out d4">SUV please!</div>
+  <div class="lx-stage rv" aria-hidden="true">
+    <svg class="lx-lines" viewBox="0 0 560 480" preserveAspectRatio="none">
+      <path id="lxh-p1" d="M110 70 C 110 150, 190 170, 230 205"/>
+      <path id="lxh-p2" d="M450 70 C 450 150, 370 170, 330 205"/>
+      <path id="lxh-p3" d="M110 410 C 110 330, 190 310, 230 275"/>
+      <path id="lxh-p4" d="M450 410 C 450 330, 370 310, 330 275"/>
+      <circle r="4" fill="#F5DC85"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#lxh-p1"/></animateMotion></circle>
+      <circle r="4" fill="#8DB4FF"><animateMotion dur="3.1s" begin=".6s" repeatCount="indefinite"><mpath href="#lxh-p2"/></animateMotion></circle>
+      <circle r="4" fill="#8DB4FF"><animateMotion dur="2.9s" begin="1.2s" repeatCount="indefinite"><mpath href="#lxh-p3"/></animateMotion></circle>
+      <circle r="4" fill="#F5DC85"><animateMotion dur="3.3s" begin=".3s" repeatCount="indefinite"><mpath href="#lxh-p4"/></animateMotion></circle>
+    </svg>
+    <span class="lx-node g" style="left:19.6%;top:16.5%"></span>
+    <span class="lx-node" style="left:80.4%;top:16.5%"></span>
+    <span class="lx-node" style="left:19.6%;top:83.5%"></span>
+    <span class="lx-node g" style="left:80.4%;top:83.5%"></span>
+
+    <div class="lx-core">
+      <div class="lx-core-top">Luxon Limo AI <span class="lx-live"><i></i>LIVE</span></div>
+      <div class="lx-route">
+        <svg viewBox="0 0 200 84" preserveAspectRatio="none">
+          <path id="lxh-road" d="M14 64 C 50 64, 50 22, 92 26 S 150 64, 186 22" fill="none" stroke="rgba(141,180,255,.35)" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
+          <circle cx="14" cy="64" r="4" fill="#8DB4FF"/><circle cx="186" cy="22" r="5" fill="#F5DC85"/>
+          <g><rect x="-7" y="-4" width="14" height="8" rx="3" fill="#FFFFFF"/><rect x="-4" y="-3" width="5" height="3" rx="1" fill="#0B1F3A"/>
+            <animateMotion dur="5s" repeatCount="indefinite" rotate="auto"><mpath href="#lxh-road"/></animateMotion></g>
+        </svg>
+        <span class="lx-route-l" style="left:8px">JFK T4</span><span class="lx-route-l" style="right:8px">Midtown</span>
       </div>
-    </div></div>
-    <div class="lx-fast"><em><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></em>
-      <div><div style="font-size:12px;color:rgba(255,255,255,.75)">Missed call</div><div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px">answered automatically</div></div></div>
-    <div class="lx-trip">
-      <div style="display:flex;justify-content:space-between;align-items:center"><b>Trip captured</b><span class="lx-tag">New lead</span></div>
-      <div class="lx-rows"><span>Pickup</span><span>JFK Terminal 4</span><span>Drop-off</span><span>Midtown</span><span>When</span><span>Sat · 6:30 PM</span><span>Party</span><span>3 passengers</span><span>Vehicle</span><span>SUV</span></div>
+      <div class="lx-bars">
+        <span>Inquiries</span><span class="lx-bar"><b style="--a:62%;--b:88%"></b></span>
+        <span>Quoted</span><span class="lx-bar"><b style="--a:44%;--b:64%"></b></span>
+        <span>Booked</span><span class="lx-bar"><b class="g" style="--a:30%;--b:52%"></b></span>
+      </div>
+      <div class="lx-sample">Sample data</div>
     </div>
+
+    <div class="lx-ev e1"><em class="ic-g"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></em><div><b>Missed call answered</b><span>Texted back automatically</span></div></div>
+    <div class="lx-ev e2"><em class="ic-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M3 13l2-6h14l2 6v4H3z"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></em><div><b>Trip captured</b><span>Sat 6:30 PM · SUV · 3 guests</span></div></div>
+    <div class="lx-ev e3"><em class="ic-b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></em><div><b>Follow-up sent</b><span>Quote reminder by text</span></div></div>
+    <div class="lx-ev e4"><em class="ic-g"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></em><div><b>5★ review received</b><span>After a completed ride</span></div></div>
   </div>
 </div>
+<script>
+(function () {
+  var els = document.querySelectorAll('.lxh .rv:not(.in)');
+  if (!('IntersectionObserver' in window)) { for (var i = 0; i < els.length; i++) els[i].classList.add('in'); return; }
+  var io = new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: .12 });
+  for (var j = 0; j < els.length; j++) io.observe(els[j]);
+})();
+</script>
 </div>
