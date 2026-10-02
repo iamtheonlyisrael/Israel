@@ -67,6 +67,8 @@ In GHL, either paste the header and footer into each page's first and last secti
 
 ## Full-page mockups
 
+`mockups/luxon-full-site.html` combines **all 13 pages in one file**: the header, CTA band and footer appear once, and the menu, dropdown, footer and buttons switch pages. Use it to preview or present the whole site. In GHL, each page is still pasted separately from `pages/` and `home/`.
+
 `mockups/home.html` and `mockups/about.html` are full pages (header, all sections, footer) in one file. Open it in any browser.
 Run `./build-mockups.sh` to rebuild it after editing a block.
 

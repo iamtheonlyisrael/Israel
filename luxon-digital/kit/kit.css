@@ -39,7 +39,7 @@
 .lxk .h3{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:20px !important;line-height:1.3 !important;color:#0B1F3A !important;margin-bottom:8px !important}
 .lxk .hero .h1,.lxk .hero .h2,.lxk .hero .h3,.lxk .dk .h2,.lxk .dk .h3,.lxk .dk2 .h2,.lxk .dk2 .h3{color:#FFFFFF !important}
 .lxk .gt{background:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 45%,#B8922A 100%) !important;-webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;-webkit-text-fill-color:transparent !important}
-.lxk .hero .gt,.lxk .dk .gt,.lxk .dk2 .gt{background:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#8DB4FF 75%,#5B8DEF 100%);background-size:200% auto !important;-webkit-background-clip:text !important;background-clip:text !important;animation:lxkShift 8s ease-in-out infinite alternate}
+.lxk .hero .gt,.lxk .dk .gt,.lxk .dk2 .gt{background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#8DB4FF 75%,#5B8DEF 100%) !important;background-position:0% center;background-size:200% auto !important;-webkit-background-clip:text !important;background-clip:text !important;animation:lxkShift 8s ease-in-out infinite alternate}
 .lxk .lead{font-size:clamp(16px,1.6vw,18.5px) !important;line-height:1.65 !important;color:#3E4C59 !important;max-width:640px !important}
 .lxk .center .lead,.lxk .head.center .lead{margin-left:auto !important;margin-right:auto !important}
 .lxk .hero .lead,.lxk .dk .lead,.lxk .dk2 .lead{color:rgba(255,255,255,.84) !important}

@@ -84,3 +84,50 @@ for fn in sorted(os.listdir(P('pages', 'src'))):
             + '\n'.join(parts) + '\n</body>\n</html>\n')
     open(P('mockups', fn), 'w').write(html)
     print('built', page)
+
+# ---------- combined single-file website: mockups/luxon-full-site.html ----------
+order = ['home', 'luxon-limo-ai', 'ai-receptionist', 'lead-follow-up', 'review-automation', 'lead-management',
+         'demo', 'pricing', 'about', 'faq', 'contact', 'privacy-policy', 'terms-and-conditions']
+home_blocks = ['01-hero', '02-missed-call', '03-how-it-works', '04-features', '05-who-its-for', '06-guardrails', '07-founder-story']
+sections = []
+kit_block = f'<style>\n{kit}</style>'
+for i, page in enumerate(order):
+    if page == 'home':
+        body = '\n'.join(open(P('home', b + '.html')).read() for b in home_blocks)
+    else:
+        body = open(P('pages', page + '.html')).read()
+        if i > 1:  # kit styles only need to be included once
+            body = body.replace(kit_block, '', 1)
+    sections.append(f'<section class="lx-page" id="pg-{page}" data-cta="{0 if page in NO_CTA else 1}"'
+                    f'{"" if page == "home" else " hidden"}>\n{body}\n</section>')
+site = '\n'.join([shared('header.html'), *sections, '<div id="lx-cta-wrap">', shared('cta-band.html'), '</div>', shared('footer.html')])
+def route_link(m):
+    path = m.group(1)
+    if path == '/': return 'href="#pg-home"'
+    name = path.strip('/').split('#')[0]
+    return f'href="#pg-{name}"' if name in order else m.group(0)
+site = re.sub(r'href="(/[^"]*)"', route_link, site)
+site = re.sub(r'href="PASTE-[A-Z-]+-URL"', 'href="#"', site)
+router = '''<script>
+(function () {
+  var pages = document.querySelectorAll('.lx-page'), cta = document.getElementById('lx-cta-wrap');
+  function show() {
+    var h = location.hash.replace('#', '');
+    if (h && h.indexOf('pg-') !== 0) { return; }            /* in-page anchor: stay on current page */
+    var id = h || 'pg-home', found = document.getElementById(id) ? id : 'pg-home';
+    for (var i = 0; i < pages.length; i++) pages[i].hidden = pages[i].id !== found;
+    cta.hidden = document.getElementById(found).getAttribute('data-cta') === '0';
+    window.scrollTo(0, 0);
+    var mob = document.getElementById('lx-tog'); if (mob) mob.checked = false;
+  }
+  window.addEventListener('hashchange', show);
+  show();
+})();
+</script>'''
+full = ('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        '<title>Luxon Digital | AI Automation for Limo &amp; Transportation Companies</title>\n'
+        '<style>body{margin:0;background:#FFFFFF}.lx-page[hidden],#lx-cta-wrap[hidden]{display:none !important}</style>\n'
+        '</head>\n<body>\n' + site + '\n' + router + '\n</body>\n</html>\n')
+open(P('mockups', 'luxon-full-site.html'), 'w').write(full)
+print('built full site', round(len(full) / 1024), 'KB')
