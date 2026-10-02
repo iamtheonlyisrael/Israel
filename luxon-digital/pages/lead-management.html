@@ -1,157 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Us | Luxon Digital</title>
-<style>html{scroll-behavior:smooth}body{margin:0;background:#FFFFFF}</style>
-</head>
-<body>
-<div class="lxhd">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
-.lxhd{width:100% !important;font-family:'Inter',sans-serif !important;box-sizing:border-box !important;position:relative !important;z-index:50 !important}
-.lxhd *,.lxhd *::before,.lxhd *::after{box-sizing:border-box !important}
-.lxhd a{text-decoration:none !important}
-/* ---------- billboard top bar ---------- */
-.lxhd .lx-top{position:relative !important;display:block !important;background:#071528 !important;padding:7px 0 !important;color:#FFFFFF !important;border-bottom:1px solid rgba(212,175,55,.55) !important;box-shadow:inset 0 -12px 24px rgba(212,175,55,.08) !important;overflow:hidden !important}
-.lxhd .lx-top:hover .lx-tpanel{filter:brightness(1.08) !important}
-.lxhd .lx-tbulbs{position:absolute !important;left:0 !important;right:0 !important;height:6px !important;pointer-events:none !important;z-index:3 !important;background:radial-gradient(circle at 9px 50%,#FFF3C4 0 2.2px,transparent 3px),radial-gradient(circle at 27px 50%,rgba(212,175,55,.35) 0 2px,transparent 2.8px) !important;background-size:36px 100% !important;background-repeat:repeat-x !important;filter:drop-shadow(0 0 3px rgba(255,215,106,.9)) !important;animation:lxtChase .8s steps(2) infinite}
-.lxhd .lx-tbulbs.t{top:1px !important}
-.lxhd .lx-tbulbs.b{bottom:1px !important;animation-direction:reverse}
-.lxhd .lx-tpanel{position:relative !important;max-width:1240px !important;margin:0 auto !important;height:34px !important;display:flex !important;perspective:2400px !important;container-type:inline-size !important;transition:filter .2s !important}
-.lxhd .lx-tslat{position:relative !important;flex:1 1 0 !important;height:100% !important;transform-style:preserve-3d !important;animation:lxtTri 12s cubic-bezier(.75,0,.25,1) infinite;animation-delay:calc(var(--i) * .05s)}
-.lxhd .lx-tface{position:absolute !important;inset:0 !important;overflow:hidden !important;backface-visibility:hidden !important;-webkit-backface-visibility:hidden !important;transform:rotateY(calc(var(--k) * 120deg)) translateZ(calc(6.25cqw * .2887)) !important}
-.lxhd .lx-tmsg{position:absolute !important;top:0 !important;bottom:0 !important;width:1600% !important;left:calc(var(--i) * -100%) !important;display:flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:clamp(10px,2.6cqw,13px) !important;letter-spacing:.18em !important;text-transform:uppercase !important;white-space:nowrap !important}
-.lxhd .lx-tmsg em{font-style:normal !important}
-.lxhd .lx-tmsg .s{display:none !important}
-.lxhd .lx-tmsg.m0{background:#0B1F3A !important;color:#FFFFFF !important}
-.lxhd .lx-tmsg.m0 em{color:#D4AF37 !important}
-.lxhd .lx-tmsg.m1{background:#D4AF37 !important;color:#0B1F3A !important}
-.lxhd .lx-tmsg.m2{background:#FFFFFF !important;color:#0B1F3A !important}
-.lxhd .lx-tmsg.m2 em{color:#7A6210 !important}
-.lxhd .lx-tmsg i{display:inline-block !important;width:6px !important;height:6px !important;transform:rotate(45deg) !important;background:currentColor !important;opacity:.55 !important;flex:0 0 6px !important}
-.lxhd .lx-tglare{position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:2 !important;background:linear-gradient(100deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%) !important;background-size:300% 100% !important;animation:lxtGlare 6s ease-in-out infinite;mix-blend-mode:screen}
-@container (max-width:640px){.lxhd .lx-tmsg .l{display:none !important}.lxhd .lx-tmsg .s{display:inline !important}.lxhd .lx-tmsg{letter-spacing:.12em !important}}
-@keyframes lxtTri{0%,27%{transform:rotateY(0)}33.33%,60%{transform:rotateY(-120deg)}66.66%,93%{transform:rotateY(-240deg)}100%{transform:rotateY(-360deg)}}
-@keyframes lxtChase{to{background-position:36px 0}}
-@keyframes lxtGlare{0%,50%{background-position:120% 0}100%{background-position:-120% 0}}
-@media (prefers-reduced-motion:reduce){.lxhd .lx-tslat,.lxhd .lx-tbulbs,.lxhd .lx-tglare{animation:none !important}}
-.lxhd .lx-bar{background:#FFFFFF !important;border-bottom:1px solid #E4E7EB !important}
-.lxhd .lx-in{max-width:1200px !important;margin:0 auto !important;padding:14px 20px !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:24px !important}
-.lxhd .lx-logo{display:flex !important;align-items:center !important;gap:10px !important;color:#0B1F3A !important}
-.lxhd .lx-logo img{height:52px !important;width:auto !important;display:block !important}
-.lxhd .lx-word{display:flex;flex-direction:column !important;line-height:1 !important}
-.lxhd .lx-word b{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:22px !important;letter-spacing:.08em !important;color:#0B1F3A !important}
-.lxhd .lx-word i{font-style:normal !important;font-family:'Montserrat',sans-serif !important;font-weight:600 !important;font-size:10px !important;letter-spacing:.5em !important;color:#7A6210 !important;margin-top:4px !important}
-.lxhd .lx-nav{display:flex !important;align-items:center !important;gap:30px !important}
-.lxhd .lx-link{font-weight:500 !important;font-size:15px !important;color:#1F2933 !important;padding:10px 0 !important;border-bottom:2px solid transparent !important;transition:color .2s,border-color .2s !important;display:inline-flex !important;align-items:center !important;gap:6px !important}
-.lxhd .lx-link:hover,.lxhd .lx-link.on{color:#0B1F3A !important;border-bottom-color:#D4AF37 !important}
-.lxhd .lx-dd{position:relative !important}
-.lxhd .lx-menu{position:absolute !important;top:100% !important;left:-18px !important;min-width:260px !important;background:#FFFFFF !important;border:1px solid #E4E7EB !important;border-top:3px solid #D4AF37 !important;border-radius:0 0 14px 14px !important;box-shadow:0 20px 50px rgba(11,31,58,.14) !important;padding:10px !important;opacity:0 !important;visibility:hidden !important;transform:translateY(6px) !important;transition:all .2s ease !important}
-.lxhd .lx-dd:hover .lx-menu,.lxhd .lx-dd:focus-within .lx-menu{opacity:1 !important;visibility:visible !important;transform:none !important}
-.lxhd .lx-menu a{display:block !important;padding:11px 14px !important;border-radius:10px !important;color:#1F2933 !important;font-size:14.5px !important;font-weight:500 !important}
-.lxhd .lx-menu a:hover{background:#F6F7F9 !important;color:#0B1F3A !important}
-.lxhd .lx-menu a small{display:block !important;font-size:12.5px !important;color:#52606D !important;font-weight:400 !important;margin-top:2px !important}
-.lxhd .lx-cta{display:inline-flex !important;align-items:center !important;gap:8px !important;min-height:48px !important;padding:0 22px !important;border-radius:8px !important;background:linear-gradient(135deg,#B8922A 0%,#D4AF37 40%,#F5DC85 70%,#D4AF37 100%) !important;background-size:220% 100% !important;color:#0B1F3A !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:14px !important;white-space:nowrap !important;transition:transform .25s,box-shadow .25s,background-position .6s !important}
-.lxhd .lx-cta:hover{transform:translateY(-2px) !important;background-position:100% 50% !important;box-shadow:0 10px 24px rgba(212,175,55,.35) !important}
-.lxhd .lx-tog{display:none !important}
-.lxhd .lx-burger{display:none !important;width:46px !important;height:46px !important;border-radius:10px !important;border:1px solid #E4E7EB !important;align-items:center !important;justify-content:center !important;cursor:pointer !important;color:#0B1F3A !important}
-.lxhd .lx-mob{display:none !important}
-@media (max-width:1020px){
-  .lxhd .lx-nav,.lxhd .lx-in>.lx-cta{display:none !important}
-  .lxhd .lx-burger{display:inline-flex !important}
-  .lxhd .lx-tog:checked~.lx-mob{display:block !important}
-  .lxhd .lx-mob{background:#FFFFFF !important;border-bottom:1px solid #E4E7EB !important;padding:8px 20px 22px !important}
-  .lxhd .lx-mob a{display:block !important;padding:14px 4px !important;border-bottom:1px solid #F0F2F5 !important;color:#1F2933 !important;font-weight:500 !important;font-size:16px !important}
-  .lxhd .lx-mob .lx-sub{padding-left:18px !important;font-size:15px !important;color:#3E4C59 !important}
-  .lxhd .lx-mob a.lx-cta{display:flex !important;justify-content:center !important;margin-top:16px !important;border:0 !important;color:#0B1F3A !important;font-weight:700 !important;font-size:15px !important}
-}
-</style>
-
-<!-- Billboard top bar: edit the 3 messages in the script at the bottom of this block -->
-<a class="lx-top" href="/contact" aria-label="AI Automation That Keeps Business Moving. Book Your AI Demo">
-  <span class="lx-tbulbs t" aria-hidden="true"></span>
-  <span class="lx-tpanel" aria-hidden="true">
-    <span class="lx-tmsg m0" style="width:100% !important;left:0 !important"><span class="l">AI Automation That <em>Keeps Business Moving</em></span><span class="s">AI That <em>Keeps Business Moving</em></span></span>
-  </span>
-  <span class="lx-tglare" aria-hidden="true"></span>
-  <span class="lx-tbulbs b" aria-hidden="true"></span>
-</a>
-<input type="checkbox" id="lx-tog" class="lx-tog" aria-hidden="true">
-<div class="lx-bar">
-  <div class="lx-in">
-    <a class="lx-logo" href="/" aria-label="Luxon Digital home">
-      <!-- LOGO: to use the image logo, uncomment the next line, paste the GHL media URL, and delete the <span class="lx-word"> line -->
-      <!-- <img src="PASTE-LOGO-URL" alt="Luxon Digital"> -->
-      <span class="lx-word"><b>LUXON</b><i>DIGITAL</i></span>
-    </a>
-    <nav class="lx-nav" aria-label="Main">
-      <a class="lx-link" href="/">Home</a>
-      <div class="lx-dd">
-        <a class="lx-link" href="/luxon-limo-ai">Luxon Limo AI
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
-        <div class="lx-menu">
-          <a href="/ai-receptionist">AI Receptionist<small>Answer every call, even after hours</small></a>
-          <a href="/lead-follow-up">Automated Lead Follow-Up<small>Turn inquiries into customers</small></a>
-          <a href="/review-automation">Review Automation<small>More 5-star reviews after every ride</small></a>
-          <a href="/lead-management">Lead Management<small>Every lead in one clear view</small></a>
-        </div>
-      </div>
-      <a class="lx-link" href="/demo">Demo</a>
-      <a class="lx-link" href="/pricing">Pricing</a>
-      <a class="lx-link" href="/about">About Us</a>
-      <a class="lx-link" href="/faq">FAQ</a>
-      <a class="lx-link" href="/contact">Contact</a>
-    </nav>
-    <a class="lx-cta" href="/contact">Book Your AI Demo
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <label class="lx-burger" for="lx-tog" aria-label="Open menu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></label>
-  </div>
-</div>
-<div class="lx-mob">
-  <a href="/">Home</a>
-  <a href="/luxon-limo-ai">Luxon Limo AI</a>
-  <a class="lx-sub" href="/ai-receptionist">AI Receptionist</a>
-  <a class="lx-sub" href="/lead-follow-up">Automated Lead Follow-Up</a>
-  <a class="lx-sub" href="/review-automation">Review Automation</a>
-  <a class="lx-sub" href="/lead-management">Lead Management</a>
-  <a href="/demo">Demo</a>
-  <a href="/pricing">Pricing</a>
-  <a href="/about">About Us</a>
-  <a href="/faq">FAQ</a>
-  <a href="/contact">Contact</a>
-  <a class="lx-cta" href="/contact">Book Your AI Demo</a>
-</div>
-<script>
-(function () {
-  /* ---- Top bar billboard messages (exactly 3). "long" = desktop, "short" = phones. <em> = gold words ---- */
-  var MESSAGES = [
-    { long: 'AI Automation That <em>Keeps Business Moving</em>',            short: 'AI That <em>Keeps Business Moving</em>' },
-    { long: 'Never Miss Another Call <i></i> Never Lose Another Reservation', short: 'Never Miss Another Call' },
-    { long: 'Done-For-You AI for Limo &amp; Chauffeur Companies <i></i> <em>Book Your AI Demo &rarr;</em>', short: '<em>Book Your AI Demo &rarr;</em>' }
-  ];
-  var SLATS = 16;
-  var panels = document.querySelectorAll('.lxhd .lx-tpanel:not([data-built])');
-  for (var p = 0; p < panels.length; p++) {
-    var panel = panels[p], html = '';
-    panel.setAttribute('data-built', '1');
-    for (var i = 0; i < SLATS; i++) {
-      html += '<span class="lx-tslat" style="--i:' + i + '">';
-      for (var k = 0; k < 3; k++) {
-        html += '<span class="lx-tface" style="--k:' + k + '"><span class="lx-tmsg m' + k + '">' +
-          '<span class="l">' + MESSAGES[k].long + '</span><span class="s">' + MESSAGES[k].short + '</span></span></span>';
-      }
-      html += '</span>';
-    }
-    panel.innerHTML = html;
-  }
-})();
-</script>
-</div>
-
-<!-- Luxon Digital | About Us page | paste this whole block into ONE Custom Code element -->
+<!-- Luxon Digital | Lead Management page | paste this whole block into ONE Custom Code element -->
 <div class="lxk">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
@@ -426,113 +273,76 @@
 @media (prefers-reduced-motion:reduce){.lxk *,.lxk *::before,.lxk *::after{animation:none !important;transition:none !important}.lxk .rv,.lxk .b-in,.lxk .b-out,.lxk .tl.live .tl-i,.lxk .stars svg{opacity:1 !important;transform:none !important}}
 </style>
 <style>
-.lxk .values-sec{padding-top:80px !important;padding-bottom:80px !important}
-.lxk .values-eye{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:14px !important;letter-spacing:1px !important;color:#D4AF37FF !important;text-transform:uppercase !important}
-.lxk .who{border-radius:24px !important;padding:30px !important}
-.lxk .who-i{display:flex !important;align-items:center !important;gap:14px !important;padding:14px 16px !important;border-radius:14px !important;background:rgba(255,255,255,.05) !important;border:1px solid rgba(255,255,255,.1) !important;font-weight:600 !important;font-size:15.5px !important;color:#FFFFFF !important;transition:transform .25s ease,border-color .25s ease,background .25s ease !important}
-.lxk .who-i:hover{transform:translateX(4px) !important;border-color:rgba(212,175,55,.55) !important;background:rgba(212,175,55,.08) !important}
-.lxk .who-i .ico{width:40px !important;height:40px !important;flex:0 0 40px !important;margin:0 !important;border-radius:11px !important}
-.lxk .eq{display:flex !important;flex-wrap:wrap !important;align-items:center !important;justify-content:center !important;gap:12px !important;margin-top:56px !important}
-.lxk .eq span{padding:15px 20px !important;border-radius:14px !important;font-weight:600 !important;font-size:15px !important;color:#FFFFFF !important;background:linear-gradient(135deg,#0E2B5E,#0B1F3A) !important;border:1px solid rgba(212,175,55,.35) !important}
-.lxk .eq b{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:24px !important;color:#B8922A !important}
-.lxk .eq span.res{background:linear-gradient(135deg,#B8922A,#F5DC85) !important;color:#0B1F3A !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;border:0 !important}
-@media (max-width:560px){.lxk .eq b{display:none !important}.lxk .eq span{width:100% !important;text-align:center !important}}
+.lxk .mover{position:relative !important}
+.lxk .ghost-tk{position:absolute !important;left:0 !important;right:0 !important;top:36px !important;z-index:3 !important;padding:12px !important;border-radius:12px !important;background:#FFFFFF !important;border:2px solid #D4AF37 !important;box-shadow:0 14px 30px rgba(212,175,55,.35) !important;font-size:12.5px !important;color:#52606D !important;animation:lxmMove 9s cubic-bezier(.7,0,.3,1) infinite}
+.lxk .ghost-tk b{display:block !important;font-size:13.5px !important;color:#1F2933 !important;margin-bottom:3px !important}
+@keyframes lxmMove{0%,18%{transform:translateX(0)}30%,48%{transform:translateX(calc(100% + 12px))}60%,78%{transform:translateX(calc(200% + 24px))}90%,100%{transform:translateX(calc(300% + 36px));opacity:0}}
+@media (max-width:900px){.lxk .ghost-tk{display:none !important}}
 </style>
 
-<!-- HERO -->
 <section class="sec hero">
   <span class="aura a" aria-hidden="true"></span><span class="aura b" aria-hidden="true"></span>
-  <div class="wrap split r">
-    <div class="rv">
-      <span class="pill"><i></i>About Luxon Digital</span>
-      <h1 class="h1">Your AI automation partner for <span class="gt">transportation.</span></h1>
-      <p class="lead">We help limo and private transportation companies capture more business with simple, done-for-you AI. You don't need to become a tech expert. That's our job.</p>
+  <div class="wrap">
+    <div class="crumb"><a href="/luxon-limo-ai">Luxon Limo AI</a><b>/</b>Lead Management</div>
+    <div class="head rv" style="max-width:820px">
+      <span class="pill"><i></i>Lead Management</span>
+      <h1 class="h1">Every lead. Every quote. <span class="gt">One clear view.</span></h1>
+      <p class="lead">Calls, texts, website requests and emails land in one place. See who asked, what trip they need, and which quotes still need an answer.</p>
       <div class="btns">
         <a class="btn gold" href="/contact">Book Your AI Demo <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn ghost" href="/demo"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> Watch the Demo Here</a>
       </div>
     </div>
-    <div class="panel glass who rv l2">
-      <div class="panel-h">Who we serve <span class="live"><i></i>1–20 VEHICLES</span></div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div class="who-i"><span class="ico gold"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14M3 13l2-6h14l2 6v4H3z"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/></svg></span>Limo &amp; black-car companies</div>
-        <div class="who-i"><span class="ico gold"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>Chauffeur &amp; executive transportation</div>
-        <div class="who-i"><span class="ico gold"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16l20-6-3-3-6 2-6-5-2 1 4 6-5 2-2-2-2 1z"/></svg></span>Airport transfer operators</div>
-        <div class="who-i"><span class="ico gold"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>Private transportation businesses</div>
+    <div class="board rv l2" aria-label="Example lead board">
+      <div class="col mover">
+        <div class="col-h">New inquiry <span>3</span></div>
+        <div class="ghost-tk" aria-hidden="true"><b>Airport transfer · SUV</b>JFK → Midtown · Sat 6:30 PM</div>
+        <div class="tk" style="visibility:hidden" aria-hidden="true"><b>&nbsp;</b>&nbsp;<em>&nbsp;</em></div>
+        <div class="tk"><b>Prom · Stretch limo</b>8 passengers · May 16<em>Via website</em></div>
+        <div class="tk"><b>Hourly · Sedan</b>Downtown meetings<em>Via text</em></div>
       </div>
-      <p class="small" style="margin-top:18px !important;line-height:1.6 !important">Best fit: operators where the owner or a small team still handles calls, quotes and bookings.</p>
+      <div class="col"><div class="col-h">Quote sent <span>2</span></div>
+        <div class="tk"><b>Wedding · 2 sedans</b>Follow-up scheduled · Wed<em>Via missed-call text</em></div>
+        <div class="tk"><b>Concert night · Sprinter</b>12 guests<em>Via Google</em></div></div>
+      <div class="col"><div class="col-h">Booked <span>4</span></div>
+        <div class="tk navy"><b>Corporate account · hourly</b>Recurring · Mondays<em>Via referral</em></div>
+        <div class="tk"><b>Airport pickup · Sedan</b>LGA · Fri 9:15 AM<em>Via AI receptionist</em></div></div>
+      <div class="col"><div class="col-h">Completed <span>12</span></div>
+        <div class="tk"><b>Night out · Sprinter</b>Review request sent<em style="color:#0B6B3A">★★★★★ received</em></div></div>
     </div>
+    <p class="small rv" style="margin-top:14px !important;text-align:center;font-style:italic">Example board</p>
   </div>
 </section>
 
-<!-- MISSION / VISION -->
 <section class="sec lt">
-  <div class="wrap grid g2">
-    <div class="card bar rv" style="padding:40px">
-      <span class="pill">Our mission</span>
-      <p style="margin-top:18px !important;font-family:'Montserrat',sans-serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);line-height:1.5;color:#0B1F3A">To help limo and transportation businesses grow by making powerful AI automation simple, practical, and accessible, so they can capture more opportunities, serve customers better, and spend less time on repetitive work.</p>
-    </div>
-    <div class="card navy rv l2" style="padding:40px">
-      <span class="pill" style="background:rgba(255,255,255,.06);border-color:rgba(212,175,55,.45);color:#F5DC85;box-shadow:none">Our vision</span>
-      <p style="margin-top:18px !important;font-family:'Montserrat',sans-serif;font-weight:600;font-size:clamp(18px,1.8vw,22px);line-height:1.5;color:#FFFFFF">To become the trusted AI automation partner for transportation businesses, transforming how they capture customers, communicate, and grow through simple, intelligent technology.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FIVE PRINCIPLES -->
-<section class="sec dk2 values-sec">
-  <span class="dots" aria-hidden="true"></span>
-  <div class="wrap">
-    <div class="head rv">
-      <div class="values-eye">— WHAT WE VALUE</div>
-      <h2 class="h2">Five principles behind <span class="gt">every build</span></h2>
-      <p class="lead">The standards we hold ourselves to on every system we set up for your business.</p>
-    </div>
-    <div class="grid g5">
-      <div class="card bar rv"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V16h8v-1.3A7 7 0 0 0 12 2z"/></svg></span><h3 class="h3">Simplicity</h3><p class="txt">Make powerful AI easy to understand and use.</p></div>
-      <div class="card bar rv l2"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><h3 class="h3">Reliability</h3><p class="txt">Build automation businesses can depend on every day.</p></div>
-      <div class="card bar rv l3"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><h3 class="h3">Results</h3><p class="txt">Focus on measurable business outcomes, not technology for technology's sake.</p></div>
-      <div class="card bar rv l4"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></span><h3 class="h3">Innovation</h3><p class="txt">Apply practical AI solutions that keep clients competitive.</p></div>
-      <div class="card bar rv"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5M16 14.5c3 0 6 1.5 6 4.5"/></svg></span><h3 class="h3">Partnership</h3><p class="txt">Work alongside clients and support their long-term growth.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY TRANSPORTATION -->
-<section class="sec lt2">
-  <div class="wrap">
-    <div class="split">
-      <div class="rv">
-        <span class="pill">Why transportation-specific</span>
-        <h2 class="h2">Built around your industry, <span class="gt">not retrofitted from another one</span></h2>
-        <p class="lead">We built Luxon Limo AI around how limo, black-car, chauffeur, and private transportation companies actually operate, not generic small-business automation. That's the difference between software you have to configure yourself and a system that already understands your business.</p>
-      </div>
-      <div class="cmp rv l2">
-        <div class="cmp-r"><div class="cmp-c cmp-a">Generic automation</div><div class="cmp-c cmp-b">Luxon Limo AI</div></div>
-        <div class="cmp-r"><div class="cmp-c cmp-a">Captures a name and number</div><div class="cmp-c cmp-b">Captures pickup, drop-off, date, passengers and vehicle</div></div>
-        <div class="cmp-r"><div class="cmp-c cmp-a">Generic answers</div><div class="cmp-c cmp-b">Knows airport transfers, hourly service and corporate accounts</div></div>
-        <div class="cmp-r"><div class="cmp-c cmp-a">Asks you to switch tools</div><div class="cmp-c cmp-b">Works alongside Moovs, Limo Anywhere and your current tools</div></div>
-        <div class="cmp-r"><div class="cmp-c cmp-a">You set it up yourself</div><div class="cmp-c cmp-b">Done for you, tested and supported</div></div>
-      </div>
-    </div>
-    <div class="eq rv">
-      <span>Transportation know-how</span><b>+</b><span>Practical AI</span><b>+</b><span>Done-for-you setup</span><b>+</b><span>Ongoing support</span><b>=</b><span class="res">More bookings, less admin</span>
-    </div>
-  </div>
-</section>
-
-<!-- HOW WE WORK -->
-<section class="sec wm">
   <div class="wrap">
     <div class="head center rv">
-      <span class="pill">How we work</span>
-      <h2 class="h2">Simple principles. <span class="gt">Reliable results.</span></h2>
+      <span class="pill">Stay organized</span>
+      <h2 class="h2">No more sticky notes, <span class="gt">inboxes and voicemails.</span></h2>
     </div>
-    <div class="grid g3">
-      <div class="card rv"><span class="ico pulse"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><h3 class="h3">AI never guesses</h3><p class="txt">If the answer isn't in your approved information, the AI collects the details and hands off to your team.</p></div>
-      <div class="card rv l2"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><h3 class="h3">Start simple, then grow</h3><p class="txt">We prove the core system works reliably before adding more automation.</p></div>
-      <div class="card rv l3"><span class="ico pulse"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5M16 14.5c3 0 6 1.5 6 4.5"/></svg></span><h3 class="h3">People stay in the loop</h3><p class="txt">AI supports great service. It never stands between a customer and a person.</p></div>
+    <div class="grid g4">
+      <div class="card rv"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3 class="h3">Every source, one list</h3><p class="txt">Calls, texts, website forms, Google and email, organized automatically.</p></div>
+      <div class="card rv l2"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><h3 class="h3">Clear next steps</h3><p class="txt">See which quotes need an answer and who's ready to book.</p></div>
+      <div class="card rv l3"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span><h3 class="h3">Full customer history</h3><p class="txt">Past trips, preferences and conversations, ready when they call again.</p></div>
+      <div class="card navy rv l4"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></span><h3 class="h3">Works with your booking software</h3><p class="txt">Keep dispatch in Moovs, Limo Anywhere or your current system.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="sec dk">
+  <span class="dots" aria-hidden="true"></span>
+  <div class="wrap split">
+    <div class="rv">
+      <span class="pill">What you'll see</span>
+      <h2 class="h2">Know exactly <span class="gt">where every lead stands.</span></h2>
+      <p class="lead">We review the numbers that matter with you regularly, and keep improving the system.</p>
+    </div>
+    <ul class="checks rv l2">
+      <li><b>Calls answered</b><span>Including after-hours and overflow.</span></li>
+      <li><b>Leads captured</b><span>With trip details ready to quote.</span></li>
+      <li><b>Response time</b><span>How quickly every inquiry was answered.</span></li>
+      <li><b>Follow-ups and reviews</b><span>What went out, and what came back.</span></li>
+    </ul>
   </div>
 </section>
 <script>
@@ -544,128 +354,3 @@
 })();
 </script>
 </div>
-
-<div class="lxcta">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
-.lxcta{background:linear-gradient(180deg,#FFFFFF 0%,#EEF4FF 100%) !important;padding:56px 20px 96px !important;font-family:'Inter',sans-serif !important;box-sizing:border-box !important;width:100% !important}
-.lxcta *,.lxcta *::before,.lxcta *::after{box-sizing:border-box !important}
-.lxcta h2,.lxcta p{margin:0 !important;padding:0 !important}
-.lxcta a{text-decoration:none !important}
-.lxcta .lx-box{max-width:1200px !important;margin:0 auto !important;background:radial-gradient(600px 300px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 70%),radial-gradient(500px 300px at 100% 100%,rgba(212,175,55,.3),rgba(212,175,55,0) 70%),linear-gradient(135deg,#0E2B5E,#0B1F3A 55%,#071528) !important;box-shadow:0 40px 90px rgba(11,31,58,.35) !important;border-radius:24px !important;padding:clamp(36px,6vw,64px) !important;display:flex !important;flex-wrap:wrap !important;align-items:center !important;justify-content:space-between !important;gap:32px !important;position:relative !important;overflow:hidden !important;border:1px solid rgba(212,175,55,.45) !important}
-.lxcta .lx-box::after{content:'' !important;position:absolute !important;right:-120px !important;top:-120px !important;width:320px !important;height:320px !important;border-radius:50% !important;border:1px solid rgba(212,175,55,.3) !important;box-shadow:0 0 0 40px rgba(212,175,55,.04),0 0 0 80px rgba(47,111,228,.05) !important;pointer-events:none !important;animation:lxctaSpin 12s ease-in-out infinite alternate}
-.lxcta .lx-box::before{content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:-40% !important;width:30% !important;background:linear-gradient(100deg,transparent,rgba(255,255,255,.08),transparent) !important;pointer-events:none !important;animation:lxctaSheen 7s ease-in-out infinite}
-@keyframes lxctaSpin{to{transform:scale(1.15) translate(-20px,20px)}}
-@keyframes lxctaSheen{0%,60%{left:-40%}100%{left:120%}}
-@media (prefers-reduced-motion:reduce){.lxcta .lx-box::before,.lxcta .lx-box::after{animation:none !important}}
-.lxcta .lx-txt{flex:1 1 440px !important;position:relative !important;z-index:1 !important}
-.lxcta .lx-eye{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:12px !important;letter-spacing:.24em !important;color:#D4AF37 !important;text-transform:uppercase !important}
-.lxcta h2 span{background:linear-gradient(90deg,#F5DC85,#D4AF37 40%,#8DB4FF) !important;-webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;-webkit-text-fill-color:transparent !important}
-.lxcta h2{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:clamp(28px,3.4vw,42px) !important;line-height:1.12 !important;color:#FFFFFF !important;margin:14px 0 12px !important}
-.lxcta p{font-size:17px !important;line-height:1.6 !important;color:rgba(255,255,255,.82) !important}
-.lxcta .lx-btns{display:flex !important;flex-direction:column !important;gap:12px !important;flex:0 1 290px !important;position:relative !important;z-index:1 !important}
-.lxcta .lx-btn{display:flex !important;align-items:center !important;justify-content:center !important;min-height:56px !important;padding:0 26px !important;border-radius:8px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:15px !important;transition:transform .2s !important}
-.lxcta .lx-btn:hover{transform:translateY(-2px) !important}
-.lxcta .lx-gold:hover{transform:translateY(-2px) !important;background-position:100% 50% !important;box-shadow:0 16px 40px rgba(212,175,55,.5),inset 0 1px 0 rgba(255,255,255,.45) !important}
-.lxcta .lx-ghost:hover{transform:translateY(-2px) !important;background:rgba(212,175,55,.16) !important}
-.lxcta .lx-gold{background:linear-gradient(135deg,#B8922A 0%,#D4AF37 40%,#F5DC85 70%,#D4AF37 100%) !important;background-size:220% 100% !important;background-position:0% 50% !important;color:#0B1F3A !important;box-shadow:0 10px 30px rgba(212,175,55,.35),inset 0 1px 0 rgba(255,255,255,.45) !important;transition:transform .25s ease,box-shadow .25s ease,background-position .6s ease !important}
-.lxcta .lx-ghost{border:1.5px solid #D4AF37 !important;color:#FFFFFF !important;background:rgba(212,175,55,.06) !important;transition:transform .25s ease,background .25s ease !important}
-@media (max-width:640px){.lxcta{padding:24px 16px 64px !important}.lxcta .lx-btns{flex:1 1 100% !important}}
-</style>
-<div class="lx-box">
-  <div class="lx-txt">
-    <div class="lx-eye">Never miss an opportunity</div>
-    <h2>Let's talk about <span>your business.</span></h2>
-    <p>See what Luxon Limo AI could look like for your company. A short, friendly demo with no tech talk.</p>
-  </div>
-  <div class="lx-btns">
-    <a class="lx-btn lx-gold" href="/contact">Book Your AI Demo</a>
-    <a class="lx-btn lx-ghost" href="/demo">Watch the Demo Here</a>
-  </div>
-</div>
-</div>
-
-<div class="lxft">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
-.lxft{background:#061426 !important;color:rgba(255,255,255,.75) !important;font-family:'Inter',sans-serif !important;font-size:15px !important;box-sizing:border-box !important;width:100% !important;border-top:3px solid #D4AF37 !important}
-.lxft *,.lxft *::before,.lxft *::after{box-sizing:border-box !important}
-.lxft p{margin:0 !important}
-.lxft a{text-decoration:none !important;color:rgba(255,255,255,.78) !important;transition:color .2s !important}
-.lxft a:hover{color:#D4AF37 !important}
-.lxft .lx-in{max-width:1200px !important;margin:0 auto !important;padding:72px 20px 28px !important}
-.lxft .lx-cols{display:grid !important;grid-template-columns:1.4fr 1fr 1fr 1fr !important;gap:40px !important}
-.lxft .lx-logo{display:flex !important;align-items:center !important;gap:10px !important;margin-bottom:18px !important}
-.lxft .lx-logo img{height:50px !important;width:auto !important;display:block !important}
-.lxft .lx-word{display:flex;flex-direction:column !important;line-height:1 !important}
-.lxft .lx-word b{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:22px !important;letter-spacing:.08em !important;color:#FFFFFF !important}
-.lxft .lx-word i{font-style:normal !important;font-family:'Montserrat',sans-serif !important;font-weight:600 !important;font-size:10px !important;letter-spacing:.5em !important;color:#D4AF37 !important;margin-top:4px !important}
-.lxft .lx-tag{line-height:1.6 !important;max-width:300px !important}
-.lxft .lx-soc{display:flex !important;gap:10px !important;margin-top:22px !important}
-.lxft .lx-soc a{width:44px !important;height:44px !important;border-radius:10px !important;border:1px solid rgba(255,255,255,.18) !important;display:flex !important;align-items:center !important;justify-content:center !important;color:#D4AF37 !important}
-.lxft .lx-soc a:hover{border-color:#D4AF37 !important;background:rgba(212,175,55,.1) !important}
-.lxft h4{margin:0 0 16px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:12px !important;letter-spacing:.2em !important;color:#D4AF37 !important;text-transform:uppercase !important}
-.lxft .lx-list{display:flex !important;flex-direction:column !important;gap:4px !important}
-.lxft .lx-list a,.lxft .lx-list span{padding:6px 0 !important;display:block !important}
-.lxft .lx-btn{display:inline-flex !important;align-items:center !important;min-height:44px !important;padding:0 18px !important;margin-top:10px !important;border-radius:8px !important;border:1px solid #D4AF37 !important;color:#FFFFFF !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:13px !important}
-.lxft .lx-btn:hover{background:#D4AF37 !important;color:#0B1F3A !important}
-.lxft .lx-bot{margin-top:56px !important;padding-top:22px !important;border-top:1px solid rgba(255,255,255,.12) !important;display:flex !important;flex-wrap:wrap !important;justify-content:space-between !important;gap:12px !important;font-size:13px !important;color:rgba(255,255,255,.62) !important}
-.lxft .lx-bot nav{display:flex !important;gap:24px !important}
-@media (max-width:900px){.lxft .lx-cols{grid-template-columns:1fr 1fr !important}}
-@media (max-width:520px){.lxft .lx-cols{grid-template-columns:1fr !important;gap:32px !important}.lxft .lx-in{padding:56px 18px 24px !important}}
-</style>
-<div class="lx-in">
-  <div class="lx-cols">
-    <div>
-      <a class="lx-logo" href="/" aria-label="Luxon Digital home">
-        <!-- LOGO: use the LIGHT/white logo (navy logo won't show on navy). Uncomment, paste URL, and delete the <span class="lx-word"> line -->
-        <!-- <img src="PASTE-LIGHT-LOGO-URL" alt="Luxon Digital"> -->
-        <span class="lx-word"><b>LUXON</b><i>DIGITAL</i></span>
-      </a>
-      <p class="lx-tag">AI Automation That Keeps Business Moving. Done-for-you AI for limo, black-car and chauffeur companies.</p>
-      <div class="lx-soc">
-        <a href="PASTE-FACEBOOK-URL" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-        <a href="PASTE-INSTAGRAM-URL" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></a>
-        <a href="PASTE-LINKEDIN-URL" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></a>
-        <a href="PASTE-YOUTUBE-URL" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
-      </div>
-    </div>
-    <div>
-      <h4>Luxon Limo AI</h4>
-      <div class="lx-list">
-        <a href="/luxon-limo-ai">Overview</a>
-        <a href="/ai-receptionist">AI Receptionist</a>
-        <a href="/lead-follow-up">Automated Lead Follow-Up</a>
-        <a href="/review-automation">Review Automation</a>
-        <a href="/lead-management">Lead Management</a>
-      </div>
-    </div>
-    <div>
-      <h4>Company</h4>
-      <div class="lx-list">
-        <a href="/about">About Us</a>
-        <a href="/demo">See the Demo</a>
-        <a href="/pricing">Pricing</a>
-        <a href="/faq">FAQ</a>
-        <a href="/contact">Contact</a>
-      </div>
-    </div>
-    <div>
-      <h4>Get in touch</h4>
-      <div class="lx-list">
-        <span>[Business email]</span>
-        <span>[Business phone]</span>
-        <span>Mon–Fri · [hours] PT</span>
-      </div>
-      <a class="lx-btn" href="/contact">Book Your AI Demo</a>
-    </div>
-  </div>
-  <div class="lx-bot">
-    <span>© 2026 Luxon Digital. All rights reserved.</span>
-    <nav aria-label="Legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms &amp; Conditions</a></nav>
-  </div>
-</div>
-</div>
-
-</body>
-</html>

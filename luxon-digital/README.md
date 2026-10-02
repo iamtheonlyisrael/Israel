@@ -20,6 +20,34 @@ Dark gold for small text on white: `#7A6210`. Brand gold on white is too light t
 - [ ] Privacy Policy and Terms pages must be live and linked in the footer before running ads.
 - [ ] Each button links to a page that exists (`/contact`, `/demo`, and so on).
 
+## All other pages (one block per page)
+
+Each page is **one Custom Code block** in `pages/`. Paste the whole file into a single Custom Code element, between the header and the "Let's talk" band. Contact and the two legal pages skip the band.
+
+| Page | Paste file | Live graphic / effects |
+|---|---|---|
+| About Us | `pages/about.html` | Who-we-serve glass card; Five Principles (— WHAT WE VALUE eyebrow, gold, 14px/700/1px, 80px padding); Generic vs Luxon comparison; equation row |
+| Luxon Limo AI | `pages/luxon-limo-ai.html` | Inquiries → glowing Luxon hub → results, with light sweeping each row; 4 feature panels with mini live demos |
+| AI Receptionist | `pages/ai-receptionist.html` | Live call card: voice waveform, transcript bubbles appear one by one, trip details captured |
+| Automated Lead Follow-Up | `pages/lead-follow-up.html` | Follow-up timeline lights up step by step (missed call → text → quote → booked). Fixes the CTA the client flagged |
+| Review Automation | `pages/review-automation.html` | Review request with stars filling in; happy rider vs concern routing |
+| Lead Management | `pages/lead-management.html` | Lead board with a trip card moving New → Quoted → Booked → Completed |
+| Demo | `pages/demo.html` | Video area (paste the video embed), demo phone line card, **calendar embed spot** |
+| Pricing | `pages/pricing.html` | 3 plans: Essentials $297/mo, Growth $397/mo (+ $1,500 setup), Custom |
+| FAQ | `pages/faq.html` | Jump links + open/close questions (works without any script) |
+| Contact / Book a Demo | `pages/contact.html` | **Calendar embed spot**, what to expect, contact details |
+| Privacy Policy | `pages/privacy-policy.html` | Sticky table of contents. **Placeholder text: final legal copy needed** |
+| Terms & Conditions | `pages/terms-and-conditions.html` | Same layout. **Placeholder text: final legal copy needed** |
+
+**Where to paste embeds** (search the file for these comments):
+- `<!-- CALENDAR: ...` in `demo.html` and `contact.html` → replace the dashed box with the GHL "Book Your AI Demo" calendar embed.
+- `<!-- DEMO VIDEO: ...` in `demo.html` → replace with the video embed.
+- `<!-- PRICES: ...` at the top of `pricing.html` → change the amounts if needed.
+
+**SOP rules followed on every page:** brand voice from the brand kit (simple business language, no jargon). None of the "words we avoid" appear on any page: no "bot", "CRM", "guaranteed", "workflow", "integration" and so on. Only two CTA labels: "Book Your AI Demo" and "Watch the Demo Here". No invented stats; example graphics are labeled "Sample data" or "Example". AI safety messaging throughout: never invents prices, hands off to a person, approved and tested before launch.
+
+**Editing:** change the page source in `pages/src/`, the shared style in `kit/kit.css`, then run `python3 build-pages.py`. This rebuilds `pages/` and `mockups/`.
+
 ## Shared blocks (every page)
 
 | File | What it is |
@@ -42,7 +70,9 @@ In GHL, either paste the header and footer into each page's first and last secti
 `mockups/home.html` and `mockups/about.html` are full pages (header, all sections, footer) in one file. Open it in any browser.
 Run `./build-mockups.sh` to rebuild it after editing a block.
 
-## About page
+## About page (older section blocks)
+
+> Superseded by `pages/about.html` (one block, colorful style). The blocks below are kept because some may already be pasted in GHL.
 
 | # | Section | Build | Notes |
 |---|---|---|---|

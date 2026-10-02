@@ -1,0 +1,73 @@
+<style>
+.lxk .mover{position:relative !important}
+.lxk .ghost-tk{position:absolute !important;left:0 !important;right:0 !important;top:36px !important;z-index:3 !important;padding:12px !important;border-radius:12px !important;background:#FFFFFF !important;border:2px solid #D4AF37 !important;box-shadow:0 14px 30px rgba(212,175,55,.35) !important;font-size:12.5px !important;color:#52606D !important;animation:lxmMove 9s cubic-bezier(.7,0,.3,1) infinite}
+.lxk .ghost-tk b{display:block !important;font-size:13.5px !important;color:#1F2933 !important;margin-bottom:3px !important}
+@keyframes lxmMove{0%,18%{transform:translateX(0)}30%,48%{transform:translateX(calc(100% + 12px))}60%,78%{transform:translateX(calc(200% + 24px))}90%,100%{transform:translateX(calc(300% + 36px));opacity:0}}
+@media (max-width:900px){.lxk .ghost-tk{display:none !important}}
+</style>
+
+<section class="sec hero">
+  <span class="aura a" aria-hidden="true"></span><span class="aura b" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="crumb"><a href="/luxon-limo-ai">Luxon Limo AI</a><b>/</b>Lead Management</div>
+    <div class="head rv" style="max-width:820px">
+      <span class="pill"><i></i>Lead Management</span>
+      <h1 class="h1">Every lead. Every quote. <span class="gt">One clear view.</span></h1>
+      <p class="lead">Calls, texts, website requests and emails land in one place. See who asked, what trip they need, and which quotes still need an answer.</p>
+      <div class="btns">
+        <a class="btn gold" href="/contact">Book Your AI Demo {{i:arrow:18}}</a>
+        <a class="btn ghost" href="/demo">{{i:play:18}} Watch the Demo Here</a>
+      </div>
+    </div>
+    <div class="board rv l2" aria-label="Example lead board">
+      <div class="col mover">
+        <div class="col-h">New inquiry <span>3</span></div>
+        <div class="ghost-tk" aria-hidden="true"><b>Airport transfer · SUV</b>JFK → Midtown · Sat 6:30 PM</div>
+        <div class="tk" style="visibility:hidden" aria-hidden="true"><b>&nbsp;</b>&nbsp;<em>&nbsp;</em></div>
+        <div class="tk"><b>Prom · Stretch limo</b>8 passengers · May 16<em>Via website</em></div>
+        <div class="tk"><b>Hourly · Sedan</b>Downtown meetings<em>Via text</em></div>
+      </div>
+      <div class="col"><div class="col-h">Quote sent <span>2</span></div>
+        <div class="tk"><b>Wedding · 2 sedans</b>Follow-up scheduled · Wed<em>Via missed-call text</em></div>
+        <div class="tk"><b>Concert night · Sprinter</b>12 guests<em>Via Google</em></div></div>
+      <div class="col"><div class="col-h">Booked <span>4</span></div>
+        <div class="tk navy"><b>Corporate account · hourly</b>Recurring · Mondays<em>Via referral</em></div>
+        <div class="tk"><b>Airport pickup · Sedan</b>LGA · Fri 9:15 AM<em>Via AI receptionist</em></div></div>
+      <div class="col"><div class="col-h">Completed <span>12</span></div>
+        <div class="tk"><b>Night out · Sprinter</b>Review request sent<em style="color:#0B6B3A">★★★★★ received</em></div></div>
+    </div>
+    <p class="small rv" style="margin-top:14px !important;text-align:center;font-style:italic">Example board</p>
+  </div>
+</section>
+
+<section class="sec lt">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="pill">Stay organized</span>
+      <h2 class="h2">No more sticky notes, <span class="gt">inboxes and voicemails.</span></h2>
+    </div>
+    <div class="grid g4">
+      <div class="card rv"><span class="ico">{{i:globe}}</span><h3 class="h3">Every source, one list</h3><p class="txt">Calls, texts, website forms, Google and email, organized automatically.</p></div>
+      <div class="card rv l2"><span class="ico gold">{{i:check}}</span><h3 class="h3">Clear next steps</h3><p class="txt">See which quotes need an answer and who's ready to book.</p></div>
+      <div class="card rv l3"><span class="ico">{{i:file}}</span><h3 class="h3">Full customer history</h3><p class="txt">Past trips, preferences and conversations, ready when they call again.</p></div>
+      <div class="card navy rv l4"><span class="ico gold">{{i:repeat}}</span><h3 class="h3">Works with your booking software</h3><p class="txt">Keep dispatch in Moovs, Limo Anywhere or your current system.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dk">
+  <span class="dots" aria-hidden="true"></span>
+  <div class="wrap split">
+    <div class="rv">
+      <span class="pill">What you'll see</span>
+      <h2 class="h2">Know exactly <span class="gt">where every lead stands.</span></h2>
+      <p class="lead">We review the numbers that matter with you regularly, and keep improving the system.</p>
+    </div>
+    <ul class="checks rv l2">
+      <li><b>Calls answered</b><span>Including after-hours and overflow.</span></li>
+      <li><b>Leads captured</b><span>With trip details ready to quote.</span></li>
+      <li><b>Response time</b><span>How quickly every inquiry was answered.</span></li>
+      <li><b>Follow-ups and reviews</b><span>What went out, and what came back.</span></li>
+    </ul>
+  </div>
+</section>
