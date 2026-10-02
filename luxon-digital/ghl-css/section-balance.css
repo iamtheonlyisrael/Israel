@@ -1,19 +1,18 @@
-/* ===== Balance the hero section #section-MtESZcWKLs: equal top/bottom space, columns centered ===== */
+/* ===== Balance the hero section #section-MtESZcWKLs: equal top/bottom space, columns centered =====
+   Only the MAIN row is touched; inner rows (like the buttons row) keep their GHL settings. */
 #section-MtESZcWKLs{
   display:block !important;
   padding-top:96px !important;padding-bottom:96px !important;
   min-height:0 !important;height:auto !important
 }
-/* the row: put the text column and the board side by side, centered vertically */
-#section-MtESZcWKLs .c-row > .inner{
-  display:flex !important;align-items:center !important;gap:48px !important
-}
-/* each column: center its own content vertically too */
-#section-MtESZcWKLs .c-column > .inner{
-  display:flex !important;flex-direction:column !important;justify-content:center !important;height:100% !important
+/* main row only: text column and board side by side, centered vertically */
+#section-MtESZcWKLs > .inner > .c-row > .inner,
+#section-MtESZcWKLs > .c-row > .inner{
+  display:flex !important;align-items:center !important
 }
 /* phones: less space, stack the columns */
 @media (max-width:767px){
   #section-MtESZcWKLs{padding-top:56px !important;padding-bottom:64px !important}
-  #section-MtESZcWKLs .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:40px !important}
+  #section-MtESZcWKLs > .inner > .c-row > .inner,
+  #section-MtESZcWKLs > .c-row > .inner{flex-direction:column !important;align-items:stretch !important}
 }
