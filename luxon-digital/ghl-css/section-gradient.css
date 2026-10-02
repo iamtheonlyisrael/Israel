@@ -1,0 +1,30 @@
+/* ===== Luxon navy/blue/gold gradient for GHL section #section-MtESZcWKLs =====
+   Paste into: Page Settings > Custom CSS. Same look as the coded hero. */
+
+/* 1. gradient background */
+#section-MtESZcWKLs{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(900px 600px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 60%),
+             radial-gradient(700px 520px at 100% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 60%),
+             linear-gradient(135deg,#061226 0%,#0B1F3A 45%,#0E2B5E 100%) !important
+}
+#section-MtESZcWKLs > .bg,#section-MtESZcWKLs .bg-section{background:transparent !important}
+
+/* 2. slow drifting blue and gold glows */
+#section-MtESZcWKLs::before,#section-MtESZcWKLs::after{
+  content:'' !important;position:absolute !important;width:520px !important;height:520px !important;border-radius:50% !important;
+  filter:blur(90px) !important;pointer-events:none !important;z-index:0 !important
+}
+#section-MtESZcWKLs::before{left:-160px;top:-140px;background:#2F6FE4 !important;opacity:.35;animation:lxSecFloat 14s ease-in-out infinite}
+#section-MtESZcWKLs::after{right:-180px;bottom:-200px;background:#E8C55A !important;opacity:.13;animation:lxSecFloat 18s ease-in-out infinite reverse}
+#section-MtESZcWKLs > div{position:relative !important;z-index:1 !important}
+@keyframes lxSecFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
+
+/* 3. text colors for the dark background */
+#section-MtESZcWKLs h1,#section-MtESZcWKLs h2,#section-MtESZcWKLs h3{color:#FFFFFF !important}
+#section-MtESZcWKLs p{color:rgba(255,255,255,.85) !important}
+/* eyebrow pill text: brighter gold on dark */
+#section-MtESZcWKLs #paragraph-5uHXiGIeBw .text-output,#section-MtESZcWKLs #paragraph-5uHXiGIeBw .text-output p,#section-MtESZcWKLs #paragraph-5uHXiGIeBw .text-output span{color:#F5DC85 !important}
+#section-MtESZcWKLs #paragraph-5uHXiGIeBw .text-output{background:rgba(255,255,255,.06) !important}
+
+@media (prefers-reduced-motion:reduce){#section-MtESZcWKLs::before,#section-MtESZcWKLs::after{animation:none !important}}
