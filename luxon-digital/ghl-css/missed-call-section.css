@@ -1,10 +1,9 @@
 /* ===== Luxon "Missed call. Lost reservation." section gradient (GHL native section) =====
    Paste into: Page Settings > Custom CSS (below the hero CSS).
-   Replace every  #section-XXXXXXXX  with this section's id
-   (click the section > Advanced/Settings > copy the id, e.g. #section-AbC123xYz). */
+   Section id: #section-FDnnDrmCik
 
 /* light blue -> white -> soft gold, with a blue glow top-left and a gold glow bottom-right */
-#section-XXXXXXXX{
+#section-FDnnDrmCik{
   background:
     radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),
     radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 70%),
@@ -12,8 +11,8 @@
   padding-top:96px !important;padding-bottom:96px !important
 }
 /* stop GHL's own section color from covering the gradient */
-#section-XXXXXXXX > .bg,#section-XXXXXXXX .bg-section{background:transparent !important}
+#section-FDnnDrmCik > .bg,#section-FDnnDrmCik .bg-section{background:transparent !important}
 
 @media (max-width:767px){
-  #section-XXXXXXXX{padding-top:64px !important;padding-bottom:64px !important}
+  #section-FDnnDrmCik{padding-top:64px !important;padding-bottom:64px !important}
 }
