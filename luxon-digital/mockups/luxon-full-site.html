@@ -295,7 +295,7 @@
         var p = all[i].querySelector('.lx-st'), cur = ORDER.indexOf(p.className.match(/s-(\w+)/)[1]);
         if (cur > 0 && cur < 3 && Math.random() < .6) setStatus(p, ORDER[cur + 1]);
       }
-      var t = TRIPS[n++ % TRIPS.length], h = 11, m = mins++ % 60;
+      var t = TRIPS[n++ % TRIPS.length], tot = mins++, h = ((11 + Math.floor(tot / 60)) % 12) || 12, m = tot % 60;
       var row = document.createElement('div');
       row.className = 'lx-row new';
       row.innerHTML = '<span class="lx-t">' + h + ':' + (m < 10 ? '0' : '') + m + '</span><span class="lx-trip"><b>' + t[0] + '</b><span>' + t[1] + '</span></span><span class="lx-veh">' + t[2] + '</span><span class="lx-st s-ringing">RINGING</span>';
