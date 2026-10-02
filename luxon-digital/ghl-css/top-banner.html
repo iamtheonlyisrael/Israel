@@ -1,0 +1,68 @@
+<!-- Luxon flipping billboard banner: paste into ONE Custom Code element at the very top of the page
+     (replace the old "AI AUTOMATION THAT KEEPS BUSINESS MOVING" bar). Edit the 3 messages in the script. -->
+<div class="lxtb">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+.lxtb{width:100% !important;box-sizing:border-box !important;font-family:'Inter',sans-serif !important}
+.lxtb *,.lxtb *::before,.lxtb *::after{box-sizing:border-box !important}
+.lxtb a{text-decoration:none !important}
+.lxtb .lx-top{position:relative !important;display:block !important;background:linear-gradient(90deg,#061226,#0B1F3A 50%,#061226) !important;padding:6px 0 !important;color:#FFFFFF !important;overflow:hidden !important}
+.lxtb .lx-top:hover .lx-tpanel{filter:brightness(1.08) !important}
+.lxtb .lx-tline{position:absolute !important;left:0 !important;right:0 !important;height:2px !important;pointer-events:none !important;z-index:3 !important;overflow:hidden !important;background:linear-gradient(90deg,rgba(212,175,55,0),#B8922A 15%,#F5DC85 50%,#B8922A 85%,rgba(212,175,55,0)) !important;box-shadow:0 0 10px rgba(212,175,55,.55) !important}
+.lxtb .lx-tline.t{top:0 !important}.lxtb .lx-tline.b{bottom:0 !important}
+.lxtb .lx-tline::after{content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:0 !important;width:22% !important;background:linear-gradient(90deg,transparent,#FFFFFF,transparent) !important;transform:translateX(-120%);animation:lxtRun 4.5s ease-in-out infinite}
+.lxtb .lx-tline.b::after{animation-direction:reverse}
+.lxtb .lx-tpanel{position:relative !important;max-width:none !important;margin:0 !important;height:34px !important;display:flex !important;perspective:2400px !important;container-type:inline-size !important;transition:filter .2s !important}
+.lxtb .lx-tslat{position:relative !important;flex:1 1 0 !important;height:100% !important;transform-style:preserve-3d !important;animation:lxtTri 12s cubic-bezier(.75,0,.25,1) infinite;animation-delay:calc(var(--i) * .05s)}
+.lxtb .lx-tface{position:absolute !important;top:0 !important;bottom:0 !important;left:-.5px !important;right:-.5px !important;overflow:hidden !important;backface-visibility:hidden !important;-webkit-backface-visibility:hidden !important;transform:rotateY(calc(var(--k) * 120deg)) translateZ(calc(6.25cqw * .2887)) !important}
+.lxtb .lx-tmsg{position:absolute !important;top:0 !important;bottom:0 !important;width:1600% !important;left:calc(var(--i) * -100%) !important;display:flex !important;align-items:center !important;justify-content:center !important;gap:10px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:clamp(10px,2.6cqw,13px) !important;letter-spacing:.18em !important;text-transform:uppercase !important;white-space:nowrap !important}
+.lxtb .lx-tmsg em{font-style:normal !important}
+.lxtb .lx-tmsg .s{display:none !important}
+.lxtb .lx-tmsg.m0{background:#0B1F3A !important;color:#FFFFFF !important}
+.lxtb .lx-tmsg.m0 em{color:#D4AF37 !important}
+.lxtb .lx-tmsg.m1{background:#D4AF37 !important;color:#0B1F3A !important}
+.lxtb .lx-tmsg.m2{background:#FFFFFF !important;color:#0B1F3A !important}
+.lxtb .lx-tmsg.m2 em{color:#7A6210 !important}
+.lxtb .lx-tmsg i{display:inline-block !important;width:6px !important;height:6px !important;transform:rotate(45deg) !important;background:currentColor !important;opacity:.55 !important;flex:0 0 6px !important}
+.lxtb .lx-tglare{position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:2 !important;background:linear-gradient(100deg,transparent 40%,rgba(255,255,255,.28) 50%,transparent 60%);background-size:300% 100% !important;animation:lxtGlare 6s ease-in-out infinite;mix-blend-mode:screen}
+@container (max-width:640px){.lxtb .lx-tmsg .l{display:none !important}.lxtb .lx-tmsg .s{display:inline !important}.lxtb .lx-tmsg{letter-spacing:.12em !important}}
+@keyframes lxtTri{0%,27%{transform:rotateY(0)}33.33%,60%{transform:rotateY(-120deg)}66.66%,93%{transform:rotateY(-240deg)}100%{transform:rotateY(-360deg)}}
+@keyframes lxtRun{0%{transform:translateX(-120%)}100%{transform:translateX(560%)}}
+@keyframes lxtGlare{0%,50%{background-position:120% 0}100%{background-position:-120% 0}}
+@media (prefers-reduced-motion:reduce){.lxtb .lx-tslat,.lxtb .lx-tline::after,.lxtb .lx-tglare{animation:none !important}}
+</style>
+<!-- Billboard top bar: edit the 3 messages in the script at the bottom of this block -->
+<a class="lx-top" href="/contact" aria-label="AI Automation That Keeps Business Moving. Book Your AI Demo">
+  <span class="lx-tline t" aria-hidden="true"></span>
+  <span class="lx-tpanel" aria-hidden="true">
+    <span class="lx-tmsg m0" style="width:100% !important;left:0 !important"><span class="l">AI Automation That <em>Keeps Business Moving</em></span><span class="s">AI That <em>Keeps Business Moving</em></span></span>
+  </span>
+  <span class="lx-tglare" aria-hidden="true"></span>
+  <span class="lx-tline b" aria-hidden="true"></span>
+</a>
+<script>
+(function () {
+  /* ---- Top bar billboard messages (exactly 3). "long" = desktop, "short" = phones. <em> = gold words ---- */
+  var MESSAGES = [
+    { long: 'AI Automation That <em>Keeps Business Moving</em>',            short: 'AI That <em>Keeps Business Moving</em>' },
+    { long: 'Never Miss Another Call <i></i> Never Lose Another Reservation', short: 'Never Miss Another Call' },
+    { long: 'Done-For-You AI for Limo &amp; Chauffeur Companies <i></i> <em>Book Your AI Demo &rarr;</em>', short: '<em>Book Your AI Demo &rarr;</em>' }
+  ];
+  var SLATS = 16;
+  var panels = document.querySelectorAll('.lxtb .lx-tpanel:not([data-built])');
+  for (var p = 0; p < panels.length; p++) {
+    var panel = panels[p], html = '';
+    panel.setAttribute('data-built', '1');
+    for (var i = 0; i < SLATS; i++) {
+      html += '<span class="lx-tslat" style="--i:' + i + '">';
+      for (var k = 0; k < 3; k++) {
+        html += '<span class="lx-tface" style="--k:' + k + '"><span class="lx-tmsg m' + k + '">' +
+          '<span class="l">' + MESSAGES[k].long + '</span><span class="s">' + MESSAGES[k].short + '</span></span></span>';
+      }
+      html += '</span>';
+    }
+    panel.innerHTML = html;
+  }
+})();
+</script>
+</div>
