@@ -5,6 +5,9 @@
 
 #paragraph-5uHXiGIeBw{display:flex !important;justify-content:flex-start !important}
 
+/* hide anything else inside the element (removes the orange label box) */
+#paragraph-5uHXiGIeBw > *:not(:first-child){display:none !important}
+
 /* the pill */
 #paragraph-5uHXiGIeBw > div:first-child{
   position:relative !important;display:inline-flex !important;align-items:center !important;gap:10px !important;
