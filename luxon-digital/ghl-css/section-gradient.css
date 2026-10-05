@@ -17,7 +17,9 @@
 }
 #section-MtESZcWKLs::before{left:-160px;top:-140px;background:#2F6FE4 !important;opacity:.35;animation:lxSecFloat 14s ease-in-out infinite}
 #section-MtESZcWKLs::after{right:-180px;bottom:-200px;background:#E8C55A !important;opacity:.13;animation:lxSecFloat 18s ease-in-out infinite reverse}
-#section-MtESZcWKLs > div{position:relative !important;z-index:1 !important}
+/* keep GHL's background layer (.bg) behind and out of the layout; lift only the content above the glows */
+#section-MtESZcWKLs > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-MtESZcWKLs > div:not(.bg){position:relative !important;z-index:1 !important}
 @keyframes lxSecFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
 
 /* 3. text colors for the dark background */
