@@ -1,0 +1,26 @@
+/* ---------- HEADLINE #heading-dedkB9mjG9: "Four tools." solid navy, "One simple system." blue -> gold gradient ---------- */
+/* CSS draws the headline itself, so it works no matter how the colors are set in GHL.
+   If you change the wording in GHL, change the two "content" lines below too.
+   HEADLINE SIZE: change 48px / 40px / 30px to match your design. */
+#heading-dedkB9mjG9 :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-dedkB9mjG9 :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{
+  font-size:48px !important;line-height:1.15 !important;letter-spacing:inherit
+}
+#heading-dedkB9mjG9 :is(h1,h2,h3)::before{
+  content:"Four tools. ";content:"Four tools. " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-dedkB9mjG9 :is(h1,h2,h3)::after{
+  content:"One simple system.";content:"One simple system." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 30%,#B8922A 50%,#2F6FE4 70%,#1E4FA8 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxBlueGoldShift 6s ease-in-out infinite alternate
+}
+@keyframes lxBlueGoldShift{to{background-position:100% center}}
+@media (max-width:1024px){#heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:40px !important}}
+@media (max-width:600px){#heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:30px !important}}
+@media (prefers-reduced-motion:reduce){#heading-dedkB9mjG9 :is(h1,h2,h3)::after{animation:none !important}}
