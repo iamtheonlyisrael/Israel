@@ -22,6 +22,14 @@
 :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):not(:has(a,button)):active{transform:translateY(-1px) !important}
 :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(i,svg){transition:transform .25s ease !important}
 :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):hover :is(i,svg){transform:translateX(4px)}
+/* Watch the Demo Here (navy button): navy/blue glow to match its background instead of gold */
+#button-IzJudpf1kW :is(a,button):not(:has(a,button)):hover,
+#button-IzJudpf1kW :is(a,button):not(:has(a,button)):focus-visible{
+  box-shadow:0 14px 30px rgba(14,43,94,.65),0 0 22px rgba(47,111,228,.35),0 0 0 1px rgba(141,180,255,.55) !important
+}
+#button-IzJudpf1kW :is(a,button):not(:has(a,button))::after{
+  background:linear-gradient(100deg,transparent,rgba(141,180,255,.30),transparent) !important
+}
 @media (prefers-reduced-motion:reduce){
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button),:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button)::after,:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(i,svg){transition:none !important}
 }
