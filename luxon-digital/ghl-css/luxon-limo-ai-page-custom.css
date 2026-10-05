@@ -93,22 +93,19 @@
 }
 #section-AgMJ8881FQ > .bg,#section-AgMJ8881FQ .bg-section{background:transparent !important}
 
-/* ---------- HEADLINE #heading-SsTqSQWkWc: blue -> gold gradient only on "One simple system." ---------- */
-#heading-SsTqSQWkWc span[style*="color"],#heading-SsTqSQWkWc font[color]{
-  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 18%,#B8922A 40%,#B8922A 60%,#2F6FE4 82%,#1E4FA8 100%) !important;
-  background-size:200% auto !important;background-position:0% center;
+/* ---------- HEADLINE #heading-SsTqSQWkWc: "Four tools." solid navy, "One simple system." blue -> gold ---------- */
+/* gradient on the uncolored words of the headline ("One simple system."), slow shimmer */
+#heading-SsTqSQWkWc :is(h1,h2,h3){
+  width:fit-content !important;max-width:100% !important;margin-left:auto !important;margin-right:auto !important;
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#1E4FA8 17%,#2F6FE4 27%,#B8922A 45%,#D4AF37 50%,#B8922A 55%,#2F6FE4 73%,#1E4FA8 83%,#1E4FA8 100%) !important;
+  background-size:200% 100% !important;background-position:0% center;
   -webkit-background-clip:text !important;background-clip:text !important;
   color:transparent !important;-webkit-text-fill-color:transparent !important;
-  -webkit-box-decoration-break:clone;box-decoration-break:clone;
   animation:lxBlueGoldShift 6s ease-in-out infinite alternate
 }
-/* navy / black / charcoal words ("Four tools.") stay solid navy */
-#heading-SsTqSQWkWc span[style*="11, 31, 58"],#heading-SsTqSQWkWc span[style*="11,31,58"],#heading-SsTqSQWkWc span[style*="#0b1f3a" i],
-#heading-SsTqSQWkWc span[style*="0, 0, 0"],#heading-SsTqSQWkWc span[style*="0,0,0"],#heading-SsTqSQWkWc span[style*="#000" i],
-#heading-SsTqSQWkWc span[style*="31, 41, 51"],#heading-SsTqSQWkWc span[style*="#1f2933" i],#heading-SsTqSQWkWc span[style*="black" i],
-#heading-SsTqSQWkWc font[color="#0b1f3a" i],#heading-SsTqSQWkWc font[color="#000000" i],#heading-SsTqSQWkWc font[color="#000" i]{
-  background:none !important;animation:none !important;
-  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+/* words that have their own color in GHL ("Four tools.") = solid navy, no gradient */
+#heading-SsTqSQWkWc :is(h1,h2,h3) span[style*="color"],#heading-SsTqSQWkWc :is(h1,h2,h3) font[color]{
+  background:none !important;color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
 }
 @keyframes lxBlueGoldShift{to{background-position:100% center}}
 
@@ -116,7 +113,7 @@
 @media (prefers-reduced-motion:reduce){
   #section-1T_ti8nH1T::before,#section-1T_ti8nH1T::after,
   #heading-sdweA4P_CT span,#heading-sdweA4P_CT font,
-  #heading-SsTqSQWkWc span,#heading-SsTqSQWkWc font{animation:none !important}
+  #heading-SsTqSQWkWc :is(h1,h2,h3){animation:none !important}
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button),
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button)::after,
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(i,svg){transition:none !important}
