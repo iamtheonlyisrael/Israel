@@ -1,26 +1,27 @@
-/* ===== Luxon button hover effect for GHL Button #button-_L8xzBJ2zh =====
+/* ===== Luxon button hover effect for GHL Buttons =====
+   #button-_L8xzBJ2zh (Book Your AI Demo) and #button-IzJudpf1kW (Watch the Demo Here)
    Paste into: Page Settings > Custom CSS.
    Hover: button lifts, gold glow, a light shine sweeps across, the arrow/icon nudges right.
-   It keeps the button's own colors, so it works on the gold AND the navy button.
-   For another button, copy this block and replace  #button-_L8xzBJ2zh  with that button's id. */
-#button-_L8xzBJ2zh :is(a,button):not(:has(a,button)){
+   It keeps each button's own colors, so it works on the gold AND the navy button.
+   To add another button, put its id inside every :is(...) list, separated by a comma. */
+:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):not(:has(a,button)){
   position:relative !important;overflow:hidden !important;
   transition:transform .25s ease,box-shadow .25s ease,filter .25s ease !important
 }
-#button-_L8xzBJ2zh :is(a,button):not(:has(a,button))::after{
+:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):not(:has(a,button))::after{
   content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:0 !important;width:45% !important;
   background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent) !important;
   pointer-events:none !important;transform:translateX(-160%) skewX(-18deg);transition:transform .7s ease
 }
-#button-_L8xzBJ2zh :is(a,button):not(:has(a,button)):hover,
-#button-_L8xzBJ2zh :is(a,button):not(:has(a,button)):focus-visible{
+:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):not(:has(a,button)):hover,
+:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):not(:has(a,button)):focus-visible{
   transform:translateY(-3px) !important;filter:brightness(1.06) !important;
   box-shadow:0 14px 30px rgba(212,175,55,.35),0 0 0 1px rgba(245,220,133,.45) !important
 }
-#button-_L8xzBJ2zh :is(a,button):not(:has(a,button)):hover::after{transform:translateX(330%) skewX(-18deg)}
-#button-_L8xzBJ2zh :is(a,button):not(:has(a,button)):active{transform:translateY(-1px) !important}
-#button-_L8xzBJ2zh :is(i,svg){transition:transform .25s ease !important}
-#button-_L8xzBJ2zh :is(a,button):hover :is(i,svg){transform:translateX(4px)}
+:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):not(:has(a,button)):hover::after{transform:translateX(330%) skewX(-18deg)}
+:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):not(:has(a,button)):active{transform:translateY(-1px) !important}
+:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(i,svg){transition:transform .25s ease !important}
+:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button):hover :is(i,svg){transform:translateX(4px)}
 @media (prefers-reduced-motion:reduce){
-  #button-_L8xzBJ2zh :is(a,button),#button-_L8xzBJ2zh :is(a,button)::after,#button-_L8xzBJ2zh :is(i,svg){transition:none !important}
+  :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button),:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button)::after,:is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(i,svg){transition:none !important}
 }
