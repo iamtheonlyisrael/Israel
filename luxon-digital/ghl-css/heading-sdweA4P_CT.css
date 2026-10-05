@@ -1,6 +1,7 @@
 /* ===== Luxon gold gradient on the colored words of #heading-sdweA4P_CT =====
    Paste into: Page Settings > Custom CSS.
-   The words that have their own text color in GHL (e.g. "AI that works for your business.") get the gradient. */
+   Gold gradient ONLY on words with a non-white color in GHL ("AI that works for your business").
+   Words colored white (or left without a color), like "Luxon Limo AI:", stay plain white. */
 #heading-sdweA4P_CT span[style*="color"],#heading-sdweA4P_CT font[color]{
   background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
   background-size:200% auto !important;background-position:0% center;
@@ -8,6 +9,13 @@
   color:transparent !important;-webkit-text-fill-color:transparent !important;
   -webkit-box-decoration-break:clone;box-decoration-break:clone;
   animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+/* white words: no gradient */
+#heading-sdweA4P_CT span[style*="255, 255, 255"],#heading-sdweA4P_CT span[style*="255,255,255"],
+#heading-sdweA4P_CT span[style*="#fff" i],#heading-sdweA4P_CT span[style*="white" i],
+#heading-sdweA4P_CT font[color="#ffffff" i],#heading-sdweA4P_CT font[color="#fff" i],#heading-sdweA4P_CT font[color="white" i]{
+  background:none !important;animation:none !important;
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
 }
 @keyframes lxGoldShift{to{background-position:100% center}}
 @media (prefers-reduced-motion:reduce){#heading-sdweA4P_CT span,#heading-sdweA4P_CT font{animation:none !important}}
