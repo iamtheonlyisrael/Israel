@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+/* ================= HERO SECTION #section-l_Iy2VI3_z ================= */
+
+/* gradient background + balanced spacing */
+#section-l_Iy2VI3_z{
+  position:relative !important;overflow:hidden !important;display:block !important;
+  padding-top:96px !important;padding-bottom:96px !important;min-height:0 !important;height:auto !important;
+  background:radial-gradient(900px 600px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 60%),
+             radial-gradient(700px 520px at 100% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 60%),
+             linear-gradient(135deg,#061226 0%,#0B1F3A 45%,#0E2B5E 100%) !important
+}
+#section-l_Iy2VI3_z > .bg,#section-l_Iy2VI3_z .bg-section{background:transparent !important}
+
+/* slow drifting blue and gold glows */
+#section-l_Iy2VI3_z::before,#section-l_Iy2VI3_z::after{
+  content:'' !important;position:absolute !important;width:520px !important;height:520px !important;border-radius:50% !important;
+  filter:blur(90px) !important;pointer-events:none !important;z-index:0 !important
+}
+#section-l_Iy2VI3_z::before{left:-160px;top:-140px;background:#2F6FE4 !important;opacity:.35;animation:lxSecFloat 14s ease-in-out infinite}
+#section-l_Iy2VI3_z::after{right:-180px;bottom:-200px;background:#E8C55A !important;opacity:.13;animation:lxSecFloat 18s ease-in-out infinite reverse}
+@keyframes lxSecFloat{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,40px)}}
+
+/* keep GHL's background layer behind and out of the layout; lift only the content above the glows */
+#section-l_Iy2VI3_z > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-l_Iy2VI3_z > div:not(.bg){position:relative !important;z-index:1 !important}
+
+/* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
+#section-l_Iy2VI3_z > .inner > .c-row > .inner,
+#section-l_Iy2VI3_z > .c-row > .inner{display:flex !important;align-items:center !important}
+
+/* text colors on the dark background */
+#section-l_Iy2VI3_z h1,#section-l_Iy2VI3_z h2,#section-l_Iy2VI3_z h3{color:#FFFFFF !important}
+#section-l_Iy2VI3_z p{color:rgba(255,255,255,.85) !important}
+
+/* ================= EYEBROW #paragraph-yb38jSpclQQ ================= */
+#paragraph-yb38jSpclQQ .text-output{
+  position:relative !important;display:inline-flex !important;align-items:center !important;gap:10px !important;
+  width:auto !important;max-width:100% !important;padding:8px 18px 8px 14px !important;border-radius:999px !important;
+  background:rgba(255,255,255,.06) !important;border:1px solid rgba(212,175,55,.5) !important;overflow:hidden !important;
+  box-shadow:0 0 0 0 rgba(212,175,55,0);
+  animation:lxEyeIn .8s ease both,lxEyeGlow 4s ease-in-out 1s infinite
+}
+#paragraph-yb38jSpclQQ .text-output::before{
+  content:'' !important;flex:0 0 8px !important;width:8px !important;height:8px !important;border-radius:50% !important;
+  background:#3DDC97 !important;animation:lxEyePing 2s ease-out infinite
+}
+#paragraph-yb38jSpclQQ .text-output::after{
+  content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:0 !important;width:35% !important;
+  background:linear-gradient(100deg,transparent,rgba(245,220,133,.28),transparent) !important;pointer-events:none !important;
+  transform:translateX(-120%);animation:lxEyeSweep 5s ease-in-out 1.2s infinite
+}
+#paragraph-yb38jSpclQQ .text-output p,#paragraph-yb38jSpclQQ .text-output span,#paragraph-yb38jSpclQQ .text-output div{
+  margin:0 !important;padding:0 !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;
+  font-size:12px !important;line-height:1.35 !important;letter-spacing:.16em !important;text-transform:uppercase !important;
+  color:#F5DC85 !important;text-align:left !important;background:none !important;border:0 !important
+}
+@keyframes lxEyeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lxEyeGlow{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 18px 0 rgba(212,175,55,.28)}}
+@keyframes lxEyePing{0%{box-shadow:0 0 0 0 rgba(61,220,151,.7)}100%{box-shadow:0 0 0 9px rgba(61,220,151,0)}}
+@keyframes lxEyeSweep{0%,55%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+/* ================= HEADLINE #heading-5hAFf2b_drg ================= */
+/* "Answer every call." white, "Even when you can't." gold gradient on its own line.
+   CSS draws the headline itself, so it works no matter how the colors are set in GHL.
+   If you change the wording in GHL, change the two "content" lines below too.
+   HEADLINE SIZE: 64px desktop, 46px tablet, 34px phone */
+#heading-5hAFf2b_drg :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-5hAFf2b_drg :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-5hAFf2b_drg :is(h1,h2,h3)::before,#heading-5hAFf2b_drg :is(h1,h2,h3)::after{
+  font-size:64px !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-5hAFf2b_drg :is(h1,h2,h3)::before{
+  content:"Answer every call.";content:"Answer every call." / "";
+  display:block;
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-5hAFf2b_drg :is(h1,h2,h3)::after{
+  content:"Even when you can\2019t.";content:"Even when you can\2019t." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@keyframes lxGoldShift{to{background-position:100% center}}
+@media (max-width:1024px){#heading-5hAFf2b_drg :is(h1,h2,h3)::before,#heading-5hAFf2b_drg :is(h1,h2,h3)::after{font-size:46px !important}}
+@media (max-width:600px){#heading-5hAFf2b_drg :is(h1,h2,h3)::before,#heading-5hAFf2b_drg :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= "MISSED CALL. LOST RESERVATION." SECTION #section-zqZgH5slcO ================= */
+#section-zqZgH5slcO{
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),
+             radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 70%),
+             linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 55%,#FFF8E6 100%) !important;
+  padding-top:96px !important;padding-bottom:96px !important
+}
+#section-zqZgH5slcO > .bg,#section-zqZgH5slcO .bg-section{background:transparent !important}
+
+/* ================= HEADLINE #heading-IuyUKPuiJHJ: gradient only on the LAST colored part ("Real business results.") ================= */
+#heading-IuyUKPuiJHJ span[style*="color"]:last-of-type{
+  background:linear-gradient(90deg,#2563EB 0%,#3B6FD8 35%,#6B7A90 65%,#B8892B 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent !important
+}
+
+/* ================= PILL #sub-heading-S-f24mtRVzg ================= */
+#sub-heading-S-f24mtRVzg{
+  display:inline-block;position:relative;
+  padding:10px 20px !important;border-radius:999px !important;
+  border:1px solid rgba(212,175,55,.55) !important;background:rgba(255,255,255,.04);
+  box-shadow:0 6px 18px rgba(11,31,58,.08);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;cursor:default
+}
+#sub-heading-S-f24mtRVzg:hover{
+  transform:translateY(-3px);border-color:#D4AF37 !important;background:rgba(212,175,55,.08);
+  box-shadow:0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
+}
+
+/* ================= PHONES ================= */
+@media (max-width:767px){
+  #section-l_Iy2VI3_z{padding-top:56px !important;padding-bottom:64px !important}
+  #section-l_Iy2VI3_z > .inner > .c-row > .inner,
+  #section-l_Iy2VI3_z > .c-row > .inner{flex-direction:column !important;align-items:stretch !important}
+  #section-zqZgH5slcO{padding-top:64px !important;padding-bottom:64px !important}
+}
+@media (max-width:480px){
+  #paragraph-yb38jSpclQQ .text-output p,#paragraph-yb38jSpclQQ .text-output span{font-size:10.5px !important;letter-spacing:.12em !important}
+}
+
+/* ================= VISITORS WHO TURN OFF MOTION ================= */
+@media (prefers-reduced-motion:reduce){
+  #section-l_Iy2VI3_z::before,#section-l_Iy2VI3_z::after,
+  #paragraph-yb38jSpclQQ .text-output,#paragraph-yb38jSpclQQ .text-output::before,#paragraph-yb38jSpclQQ .text-output::after,
+  #heading-5hAFf2b_drg :is(h1,h2,h3)::after{animation:none !important}
+  #sub-heading-S-f24mtRVzg,#sub-heading-S-f24mtRVzg:hover{transition:none !important;transform:none !important}
+}
