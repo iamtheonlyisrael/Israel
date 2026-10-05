@@ -180,7 +180,7 @@
 .lxh .lx-checks span{display:flex !important;align-items:center !important;gap:8px !important}
 
 /* ---- live dispatch board ---- */
-.lxh .lx-board{position:relative !important;width:100% !important;max-width:560px !important;margin:0 auto !important;border-radius:22px !important;padding:22px !important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03)) !important;border:1px solid rgba(255,255,255,.18) !important;backdrop-filter:blur(10px) !important;-webkit-backdrop-filter:blur(10px) !important;box-shadow:0 40px 90px rgba(0,0,0,.5),0 0 0 1px rgba(212,175,55,.12) inset !important}
+.lxh .lx-board{contain:layout !important;position:relative !important;width:100% !important;max-width:560px !important;margin:0 auto !important;border-radius:22px !important;padding:22px !important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03)) !important;border:1px solid rgba(255,255,255,.18) !important;backdrop-filter:blur(10px) !important;-webkit-backdrop-filter:blur(10px) !important;box-shadow:0 40px 90px rgba(0,0,0,.5),0 0 0 1px rgba(212,175,55,.12) inset !important}
 .lxh .lx-bh{display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px !important;padding-bottom:16px !important;border-bottom:1px solid rgba(255,255,255,.12) !important}
 .lxh .lx-bh b{display:block !important;font-family:'Montserrat',sans-serif !important;font-size:15px !important;color:#FFFFFF !important}
 .lxh .lx-bh small{display:block !important;font-size:12px !important;color:rgba(255,255,255,.62) !important;margin-top:2px !important}
@@ -189,13 +189,14 @@
 .lxh .lx-live i{width:7px !important;height:7px !important;border-radius:50% !important;background:#3DDC97 !important;animation:lxhBlink 1.4s ease-in-out infinite}
 .lxh .lx-cols,.lxh .lx-row{display:grid !important;grid-template-columns:64px 1fr 84px 116px !important;gap:12px !important;align-items:center !important}
 .lxh .lx-cols{padding:12px 6px 8px !important;font-size:10.5px !important;font-weight:700 !important;letter-spacing:.16em !important;color:rgba(255,255,255,.5) !important}
-.lxh .lx-rows{display:flex !important;flex-direction:column !important;gap:8px !important;min-height:262px !important}
-.lxh .lx-row{padding:12px 10px !important;border-radius:12px !important;background:rgba(6,18,38,.55) !important;border:1px solid rgba(255,255,255,.07) !important;font-size:13.5px !important;color:#FFFFFF !important}
+.lxh .lx-rows{display:flex !important;flex-direction:column !important;gap:8px !important;flex:0 0 auto !important;height:328px !important;min-height:0 !important;overflow:hidden !important;overflow-anchor:none !important}
+.lxh .lx-row{flex:0 0 76px !important;height:76px !important;min-height:0 !important;overflow:hidden !important;padding:12px 10px !important;border-radius:12px !important;background:rgba(6,18,38,.55) !important;border:1px solid rgba(255,255,255,.07) !important;font-size:13.5px !important;color:#FFFFFF !important}
 .lxh .lx-row.new{animation:lxhIn .6s cubic-bezier(.2,.8,.2,1) both}
 .lxh .lx-row.out{animation:lxhOut .5s ease forwards}
 .lxh .lx-t{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;color:#F5DC85 !important;font-variant-numeric:tabular-nums !important}
-.lxh .lx-trip b{display:block !important;font-weight:600 !important}
-.lxh .lx-trip span{display:block !important;font-size:11.5px !important;color:rgba(255,255,255,.6) !important}
+.lxh .lx-trip{min-width:0 !important}
+.lxh .lx-trip b{display:-webkit-box !important;-webkit-box-orient:vertical !important;-webkit-line-clamp:2 !important;overflow:hidden !important;font-weight:600 !important;line-height:1.25 !important}
+.lxh .lx-trip span{display:block !important;white-space:nowrap !important;overflow:hidden !important;text-overflow:ellipsis !important;font-size:11.5px !important;color:rgba(255,255,255,.6) !important}
 .lxh .lx-veh{font-size:12.5px !important;color:rgba(255,255,255,.8) !important}
 .lxh .lx-st{justify-self:start !important;display:inline-flex !important;align-items:center !important;gap:6px !important;padding:5px 10px !important;border-radius:999px !important;font-size:10.5px !important;font-weight:800 !important;letter-spacing:.1em !important;transform-origin:50% 50% !important}
 .lxh .lx-st::before{content:'' !important;width:6px !important;height:6px !important;border-radius:50% !important;background:currentColor !important}
