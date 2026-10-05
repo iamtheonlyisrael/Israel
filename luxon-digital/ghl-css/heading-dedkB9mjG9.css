@@ -1,11 +1,11 @@
 /* ---------- HEADLINE #heading-dedkB9mjG9: "Four tools." solid navy, "One simple system." blue -> gold gradient ---------- */
 /* CSS draws the headline itself, so it works no matter how the colors are set in GHL.
    If you change the wording in GHL, change the two "content" lines below too.
-   HEADLINE SIZE: change 48px / 40px / 30px to match your design. */
+   HEADLINE SIZE: 68px desktop, 48px tablet, 34px phone to match your design. */
 #heading-dedkB9mjG9 :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
 #heading-dedkB9mjG9 :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
 #heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{
-  font-size:48px !important;line-height:1.15 !important;letter-spacing:inherit
+  font-size:68px !important;line-height:1.1 !important;letter-spacing:inherit
 }
 #heading-dedkB9mjG9 :is(h1,h2,h3)::before{
   content:"Four tools. ";content:"Four tools. " / "";
@@ -21,6 +21,6 @@
   animation:lxBlueGoldShift 6s ease-in-out infinite alternate
 }
 @keyframes lxBlueGoldShift{to{background-position:100% center}}
-@media (max-width:1024px){#heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:40px !important}}
-@media (max-width:600px){#heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:30px !important}}
+@media (max-width:1024px){#heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:34px !important}}
 @media (prefers-reduced-motion:reduce){#heading-dedkB9mjG9 :is(h1,h2,h3)::after{animation:none !important}}
