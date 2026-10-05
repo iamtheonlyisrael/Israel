@@ -85,6 +85,14 @@
   background:linear-gradient(100deg,transparent,rgba(141,180,255,.30),transparent) !important
 }
 
+/* ---------- FEATURES SECTION #section-AgMJ8881FQ: light blue -> white -> soft gold ---------- */
+#section-AgMJ8881FQ{
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),
+             radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 70%),
+             linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 55%,#FFF8E6 100%) !important
+}
+#section-AgMJ8881FQ > .bg,#section-AgMJ8881FQ .bg-section{background:transparent !important}
+
 /* ---------- visitors who turn off motion ---------- */
 @media (prefers-reduced-motion:reduce){
   #section-1T_ti8nH1T::before,#section-1T_ti8nH1T::after,
