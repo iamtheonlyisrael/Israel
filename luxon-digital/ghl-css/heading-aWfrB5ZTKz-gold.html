@@ -1,0 +1,31 @@
+<!-- Luxon: makes everything after "Done for you," in headline #heading-aWfrB5ZTKz gold (styled by the page Custom CSS).
+     Paste into ONE Custom Code element anywhere on the Luxon Limo AI page (it shows nothing by itself). -->
+<script>
+(function () {
+  var ID = 'heading-aWfrB5ZTKz', WHITE_PART = 'Done for you,';
+  function run() {
+    var h = document.getElementById(ID);
+    if (!h || h.querySelector('.lx-gold')) return;
+    var walker = document.createTreeWalker(h, NodeFilter.SHOW_TEXT), nodes = [], n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    var seen = '', after = false;
+    for (var i = 0; i < nodes.length; i++) {
+      var t = nodes[i];
+      if (!after) {
+        var before = seen.length; seen += t.nodeValue;
+        var at = seen.indexOf(WHITE_PART);
+        if (at === -1) continue;
+        var cut = at + WHITE_PART.length - before;          /* end of "Done for you," inside this text */
+        after = true;
+        if (cut >= t.nodeValue.length) continue;
+        t = t.splitText(Math.max(cut, 0));
+      }
+      if (!t.nodeValue.trim()) continue;
+      var s = document.createElement('span'); s.className = 'lx-gold';
+      t.parentNode.insertBefore(s, t); s.appendChild(t);
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+  [400, 1200, 2500, 5000].forEach(function (ms) { setTimeout(run, ms); });   /* in case the page builder redraws the headline */
+})();
+</script>
