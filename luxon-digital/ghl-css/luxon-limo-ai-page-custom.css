@@ -126,13 +126,21 @@
 #section-tuvZ4FT-_q > div:not(.bg){position:relative !important;z-index:1 !important}
 
 /* ---------- HEADLINE #heading-aWfrB5ZTKz: "Done for you," white, "from setup to support." gold gradient ---------- */
-/* works whichever words carry their own color in GHL:
-   A) "from setup to support." has a gold/other color  -> those colored words get the gradient
-   B) only white-colored words (or none)              -> the plain words get the gradient, white words stay white */
-#heading-aWfrB5ZTKz :is(h1,h2,h3){color:#FFFFFF !important}
-
-/* A: colored (non-white) words = gold gradient */
-#heading-aWfrB5ZTKz :is(span,font):is([style*="color"],[color]):not([style*="255, 255, 255"],[style*="255,255,255"],[style*="#fff" i],[style*="white" i]){
+/* CSS draws the headline itself, so it works no matter how the colors are set in GHL.
+   The real GHL text stays on the page for Google, it is just hidden.
+   If you change the wording in GHL, change the two "content" lines below too.
+   HEADLINE SIZE: change 64px / 46px / 34px to match your design. */
+#heading-aWfrB5ZTKz :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-aWfrB5ZTKz :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{
+  font-size:64px !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-aWfrB5ZTKz :is(h1,h2,h3)::before{
+  content:"Done for you, ";content:"Done for you, " / "";
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{
+  content:"from setup to support.";content:"from setup to support." / "";
   background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
   background-size:200% auto !important;background-position:0% center;
   -webkit-background-clip:text !important;background-clip:text !important;
@@ -140,28 +148,15 @@
   -webkit-box-decoration-break:clone;box-decoration-break:clone;
   animation:lxGoldShift 6s ease-in-out infinite alternate
 }
-
-/* B: no gold-colored words in the headline -> gold gradient on the plain words */
-#heading-aWfrB5ZTKz :is(h1,h2,h3):not(:has(:is(span,font):is([style*="color"],[color]):not([style*="255, 255, 255"],[style*="255,255,255"],[style*="#fff" i],[style*="white" i]))){
-  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
-  background-size:200% auto !important;background-position:0% center;
-  -webkit-background-clip:text !important;background-clip:text !important;
-  color:transparent !important;-webkit-text-fill-color:transparent !important;
-  animation:lxGoldShift 6s ease-in-out infinite alternate
-}
-
-/* white-colored words ("Done for you,") always stay solid white */
-#heading-aWfrB5ZTKz :is(span,font):is([style*="255, 255, 255"],[style*="255,255,255"],[style*="#fff" i],[style*="white" i],[color="#ffffff" i],[color="#fff" i],[color="white" i]){
-  background:none !important;animation:none !important;
-  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
-}
+@media (max-width:1024px){#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-size:46px !important}}
+@media (max-width:600px){#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-size:34px !important}}
 
 /* ---------- visitors who turn off motion ---------- */
 @media (prefers-reduced-motion:reduce){
   #section-1T_ti8nH1T::before,#section-1T_ti8nH1T::after,
   #heading-sdweA4P_CT span,#heading-sdweA4P_CT font,
   #heading-SsTqSQWkWc :is(h1,h2,h3),
-  #heading-aWfrB5ZTKz :is(h1,h2,h3),#heading-aWfrB5ZTKz span,#heading-aWfrB5ZTKz font{animation:none !important}
+  #heading-aWfrB5ZTKz :is(h1,h2,h3)::after{animation:none !important}
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button),
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button)::after,
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(i,svg){transition:none !important}
