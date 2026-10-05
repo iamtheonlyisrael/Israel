@@ -125,11 +125,31 @@
 }
 #section-tuvZ4FT-_q > div:not(.bg){position:relative !important;z-index:1 !important}
 
+/* ---------- HEADLINE #heading-aWfrB5ZTKz: "Done for you," white, "from setup to support." gold gradient ---------- */
+#heading-aWfrB5ZTKz :is(h1,h2,h3){color:#FFFFFF !important}
+/* words with their own (non-white) color in GHL = gold gradient with slow shimmer */
+#heading-aWfrB5ZTKz span[style*="color"],#heading-aWfrB5ZTKz font[color]{
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+/* words colored white stay plain white */
+#heading-aWfrB5ZTKz span[style*="255, 255, 255"],#heading-aWfrB5ZTKz span[style*="255,255,255"],
+#heading-aWfrB5ZTKz span[style*="#fff" i],#heading-aWfrB5ZTKz span[style*="white" i],
+#heading-aWfrB5ZTKz font[color="#ffffff" i],#heading-aWfrB5ZTKz font[color="#fff" i],#heading-aWfrB5ZTKz font[color="white" i]{
+  background:none !important;animation:none !important;
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+
 /* ---------- visitors who turn off motion ---------- */
 @media (prefers-reduced-motion:reduce){
   #section-1T_ti8nH1T::before,#section-1T_ti8nH1T::after,
   #heading-sdweA4P_CT span,#heading-sdweA4P_CT font,
-  #heading-SsTqSQWkWc :is(h1,h2,h3){animation:none !important}
+  #heading-SsTqSQWkWc :is(h1,h2,h3),
+  #heading-aWfrB5ZTKz span,#heading-aWfrB5ZTKz font{animation:none !important}
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button),
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(a,button)::after,
   :is(#button-_L8xzBJ2zh,#button-IzJudpf1kW) :is(i,svg){transition:none !important}
