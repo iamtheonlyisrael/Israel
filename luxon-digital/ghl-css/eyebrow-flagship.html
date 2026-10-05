@@ -1,0 +1,17 @@
+<!-- Luxon eyebrow "Our Flagship Product" (centered): paste into a Custom Code element above the heading -->
+<div class="lx-fp-wrap">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+.lx-fp-wrap{display:flex !important;justify-content:center !important;width:100% !important}
+.lx-fp{position:relative;display:inline-flex;align-items:center;gap:10px;max-width:100%;padding:9px 20px 9px 16px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(212,175,55,.5);overflow:hidden;box-sizing:border-box;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;line-height:1.35;letter-spacing:.18em;text-transform:uppercase;color:#F5DC85;animation:lxFpIn .8s ease both,lxFpGlow 4s ease-in-out 1s infinite}
+.lx-fp::before{content:'';flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:#3DDC97;animation:lxFpPing 2s ease-out infinite}
+.lx-fp::after{content:'';position:absolute;top:0;bottom:0;left:0;width:35%;background:linear-gradient(100deg,transparent,rgba(245,220,133,.28),transparent);pointer-events:none;transform:translateX(-120%);animation:lxFpSweep 5s ease-in-out 1.2s infinite}
+@keyframes lxFpIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lxFpGlow{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 18px 0 rgba(212,175,55,.28)}}
+@keyframes lxFpPing{0%{box-shadow:0 0 0 0 rgba(61,220,151,.7)}100%{box-shadow:0 0 0 9px rgba(61,220,151,0)}}
+@keyframes lxFpSweep{0%,55%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+@media (max-width:480px){.lx-fp{font-size:11px;letter-spacing:.14em}}
+@media (prefers-reduced-motion:reduce){.lx-fp,.lx-fp::before,.lx-fp::after{animation:none}}
+</style>
+<span class="lx-fp">Our Flagship Product</span>
+</div>
