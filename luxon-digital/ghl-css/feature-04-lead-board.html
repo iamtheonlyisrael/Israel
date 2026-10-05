@@ -1,0 +1,25 @@
+<!-- Luxon graphic | Lead Management: lead board with New, Quoted and Booked columns | paste into ONE Custom Code element -->
+<div class="lxg4">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+.lxg4,.lxg4 *,.lxg4 *::before,.lxg4 *::after{box-sizing:border-box !important}
+.lxg4{width:100% !important;max-width:560px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important}
+.lxg4 p{margin:0 !important}
+.lxg4 .board{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:12px !important;padding:16px !important;border-radius:20px !important;background:#F6F7F9 !important;color:#1F2933 !important}
+.lxg4 .col{display:flex !important;flex-direction:column !important;gap:10px !important;min-width:0 !important}
+.lxg4 .col-h{padding:4px 4px 6px !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:13.5px !important;color:#0B1F3A !important}
+.lxg4 .tk{padding:12px !important;border-radius:12px !important;background:#FFFFFF !important;border:1px solid #E4E7EB !important;font-size:12.5px !important;line-height:1.4 !important;color:#52606D !important}
+.lxg4 .tk b{display:block !important;font-size:13.5px !important;color:#1F2933 !important;margin-bottom:3px !important}
+.lxg4 .tk.navy{background:#0B1F3A !important;border-color:#0B1F3A !important;color:rgba(255,255,255,.75) !important}
+.lxg4 .tk.navy b{color:#FFFFFF !important}
+.lxg4 .tk.hot{animation:lxg4Hot 4s ease-in-out infinite}
+@keyframes lxg4Hot{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 0 3px rgba(212,175,55,.8),0 10px 24px rgba(212,175,55,.35)}}
+@media (max-width:480px){.lxg4 .board{gap:8px !important;padding:10px !important}.lxg4 .tk{padding:9px !important;font-size:11.5px !important;overflow-wrap:anywhere !important}.lxg4 .tk b{font-size:12.5px !important}.lxg4 .col-h{font-size:12.5px !important}}
+@media (prefers-reduced-motion:reduce){.lxg4 *,.lxg4 *::before,.lxg4 *::after{animation:none !important}.lxg4 .tl-i,.lxg4 .stars svg{opacity:1 !important;transform:none !important}}
+</style>
+  <div class="board" role="img" aria-label="Example lead board: a new airport SUV request, a quoted wedding and a booked corporate trip">
+    <div class="col"><div class="col-h">New</div><div class="tk hot"><b>Airport · SUV</b>JFK → Midtown</div></div>
+    <div class="col"><div class="col-h">Quoted</div><div class="tk"><b>Wedding</b>2 sedans</div></div>
+    <div class="col"><div class="col-h">Booked</div><div class="tk navy"><b>Corporate</b>Hourly</div></div>
+  </div>
+</div>
