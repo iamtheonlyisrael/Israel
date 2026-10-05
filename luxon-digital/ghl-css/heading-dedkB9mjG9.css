@@ -9,6 +9,7 @@
 }
 #heading-dedkB9mjG9 :is(h1,h2,h3)::before{
   content:"Keep your ";content:"Keep your " / "";
+  font-weight:900 !important;
   color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
 }
 #heading-dedkB9mjG9 :is(h1,h2,h3)::after{
