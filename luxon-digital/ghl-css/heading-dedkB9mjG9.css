@@ -1,4 +1,4 @@
-/* ---------- HEADLINE #heading-dedkB9mjG9: "Four tools." solid navy, "One simple system." blue -> gold gradient ---------- */
+/* ---------- HEADLINE #heading-dedkB9mjG9: "Keep your" solid navy, "booking software." blue -> gold gradient ---------- */
 /* CSS draws the headline itself, so it works no matter how the colors are set in GHL.
    If you change the wording in GHL, change the two "content" lines below too.
    HEADLINE SIZE: 68px desktop, 48px tablet, 34px phone to match your design. */
@@ -8,11 +8,11 @@
   font-size:68px !important;line-height:1.1 !important;letter-spacing:inherit
 }
 #heading-dedkB9mjG9 :is(h1,h2,h3)::before{
-  content:"Four tools. ";content:"Four tools. " / "";
+  content:"Keep your ";content:"Keep your " / "";
   color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
 }
 #heading-dedkB9mjG9 :is(h1,h2,h3)::after{
-  content:"One simple system.";content:"One simple system." / "";
+  content:"booking software.";content:"booking software." / "";
   background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 30%,#B8922A 50%,#2F6FE4 70%,#1E4FA8 100%) !important;
   background-size:200% auto !important;background-position:0% center;
   -webkit-background-clip:text !important;background-clip:text !important;
