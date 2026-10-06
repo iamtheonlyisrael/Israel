@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+/* ================= HERO SECTION #section-WFnhUUfW7X ================= */
+/* standard hero height: fills the screen under the menu (min 620px, max 900px), content centered top-to-bottom */
+#section-WFnhUUfW7X {
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    min-height: clamp(620px, calc(100vh - 80px), 900px) !important;
+    min-height: clamp(620px, calc(100svh - 80px), 900px) !important;
+    height: auto !important;
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+    background: radial-gradient(900px 600px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 60%),
+             radial-gradient(700px 520px at 100% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 60%),
+             linear-gradient(135deg,#061226 0%,#0B1F3A 45%,#0E2B5E 100%) !important
+}
+
+#section-WFnhUUfW7X > .bg,#section-WFnhUUfW7X .bg-section {
+    background: transparent !important
+}
+/* slow drifting blue and gold glows */
+#section-WFnhUUfW7X::before,#section-WFnhUUfW7X::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 520px !important;
+    height: 520px !important;
+    border-radius: 50% !important;
+    filter: blur(90px) !important;
+    pointer-events: none !important;
+    z-index: 0 !important
+}
+
+#section-WFnhUUfW7X::before {
+    left: -160px;
+    top: -140px;
+    background: #2F6FE4 !important;
+    opacity: .35;
+    animation: lxSecFloat 14s ease-in-out infinite
+}
+
+#section-WFnhUUfW7X::after {
+    right: -180px;
+    bottom: -200px;
+    background: #E8C55A !important;
+    opacity: .13;
+    animation: lxSecFloat 18s ease-in-out infinite reverse
+}
+
+@keyframes lxSecFloat {
+    0%,100% {
+        transform: translate(0,0)
+    }
+
+    50% {
+        transform: translate(60px,40px)
+    }
+}
+/* keep GHL's background layer behind and out of the layout; lift only the content above the glows (full width) */
+#section-WFnhUUfW7X > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-WFnhUUfW7X > div:not(.bg){position:relative !important;z-index:1 !important;width:100% !important}
+/* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
+#section-WFnhUUfW7X > .inner > .c-row > .inner,
+#section-WFnhUUfW7X > .c-row > .inner{display:flex !important;align-items:center !important}
+/* text colors on the dark background */
+#section-WFnhUUfW7X h1,#section-WFnhUUfW7X h2,#section-WFnhUUfW7X h3{color:#FFFFFF !important}
+#section-WFnhUUfW7X p{color:rgba(255,255,255,.85) !important}
+
+/* ================= HERO EYEBROW #paragraph-WLTAT6np7-l ================= */
+#paragraph-WLTAT6np7-l .text-output{
+  position:relative !important;display:inline-flex !important;align-items:center !important;gap:10px !important;
+  width:auto !important;max-width:100% !important;padding:8px 18px 8px 14px !important;border-radius:999px !important;
+  background:rgba(255,255,255,.06) !important;border:1px solid rgba(212,175,55,.5) !important;overflow:hidden !important;
+  box-shadow:0 0 0 0 rgba(212,175,55,0);
+  animation:lxEyeIn .8s ease both,lxEyeGlow 4s ease-in-out 1s infinite
+}
+#paragraph-WLTAT6np7-l .text-output::before{
+  content:'' !important;flex:0 0 8px !important;width:8px !important;height:8px !important;border-radius:50% !important;
+  background:#3DDC97 !important;animation:lxEyePing 2s ease-out infinite
+}
+#paragraph-WLTAT6np7-l .text-output::after{
+  content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:0 !important;width:35% !important;
+  background:linear-gradient(100deg,transparent,rgba(245,220,133,.28),transparent) !important;pointer-events:none !important;
+  transform:translateX(-120%);animation:lxEyeSweep 5s ease-in-out 1.2s infinite
+}
+#paragraph-WLTAT6np7-l .text-output p,#paragraph-WLTAT6np7-l .text-output span,#paragraph-WLTAT6np7-l .text-output div{
+  margin:0 !important;padding:0 !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;
+  font-size:12px !important;line-height:1.35 !important;letter-spacing:.16em !important;text-transform:uppercase !important;
+  color:#F5DC85 !important;text-align:left !important;background:none !important;border:0 !important
+}
+@keyframes lxEyeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lxEyeGlow{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 18px 0 rgba(212,175,55,.28)}}
+@keyframes lxEyePing{0%{box-shadow:0 0 0 0 rgba(61,220,151,.7)}100%{box-shadow:0 0 0 9px rgba(61,220,151,0)}}
+@keyframes lxEyeSweep{0%,55%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+/* ================= HERO HEADLINE #heading-NdNYbhs8feF: "Every lead. Every quote." white, "One clear view." gold ================= */
+/* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
+   SIZE: 64px desktop, 46px tablet, 34px phone */
+#heading-NdNYbhs8feF :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-NdNYbhs8feF :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-NdNYbhs8feF :is(h1,h2,h3)::before,#heading-NdNYbhs8feF :is(h1,h2,h3)::after{
+  font-size:64px !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-NdNYbhs8feF :is(h1,h2,h3)::before{
+  content:"Every lead. Every quote.";content:"Every lead. Every quote." / "";
+  display:block;
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-NdNYbhs8feF :is(h1,h2,h3)::after{
+  content:"One clear view.";content:"One clear view." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@keyframes lxGoldShift{to{background-position:100% center}}
+@media (max-width:1024px){#heading-NdNYbhs8feF :is(h1,h2,h3)::before,#heading-NdNYbhs8feF :is(h1,h2,h3)::after{font-size:46px !important}}
+@media (max-width:600px){#heading-NdNYbhs8feF :is(h1,h2,h3)::before,#heading-NdNYbhs8feF :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= "SOUND FAMILIAR" SECTION #section-5k1pyzb2Go: light blue -> white -> soft gold ================= */
+#section-5k1pyzb2Go{
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),
+             radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 70%),
+             linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 55%,#FFF8E6 100%) !important;
+  padding-top:96px !important;padding-bottom:96px !important
+}
+#section-5k1pyzb2Go > .bg,#section-5k1pyzb2Go .bg-section{background:transparent !important}
+
+/* ================= HEADLINE #heading-STNTzQPDTuP: "The phone rings at" navy, "the worst times." blue -> gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-STNTzQPDTuP :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-STNTzQPDTuP :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-STNTzQPDTuP :is(h1,h2,h3)::before,#heading-STNTzQPDTuP :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-STNTzQPDTuP :is(h1,h2,h3)::before{
+  content:"The phone rings at ";content:"The phone rings at " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-STNTzQPDTuP :is(h1,h2,h3)::after{
+  content:"the worst times.";content:"the worst times." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-STNTzQPDTuP :is(h1,h2,h3)::before,#heading-STNTzQPDTuP :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-STNTzQPDTuP :is(h1,h2,h3)::before,#heading-STNTzQPDTuP :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= "WHAT IT HANDLES" SECTION #section-RaE-BOzHt4: dark navy gradient + soft dot grid ================= */
+#section-RaE-BOzHt4{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(700px 400px at 50% 0%,rgba(47,111,228,.35),rgba(47,111,228,0) 70%),
+             linear-gradient(160deg,#071528 0%,#0B1F3A 50%,#0E2B5E 100%) !important
+}
+#section-RaE-BOzHt4 > .bg,#section-RaE-BOzHt4 .bg-section{background:transparent !important}
+#section-RaE-BOzHt4 > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-RaE-BOzHt4::before{
+  content:'' !important;position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:0 !important;
+  background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px) !important;background-size:26px 26px !important;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important
+}
+#section-RaE-BOzHt4 > div:not(.bg){position:relative !important;z-index:1 !important}
+/* text colors for the dark background */
+#section-RaE-BOzHt4 h1,#section-RaE-BOzHt4 h2,#section-RaE-BOzHt4 h3{color:#FFFFFF !important}
+#section-RaE-BOzHt4 .c-paragraph,#section-RaE-BOzHt4 .c-paragraph *,
+#section-RaE-BOzHt4 .c-sub-heading,#section-RaE-BOzHt4 .c-sub-heading *{color:rgba(255,255,255,.85) !important}
+/* "WHAT IT HANDLES" eyebrow text in brand gold: replace #EYEBROW-ID with the eyebrow's CSS Selector from GHL */
+#section-RaE-BOzHt4 #EYEBROW-ID,#section-RaE-BOzHt4 #EYEBROW-ID *{color:#D4AF37 !important;-webkit-text-fill-color:#D4AF37 !important}
+/* layout like the mockup: two equal columns, max 1200px wide, centered top-to-bottom (font sizes untouched) */
+#section-RaE-BOzHt4 .c-row{max-width:1200px !important;margin-left:auto !important;margin-right:auto !important}
+#section-RaE-BOzHt4 .c-row .c-row > .inner{display:flex !important;flex-wrap:nowrap !important;align-items:center !important;gap:64px !important}
+#section-RaE-BOzHt4 .c-row .c-row > .inner > .c-column{flex:1 1 0 !important;width:auto !important;max-width:none !important;min-width:0 !important}
+
+/* ================= HEADLINE #heading-RMBdC9vcGyG: "Professional, friendly" white, "and always on." gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-RMBdC9vcGyG :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-RMBdC9vcGyG :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-RMBdC9vcGyG :is(h1,h2,h3)::before{
+  content:"Professional, friendly ";content:"Professional, friendly " / "";
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-RMBdC9vcGyG :is(h1,h2,h3)::after{
+  content:"and always on.";content:"and always on." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@media (max-width:1024px){#heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= HEADLINE #heading-VAwUuJdel-r: "Some calls need a person." navy, "It knows which ones." blue -> gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-VAwUuJdel-r :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-VAwUuJdel-r :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-VAwUuJdel-r :is(h1,h2,h3)::before{
+  content:"Some calls need a person. ";content:"Some calls need a person. " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-VAwUuJdel-r :is(h1,h2,h3)::after{
+  content:"It knows which ones.";content:"It knows which ones." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= PILL #sub-heading-D9RA6NLBxOj ================= */
+#sub-heading-D9RA6NLBxOj{
+  display:inline-block;position:relative;
+  padding:10px 20px !important;border-radius:999px !important;
+  border:1px solid rgba(212,175,55,.55) !important;background:rgba(255,255,255,.04);
+  box-shadow:0 6px 18px rgba(11,31,58,.08);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;cursor:default
+}
+#sub-heading-D9RA6NLBxOj:hover{
+  transform:translateY(-3px);border-color:#D4AF37 !important;background:rgba(212,175,55,.08);
+  box-shadow:0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
+}
+
+/* ================= TABLETS & PHONES ================= */
+@media (max-width:900px){
+  #section-RaE-BOzHt4 .c-row .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:32px !important}
+  #section-RaE-BOzHt4 .c-row .c-row > .inner > .c-column{flex:1 1 auto !important;width:100% !important}
+}
+@media (max-width:767px){
+  /* phones: hero grows with its content instead of filling the screen */
+  #section-WFnhUUfW7X{min-height:0 !important;padding-top:56px !important;padding-bottom:64px !important}
+  #section-WFnhUUfW7X > .inner > .c-row > .inner,
+  #section-WFnhUUfW7X > .c-row > .inner{flex-direction:column !important;align-items:stretch !important}
+  #section-5k1pyzb2Go{padding-top:64px !important;padding-bottom:64px !important}
+}
+@media (max-width:480px){
+  #paragraph-WLTAT6np7-l .text-output p,#paragraph-WLTAT6np7-l .text-output span{font-size:10.5px !important;letter-spacing:.12em !important}
+}
+
+/* ================= VISITORS WHO TURN OFF MOTION ================= */
+@media (prefers-reduced-motion:reduce){
+  #section-WFnhUUfW7X::before,#section-WFnhUUfW7X::after,
+  #paragraph-WLTAT6np7-l .text-output,#paragraph-WLTAT6np7-l .text-output::before,#paragraph-WLTAT6np7-l .text-output::after,
+  #heading-NdNYbhs8feF :is(h1,h2,h3)::after,
+  #heading-RMBdC9vcGyG :is(h1,h2,h3)::after{animation:none !important}
+  #sub-heading-D9RA6NLBxOj,#sub-heading-D9RA6NLBxOj:hover{transition:none !important;transform:none !important}
+}
