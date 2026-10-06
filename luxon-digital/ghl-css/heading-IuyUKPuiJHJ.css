@@ -1,0 +1,23 @@
+/* ---------- HEADLINE #heading-IuyUKPuiJHJ: "Some calls need a person." navy, "It knows which ones." blue -> gold ---------- */
+/* CSS draws the headline itself, so it works no matter how the colors are set in GHL.
+   If you change the wording in GHL, change the two "content" lines below too.
+   HEADLINE SIZE: 52px desktop, 40px tablet, 30px phone */
+#heading-IuyUKPuiJHJ :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-IuyUKPuiJHJ :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{
+  font-size:52px !important;line-height:1.15 !important;letter-spacing:inherit
+}
+#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before{
+  content:"Some calls need a person. ";content:"Some calls need a person. " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+/* blue on the left to gold on the right, same order as the design */
+#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{
+  content:"It knows which ones.";content:"It knows which ones." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:40px !important}}
+@media (max-width:600px){#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:30px !important}}
