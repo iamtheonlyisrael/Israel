@@ -1,0 +1,25 @@
+/* ---------- HEADLINE #heading-pqPxlk-4xv: gold gradient on "and always on." only (size and weight stay as set in GHL) ---------- */
+/* A: words with their own (non-white) color in GHL = gold gradient */
+#heading-pqPxlk-4xv :is(span,font):is([style*="color"],[color]):not([style*="255, 255, 255"],[style*="255,255,255"],[style*="#fff" i],[style*="white" i]){
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+/* B: if no word has a gold/other color, the plain words get the gradient and white-colored words stay white */
+#heading-pqPxlk-4xv :is(h1,h2,h3):not(:has(:is(span,font):is([style*="color"],[color]):not([style*="255, 255, 255"],[style*="255,255,255"],[style*="#fff" i],[style*="white" i]))):has(:is(span,font):is([style*="255, 255, 255"],[style*="255,255,255"],[style*="#fff" i],[style*="white" i])){
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+/* white-colored words ("Professional, friendly") always stay solid white */
+#heading-pqPxlk-4xv :is(span,font):is([style*="255, 255, 255"],[style*="255,255,255"],[style*="#fff" i],[style*="white" i],[color="#ffffff" i],[color="#fff" i],[color="white" i]){
+  background:none !important;animation:none !important;
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+@keyframes lxGoldShift{to{background-position:100% center}}
+@media (prefers-reduced-motion:reduce){#heading-pqPxlk-4xv :is(h1,h2,h3),#heading-pqPxlk-4xv span,#heading-pqPxlk-4xv font{animation:none !important}}
