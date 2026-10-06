@@ -6,12 +6,12 @@
 .lxsend,.lxsend *,.lxsend *::before,.lxsend *::after{box-sizing:border-box !important}
 .lxsend{width:100% !important;max-width:1200px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important}
 .lxsend .grid{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important}
-.lxsend .card{position:relative !important;display:block !important;padding:30px !important;border-radius:22px !important;color:#1F2933 !important;background:linear-gradient(#FFFFFF,#FFFFFF) padding-box,linear-gradient(135deg,rgba(47,111,228,.35),rgba(228,231,235,1) 40%,rgba(212,175,55,.45)) border-box !important;border:1.5px solid transparent !important;box-shadow:0 16px 40px rgba(11,31,58,.06) !important;transition:transform .3s ease,box-shadow .3s ease !important}
+.lxsend .card{position:relative !important;overflow:hidden !important;display:block !important;padding:30px !important;border-radius:22px !important;color:#1F2933 !important;background:linear-gradient(#FFFFFF,#FFFFFF) padding-box,linear-gradient(135deg,rgba(47,111,228,.35),rgba(228,231,235,1) 40%,rgba(212,175,55,.45)) border-box !important;border:1.5px solid transparent !important;box-shadow:0 16px 40px rgba(11,31,58,.06) !important;transition:transform .3s ease,box-shadow .3s ease !important}
 .lxsend.js .card{opacity:0;transform:translateY(18px)}
 .lxsend.in .card{animation:lxsendIn .7s cubic-bezier(.2,.8,.2,1) forwards}
 .lxsend.in .card:nth-child(2){animation-delay:.1s}
 .lxsend.in .card:nth-child(3){animation-delay:.2s}
-.lxsend .card::before{content:'' !important;position:absolute !important;left:0 !important;right:0 !important;top:0 !important;height:3px !important;border-radius:22px 22px 0 0 !important;background-image:linear-gradient(90deg,#D4AF37,#F5DC85,#5B8DEF,#D4AF37) !important;background-size:200% 100% !important;background-position:0 0;animation:lxsendBar 5s linear infinite}
+.lxsend .card::before{content:'' !important;position:absolute !important;left:0 !important;right:0 !important;top:0 !important;height:4px !important;border-radius:0 !important;background-image:linear-gradient(90deg,#D4AF37,#F5DC85,#5B8DEF,#D4AF37) !important;background-size:200% 100% !important;background-position:0 0;animation:lxsendBar 5s linear infinite}
 .lxsend.in .card:nth-child(4){animation-delay:0s}
 .lxsend.in .card:nth-child(5){animation-delay:.1s}
 .lxsend.in .card:nth-child(6){animation-delay:.2s}
