@@ -1,11 +1,11 @@
 /* ---------- HEADLINE #heading-IuyUKPuiJHJ: "Some calls need a person." navy, "It knows which ones." blue -> gold ---------- */
 /* CSS draws the headline itself, so it works no matter how the colors are set in GHL.
    If you change the wording in GHL, change the two "content" lines below too.
-   HEADLINE SIZE: 52px desktop, 40px tablet, 30px phone */
+   HEADLINE SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
 #heading-IuyUKPuiJHJ :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
 #heading-IuyUKPuiJHJ :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
 #heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{
-  font-size:52px !important;line-height:1.15 !important;letter-spacing:inherit
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
 }
 #heading-IuyUKPuiJHJ :is(h1,h2,h3)::before{
   content:"Some calls need a person. ";content:"Some calls need a person. " / "";
@@ -19,5 +19,5 @@
   color:transparent !important;-webkit-text-fill-color:transparent !important;
   -webkit-box-decoration-break:slice;box-decoration-break:slice
 }
-@media (max-width:1024px){#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:40px !important}}
-@media (max-width:600px){#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:30px !important}}
+@media (max-width:1024px){#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:34px !important}}
