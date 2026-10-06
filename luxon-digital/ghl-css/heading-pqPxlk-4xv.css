@@ -1,11 +1,11 @@
 /* ---------- HEADLINE #heading-pqPxlk-4xv: "Professional, friendly" white, "and always on." gold gradient ---------- */
 /* CSS draws the headline itself, so it works even though the headline has no colors set in GHL.
-   The font and weight come from GHL. If you change the wording in GHL, change the two "content" lines too.
-   HEADLINE SIZE: 68px desktop, 48px tablet, 34px phone */
+   The font comes from GHL. If you change the wording in GHL, change the two "content" lines too.
+   HEADLINE SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
 #heading-pqPxlk-4xv :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
 #heading-pqPxlk-4xv :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
 #heading-pqPxlk-4xv :is(h1,h2,h3)::before,#heading-pqPxlk-4xv :is(h1,h2,h3)::after{
-  font-size:68px !important;line-height:1.1 !important;letter-spacing:inherit
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
 }
 #heading-pqPxlk-4xv :is(h1,h2,h3)::before{
   content:"Professional, friendly ";content:"Professional, friendly " / "";
