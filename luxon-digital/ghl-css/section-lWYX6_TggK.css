@@ -17,3 +17,18 @@
 #section-lWYX6_TggK h1,#section-lWYX6_TggK h2,#section-lWYX6_TggK h3{color:#FFFFFF !important}
 #section-lWYX6_TggK .c-paragraph,#section-lWYX6_TggK .c-paragraph *,
 #section-lWYX6_TggK .c-sub-heading,#section-lWYX6_TggK .c-sub-heading *{color:rgba(255,255,255,.85) !important}
+
+/* ---------- LAYOUT (like the mockup): two equal columns, max 1200px wide, centered top-to-bottom ----------
+   Only positioning changes; font sizes and weights are untouched. */
+#section-lWYX6_TggK .c-row{max-width:1200px !important;margin-left:auto !important;margin-right:auto !important}
+#section-lWYX6_TggK .c-row .c-row > .inner{
+  display:flex !important;flex-wrap:nowrap !important;align-items:center !important;gap:64px !important
+}
+#section-lWYX6_TggK .c-row .c-row > .inner > .c-column{
+  flex:1 1 0 !important;width:auto !important;max-width:none !important;min-width:0 !important
+}
+/* tablets and phones: stack the text on top of the checklist */
+@media (max-width:900px){
+  #section-lWYX6_TggK .c-row .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:32px !important}
+  #section-lWYX6_TggK .c-row .c-row > .inner > .c-column{flex:1 1 auto !important;width:100% !important}
+}
