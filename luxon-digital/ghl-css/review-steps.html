@@ -1,0 +1,33 @@
+<!-- Luxon Review Automation page | "How it works" numbered 1-4 steps with a light running along the line | paste into ONE Custom Code element (full width).
+     Made for a dark navy section. -->
+<div class="lxrsteps">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500&display=swap');
+.lxrsteps,.lxrsteps *,.lxrsteps *::before,.lxrsteps *::after{box-sizing:border-box !important}
+.lxrsteps{width:100% !important;max-width:1200px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important;text-align:center !important}
+.lxrsteps .steps{position:relative !important;display:grid !important;grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:20px !important}
+/* connecting line between the circles, with a light running along it */
+.lxrsteps .track{position:absolute !important;left:12.5% !important;right:12.5% !important;top:34px !important;height:2px !important;background:rgba(141,180,255,.2) !important;overflow:hidden !important;z-index:0 !important}
+.lxrsteps .track i{position:absolute !important;top:0 !important;left:-10%;width:20% !important;height:100% !important;background:linear-gradient(90deg,transparent,#F5DC85,#8DB4FF,transparent) !important;animation:lxrstepsRun 4s linear infinite}
+.lxrsteps .st{position:relative !important;z-index:1 !important;padding:0 6px !important}
+.lxrsteps .ring{position:relative !important;width:70px !important;height:70px !important;margin:0 auto 20px !important;border-radius:50% !important;padding:2px !important;background:linear-gradient(135deg,#F5DC85,#D4AF37 40%,#5B8DEF) !important;box-shadow:0 0 30px rgba(91,141,239,.3);animation:lxrstepsPulse 4s ease-out infinite}
+/* each circle lights up the moment the running light reaches it */
+.lxrsteps .st:nth-child(3) .ring{animation-delay:1s}
+.lxrsteps .st:nth-child(4) .ring{animation-delay:2s}
+.lxrsteps .st:nth-child(5) .ring{animation-delay:3s}
+.lxrsteps .ring span{width:100% !important;height:100% !important;border-radius:50% !important;background:#0B1F3A !important;display:flex !important;align-items:center !important;justify-content:center !important;color:#F5DC85 !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:20px !important;line-height:1 !important}
+.lxrsteps .h3{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:20px !important;line-height:1.3 !important;color:#FFFFFF !important;margin:0 0 8px !important}
+.lxrsteps .txt{font-size:15.5px !important;line-height:1.65 !important;color:rgba(255,255,255,.75) !important;margin:0 auto !important;max-width:280px !important}
+@keyframes lxrstepsRun{0%{left:-10%;opacity:1}75%{left:90%;opacity:1}85%,100%{left:90%;opacity:0}}
+@keyframes lxrstepsPulse{0%,25%,100%{box-shadow:0 0 30px rgba(91,141,239,.3);transform:scale(1)}6%{box-shadow:0 0 0 8px rgba(212,175,55,.25),0 0 40px rgba(245,220,133,.7);transform:scale(1.06)}}
+/* tablets: 2 x 2, phones: one column (the line is hidden) */
+@media (max-width:900px){.lxrsteps .steps{grid-template-columns:1fr 1fr !important;gap:36px 18px !important}.lxrsteps .track{display:none !important}}
+@media (max-width:560px){.lxrsteps .steps{grid-template-columns:1fr !important}}
+@media (prefers-reduced-motion:reduce){.lxrsteps .ring,.lxrsteps .track i{animation:none !important}}
+</style>
+  <div class="steps">
+    <span class="track" aria-hidden="true"><i></i></span>
+    <div class="st"><div class="ring"><span>1</span></div><h3 class="h3">Trip completed</h3><p class="txt">The ride is marked complete.</p></div>
+    <div class="st"><div class="ring"><span>2</span></div><h3 class="h3">Thank-you text</h3><p class="txt">A friendly message asks how it went.</p></div>
+    <div class="st"><div class="ring"><span>3</span></div><h3 class="h3">Rider responds</h3><p class="txt">Happy riders get your Google review link.</p></div>
+    <div class="st"><div class="ring"><span>4</span></div><h3 class="h3">You’re in control</h3><p class="txt">Any concern is sent to your team first.</p></div>
