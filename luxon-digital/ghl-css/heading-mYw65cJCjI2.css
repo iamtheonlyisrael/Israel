@@ -1,0 +1,23 @@
+/* ---------- HEADLINE #heading-mYw65cJCjI2: "The phone rings at" navy, "the worst times." blue -> gold ---------- */
+/* CSS draws the headline itself, so it works no matter how the colors are set in GHL.
+   If you change the wording in GHL, change the two "content" lines below too.
+   HEADLINE SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-mYw65cJCjI2 :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-mYw65cJCjI2 :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-mYw65cJCjI2 :is(h1,h2,h3)::before,#heading-mYw65cJCjI2 :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-mYw65cJCjI2 :is(h1,h2,h3)::before{
+  content:"The phone rings at ";content:"The phone rings at " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+/* blue on the left to gold on the right, same order as the design */
+#heading-mYw65cJCjI2 :is(h1,h2,h3)::after{
+  content:"the worst times.";content:"the worst times." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-mYw65cJCjI2 :is(h1,h2,h3)::before,#heading-mYw65cJCjI2 :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-mYw65cJCjI2 :is(h1,h2,h3)::before,#heading-mYw65cJCjI2 :is(h1,h2,h3)::after{font-size:34px !important}}
