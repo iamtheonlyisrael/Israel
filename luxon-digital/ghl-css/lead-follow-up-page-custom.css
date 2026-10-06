@@ -111,7 +111,7 @@
 @media (max-width:1024px){#heading-OktKrn0r4r3 :is(h1,h2,h3)::before,#heading-OktKrn0r4r3 :is(h1,h2,h3)::after{font-size:48px !important}}
 @media (max-width:600px){#heading-OktKrn0r4r3 :is(h1,h2,h3)::before,#heading-OktKrn0r4r3 :is(h1,h2,h3)::after{font-size:34px !important}}
 
-/* ================= "WHAT IT HANDLES" SECTION #section-vXkNektqEi: dark navy gradient + soft dot grid ================= */
+/* ================= "HOW IT WORKS" SECTION #section-vXkNektqEi: dark navy gradient + soft dot grid ================= */
 #section-vXkNektqEi{
   position:relative !important;overflow:hidden !important;
   background:radial-gradient(700px 400px at 50% 0%,rgba(47,111,228,.35),rgba(47,111,228,0) 70%),
@@ -129,14 +129,14 @@
 #section-vXkNektqEi h1,#section-vXkNektqEi h2,#section-vXkNektqEi h3{color:#FFFFFF !important}
 #section-vXkNektqEi .c-paragraph,#section-vXkNektqEi .c-paragraph *,
 #section-vXkNektqEi .c-sub-heading,#section-vXkNektqEi .c-sub-heading *{color:rgba(255,255,255,.85) !important}
-/* "WHAT IT HANDLES" eyebrow text in brand gold: replace #EYEBROW-ID with the eyebrow's CSS Selector from GHL */
+/* eyebrow text in brand gold: replace #EYEBROW-ID with the eyebrow's CSS Selector from GHL */
 #section-vXkNektqEi #EYEBROW-ID,#section-vXkNektqEi #EYEBROW-ID *{color:#D4AF37 !important;-webkit-text-fill-color:#D4AF37 !important}
 /* layout like the mockup: two equal columns, max 1200px wide, centered top-to-bottom (font sizes untouched) */
 #section-vXkNektqEi .c-row{max-width:1200px !important;margin-left:auto !important;margin-right:auto !important}
 #section-vXkNektqEi .c-row .c-row > .inner{display:flex !important;flex-wrap:nowrap !important;align-items:center !important;gap:64px !important}
 #section-vXkNektqEi .c-row .c-row > .inner > .c-column{flex:1 1 0 !important;width:auto !important;max-width:none !important;min-width:0 !important}
 
-/* ================= HEADLINE #heading-Nd5oN-Qllmc: "Professional, friendly" white, "and always on." gold ================= */
+/* ================= HEADLINE #heading-Nd5oN-Qllmc: "Automate the follow-up." white, "Keep it personal." gold ================= */
 /* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
 #heading-Nd5oN-Qllmc :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
 #heading-Nd5oN-Qllmc :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
@@ -144,11 +144,11 @@
   font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
 }
 #heading-Nd5oN-Qllmc :is(h1,h2,h3)::before{
-  content:"Professional, friendly ";content:"Professional, friendly " / "";
+  content:"Automate the follow-up. ";content:"Automate the follow-up. " / "";
   color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
 }
 #heading-Nd5oN-Qllmc :is(h1,h2,h3)::after{
-  content:"and always on.";content:"and always on." / "";
+  content:"Keep it personal.";content:"Keep it personal." / "";
   background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
   background-size:200% auto !important;background-position:0% center;
   -webkit-background-clip:text !important;background-clip:text !important;
