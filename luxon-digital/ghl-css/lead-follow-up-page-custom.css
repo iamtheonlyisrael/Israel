@@ -144,7 +144,8 @@
   font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
 }
 #heading-Nd5oN-Qllmc :is(h1,h2,h3)::before{
-  content:"Automate the follow-up. ";content:"Automate the follow-up. " / "";
+  content:"Automate the follow-up.";content:"Automate the follow-up." / "";
+  display:block;
   color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
 }
 #heading-Nd5oN-Qllmc :is(h1,h2,h3)::after{
