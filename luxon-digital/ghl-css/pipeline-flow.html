@@ -33,9 +33,9 @@
 .lxpf .lt{font-weight:600 !important;font-size:14px !important;line-height:1.3 !important}
 .lxpf .lt small{display:block !important;font-weight:400 !important;font-size:12.5px !important;color:rgba(255,255,255,.7) !important}
 .lxpf .cap{margin:14px 0 0 !important;text-align:center !important;font-size:12.5px !important;font-style:italic !important;color:rgba(255,255,255,.6) !important}
-@keyframes lxpfSrc{0%,14%,100%{border-color:rgba(141,180,255,.28);box-shadow:none}5%{border-color:#D4AF37;box-shadow:0 0 22px rgba(212,175,55,.45)}}
+@keyframes lxpfSrc{0%,14%,100%{border-color:rgba(141,180,255,.28);box-shadow:none;transform:scale(1)}5%{border-color:#D4AF37;box-shadow:0 0 22px rgba(212,175,55,.45);transform:scale(1.06)}}
 @keyframes lxpfBlink{0%,100%{opacity:1}50%{opacity:.3}}
-@keyframes lxpfGrow{0%,100%{filter:none}50%{filter:brightness(1.25)}}
+@keyframes lxpfGrow{0%,40%,100%{filter:none;transform:scaleY(1)}8%{filter:brightness(1.35);transform:scaleY(1.5)}}
 @keyframes lxpfFeed{0%{opacity:0;transform:translateY(10px)}6%,30%{opacity:1;transform:none}36%,100%{opacity:0;transform:translateY(-8px)}}
 /* tablets & phones: sources wrap above the card, lines become a small arrow */
 @media (max-width:820px){
@@ -58,7 +58,7 @@
       <div class="s"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg>Referrals</div>
     </div>
     <svg class="flow" viewBox="0 0 130 280" aria-hidden="true">
-      <defs><linearGradient id="lxpfLine" x1="0" x2="1"><stop offset="0" stop-color="#8DB4FF" stop-opacity=".25"/><stop offset="1" stop-color="#D4AF37" stop-opacity=".7"/></linearGradient></defs>
+      <defs><linearGradient id="lxpfLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="130" y2="0"><stop offset="0" stop-color="#8DB4FF" stop-opacity=".25"/><stop offset="1" stop-color="#D4AF37" stop-opacity=".7"/></linearGradient></defs>
       <g fill="none" stroke="url(#lxpfLine)" stroke-width="1.5">
         <path id="lxpf1" d="M0 22 C70 22 60 140 130 140"/>
         <path id="lxpf2" d="M0 81 C70 81 60 140 130 140"/>
@@ -66,12 +66,12 @@
         <path id="lxpf4" d="M0 199 C70 199 60 140 130 140"/>
         <path id="lxpf5" d="M0 258 C70 258 60 140 130 140"/>
       </g>
-      <g fill="#F5DC85">
-        <circle r="3.5"><animateMotion dur="2s" begin="0s" repeatCount="indefinite"><mpath href="#lxpf1"/></animateMotion></circle>
-        <circle r="3.5"><animateMotion dur="2s" begin="-1.2s" repeatCount="indefinite"><mpath href="#lxpf2"/></animateMotion></circle>
-        <circle r="3.5"><animateMotion dur="2s" begin="-.5s" repeatCount="indefinite"><mpath href="#lxpf3"/></animateMotion></circle>
-        <circle r="3.5"><animateMotion dur="2s" begin="-1.6s" repeatCount="indefinite"><mpath href="#lxpf4"/></animateMotion></circle>
-        <circle r="3.5"><animateMotion dur="2s" begin="-.9s" repeatCount="indefinite"><mpath href="#lxpf5"/></animateMotion></circle>
+      <g fill="#F5DC85" style="filter:drop-shadow(0 0 4px rgba(245,220,133,.9))">
+        <circle r="4" opacity="0"><animateMotion dur="10s" begin="0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.05;0.2;1"><mpath href="#lxpf1"/></animateMotion><animate attributeName="opacity" dur="10s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.05;0.19;0.21;1"/></circle>
+        <circle r="4" opacity="0"><animateMotion dur="10s" begin="2s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.05;0.2;1"><mpath href="#lxpf2"/></animateMotion><animate attributeName="opacity" dur="10s" begin="2s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.05;0.19;0.21;1"/></circle>
+        <circle r="4" opacity="0"><animateMotion dur="10s" begin="4s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.05;0.2;1"><mpath href="#lxpf3"/></animateMotion><animate attributeName="opacity" dur="10s" begin="4s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.05;0.19;0.21;1"/></circle>
+        <circle r="4" opacity="0"><animateMotion dur="10s" begin="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.05;0.2;1"><mpath href="#lxpf4"/></animateMotion><animate attributeName="opacity" dur="10s" begin="6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.05;0.19;0.21;1"/></circle>
+        <circle r="4" opacity="0"><animateMotion dur="10s" begin="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.05;0.2;1"><mpath href="#lxpf5"/></animateMotion><animate attributeName="opacity" dur="10s" begin="8s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.05;0.19;0.21;1"/></circle>
       </g>
     </svg>
     <div class="board">
