@@ -1,0 +1,19 @@
+/* ---------- SECTION #section-lWYX6_TggK ("What it handles"): dark navy gradient + soft dot grid ---------- */
+#section-lWYX6_TggK{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(700px 400px at 50% 0%,rgba(47,111,228,.35),rgba(47,111,228,0) 70%),
+             linear-gradient(160deg,#071528 0%,#0B1F3A 50%,#0E2B5E 100%) !important
+}
+#section-lWYX6_TggK > .bg,#section-lWYX6_TggK .bg-section{background:transparent !important}
+#section-lWYX6_TggK > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+/* dot grid, fading out toward the edges */
+#section-lWYX6_TggK::before{
+  content:'' !important;position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:0 !important;
+  background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px) !important;background-size:26px 26px !important;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important
+}
+#section-lWYX6_TggK > div:not(.bg){position:relative !important;z-index:1 !important}
+/* text colors for the dark background */
+#section-lWYX6_TggK h1,#section-lWYX6_TggK h2,#section-lWYX6_TggK h3{color:#FFFFFF !important}
+#section-lWYX6_TggK .c-paragraph,#section-lWYX6_TggK .c-paragraph *,
+#section-lWYX6_TggK .c-sub-heading,#section-lWYX6_TggK .c-sub-heading *{color:rgba(255,255,255,.85) !important}
