@@ -1,0 +1,80 @@
+<!-- Luxon graphic | Lead Management hero: one lead's card updating live (New inquiry -> Quote sent -> Booked) with an activity timeline and floating chips
+     Paste into ONE Custom Code element in the hero's RIGHT column. Made for a dark navy section. -->
+<div class="lxlp">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+.lxlp,.lxlp *,.lxlp *::before,.lxlp *::after{box-sizing:border-box !important}
+.lxlp{position:relative !important;width:100% !important;max-width:470px !important;margin:0 auto !important;padding:34px 0 0 !important;font-family:'Inter',sans-serif !important;text-align:left !important}
+.lxlp .card{position:relative !important;z-index:1 !important;padding:24px 24px 20px !important;border-radius:24px !important;background:#FFFFFF !important;color:#1F2933 !important;box-shadow:0 40px 90px rgba(0,0,0,.4),0 0 0 1px rgba(212,175,55,.35) !important;animation:lxlpFloat 7s ease-in-out infinite}
+/* header: avatar, name, live status */
+.lxlp .hd{display:flex !important;align-items:center !important;gap:12px !important;padding-bottom:16px !important;border-bottom:1px solid #E4E7EB !important}
+.lxlp .av{flex:none !important;width:46px !important;height:46px !important;border-radius:50% !important;display:flex !important;align-items:center !important;justify-content:center !important;background:linear-gradient(135deg,#F5DC85,#B8932A) !important;color:#0B1F3A !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:16px !important}
+.lxlp .nm{flex:1 1 auto !important;min-width:0 !important}
+.lxlp .nm b{display:block !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:16px !important;color:#0B1F3A !important}
+.lxlp .nm small{display:block !important;font-size:12.5px !important;color:#6B7A90 !important;margin-top:2px !important}
+.lxlp .st{position:relative !important;flex:none !important;width:112px !important;height:28px !important}
+.lxlp .st span{position:absolute !important;inset:0 !important;display:flex !important;align-items:center !important;justify-content:center !important;gap:6px !important;border-radius:999px !important;font-size:12px !important;font-weight:700 !important;white-space:nowrap !important;opacity:0;animation:lxlpStat 12s infinite}
+.lxlp .st span::before{content:"" !important;width:7px !important;height:7px !important;border-radius:50% !important;background:currentColor !important}
+.lxlp .st .s1{background:#EEF4FF !important;color:#2F6FE4 !important}
+.lxlp .st .s2{background:#FFF6DB !important;color:#8A6A12 !important;animation-delay:4s}
+.lxlp .st .s3{background:rgba(61,220,151,.16) !important;color:#0B6B3A !important;animation-delay:8s}
+/* trip details */
+.lxlp .dt{display:grid !important;grid-template-columns:1fr 1fr !important;gap:10px !important;margin:16px 0 !important}
+.lxlp .dt div{padding:10px 12px !important;border-radius:12px !important;background:#F5F7FA !important}
+.lxlp .dt small{display:block !important;font-size:11px !important;font-weight:600 !important;letter-spacing:.06em !important;text-transform:uppercase !important;color:#8A94A6 !important}
+.lxlp .dt b{display:block !important;margin-top:3px !important;font-size:14px !important;font-weight:600 !important;color:#0B1F3A !important}
+/* activity timeline: each step lights up in turn */
+.lxlp .tl{position:relative !important;margin:0 !important;padding:0 0 0 4px !important;list-style:none !important}
+.lxlp .tl li{position:relative !important;display:flex !important;align-items:flex-start !important;gap:12px !important;padding:0 0 12px !important;margin:0 !important;opacity:.35;animation:lxlpStep 12s infinite}
+.lxlp .tl li:last-child{padding-bottom:0 !important}
+.lxlp .tl li:nth-child(2){animation-delay:4s}.lxlp .tl li:nth-child(3){animation-delay:8s}
+.lxlp .tl li:not(:last-child)::after{content:"" !important;position:absolute !important;left:8px !important;top:20px !important;bottom:2px !important;width:2px !important;background:#E4E7EB !important}
+.lxlp .dot{flex:none !important;width:18px !important;height:18px !important;margin-top:1px !important;border-radius:50% !important;display:flex !important;align-items:center !important;justify-content:center !important;background:#0B1F3A !important;color:#F5DC85 !important}
+.lxlp .tl p{margin:0 !important;font-size:13.5px !important;line-height:1.4 !important;color:#1F2933 !important;font-weight:600 !important}
+.lxlp .tl p small{display:block !important;font-weight:400 !important;font-size:12px !important;color:#6B7A90 !important}
+/* floating chips around the card */
+.lxlp .chip{position:absolute !important;z-index:2 !important;display:flex !important;align-items:center !important;gap:8px !important;padding:9px 14px !important;border-radius:14px !important;font-size:13px !important;font-weight:600 !important;white-space:nowrap !important;box-shadow:0 18px 40px rgba(0,0,0,.35) !important}
+.lxlp .c1{top:0 !important;left:-28px !important;background:#0B1F3A !important;color:#FFFFFF !important;border:1px solid rgba(212,175,55,.55) !important;animation:lxlpBob 5s ease-in-out infinite}
+.lxlp .c1 i{color:#F5DC85 !important;font-style:normal !important}
+.lxlp .c2{bottom:28px !important;right:-24px !important;background:linear-gradient(135deg,#F5DC85,#D4AF37) !important;color:#0B1F3A !important;animation:lxlpBob 5s ease-in-out 2.5s infinite}
+.lxlp .cap{margin:30px 0 0 !important;text-align:center !important;font-size:12px !important;font-style:italic !important;color:rgba(255,255,255,.6) !important}
+@keyframes lxlpFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes lxlpBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes lxlpStat{0%{opacity:0;transform:scale(.9)}3%,31%{opacity:1;transform:none}34%,100%{opacity:0}}
+@keyframes lxlpStep{0%{opacity:.35}3%,97%{opacity:1}100%{opacity:.35}}
+/* the steps should stay lit until the loop restarts: step 2 and 3 fade back at the same moment as step 1 */
+.lxlp .tl li:nth-child(2){animation-name:lxlpStep2;animation-delay:0s}
+.lxlp .tl li:nth-child(3){animation-name:lxlpStep3;animation-delay:0s}
+@keyframes lxlpStep2{0%,33%{opacity:.35}36%,97%{opacity:1}100%{opacity:.35}}
+@keyframes lxlpStep3{0%,66%{opacity:.35}69%,97%{opacity:1}100%{opacity:.35}}
+@media (max-width:560px){
+  .lxlp{padding:30px 0 0 !important}
+  .lxlp .card{padding:20px 16px 18px !important}
+  .lxlp .st{width:100px !important}
+  .lxlp .c1{left:0 !important}.lxlp .c2{right:0 !important}
+  .lxlp .chip{font-size:12px !important;padding:8px 12px !important}
+}
+@media (prefers-reduced-motion:reduce){.lxlp *{animation:none !important}.lxlp .st .s3,.lxlp .tl li{opacity:1}}
+</style>
+  <div class="chip c1"><i>⚡</i>Answered in 30 seconds</div>
+  <div class="card">
+    <div class="hd">
+      <div class="av">DR</div>
+      <div class="nm"><b>Daniel R.</b><small>Corporate · Repeat rider</small></div>
+      <div class="st"><span class="s1">New inquiry</span><span class="s2">Quote sent</span><span class="s3">Booked</span></div>
+    </div>
+    <div class="dt">
+      <div><small>Pickup</small><b>JFK Terminal 4</b></div>
+      <div><small>Drop-off</small><b>Midtown</b></div>
+      <div><small>Vehicle</small><b>Executive SUV</b></div>
+      <div><small>When</small><b>Fri · 6:30 PM</b></div>
+    </div>
+    <ul class="tl">
+      <li><span class="dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><p>Call answered by AI receptionist<small>6:02 PM · trip details captured</small></p></li>
+      <li><span class="dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><p>Quote sent by text<small>6:04 PM · follow-up scheduled</small></p></li>
+      <li><span class="dot"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span><p>Booked and confirmed<small>6:11 PM · team notified</small></p></li>
+    </ul>
+  </div>
+  <div class="chip c2">★ Added to your pipeline</div>
+  <p class="cap">Example lead</p>
+</div>
