@@ -1,0 +1,37 @@
+<!-- Luxon graphic | "Who we serve" glass card (4 operator types + best-fit note)
+     Paste into ONE Custom Code element. Made for a dark navy section. -->
+<div class="lxwws">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+.lxwws,.lxwws *,.lxwws *::before,.lxwws *::after{box-sizing:border-box !important}
+.lxwws{width:100% !important;max-width:560px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important;text-align:left !important}
+/* frosted glass card */
+.lxwws .card{padding:30px 30px 30px !important;border-radius:26px !important;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04)) !important;border:1px solid rgba(141,180,255,.25) !important;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 40px 90px rgba(0,0,0,.35) !important;animation:lxwwsFloat 7s ease-in-out infinite}
+.lxwws .hd{display:flex !important;align-items:center !important;justify-content:space-between !important;gap:12px !important;padding-bottom:16px !important;margin-bottom:16px !important;border-bottom:1px solid rgba(255,255,255,.14) !important}
+.lxwws .hd b{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:16px !important;color:#FFFFFF !important}
+.lxwws .tag{display:flex !important;align-items:center !important;gap:7px !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:11.5px !important;letter-spacing:.08em !important;text-transform:uppercase !important;color:#3DDC97 !important;white-space:nowrap !important}
+.lxwws .tag i{width:7px !important;height:7px !important;border-radius:50% !important;background:#3DDC97 !important;animation:lxwwsBlink 1.8s ease-in-out infinite}
+/* rows */
+.lxwws .row{display:flex !important;align-items:center !important;gap:16px !important;padding:14px 16px !important;margin-bottom:10px !important;border-radius:16px !important;background:rgba(255,255,255,.05) !important;border:1px solid rgba(141,180,255,.18) !important;transition:transform .3s ease,border-color .3s ease,background .3s ease}
+.lxwws .row:hover{transform:translateX(4px);border-color:rgba(212,175,55,.5) !important;background:rgba(255,255,255,.08) !important}
+.lxwws .ic{flex:none !important;width:40px !important;height:40px !important;border-radius:11px !important;display:flex !important;align-items:center !important;justify-content:center !important;background:linear-gradient(135deg,#B8932A,#F5DC85) !important;color:#0B1F3A !important;box-shadow:0 8px 22px rgba(212,175,55,.35) !important}
+.lxwws .row span{font-weight:600 !important;font-size:15.5px !important;line-height:1.35 !important;color:#FFFFFF !important}
+.lxwws .note{margin:18px 0 0 !important;font-size:13.5px !important;line-height:1.6 !important;color:rgba(255,255,255,.65) !important}
+@keyframes lxwwsFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes lxwwsBlink{0%,100%{opacity:1}50%{opacity:.35}}
+@media (max-width:480px){
+  .lxwws .card{padding:22px 16px !important}
+  .lxwws .row{padding:12px !important;gap:12px !important}
+  .lxwws .row span{font-size:14.5px !important}
+}
+@media (prefers-reduced-motion:reduce){.lxwws *{animation:none !important;transition:none !important}}
+</style>
+  <div class="card">
+    <div class="hd"><b>Who we serve</b><span class="tag"><i></i>1–20 vehicles</span></div>
+    <div class="row"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-4.5a2 2 0 0 1 1.8-1.2h6.4A2 2 0 0 1 17 6.5L19 11v5"/><path d="M3 16h18v1.5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><circle cx="7.5" cy="13.5" r=".6"/><circle cx="16.5" cy="13.5" r=".6"/></svg></div><span>Limo &amp; black-car companies</span></div>
+    <div class="row"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg></div><span>Chauffeur &amp; executive transportation</span></div>
+    <div class="row"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 19h19"/><path d="M3.5 12.5l2.5 3.5h11.5a2.5 2.5 0 0 0 0-5H13L8.5 5H6.5l2 6H5.5L4 9.5H2.5z"/></svg></div><span>Airport transfer operators</span></div>
+    <div class="row"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></div><span>Private transportation businesses</span></div>
+    <p class="note">Best fit: operators where the owner or a small team still handles calls, quotes and bookings.</p>
+  </div>
+</div>
