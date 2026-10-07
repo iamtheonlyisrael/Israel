@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+/* ================= HERO SECTION #section-KXkdUwGx-b ================= */
+#section-KXkdUwGx-b {
+    position: relative !important;
+    overflow: hidden !important;
+    display: block !important;
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+    min-height: 0 !important;
+    height: auto !important;
+    background: radial-gradient(900px 600px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 60%),
+             radial-gradient(700px 520px at 100% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 60%),
+             linear-gradient(135deg,#061226 0%,#0B1F3A 45%,#0E2B5E 100%) !important
+}
+
+#section-KXkdUwGx-b > .bg,#section-KXkdUwGx-b .bg-section {
+    background: transparent !important
+}
+/* slow drifting blue and gold glows */
+#section-KXkdUwGx-b::before,#section-KXkdUwGx-b::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 520px !important;
+    height: 520px !important;
+    border-radius: 50% !important;
+    filter: blur(90px) !important;
+    pointer-events: none !important;
+    z-index: 0 !important
+}
+
+#section-KXkdUwGx-b::before {
+    left: -160px;
+    top: -140px;
+    background: #2F6FE4 !important;
+    opacity: .35;
+    animation: lxSecFloat 14s ease-in-out infinite
+}
+
+#section-KXkdUwGx-b::after {
+    right: -180px;
+    bottom: -200px;
+    background: #E8C55A !important;
+    opacity: .13;
+    animation: lxSecFloat 18s ease-in-out infinite reverse
+}
+
+@keyframes lxSecFloat {
+    0%,100% {
+        transform: translate(0,0)
+    }
+
+    50% {
+        transform: translate(60px,40px)
+    }
+}
+/* keep GHL's background layer behind and out of the layout; lift only the content above the glows */
+#section-KXkdUwGx-b > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-KXkdUwGx-b > div:not(.bg){position:relative !important;z-index:1 !important}
+/* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
+#section-KXkdUwGx-b > .inner > .c-row > .inner,
+#section-KXkdUwGx-b > .c-row > .inner{display:flex !important;align-items:center !important}
+/* text colors on the dark background */
+#section-KXkdUwGx-b h1,#section-KXkdUwGx-b h2,#section-KXkdUwGx-b h3{color:#FFFFFF !important}
+#section-KXkdUwGx-b p{color:rgba(255,255,255,.85) !important}
+
+/* ================= HERO EYEBROW #paragraph-zwry7ZGVfO9 ================= */
+#paragraph-zwry7ZGVfO9 .text-output{
+  position:relative !important;display:inline-flex !important;align-items:center !important;gap:10px !important;
+  width:auto !important;max-width:100% !important;padding:8px 18px 8px 14px !important;border-radius:999px !important;
+  background:rgba(255,255,255,.06) !important;border:1px solid rgba(212,175,55,.5) !important;overflow:hidden !important;
+  box-shadow:0 0 0 0 rgba(212,175,55,0);
+  animation:lxEyeIn .8s ease both,lxEyeGlow 4s ease-in-out 1s infinite
+}
+#paragraph-zwry7ZGVfO9 .text-output::before{
+  content:'' !important;flex:0 0 8px !important;width:8px !important;height:8px !important;border-radius:50% !important;
+  background:#3DDC97 !important;animation:lxEyePing 2s ease-out infinite
+}
+#paragraph-zwry7ZGVfO9 .text-output::after{
+  content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:0 !important;width:35% !important;
+  background:linear-gradient(100deg,transparent,rgba(245,220,133,.28),transparent) !important;pointer-events:none !important;
+  transform:translateX(-120%);animation:lxEyeSweep 5s ease-in-out 1.2s infinite
+}
+#paragraph-zwry7ZGVfO9 .text-output p,#paragraph-zwry7ZGVfO9 .text-output span,#paragraph-zwry7ZGVfO9 .text-output div{
+  margin:0 !important;padding:0 !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;
+  font-size:12px !important;line-height:1.35 !important;letter-spacing:.16em !important;text-transform:uppercase !important;
+  color:#F5DC85 !important;text-align:left !important;background:none !important;border:0 !important
+}
+@keyframes lxEyeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lxEyeGlow{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 18px 0 rgba(212,175,55,.28)}}
+@keyframes lxEyePing{0%{box-shadow:0 0 0 0 rgba(61,220,151,.7)}100%{box-shadow:0 0 0 9px rgba(61,220,151,0)}}
+@keyframes lxEyeSweep{0%,55%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+/* ================= HERO HEADLINE #heading-SzeIwuTZVcC: "See Luxon Limo AI" white, "in action." gold ================= */
+/* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
+   SIZE: 64px desktop, 46px tablet, 34px phone */
+#heading-SzeIwuTZVcC :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-SzeIwuTZVcC :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-SzeIwuTZVcC :is(h1,h2,h3)::before,#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{
+  font-size:64px !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-SzeIwuTZVcC :is(h1,h2,h3)::before{
+  content:"See Luxon Limo AI";content:"See Luxon Limo AI" / "";
+  display:block;
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{
+  content:"in action.";content:"in action." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@keyframes lxGoldShift{to{background-position:100% center}}
+@media (max-width:1024px){#heading-SzeIwuTZVcC :is(h1,h2,h3)::before,#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{font-size:46px !important}}
+@media (max-width:600px){#heading-SzeIwuTZVcC :is(h1,h2,h3)::before,#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= SECTION #section-olAFO802wO: light blue -> white -> soft gold ================= */
+#section-olAFO802wO{
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),
+             radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 70%),
+             linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 55%,#FFF8E6 100%) !important;
+  padding-top:96px !important;padding-bottom:96px !important
+}
+#section-olAFO802wO > .bg,#section-olAFO802wO .bg-section{background:transparent !important}
+
+/* ================= HEADLINE #heading-C3bIuG3VW1R: "The phone rings at" navy, "the worst times." blue -> gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-C3bIuG3VW1R :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-C3bIuG3VW1R :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-C3bIuG3VW1R :is(h1,h2,h3)::before,#heading-C3bIuG3VW1R :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-C3bIuG3VW1R :is(h1,h2,h3)::before{
+  content:"The phone rings at ";content:"The phone rings at " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-C3bIuG3VW1R :is(h1,h2,h3)::after{
+  content:"the worst times.";content:"the worst times." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-C3bIuG3VW1R :is(h1,h2,h3)::before,#heading-C3bIuG3VW1R :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-C3bIuG3VW1R :is(h1,h2,h3)::before,#heading-C3bIuG3VW1R :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= "SOUND FAMILIAR?" SECTION #section-hJkjCOC0p9: light blue -> white -> soft gold ================= */
+#section-hJkjCOC0p9{
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.14),rgba(47,111,228,0) 70%),
+             radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.18),rgba(212,175,55,0) 70%),
+             linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 50%,#FFF8E6 100%) !important;
+  padding-top:96px !important;padding-bottom:96px !important
+}
+/* stop GHL's own section color from covering the gradient */
+#section-hJkjCOC0p9 > .bg,#section-hJkjCOC0p9 .bg-section{background:transparent !important}
+
+/* ================= HEADLINE #heading-wTu9Gd6paCe: "Professional, friendly" white, "and always on." gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-wTu9Gd6paCe :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-wTu9Gd6paCe :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-wTu9Gd6paCe :is(h1,h2,h3)::before{
+  content:"Professional, friendly ";content:"Professional, friendly " / "";
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{
+  content:"and always on.";content:"and always on." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@media (max-width:1024px){#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= HEADLINE #heading-sm2-x3A511e: "Some calls need a person." navy, "It knows which ones." blue -> gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-sm2-x3A511e :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-sm2-x3A511e :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-sm2-x3A511e :is(h1,h2,h3)::before,#heading-sm2-x3A511e :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-sm2-x3A511e :is(h1,h2,h3)::before{
+  content:"Some calls need a person. ";content:"Some calls need a person. " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-sm2-x3A511e :is(h1,h2,h3)::after{
+  content:"It knows which ones.";content:"It knows which ones." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-sm2-x3A511e :is(h1,h2,h3)::before,#heading-sm2-x3A511e :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-sm2-x3A511e :is(h1,h2,h3)::before,#heading-sm2-x3A511e :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= PILL #sub-heading-v8kPtt7vnEM ================= */
+#sub-heading-v8kPtt7vnEM{
+  display:inline-block;position:relative;
+  padding:10px 20px !important;border-radius:999px !important;
+  border:1px solid rgba(212,175,55,.55) !important;background:rgba(255,255,255,.04);
+  box-shadow:0 6px 18px rgba(11,31,58,.08);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;cursor:default
+}
+#sub-heading-v8kPtt7vnEM:hover{
+  transform:translateY(-3px);border-color:#D4AF37 !important;background:rgba(212,175,55,.08);
+  box-shadow:0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
+}
+
+/* ================= TABLETS & PHONES ================= */
+@media (max-width:767px){
+  #section-KXkdUwGx-b{padding-top:56px !important;padding-bottom:64px !important}
+  #section-KXkdUwGx-b > .inner > .c-row > .inner,
+  #section-KXkdUwGx-b > .c-row > .inner{flex-direction:column !important;align-items:stretch !important}
+  #section-olAFO802wO{padding-top:64px !important;padding-bottom:64px !important}
+  #section-hJkjCOC0p9{padding-top:64px !important;padding-bottom:64px !important}
+}
+@media (max-width:480px){
+  #paragraph-zwry7ZGVfO9 .text-output p,#paragraph-zwry7ZGVfO9 .text-output span{font-size:10.5px !important;letter-spacing:.12em !important}
+}
+
+/* ================= VISITORS WHO TURN OFF MOTION ================= */
+@media (prefers-reduced-motion:reduce){
+  #section-KXkdUwGx-b::before,#section-KXkdUwGx-b::after,
+  #paragraph-zwry7ZGVfO9 .text-output,#paragraph-zwry7ZGVfO9 .text-output::before,#paragraph-zwry7ZGVfO9 .text-output::after,
+  #heading-SzeIwuTZVcC :is(h1,h2,h3)::after,
+  #heading-wTu9Gd6paCe :is(h1,h2,h3)::after{animation:none !important}
+  #sub-heading-v8kPtt7vnEM,#sub-heading-v8kPtt7vnEM:hover{transition:none !important;transform:none !important}
+}
