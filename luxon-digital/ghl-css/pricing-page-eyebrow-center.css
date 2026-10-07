@@ -1,0 +1,4 @@
+/* ================= PRICING PAGE: CENTER THE HERO EYEBROW #paragraph-tB8E-eTwiQV ("PRICING") =================
+   Paste at the VERY BOTTOM of the Pricing page's Custom CSS. */
+#paragraph-tB8E-eTwiQV,#paragraph-tB8E-eTwiQV > div:not(.text-output){text-align:center !important}
+#paragraph-tB8E-eTwiQV .text-output{margin-left:auto !important;margin-right:auto !important}
