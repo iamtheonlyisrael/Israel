@@ -1,0 +1,36 @@
+<!-- Luxon Pricing page | 3 glass cards on dark navy (Missed reservations / Another office hire / Your time)
+     Paste into ONE Custom Code element (full width). Made for a dark navy section. -->
+<div class="lxcost">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap');
+.lxcost,.lxcost *,.lxcost *::before,.lxcost *::after{box-sizing:border-box !important}
+.lxcost{width:100% !important;max-width:1200px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important;text-align:left !important;display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important}
+/* frosted glass card */
+.lxcost .gc{padding:30px 30px 34px !important;border-radius:22px !important;background:linear-gradient(150deg,rgba(255,255,255,.08),rgba(255,255,255,.03)) !important;border:1px solid rgba(141,180,255,.22) !important;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:0 20px 50px rgba(0,0,0,.2) !important;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.lxcost .gc:hover{transform:translateY(-6px);border-color:rgba(212,175,55,.55) !important;box-shadow:0 26px 60px rgba(0,0,0,.3),0 0 30px rgba(212,175,55,.12) !important}
+/* gold icon tile */
+.lxcost .ic{width:54px !important;height:54px !important;border-radius:14px !important;display:flex !important;align-items:center !important;justify-content:center !important;margin-bottom:24px !important;background:linear-gradient(135deg,#B8932A,#F5DC85) !important;color:#0B1F3A !important;box-shadow:0 10px 26px rgba(212,175,55,.35) !important;transition:transform .35s ease}
+.lxcost .gc:hover .ic{transform:scale(1.08) rotate(-4deg)}
+.lxcost .h3{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:20px !important;line-height:1.3 !important;color:#FFFFFF !important;margin:0 0 10px !important}
+.lxcost .txt{margin:0 !important;font-size:15px !important;line-height:1.7 !important;color:rgba(255,255,255,.78) !important}
+/* tablets & phones: one column */
+@media (max-width:900px){.lxcost{grid-template-columns:1fr !important;max-width:560px !important;gap:16px !important}}
+@media (max-width:560px){.lxcost .gc{padding:24px 22px 26px !important}}
+@media (prefers-reduced-motion:reduce){.lxcost .gc,.lxcost .ic{transition:none !important}}
+</style>
+  <div class="gc">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16V11l2-4.5a2 2 0 0 1 1.8-1.2h6.4A2 2 0 0 1 17 6.5L19 11v5"/><path d="M3 16h18v1.5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><circle cx="7.5" cy="13.5" r=".6"/><circle cx="16.5" cy="13.5" r=".6"/></svg></div>
+    <h3 class="h3">Missed reservations</h3>
+    <p class="txt">An airport transfer, a wedding or a corporate account you never heard back from.</p>
+  </div>
+  <div class="gc">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg></div>
+    <h3 class="h3">Another office hire</h3>
+    <p class="txt">After-hours coverage and follow-up without adding payroll.</p>
+  </div>
+  <div class="gc">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+    <h3 class="h3">Your time</h3>
+    <p class="txt">Fewer repetitive calls means more time on the road and with customers.</p>
+  </div>
+</div>
