@@ -65,13 +65,15 @@
 /* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
 #section-WFnhUUfW7X > .inner > .c-row > .inner,
 #section-WFnhUUfW7X > .c-row > .inner{display:flex !important;align-items:center !important}
-/* two hero columns: text left (about 55%), pipeline graphic right (about 45%), with a gap between */
-#section-WFnhUUfW7X > .inner > .c-row > .inner,
-#section-WFnhUUfW7X > .c-row > .inner{gap:48px !important}
-#section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column:first-child,
-#section-WFnhUUfW7X > .c-row > .inner > .c-column:first-child{flex:1 1 55% !important;width:auto !important;max-width:none !important;min-width:0 !important}
-#section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column:last-child:not(:first-child),
-#section-WFnhUUfW7X > .c-row > .inner > .c-column:last-child:not(:first-child){flex:1 1 45% !important;width:auto !important;max-width:none !important;min-width:0 !important}
+/* two hero columns on desktop/tablet: text left (about 55%), pipeline graphic right (about 45%), 48px gap */
+@media (min-width:768px){
+  #section-WFnhUUfW7X > .inner > .c-row > .inner,
+  #section-WFnhUUfW7X > .c-row > .inner{gap:48px !important}
+  #section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column:first-child,
+  #section-WFnhUUfW7X > .c-row > .inner > .c-column:first-child{flex:1 1 55% !important;width:auto !important;max-width:none !important;min-width:0 !important}
+  #section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column:last-child:not(:first-child),
+  #section-WFnhUUfW7X > .c-row > .inner > .c-column:last-child:not(:first-child){flex:1 1 45% !important;width:auto !important;max-width:none !important;min-width:0 !important}
+}
 /* text colors on the dark background */
 #section-WFnhUUfW7X h1,#section-WFnhUUfW7X h2,#section-WFnhUUfW7X h3{color:#FFFFFF !important}
 #section-WFnhUUfW7X p{color:rgba(255,255,255,.85) !important}
