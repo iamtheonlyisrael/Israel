@@ -399,3 +399,7 @@
 @media (max-width:1024px){#heading-SzeIwuTZVcC :is(h1,h2,h3)::before,#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{font-size:48px !important}}
 @media (max-width:600px){#heading-SzeIwuTZVcC :is(h1,h2,h3)::before,#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{font-size:34px !important}}
 @media (prefers-reduced-motion:reduce){#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{animation:none !important}}
+
+/* ================= CENTER THE HERO EYEBROW #paragraph-zwry7ZGVfO9 ("THE DEMO") ================= */
+#paragraph-zwry7ZGVfO9,#paragraph-zwry7ZGVfO9 > div:not(.text-output){text-align:center !important}
+#paragraph-zwry7ZGVfO9 .text-output{margin-left:auto !important;margin-right:auto !important}
