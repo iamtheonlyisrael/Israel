@@ -1,0 +1,14 @@
+/* ================= HERO 2 COLUMNS #section-WFnhUUfW7X: text left (~55%), graphic right (~45%) =================
+   Paste at the VERY BOTTOM of the page Custom CSS. */
+@media (min-width:768px){
+  #section-WFnhUUfW7X > .inner > .c-row > .inner,
+  #section-WFnhUUfW7X > .c-row > .inner{display:flex !important;flex-direction:row !important;align-items:center !important;gap:48px !important}
+  #section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column:first-child,
+  #section-WFnhUUfW7X > .c-row > .inner > .c-column:first-child{flex:1 1 55% !important;width:auto !important;max-width:none !important;min-width:0 !important}
+  #section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column:last-child:not(:first-child),
+  #section-WFnhUUfW7X > .c-row > .inner > .c-column:last-child:not(:first-child){flex:1 1 45% !important;width:auto !important;max-width:none !important;min-width:0 !important}
+}
+@media (max-width:767px){
+  #section-WFnhUUfW7X > .inner > .c-row > .inner,
+  #section-WFnhUUfW7X > .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:40px !important}
+}
