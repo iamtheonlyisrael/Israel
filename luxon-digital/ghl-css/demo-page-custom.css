@@ -110,6 +110,28 @@
 /* stop GHL's own section color from covering the gradient */
 #section-hJkjCOC0p9 > .bg,#section-hJkjCOC0p9 .bg-section{background:transparent !important}
 
+/* ================= "WHAT WE'LL COVER TOGETHER" SECTION: dark navy, blue glow at the top, soft dot grid =================
+   Replace #section-COVER-ID (all lines below) with this section's id from GHL, e.g. #section-AbC123xyz */
+#section-COVER-ID{
+  position:relative !important;overflow:hidden !important;
+  padding-top:96px !important;padding-bottom:96px !important;
+  background:radial-gradient(760px 380px at 50% 0%,rgba(47,111,228,.45),rgba(47,111,228,0) 70%),
+             radial-gradient(600px 360px at 100% 100%,rgba(47,111,228,.25),rgba(47,111,228,0) 70%),
+             linear-gradient(180deg,#0B1F3A 0%,#0C2450 55%,#0F2D66 100%) !important
+}
+#section-COVER-ID > .bg,#section-COVER-ID .bg-section{background:transparent !important}
+#section-COVER-ID > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+/* soft dot grid that fades out toward the edges */
+#section-COVER-ID::before{
+  content:'' !important;position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:0 !important;
+  background-image:radial-gradient(rgba(255,255,255,.09) 1px,transparent 1px) !important;background-size:26px 26px !important;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 35%,#000 25%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 35%,#000 25%,transparent 75%) !important
+}
+#section-COVER-ID > div:not(.bg){position:relative !important;z-index:1 !important}
+/* text colors on the dark background (gold words you colored in GHL stay gold) */
+#section-COVER-ID h1,#section-COVER-ID h2,#section-COVER-ID h3{color:#FFFFFF !important}
+#section-COVER-ID .c-paragraph,#section-COVER-ID .c-paragraph p{color:rgba(255,255,255,.8) !important}
+
 /* ================= HEADLINE #heading-wTu9Gd6paCe: "Worried AI will sound robotic?" navy, "Call it." blue -> gold ================= */
 /* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
    SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
@@ -183,6 +205,7 @@
   #section-KXkdUwGx-b > .c-row > .inner{flex-direction:column !important;align-items:stretch !important}
   #section-olAFO802wO{padding-top:64px !important;padding-bottom:64px !important}
   #section-hJkjCOC0p9{padding-top:64px !important;padding-bottom:64px !important}
+  #section-COVER-ID{padding-top:64px !important;padding-bottom:64px !important}
 }
 @media (max-width:600px){
   #video-Mnaf6pHdsQ,#video-Mnaf6pHdsQ :is(iframe,video){border-radius:16px !important}
