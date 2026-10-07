@@ -1,0 +1,89 @@
+<!-- Luxon graphic | Lead Management hero (option 3): "Today's leads" dashboard with an animated source ring, key numbers and new-lead alerts
+     Paste into ONE Custom Code element in the hero's RIGHT column (fits about 440-520px). Made for a dark navy section. -->
+<div class="lxld">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+.lxld,.lxld *,.lxld *::before,.lxld *::after{box-sizing:border-box !important}
+.lxld{position:relative !important;width:100% !important;max-width:460px !important;margin:0 auto !important;padding-top:64px !important;font-family:'Inter',sans-serif !important;text-align:left !important;container-type:inline-size}
+.lxld .card{position:relative !important;padding:20px 20px 18px !important;border-radius:22px !important;background:#FFFFFF !important;color:#1F2933 !important;box-shadow:0 34px 80px rgba(0,0,0,.4),0 0 0 1px rgba(212,175,55,.35) !important;animation:lxldFloat 7s ease-in-out infinite}
+.lxld .hd{display:flex !important;align-items:center !important;justify-content:space-between !important;padding-bottom:12px !important;margin-bottom:14px !important;border-bottom:1px solid #E4E7EB !important}
+.lxld .hd b{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:15px !important;color:#0B1F3A !important}
+.lxld .live{display:flex !important;align-items:center !important;gap:5px !important;padding:3px 9px !important;border-radius:999px !important;font-size:11px !important;font-weight:600 !important;background:rgba(61,220,151,.14) !important;color:#0B6B3A !important}
+.lxld .live i{width:6px !important;height:6px !important;border-radius:50% !important;background:#3DDC97 !important;animation:lxldBlink 1.6s ease-in-out infinite}
+/* ring + legend */
+.lxld .mid{display:grid !important;grid-template-columns:128px 1fr !important;align-items:center !important;gap:20px !important}
+.lxld .ring{position:relative !important;width:128px !important;height:128px !important}
+.lxld .ring svg{display:block !important;width:100% !important;height:100% !important;transform:rotate(-90deg)}
+.lxld .ring .cover{animation:lxldDraw 10s ease-in-out infinite}
+.lxld .ctr{position:absolute !important;inset:0 !important;display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:center !important}
+.lxld .ctr b{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:30px !important;line-height:1 !important;color:#0B1F3A !important}
+.lxld .ctr small{margin-top:4px !important;font-size:11px !important;color:#6B7A90 !important}
+.lxld .lg{margin:0 !important;padding:0 !important;list-style:none !important}
+.lxld .lg li{display:flex !important;align-items:center !important;gap:8px !important;margin:0 0 7px !important;padding:0 !important;font-size:12.5px !important;color:#3E4C59 !important}
+.lxld .lg li:last-child{margin-bottom:0 !important}
+.lxld .lg i{flex:none !important;width:9px !important;height:9px !important;border-radius:3px !important}
+.lxld .lg span{flex:1 1 auto !important}
+.lxld .lg b{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:12.5px !important;color:#0B1F3A !important}
+/* key numbers */
+.lxld .kpi{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:8px !important;margin-top:16px !important}
+.lxld .kpi div{padding:10px 8px !important;border-radius:12px !important;background:#0B1F3A !important;text-align:center !important}
+.lxld .kpi b{display:block !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:18px !important;line-height:1.1 !important;color:#F5DC85 !important}
+.lxld .kpi small{display:block !important;margin-top:3px !important;font-size:10.5px !important;color:rgba(255,255,255,.75) !important}
+/* new-lead alerts: 3 sample alerts take turns above the card */
+.lxld .alerts{position:absolute !important;z-index:2 !important;top:0 !important;right:-8px !important;width:250px !important;height:52px !important}
+.lxld .al{position:absolute !important;inset:0 !important;display:flex !important;align-items:center !important;gap:10px !important;padding:0 12px !important;border-radius:14px !important;background:#0B1F3A !important;border:1px solid rgba(212,175,55,.55) !important;box-shadow:0 18px 40px rgba(0,0,0,.4) !important;color:#FFFFFF !important;opacity:0;animation:lxldAlert 9s ease-in-out infinite}
+.lxld .al:nth-child(2){animation-delay:3s}.lxld .al:nth-child(3){animation-delay:6s}
+.lxld .al i{flex:none !important;width:30px !important;height:30px !important;border-radius:9px !important;display:flex !important;align-items:center !important;justify-content:center !important;background:linear-gradient(135deg,#F5DC85,#B8932A) !important;color:#0B1F3A !important}
+.lxld .al p{margin:0 !important;font-size:12.5px !important;font-weight:600 !important;line-height:1.3 !important;color:#FFFFFF !important}
+.lxld .al small{display:block !important;font-weight:400 !important;font-size:11px !important;color:rgba(255,255,255,.7) !important}
+.lxld .cap{margin:10px 0 0 !important;text-align:center !important;font-size:11.5px !important;font-style:italic !important;color:rgba(255,255,255,.6) !important}
+@keyframes lxldFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes lxldBlink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes lxldDraw{0%{stroke-dashoffset:0}22%,88%{stroke-dashoffset:-345}100%{stroke-dashoffset:0}}
+@keyframes lxldAlert{0%{opacity:0;transform:translateY(-10px) scale(.96)}6%,28%{opacity:1;transform:none}34%,100%{opacity:0;transform:translateY(6px)}}
+/* narrow column: ring above the legend, alert sits centered */
+@container (max-width:400px){
+  .lxld .mid{grid-template-columns:1fr !important;justify-items:center !important;gap:14px !important}
+  .lxld .lg{width:100% !important;max-width:240px !important}
+  .lxld .alerts{right:0 !important;left:0 !important;margin:0 auto !important;width:calc(100% - 24px) !important;max-width:260px !important}
+  .lxld .card{padding:18px 14px 16px !important}
+}
+@media (prefers-reduced-motion:reduce){.lxld *{animation:none !important}.lxld .ring .cover{stroke-dashoffset:-345}.lxld .al:first-child{opacity:1}}
+</style>
+  <div class="alerts">
+    <div class="al"><i><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></i><p>New lead · Website form<small>Wedding · 2 sedans · Sat</small></p></div>
+    <div class="al"><i><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i><p>New lead · Phone call<small>Airport pickup · answered by AI</small></p></div>
+    <div class="al"><i><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></i><p>Booked · Corporate account<small>Hourly sedan · Monday</small></p></div>
+  </div>
+  <div class="card">
+    <div class="hd"><b>Today’s leads</b><span class="live"><i></i>Live</span></div>
+    <div class="mid">
+      <div class="ring">
+        <!-- 18 leads: phone 7, text 4, website 3, Google 2, referral 2 (circumference 2πr = 326.7) -->
+        <svg viewBox="0 0 128 128" aria-hidden="true">
+          <circle cx="64" cy="64" r="52" fill="none" stroke="#EEF2F7" stroke-width="14"/>
+          <circle cx="64" cy="64" r="52" fill="none" stroke="#D4AF37" stroke-width="14" stroke-dasharray="124 203" stroke-dashoffset="0"/>
+          <circle cx="64" cy="64" r="52" fill="none" stroke="#2F6FE4" stroke-width="14" stroke-dasharray="70 257" stroke-dashoffset="-127"/>
+          <circle cx="64" cy="64" r="52" fill="none" stroke="#8DB4FF" stroke-width="14" stroke-dasharray="52 275" stroke-dashoffset="-200"/>
+          <circle cx="64" cy="64" r="52" fill="none" stroke="#F5DC85" stroke-width="14" stroke-dasharray="33 294" stroke-dashoffset="-255"/>
+          <circle cx="64" cy="64" r="52" fill="none" stroke="#0B1F3A" stroke-width="14" stroke-dasharray="33 294" stroke-dashoffset="-291"/>
+          <circle class="cover" cx="64" cy="64" r="52" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-dasharray="345 345" stroke-dashoffset="0"/>
+        </svg>
+        <div class="ctr"><b>18</b><small>leads today</small></div>
+      </div>
+      <ul class="lg">
+        <li><i style="background:#D4AF37"></i><span>Phone calls</span><b>7</b></li>
+        <li><i style="background:#2F6FE4"></i><span>Text messages</span><b>4</b></li>
+        <li><i style="background:#8DB4FF"></i><span>Website form</span><b>3</b></li>
+        <li><i style="background:#F5DC85"></i><span>Google</span><b>2</b></li>
+        <li><i style="background:#0B1F3A"></i><span>Referrals</span><b>2</b></li>
+      </ul>
+    </div>
+    <div class="kpi">
+      <div><b>28s</b><small>avg. reply</small></div>
+      <div><b>11</b><small>quotes sent</small></div>
+      <div><b>7</b><small>booked</small></div>
+    </div>
+  </div>
+  <p class="cap">Example data</p>
+</div>
