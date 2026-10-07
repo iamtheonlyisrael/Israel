@@ -1,0 +1,45 @@
+<div class="lxjr">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500&display=swap');
+.lxjr,.lxjr *,.lxjr *::before,.lxjr *::after{box-sizing:border-box !important}
+.lxjr{width:100% !important;max-width:1200px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important;text-align:center !important}
+.lxjr .steps{position:relative !important;display:grid !important;grid-template-columns:repeat(5,minmax(0,1fr)) !important;gap:0 !important;margin:0 !important;padding:0 !important}
+/* line runs from the centre of circle 1 to the centre of circle 5 */
+.lxjr .track{position:absolute !important;left:10% !important;right:10% !important;top:34px !important;height:2px !important;background:rgba(141,180,255,.22) !important;overflow:hidden !important;z-index:0 !important}
+.lxjr .track i{position:absolute !important;top:0 !important;left:-8%;width:16% !important;height:100% !important;background:linear-gradient(90deg,transparent,#F5DC85 45%,#8DB4FF 70%,transparent) !important;animation:lxjrRun 5s linear infinite}
+.lxjr .st{position:relative !important;z-index:1 !important;padding:0 12px !important;margin:0 !important}
+.lxjr .ring{position:relative !important;width:70px !important;height:70px !important;margin:0 auto 22px !important;border-radius:50% !important;padding:2px !important;background:linear-gradient(135deg,#F5DC85,#D4AF37 45%,#8DB4FF) !important;box-shadow:0 0 26px rgba(91,141,239,.28);animation:lxjrPulse 5s ease-out infinite}
+/* each circle lights up the moment the running light reaches it */
+.lxjr .st:nth-child(3) .ring{animation-delay:1s}
+.lxjr .st:nth-child(4) .ring{animation-delay:2s}
+.lxjr .st:nth-child(5) .ring{animation-delay:3s}
+.lxjr .st:nth-child(6) .ring{animation-delay:4s}
+.lxjr .ring span{width:100% !important;height:100% !important;border-radius:50% !important;background:radial-gradient(circle at 50% 35%,#132C52,#0B1F3A 70%) !important;display:flex !important;align-items:center !important;justify-content:center !important;font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:19px !important;line-height:1 !important;color:#F5DC85 !important}
+.lxjr .h3{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:19px !important;line-height:1.3 !important;color:#FFFFFF !important;margin:0 0 10px !important}
+.lxjr .txt{font-size:15px !important;line-height:1.65 !important;color:rgba(255,255,255,.75) !important;margin:0 auto !important;max-width:210px !important}
+@keyframes lxjrRun{0%{left:-8%;opacity:1}80%{left:92%;opacity:1}90%,100%{left:92%;opacity:0}}
+@keyframes lxjrPulse{0%,30%,100%{box-shadow:0 0 26px rgba(91,141,239,.28);transform:scale(1)}8%{box-shadow:0 0 0 8px rgba(212,175,55,.22),0 0 40px rgba(245,220,133,.7);transform:scale(1.07)}}
+/* small laptops / tablets: slightly tighter */
+@media (max-width:1024px){.lxjr .st{padding:0 6px !important}.lxjr .h3{font-size:17px !important}.lxjr .txt{font-size:14px !important}}
+/* phones & small tablets: vertical timeline, circle on the left */
+@media (max-width:760px){
+  .lxjr{text-align:left !important;max-width:460px !important}
+  .lxjr .steps{grid-template-columns:1fr !important;gap:28px !important}
+  .lxjr .track{left:34px !important;right:auto !important;top:35px !important;bottom:35px !important;width:2px !important;height:auto !important}
+  .lxjr .track i{display:none !important}
+  .lxjr .st{display:grid !important;grid-template-columns:70px 1fr !important;column-gap:18px !important;align-items:center !important;padding:0 !important}
+  .lxjr .ring{grid-row:span 2 !important;margin:0 !important;align-self:start !important}
+  .lxjr .h3{margin:6px 0 4px !important;font-size:18px !important}
+  .lxjr .txt{margin:0 !important;max-width:none !important;font-size:15px !important}
+}
+@media (prefers-reduced-motion:reduce){.lxjr .ring,.lxjr .track i{animation:none !important}}
+</style>
+  <div class="steps">
+    <span class="track" aria-hidden="true"><i></i></span>
+    <div class="st"><div class="ring"><span>1</span></div><h3 class="h3">Demo</h3><p class="txt">We find where leads slip away.</p></div>
+    <div class="st"><div class="ring"><span>2</span></div><h3 class="h3">Onboarding</h3><p class="txt">Your services, hours, FAQs and policies.</p></div>
+    <div class="st"><div class="ring"><span>3</span></div><h3 class="h3">Build &amp; test</h3><p class="txt">Every scenario checked.</p></div>
+    <div class="st"><div class="ring"><span>4</span></div><h3 class="h3">Your approval</h3><p class="txt">Nothing goes live without your OK.</p></div>
+    <div class="st"><div class="ring"><span>5</span></div><h3 class="h3">Launch &amp; support</h3><p class="txt">Then we keep improving it with you.</p></div>
+  </div>
+</div>
