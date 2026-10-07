@@ -27,7 +27,6 @@
 .lxlp .tl{position:relative !important;margin:0 !important;padding:0 0 0 4px !important;list-style:none !important}
 .lxlp .tl li{position:relative !important;display:flex !important;align-items:flex-start !important;gap:12px !important;padding:0 0 12px !important;margin:0 !important;opacity:.35;animation:lxlpStep 12s infinite}
 .lxlp .tl li:last-child{padding-bottom:0 !important}
-.lxlp .tl li:nth-child(2){animation-delay:4s}.lxlp .tl li:nth-child(3){animation-delay:8s}
 .lxlp .tl li:not(:last-child)::after{content:"" !important;position:absolute !important;left:8px !important;top:20px !important;bottom:2px !important;width:2px !important;background:#E4E7EB !important}
 .lxlp .dot{flex:none !important;width:18px !important;height:18px !important;margin-top:1px !important;border-radius:50% !important;display:flex !important;align-items:center !important;justify-content:center !important;background:#0B1F3A !important;color:#F5DC85 !important}
 .lxlp .tl p{margin:0 !important;font-size:13.5px !important;line-height:1.4 !important;color:#1F2933 !important;font-weight:600 !important}
@@ -42,7 +41,7 @@
 @keyframes lxlpBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes lxlpStat{0%{opacity:0;transform:scale(.9)}3%,31%{opacity:1;transform:none}34%,100%{opacity:0}}
 @keyframes lxlpStep{0%{opacity:.35}3%,97%{opacity:1}100%{opacity:.35}}
-/* the steps should stay lit until the loop restarts: step 2 and 3 fade back at the same moment as step 1 */
+/* steps light up one by one (in sync with the status pill) and stay lit until the loop restarts */
 .lxlp .tl li:nth-child(2){animation-name:lxlpStep2;animation-delay:0s}
 .lxlp .tl li:nth-child(3){animation-name:lxlpStep3;animation-delay:0s}
 @keyframes lxlpStep2{0%,33%{opacity:.35}36%,97%{opacity:1}100%{opacity:.35}}
