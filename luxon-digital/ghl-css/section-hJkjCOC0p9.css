@@ -1,0 +1,14 @@
+/* ===== "Sound familiar?" section background #section-hJkjCOC0p9: light blue -> white -> soft gold =====
+   Paste into: Page Settings > Custom CSS */
+#section-hJkjCOC0p9{
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.14),rgba(47,111,228,0) 70%),
+             radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.18),rgba(212,175,55,0) 70%),
+             linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 50%,#FFF8E6 100%) !important;
+  padding-top:96px !important;padding-bottom:96px !important
+}
+/* stop GHL's own section color from covering the gradient */
+#section-hJkjCOC0p9 > .bg,#section-hJkjCOC0p9 .bg-section{background:transparent !important}
+
+@media (max-width:767px){
+  #section-hJkjCOC0p9{padding-top:64px !important;padding-bottom:64px !important}
+}
