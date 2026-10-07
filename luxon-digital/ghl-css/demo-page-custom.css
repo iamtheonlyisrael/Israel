@@ -91,32 +91,6 @@
 @keyframes lxEyePing{0%{box-shadow:0 0 0 0 rgba(61,220,151,.7)}100%{box-shadow:0 0 0 9px rgba(61,220,151,0)}}
 @keyframes lxEyeSweep{0%,55%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
 
-/* ================= HERO HEADLINE #heading-SzeIwuTZVcC: "See Luxon Limo AI" white, "in action." gold ================= */
-/* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
-   SIZE: 64px desktop, 46px tablet, 34px phone */
-#heading-SzeIwuTZVcC :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
-#heading-SzeIwuTZVcC :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
-#heading-SzeIwuTZVcC :is(h1,h2,h3)::before,#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{
-  font-size:64px !important;line-height:1.1 !important;letter-spacing:inherit
-}
-#heading-SzeIwuTZVcC :is(h1,h2,h3)::before{
-  content:"See Luxon Limo AI";content:"See Luxon Limo AI" / "";
-  display:block;
-  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
-}
-#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{
-  content:"in action.";content:"in action." / "";
-  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
-  background-size:200% auto !important;background-position:0% center;
-  -webkit-background-clip:text !important;background-clip:text !important;
-  color:transparent !important;-webkit-text-fill-color:transparent !important;
-  -webkit-box-decoration-break:clone;box-decoration-break:clone;
-  animation:lxGoldShift 6s ease-in-out infinite alternate
-}
-@keyframes lxGoldShift{to{background-position:100% center}}
-@media (max-width:1024px){#heading-SzeIwuTZVcC :is(h1,h2,h3)::before,#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{font-size:46px !important}}
-@media (max-width:600px){#heading-SzeIwuTZVcC :is(h1,h2,h3)::before,#heading-SzeIwuTZVcC :is(h1,h2,h3)::after{font-size:34px !important}}
-
 /* ================= SECTION #section-olAFO802wO: light blue -> white -> soft gold ================= */
 #section-olAFO802wO{
   background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),
@@ -125,27 +99,6 @@
   padding-top:96px !important;padding-bottom:96px !important
 }
 #section-olAFO802wO > .bg,#section-olAFO802wO .bg-section{background:transparent !important}
-
-/* ================= HEADLINE #heading-C3bIuG3VW1R: "The phone rings at" navy, "the worst times." blue -> gold ================= */
-/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
-#heading-C3bIuG3VW1R :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
-#heading-C3bIuG3VW1R :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
-#heading-C3bIuG3VW1R :is(h1,h2,h3)::before,#heading-C3bIuG3VW1R :is(h1,h2,h3)::after{
-  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
-}
-#heading-C3bIuG3VW1R :is(h1,h2,h3)::before{
-  content:"The phone rings at ";content:"The phone rings at " / "";
-  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
-}
-#heading-C3bIuG3VW1R :is(h1,h2,h3)::after{
-  content:"the worst times.";content:"the worst times." / "";
-  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
-  -webkit-background-clip:text !important;background-clip:text !important;
-  color:transparent !important;-webkit-text-fill-color:transparent !important;
-  -webkit-box-decoration-break:slice;box-decoration-break:slice
-}
-@media (max-width:1024px){#heading-C3bIuG3VW1R :is(h1,h2,h3)::before,#heading-C3bIuG3VW1R :is(h1,h2,h3)::after{font-size:48px !important}}
-@media (max-width:600px){#heading-C3bIuG3VW1R :is(h1,h2,h3)::before,#heading-C3bIuG3VW1R :is(h1,h2,h3)::after{font-size:34px !important}}
 
 /* ================= "SOUND FAMILIAR?" SECTION #section-hJkjCOC0p9: light blue -> white -> soft gold ================= */
 #section-hJkjCOC0p9{
@@ -156,50 +109,6 @@
 }
 /* stop GHL's own section color from covering the gradient */
 #section-hJkjCOC0p9 > .bg,#section-hJkjCOC0p9 .bg-section{background:transparent !important}
-
-/* ================= HEADLINE #heading-wTu9Gd6paCe: "Professional, friendly" white, "and always on." gold ================= */
-/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
-#heading-wTu9Gd6paCe :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
-#heading-wTu9Gd6paCe :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
-#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{
-  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
-}
-#heading-wTu9Gd6paCe :is(h1,h2,h3)::before{
-  content:"Professional, friendly ";content:"Professional, friendly " / "";
-  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
-}
-#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{
-  content:"and always on.";content:"and always on." / "";
-  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
-  background-size:200% auto !important;background-position:0% center;
-  -webkit-background-clip:text !important;background-clip:text !important;
-  color:transparent !important;-webkit-text-fill-color:transparent !important;
-  -webkit-box-decoration-break:clone;box-decoration-break:clone;
-  animation:lxGoldShift 6s ease-in-out infinite alternate
-}
-@media (max-width:1024px){#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{font-size:48px !important}}
-@media (max-width:600px){#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{font-size:34px !important}}
-
-/* ================= HEADLINE #heading-sm2-x3A511e: "Some calls need a person." navy, "It knows which ones." blue -> gold ================= */
-/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
-#heading-sm2-x3A511e :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
-#heading-sm2-x3A511e :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
-#heading-sm2-x3A511e :is(h1,h2,h3)::before,#heading-sm2-x3A511e :is(h1,h2,h3)::after{
-  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
-}
-#heading-sm2-x3A511e :is(h1,h2,h3)::before{
-  content:"Some calls need a person. ";content:"Some calls need a person. " / "";
-  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
-}
-#heading-sm2-x3A511e :is(h1,h2,h3)::after{
-  content:"It knows which ones.";content:"It knows which ones." / "";
-  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
-  -webkit-background-clip:text !important;background-clip:text !important;
-  color:transparent !important;-webkit-text-fill-color:transparent !important;
-  -webkit-box-decoration-break:slice;box-decoration-break:slice
-}
-@media (max-width:1024px){#heading-sm2-x3A511e :is(h1,h2,h3)::before,#heading-sm2-x3A511e :is(h1,h2,h3)::after{font-size:48px !important}}
-@media (max-width:600px){#heading-sm2-x3A511e :is(h1,h2,h3)::before,#heading-sm2-x3A511e :is(h1,h2,h3)::after{font-size:34px !important}}
 
 /* ================= PILL #sub-heading-v8kPtt7vnEM ================= */
 #sub-heading-v8kPtt7vnEM{
@@ -229,8 +138,6 @@
 /* ================= VISITORS WHO TURN OFF MOTION ================= */
 @media (prefers-reduced-motion:reduce){
   #section-KXkdUwGx-b::before,#section-KXkdUwGx-b::after,
-  #paragraph-zwry7ZGVfO9 .text-output,#paragraph-zwry7ZGVfO9 .text-output::before,#paragraph-zwry7ZGVfO9 .text-output::after,
-  #heading-SzeIwuTZVcC :is(h1,h2,h3)::after,
-  #heading-wTu9Gd6paCe :is(h1,h2,h3)::after{animation:none !important}
+  #paragraph-zwry7ZGVfO9 .text-output,#paragraph-zwry7ZGVfO9 .text-output::before,#paragraph-zwry7ZGVfO9 .text-output::after{animation:none !important}
   #sub-heading-v8kPtt7vnEM,#sub-heading-v8kPtt7vnEM:hover{transition:none !important;transform:none !important}
 }
