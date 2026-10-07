@@ -11,4 +11,6 @@
 @media (max-width:767px){
   #section-WFnhUUfW7X > .inner > .c-row > .inner,
   #section-WFnhUUfW7X > .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:40px !important}
+  #section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column,
+  #section-WFnhUUfW7X > .c-row > .inner > .c-column{width:100% !important;max-width:100% !important;flex:0 0 auto !important}
 }
