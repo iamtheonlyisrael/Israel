@@ -1,53 +1,53 @@
 <!-- Luxon graphic | "Every lead, one pipeline": lead sources flow along lines into one pipeline card with stage counts and a "Just in" feed
-     Paste into ONE Custom Code element (fits a hero column next to the headline, about 520-580px wide). Made for a dark navy section.
+     Paste into ONE Custom Code element (fits a hero column next to the headline, about 480-540px wide). Made for a dark navy section.
      The random pump + dot runs on the live/preview page (GHL does not run scripts inside the editor). -->
 <div class="lxpf">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap');
 .lxpf,.lxpf *,.lxpf *::before,.lxpf *::after{box-sizing:border-box !important}
-.lxpf{width:100% !important;max-width:580px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important;text-align:left !important;container-type:inline-size}
+.lxpf{width:100% !important;max-width:520px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important;text-align:left !important;container-type:inline-size}
 .lxpf .wrap{display:flex !important;align-items:center !important;justify-content:center !important}
 /* left: lead sources */
-.lxpf .src{display:flex !important;flex-direction:column !important;gap:15px !important;flex:none !important;width:168px !important}
-.lxpf .s{height:44px !important;display:flex !important;align-items:center !important;gap:10px !important;padding:0 14px !important;border-radius:999px !important;background:rgba(255,255,255,.06) !important;border:1px solid rgba(141,180,255,.28) !important;color:#FFFFFF !important;font-size:13.5px !important;font-weight:500 !important;white-space:nowrap !important}
+.lxpf .src{display:flex !important;flex-direction:column !important;gap:10px !important;flex:none !important;width:150px !important}
+.lxpf .s{height:36px !important;display:flex !important;align-items:center !important;gap:8px !important;padding:0 12px !important;border-radius:999px !important;background:rgba(255,255,255,.06) !important;border:1px solid rgba(141,180,255,.28) !important;color:#FFFFFF !important;font-size:12.5px !important;font-weight:500 !important;white-space:nowrap !important}
 .lxpf .s.pump{animation:lxpfPump .7s ease-out}
-.lxpf .s svg{flex:none !important;color:#F5DC85 !important}
+.lxpf .s svg{flex:none !important;width:14px !important;height:14px !important;color:#F5DC85 !important}
 /* middle: lines with moving dots */
-.lxpf .flow{flex:none !important;width:70px !important;height:280px !important;display:block !important}
+.lxpf .flow{flex:none !important;width:60px !important;height:220px !important;display:block !important}
 /* right: pipeline card */
-.lxpf .board{flex:1 1 auto !important;min-width:0 !important;max-width:340px !important;padding:20px 20px !important;border-radius:24px !important;background:#FFFFFF !important;color:#1F2933 !important;box-shadow:0 40px 90px rgba(0,0,0,.35),0 0 0 1px rgba(212,175,55,.35) !important}
-.lxpf .bh{display:flex !important;align-items:center !important;justify-content:space-between !important;padding-bottom:14px !important;margin-bottom:16px !important;border-bottom:1px solid #E4E7EB !important}
-.lxpf .bt{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:15px !important;color:#0B1F3A !important}
-.lxpf .live{display:flex !important;align-items:center !important;gap:6px !important;padding:4px 11px !important;border-radius:999px !important;font-size:12px !important;font-weight:600 !important;background:rgba(61,220,151,.14) !important;color:#0B6B3A !important}
-.lxpf .live i{width:7px !important;height:7px !important;border-radius:50% !important;background:#3DDC97 !important;animation:lxpfBlink 1.6s ease-in-out infinite}
-.lxpf .row{display:grid !important;grid-template-columns:86px 1fr 22px !important;align-items:center !important;gap:10px !important;margin-bottom:11px !important;font-size:13px !important;color:#3E4C59 !important}
+.lxpf .board{flex:1 1 auto !important;min-width:0 !important;max-width:300px !important;padding:16px 16px !important;border-radius:20px !important;background:#FFFFFF !important;color:#1F2933 !important;box-shadow:0 30px 70px rgba(0,0,0,.35),0 0 0 1px rgba(212,175,55,.35) !important}
+.lxpf .bh{display:flex !important;align-items:center !important;justify-content:space-between !important;padding-bottom:10px !important;margin-bottom:12px !important;border-bottom:1px solid #E4E7EB !important}
+.lxpf .bt{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:14px !important;color:#0B1F3A !important}
+.lxpf .live{display:flex !important;align-items:center !important;gap:5px !important;padding:3px 9px !important;border-radius:999px !important;font-size:11px !important;font-weight:600 !important;background:rgba(61,220,151,.14) !important;color:#0B6B3A !important}
+.lxpf .live i{width:6px !important;height:6px !important;border-radius:50% !important;background:#3DDC97 !important;animation:lxpfBlink 1.6s ease-in-out infinite}
+.lxpf .row{display:grid !important;grid-template-columns:78px 1fr 20px !important;align-items:center !important;gap:8px !important;margin-bottom:8px !important;font-size:12px !important;color:#3E4C59 !important}
 .lxpf .row b{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;color:#0B1F3A !important;text-align:right !important}
-.lxpf .bar{height:8px !important;border-radius:99px !important;background:#EEF2F7 !important;overflow:hidden !important}
+.lxpf .bar{height:6px !important;border-radius:99px !important;background:#EEF2F7 !important;overflow:hidden !important}
 .lxpf .bar span{display:block !important;height:100% !important;border-radius:99px !important;background:linear-gradient(90deg,#2F6FE4,#8DB4FF) !important}
 .lxpf .row.bk .bar span{background:linear-gradient(90deg,#B8932A,#F5DC85) !important}
 .lxpf .row.nw .bar span.hit{animation:lxpfHit .6s ease-out}
 /* "Just in" feed: 3 sample leads take turns */
-.lxpf .feed{position:relative !important;height:62px !important;margin-top:16px !important}
-.lxpf .lead{position:absolute !important;inset:0 !important;display:flex !important;align-items:center !important;gap:10px !important;padding:0 12px !important;border-radius:14px !important;background:#0B1F3A !important;color:#FFFFFF !important;opacity:0;animation:lxpfFeed 9s ease-in-out infinite}
+.lxpf .feed{position:relative !important;height:50px !important;margin-top:12px !important}
+.lxpf .lead{position:absolute !important;inset:0 !important;display:flex !important;align-items:center !important;gap:8px !important;padding:0 10px !important;border-radius:12px !important;background:#0B1F3A !important;color:#FFFFFF !important;opacity:0;animation:lxpfFeed 9s ease-in-out infinite}
 .lxpf .lead:nth-child(2){animation-delay:3s}.lxpf .lead:nth-child(3){animation-delay:6s}
-.lxpf .tag{flex:none !important;padding:3px 8px !important;border-radius:999px !important;font-size:10px !important;font-weight:700 !important;letter-spacing:.04em !important;text-transform:uppercase !important;background:#D4AF37 !important;color:#0B1F3A !important}
-.lxpf .lt{min-width:0 !important;font-weight:600 !important;font-size:13px !important;line-height:1.3 !important}
-.lxpf .lt small{display:block !important;font-weight:400 !important;font-size:11.5px !important;color:rgba(255,255,255,.7) !important}
-.lxpf .cap{margin:14px 0 0 !important;text-align:center !important;font-size:12.5px !important;font-style:italic !important;color:rgba(255,255,255,.6) !important}
+.lxpf .tag{flex:none !important;padding:2px 7px !important;border-radius:999px !important;font-size:9px !important;font-weight:700 !important;letter-spacing:.04em !important;text-transform:uppercase !important;background:#D4AF37 !important;color:#0B1F3A !important}
+.lxpf .lt{min-width:0 !important;font-weight:600 !important;font-size:12px !important;line-height:1.3 !important}
+.lxpf .lt small{display:block !important;font-weight:400 !important;font-size:10.5px !important;color:rgba(255,255,255,.7) !important}
+.lxpf .cap{margin:10px 0 0 !important;text-align:center !important;font-size:11.5px !important;font-style:italic !important;color:rgba(255,255,255,.6) !important}
 @keyframes lxpfPump{0%{transform:scale(1)}30%{transform:scale(1.07);border-color:#D4AF37;box-shadow:0 0 24px rgba(212,175,55,.5)}100%{transform:scale(1);border-color:rgba(141,180,255,.28);box-shadow:none}}
 @keyframes lxpfBlink{0%,100%{opacity:1}50%{opacity:.3}}
 @keyframes lxpfHit{0%,100%{filter:none;transform:scaleY(1)}25%{filter:brightness(1.4);transform:scaleY(1.6)}}
 @keyframes lxpfFeed{0%{opacity:0;transform:translateY(10px)}6%,30%{opacity:1;transform:none}36%,100%{opacity:0;transform:translateY(-8px)}}
 /* narrow column (tablets & phones): sources wrap above the card, lines become a small line */
-@container (max-width:500px){
+@container (max-width:460px){
   .lxpf .wrap{flex-direction:column !important}
-  .lxpf .src{width:100% !important;flex-direction:row !important;flex-wrap:wrap !important;justify-content:center !important;gap:10px !important}
-  .lxpf .s{height:36px !important;font-size:13px !important;padding:0 13px !important}
+  .lxpf .src{width:100% !important;flex-direction:row !important;flex-wrap:wrap !important;justify-content:center !important;gap:8px !important}
+  .lxpf .s{height:32px !important;font-size:12px !important;padding:0 11px !important}
   .lxpf .flow{display:none !important}
-  .lxpf .wrap::after{content:"";order:1;width:2px;height:34px;margin:14px 0;background:linear-gradient(#D4AF37,rgba(141,180,255,.3))}
-  .lxpf .board{order:2;width:100% !important;max-width:420px !important}
+  .lxpf .wrap::after{content:"";order:1;width:2px;height:24px;margin:10px 0;background:linear-gradient(#D4AF37,rgba(141,180,255,.3))}
+  .lxpf .board{order:2;width:100% !important;max-width:340px !important}
 }
-@container (max-width:360px){.lxpf .board{padding:18px 16px !important}.lxpf .row{grid-template-columns:82px 1fr 22px !important}}
+@container (max-width:340px){.lxpf .board{padding:14px 14px !important}}
 @media (prefers-reduced-motion:reduce){.lxpf *{animation:none !important}.lxpf .lead:first-child{opacity:1}}
 </style>
   <div class="wrap">
@@ -58,14 +58,14 @@
       <div class="s"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Google</div>
       <div class="s"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg>Referrals</div>
     </div>
-    <svg class="flow" viewBox="0 0 70 280" aria-hidden="true">
-      <defs><linearGradient id="lxpfLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="70" y2="0"><stop offset="0" stop-color="#8DB4FF" stop-opacity=".25"/><stop offset="1" stop-color="#D4AF37" stop-opacity=".7"/></linearGradient></defs>
+    <svg class="flow" viewBox="0 0 60 220" aria-hidden="true">
+      <defs><linearGradient id="lxpfLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="60" y2="0"><stop offset="0" stop-color="#8DB4FF" stop-opacity=".25"/><stop offset="1" stop-color="#D4AF37" stop-opacity=".7"/></linearGradient></defs>
       <g fill="none" stroke="url(#lxpfLine)" stroke-width="1.5">
-        <path id="lxpf1" d="M0 22 C38 22 32 140 70 140"/>
-        <path id="lxpf2" d="M0 81 C38 81 32 140 70 140"/>
-        <path id="lxpf3" d="M0 140 L70 140"/>
-        <path id="lxpf4" d="M0 199 C38 199 32 140 70 140"/>
-        <path id="lxpf5" d="M0 258 C38 258 32 140 70 140"/>
+        <path id="lxpf1" d="M0 18 C33 18 27 110 60 110"/>
+        <path id="lxpf2" d="M0 64 C33 64 27 110 60 110"/>
+        <path id="lxpf3" d="M0 110 L60 110"/>
+        <path id="lxpf4" d="M0 156 C33 156 27 110 60 110"/>
+        <path id="lxpf5" d="M0 202 C33 202 27 110 60 110"/>
       </g>
       <g class="dots" fill="#F5DC85" style="filter:drop-shadow(0 0 4px rgba(245,220,133,.9))"></g>
     </svg>
@@ -93,7 +93,7 @@
     function fly(i){
       if(getComputedStyle(flow).display==='none')return;
       var path=paths[i],len=path.getTotalLength(),dot=document.createElementNS('http://www.w3.org/2000/svg','circle'),t0=null,T=1000;
-      dot.setAttribute('r','4');dots.appendChild(dot);
+      dot.setAttribute('r','3.5');dots.appendChild(dot);
       function step(t){if(t0===null)t0=t;var k=Math.min((t-t0)/T,1),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2,pt=path.getPointAtLength(e*len);
         dot.setAttribute('cx',pt.x);dot.setAttribute('cy',pt.y);dot.setAttribute('opacity',k>.92?(1-k)/.08:1);
         if(k<1)requestAnimationFrame(step);else{dots.removeChild(dot);replay(bar,'hit')}}
