@@ -1,0 +1,46 @@
+<!-- Luxon graphic | Lead Management: 4 feature cards (last one navy, highlighted)
+     Paste into ONE Custom Code element (full width). Made for a light section. -->
+<div class="lxlm">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500&display=swap');
+.lxlm,.lxlm *,.lxlm *::before,.lxlm *::after{box-sizing:border-box !important}
+.lxlm{width:100% !important;max-width:1220px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important;text-align:left !important;display:grid !important;grid-template-columns:repeat(4,minmax(0,1fr)) !important;gap:20px !important}
+/* white card with a soft blue -> gold border */
+.lxlm .bc{padding:30px 30px 34px !important;border-radius:22px !important;border:1px solid transparent !important;background:linear-gradient(#FFFFFF,#FFFFFF) padding-box,linear-gradient(135deg,rgba(91,141,239,.45),rgba(212,175,55,.5)) border-box !important;box-shadow:0 18px 40px rgba(11,31,58,.07) !important;transition:transform .35s ease,box-shadow .35s ease}
+.lxlm .bc:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(11,31,58,.13) !important}
+/* highlighted navy card */
+.lxlm .bc.dark{border:0 !important;background:radial-gradient(420px 260px at 0% 0%,rgba(47,111,228,.45),rgba(47,111,228,0) 70%),linear-gradient(160deg,#0E2B5E 0%,#0B1F3A 55%,#071528 100%) !important;box-shadow:0 26px 60px rgba(11,31,58,.3) !important}
+.lxlm .bc.dark:hover{box-shadow:0 34px 70px rgba(11,31,58,.4) !important}
+.lxlm .ic{width:54px !important;height:54px !important;border-radius:14px !important;display:flex !important;align-items:center !important;justify-content:center !important;margin-bottom:24px !important;background:linear-gradient(135deg,#0B1F3A,#1E4FA8) !important;color:#F5DC85 !important;box-shadow:0 10px 24px rgba(30,79,168,.35) !important;transition:transform .35s ease}
+.lxlm .ic.gold{background:linear-gradient(135deg,#B8932A,#F5DC85) !important;color:#0B1F3A !important;box-shadow:0 10px 24px rgba(212,175,55,.35) !important}
+.lxlm .bc:hover .ic{transform:scale(1.08) rotate(-4deg)}
+.lxlm .h3{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:20px !important;line-height:1.3 !important;color:#0B1F3A !important;margin:0 0 10px !important}
+.lxlm .txt{margin:0 !important;font-size:15px !important;line-height:1.7 !important;color:#3E4C59 !important}
+.lxlm .dark .h3{color:#FFFFFF !important}
+.lxlm .dark .txt{color:rgba(255,255,255,.78) !important}
+/* tablets: 2 x 2, phones: one column */
+@media (max-width:1100px){.lxlm{grid-template-columns:repeat(2,minmax(0,1fr)) !important;max-width:760px !important}}
+@media (max-width:600px){.lxlm{grid-template-columns:1fr !important;max-width:520px !important;gap:16px !important}.lxlm .bc{padding:24px 22px 26px !important}}
+@media (prefers-reduced-motion:reduce){.lxlm .bc,.lxlm .ic{transition:none !important}}
+</style>
+  <div class="bc">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+    <h3 class="h3">Every source, one list</h3>
+    <p class="txt">Calls, texts, website forms, Google and email, organized automatically.</p>
+  </div>
+  <div class="bc">
+    <div class="ic gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></div>
+    <h3 class="h3">Clear next steps</h3>
+    <p class="txt">See which quotes need an answer and who’s ready to book.</p>
+  </div>
+  <div class="bc">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div>
+    <h3 class="h3">Full customer history</h3>
+    <p class="txt">Past trips, preferences and conversations, ready when they call again.</p>
+  </div>
+  <div class="bc dark">
+    <div class="ic gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></div>
+    <h3 class="h3">Works with your booking software</h3>
+    <p class="txt">Keep dispatch in Moovs, Limo Anywhere or your current system.</p>
+  </div>
+</div>
