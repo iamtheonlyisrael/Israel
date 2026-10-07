@@ -110,6 +110,29 @@
 /* stop GHL's own section color from covering the gradient */
 #section-hJkjCOC0p9 > .bg,#section-hJkjCOC0p9 .bg-section{background:transparent !important}
 
+/* ================= HEADLINE #heading-wTu9Gd6paCe: "Worried AI will sound robotic?" navy, "Call it." blue -> gold ================= */
+/* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
+   SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-wTu9Gd6paCe :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-wTu9Gd6paCe :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-wTu9Gd6paCe :is(h1,h2,h3)::before{
+  content:"Worried AI will sound robotic? ";content:"Worried AI will sound robotic? " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{
+  content:"Call it.";content:"Call it." / "";
+  white-space:nowrap;/* keeps "Call it." together on one line */
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-wTu9Gd6paCe :is(h1,h2,h3)::before,#heading-wTu9Gd6paCe :is(h1,h2,h3)::after{font-size:34px !important}}
+
 /* ================= PILL #sub-heading-v8kPtt7vnEM ================= */
 #sub-heading-v8kPtt7vnEM{
   display:inline-block;position:relative;
