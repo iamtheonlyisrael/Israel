@@ -1,0 +1,25 @@
+/* ================= HEADLINE #heading-D5_eizT0Om: "What we'll cover" white, "together" gold ================= */
+/* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
+   SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-D5_eizT0Om :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-D5_eizT0Om :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-D5_eizT0Om :is(h1,h2,h3)::before,#heading-D5_eizT0Om :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-D5_eizT0Om :is(h1,h2,h3)::before{
+  content:"What we'll cover ";content:"What we'll cover " / "";
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-D5_eizT0Om :is(h1,h2,h3)::after{
+  content:"together";content:"together" / "";
+  white-space:nowrap;
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  animation:lxGoldShiftD 6s ease-in-out infinite alternate
+}
+@keyframes lxGoldShiftD{to{background-position:100% center}}
+@media (max-width:1024px){#heading-D5_eizT0Om :is(h1,h2,h3)::before,#heading-D5_eizT0Om :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-D5_eizT0Om :is(h1,h2,h3)::before,#heading-D5_eizT0Om :is(h1,h2,h3)::after{font-size:34px !important}}
+@media (prefers-reduced-motion:reduce){#heading-D5_eizT0Om :is(h1,h2,h3)::after{animation:none !important}}
