@@ -146,6 +146,36 @@
   box-shadow:0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
 }
 
+/* ================= DEMO VIDEO #video-Mnaf6pHdsQ: framed player + placeholder until the video is added ================= */
+/* frame (applies with or without a video) */
+#video-Mnaf6pHdsQ{
+  position:relative !important;overflow:hidden !important;border-radius:24px !important;
+  border:1px solid rgba(212,175,55,.4) !important;
+  background:radial-gradient(520px 360px at 30% 18%,rgba(47,111,228,.55),rgba(47,111,228,0) 70%),
+             linear-gradient(150deg,#163A7A 0%,#0B1F3A 55%,#071528 100%) !important;
+  box-shadow:0 40px 90px rgba(0,0,0,.45),0 0 0 6px rgba(255,255,255,.02) !important
+}
+#video-Mnaf6pHdsQ :is(iframe,video){display:block !important;width:100% !important;border:0 !important;border-radius:24px !important}
+/* PLACEHOLDER: shows only while no video link is set in GHL, and disappears once a real video is added */
+#video-Mnaf6pHdsQ:not(:has(iframe[src*="http"],video[src],video source)){aspect-ratio:16/9 !important;min-height:240px !important;max-width:100% !important}
+#video-Mnaf6pHdsQ:not(:has(iframe[src*="http"],video[src],video source)) > *{opacity:0 !important}
+/* gold play button with a soft ring */
+#video-Mnaf6pHdsQ:not(:has(iframe[src*="http"],video[src],video source))::before{
+  content:"" !important;position:absolute !important;z-index:2 !important;left:50% !important;top:50% !important;
+  width:92px !important;height:92px !important;margin:-70px 0 0 -46px !important;border-radius:50% !important;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5.5v13l10.5-6.5z' fill='%230B1F3A'/%3E%3C/svg%3E") 54% 50%/30px 30px no-repeat,
+             linear-gradient(135deg,#B8932A,#F5DC85) !important;
+  box-shadow:0 0 0 20px rgba(255,255,255,.08),0 14px 34px rgba(0,0,0,.35);
+  animation:lxVidPulse 2.6s ease-in-out infinite
+}
+/* caption under the button */
+#video-Mnaf6pHdsQ:not(:has(iframe[src*="http"],video[src],video source))::after{
+  content:"[Demo video: about 2 minutes, provided by Luxon]" !important;position:absolute !important;z-index:2 !important;
+  left:16px !important;right:16px !important;top:50% !important;margin-top:46px !important;text-align:center !important;
+  font-family:'Inter',sans-serif !important;font-size:15px !important;line-height:1.4 !important;color:rgba(255,255,255,.75) !important
+}
+@keyframes lxVidPulse{0%,100%{box-shadow:0 0 0 20px rgba(255,255,255,.08),0 14px 34px rgba(0,0,0,.35)}50%{box-shadow:0 0 0 28px rgba(255,255,255,.04),0 14px 40px rgba(212,175,55,.35)}}
+
 /* ================= TABLETS & PHONES ================= */
 @media (max-width:767px){
   #section-KXkdUwGx-b{padding-top:56px !important;padding-bottom:64px !important}
@@ -154,6 +184,12 @@
   #section-olAFO802wO{padding-top:64px !important;padding-bottom:64px !important}
   #section-hJkjCOC0p9{padding-top:64px !important;padding-bottom:64px !important}
 }
+@media (max-width:600px){
+  #video-Mnaf6pHdsQ,#video-Mnaf6pHdsQ :is(iframe,video){border-radius:16px !important}
+  #video-Mnaf6pHdsQ:not(:has(iframe[src*="http"],video[src],video source)){min-height:0 !important;width:100% !important}
+  #video-Mnaf6pHdsQ:not(:has(iframe[src*="http"],video[src],video source))::before{width:72px !important;height:72px !important;margin:-56px 0 0 -36px !important;background-size:24px 24px,auto !important}
+  #video-Mnaf6pHdsQ:not(:has(iframe[src*="http"],video[src],video source))::after{margin-top:36px !important;font-size:13px !important}
+}
 @media (max-width:480px){
   #paragraph-zwry7ZGVfO9 .text-output p,#paragraph-zwry7ZGVfO9 .text-output span{font-size:10.5px !important;letter-spacing:.12em !important}
 }
@@ -161,6 +197,7 @@
 /* ================= VISITORS WHO TURN OFF MOTION ================= */
 @media (prefers-reduced-motion:reduce){
   #section-KXkdUwGx-b::before,#section-KXkdUwGx-b::after,
-  #paragraph-zwry7ZGVfO9 .text-output,#paragraph-zwry7ZGVfO9 .text-output::before,#paragraph-zwry7ZGVfO9 .text-output::after{animation:none !important}
+  #paragraph-zwry7ZGVfO9 .text-output,#paragraph-zwry7ZGVfO9 .text-output::before,#paragraph-zwry7ZGVfO9 .text-output::after,
+  #video-Mnaf6pHdsQ::before{animation:none !important}
   #sub-heading-v8kPtt7vnEM,#sub-heading-v8kPtt7vnEM:hover{transition:none !important;transform:none !important}
 }
