@@ -32,3 +32,13 @@
   #section-nx4VXs7wz7::before{background-size:22px 22px !important}
 }
 @media (prefers-reduced-motion:reduce){#section-nx4VXs7wz7::after{animation:none !important}}
+
+/* ---------- SIZE: ~100px space top & bottom, content held to a centred 1200px column with side gutters ---------- */
+#section-nx4VXs7wz7{
+  min-height:0 !important;height:auto !important;
+  padding:100px 24px !important;margin:0 !important
+}
+#section-nx4VXs7wz7 > .inner{max-width:1200px !important;width:100% !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important}
+#section-nx4VXs7wz7 .c-row{max-width:1200px !important;width:100% !important;margin-left:auto !important;margin-right:auto !important}
+@media (max-width:1024px){#section-nx4VXs7wz7{padding:80px 24px !important}}
+@media (max-width:767px){#section-nx4VXs7wz7{padding:64px 16px 72px !important}}
