@@ -451,15 +451,3 @@ body .lxinc .card:hover{border-color:rgba(212,175,55,.8) !important}
         font-size: 34px !important
     }
 }
-
-/* ================= BOOKING BANNER SECTION SIZE (the section holding the .lxcta banner) =================
-   ~88px space top & bottom, banner held to the same centred 1200px column as the sections above */
-[id^="section-"]:has(.lxcta){
-  min-height:0 !important;height:auto !important;
-  padding:88px 24px !important;margin:0 !important
-}
-[id^="section-"]:has(.lxcta) > .inner{max-width:1200px !important;width:100% !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important}
-[id^="section-"]:has(.lxcta) .c-row{max-width:1200px !important;width:100% !important;margin-left:auto !important;margin-right:auto !important}
-[id^="section-"]:has(.lxcta) .c-row > .inner,[id^="section-"]:has(.lxcta) .c-column > .inner{padding-left:0 !important;padding-right:0 !important}
-@media (max-width:1024px){[id^="section-"]:has(.lxcta){padding:72px 24px !important}}
-@media (max-width:767px){[id^="section-"]:has(.lxcta){padding:56px 16px !important}}
