@@ -1,0 +1,59 @@
+<!-- Booking CTA banner | paste into ONE Custom Code element (full width).
+     Replace BOOKING-LINK and DEMO-VIDEO-LINK with your real links. -->
+<div class="lxcta">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500&display=swap');
+.lxcta,.lxcta *,.lxcta *::before,.lxcta *::after{box-sizing:border-box !important}
+.lxcta{width:100% !important;max-width:1200px !important;margin:0 auto !important;font-family:'Inter',sans-serif !important;container-type:inline-size}
+.lxcta .box{position:relative !important;overflow:hidden !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:48px !important;
+  padding:68px 64px !important;border-radius:24px !important;border:1px solid rgba(212,175,55,.35) !important;
+  background:radial-gradient(520px 340px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 70%),
+             radial-gradient(420px 300px at 100% 100%,rgba(212,175,55,.22),rgba(212,175,55,0) 70%),
+             linear-gradient(120deg,#163A78 0%,#0E2550 35%,#0B1F3A 65%,#0A1A33 100%) !important;
+  box-shadow:0 30px 60px rgba(11,31,58,.28) !important}
+/* decorative rings, top-right */
+.lxcta .box::before,.lxcta .box::after{content:'' !important;position:absolute !important;border-radius:50% !important;pointer-events:none !important}
+.lxcta .box::before{width:440px !important;height:440px !important;right:-120px !important;top:-220px !important;border:1px solid rgba(141,180,255,.1) !important;background:rgba(141,180,255,.03) !important}
+.lxcta .box::after{width:340px !important;height:340px !important;right:-140px !important;top:-120px !important;border:1px solid rgba(212,175,55,.18) !important;animation:lxctaSpin 30s linear infinite}
+@keyframes lxctaSpin{to{transform:rotate(360deg)}}
+.lxcta .copy{position:relative !important;z-index:1 !important;flex:1 1 auto !important;min-width:0 !important}
+.lxcta .eye{font-family:'Montserrat',sans-serif !important;font-weight:800 !important;font-size:12px !important;letter-spacing:.24em !important;text-transform:uppercase !important;color:#D4AF37 !important;margin:0 0 14px !important}
+.lxcta .h2{font-family:'Montserrat',sans-serif !important;font-weight:900 !important;font-size:clamp(30px,4.2cqw,46px) !important;line-height:1.12 !important;letter-spacing:-.01em !important;color:#FFFFFF !important;margin:0 0 14px !important}
+.lxcta .h2 em{font-style:normal !important;white-space:nowrap !important;
+  background:linear-gradient(90deg,#F5DC85 0%,#D4AF37 45%,#B9B08A 70%,#8DB4FF 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;color:transparent !important;-webkit-text-fill-color:transparent !important;-webkit-box-decoration-break:slice;box-decoration-break:slice}
+.lxcta .txt{font-size:17px !important;line-height:1.6 !important;color:rgba(255,255,255,.82) !important;margin:0 !important;max-width:720px !important}
+.lxcta .btns{position:relative !important;z-index:1 !important;flex:0 0 290px !important;display:flex !important;flex-direction:column !important;gap:14px !important}
+.lxcta .btn{display:flex !important;align-items:center !important;justify-content:center !important;min-height:56px !important;padding:14px 24px !important;border-radius:8px !important;
+  font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:15px !important;line-height:1.2 !important;text-align:center !important;text-decoration:none !important;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease !important}
+.lxcta .gold{color:#0B1F3A !important;background:linear-gradient(135deg,#B8922A 0%,#D4AF37 50%,#E9C962 100%) !important;box-shadow:0 10px 30px rgba(212,175,55,.35) !important}
+.lxcta .gold:hover{transform:translateY(-2px) !important;box-shadow:0 16px 38px rgba(212,175,55,.5) !important}
+.lxcta .ghost{color:#FFFFFF !important;background:rgba(11,31,58,.35) !important;border:1px solid rgba(212,175,55,.75) !important}
+.lxcta .ghost:hover{transform:translateY(-2px) !important;background:rgba(212,175,55,.12) !important;border-color:#D4AF37 !important}
+/* narrower: buttons drop under the text */
+@container (max-width:860px){
+  .lxcta .box{flex-direction:column !important;align-items:flex-start !important;gap:32px !important;padding:52px 40px !important}
+  .lxcta .btns{flex:0 0 auto !important;width:100% !important;flex-direction:row !important}
+  .lxcta .btn{flex:1 1 0 !important}
+}
+@container (max-width:520px){
+  .lxcta .box{padding:40px 24px !important;border-radius:20px !important;text-align:center !important;align-items:center !important}
+  .lxcta .txt{font-size:16px !important}
+  .lxcta .btns{flex-direction:column !important}
+  .lxcta .h2 em{white-space:normal !important}
+}
+@media (prefers-reduced-motion:reduce){.lxcta .box::after{animation:none !important}.lxcta .btn{transition:none !important}}
+</style>
+  <div class="box">
+    <div class="copy">
+      <p class="eye">Never miss an opportunity</p>
+      <h2 class="h2">Let’s talk about <em>your business.</em></h2>
+      <p class="txt">See what Luxon Limo AI could look like for your company. A short, friendly demo with no tech talk.</p>
+    </div>
+    <div class="btns">
+      <a class="btn gold" href="BOOKING-LINK">Book Your AI Demo</a>
+      <a class="btn ghost" href="DEMO-VIDEO-LINK">Watch the Demo Here</a>
+    </div>
+  </div>
+</div>
