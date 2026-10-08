@@ -65,9 +65,9 @@
 /* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
 #section-WFnhUUfW7X > .inner > .c-row > .inner,
 #section-WFnhUUfW7X > .c-row > .inner{display:flex !important;align-items:center !important}
-/* text colors on the dark background (#sub-heading-WEtIyGduyXd is left out, so it keeps its own GHL styling) */
-#section-WFnhUUfW7X :is(h1,h2,h3):where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *)){color:#FFFFFF !important}
-#section-WFnhUUfW7X p:where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *)){color:rgba(255,255,255,.85) !important}
+/* text colors on the dark background (#sub-heading-WEtIyGduyXd and #paragraph-kHg4hG0j0j are left out, so they keep their own GHL styling) */
+#section-WFnhUUfW7X :is(h1,h2,h3):where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *, #paragraph-kHg4hG0j0j *)){color:#FFFFFF !important}
+#section-WFnhUUfW7X p:where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *, #paragraph-kHg4hG0j0j, #paragraph-kHg4hG0j0j *)){color:rgba(255,255,255,.85) !important}
 
 /* ================= HERO EYEBROW #paragraph-WLTAT6np7-l ================= */
 #paragraph-WLTAT6np7-l .text-output{
@@ -166,9 +166,9 @@
   -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important
 }
 #section-RaE-BOzHt4 > div:not(.bg){position:relative !important;z-index:1 !important}
-/* text colors for the dark background (#sub-heading-WEtIyGduyXd is left out, so it keeps its own GHL styling) */
-#section-RaE-BOzHt4 :is(h1,h2,h3):where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *)){color:#FFFFFF !important}
-#section-RaE-BOzHt4 .c-paragraph,#section-RaE-BOzHt4 .c-paragraph *,
+/* text colors for the dark background (#sub-heading-WEtIyGduyXd and #paragraph-kHg4hG0j0j are left out, so they keep their own GHL styling) */
+#section-RaE-BOzHt4 :is(h1,h2,h3):where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *, #paragraph-kHg4hG0j0j *)){color:#FFFFFF !important}
+#section-RaE-BOzHt4 .c-paragraph:where(:not(#paragraph-kHg4hG0j0j)),#section-RaE-BOzHt4 .c-paragraph:where(:not(#paragraph-kHg4hG0j0j)) *,
 #section-RaE-BOzHt4 .c-sub-heading:where(:not(#sub-heading-WEtIyGduyXd)),#section-RaE-BOzHt4 .c-sub-heading:where(:not(#sub-heading-WEtIyGduyXd)) *{color:rgba(255,255,255,.85) !important}
 /* "WHAT IT HANDLES" eyebrow text in brand gold: replace #EYEBROW-ID with the eyebrow's CSS Selector from GHL */
 #section-RaE-BOzHt4 #EYEBROW-ID,#section-RaE-BOzHt4 #EYEBROW-ID * {
