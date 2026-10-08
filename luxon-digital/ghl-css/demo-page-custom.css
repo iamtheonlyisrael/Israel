@@ -60,9 +60,9 @@
 /* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
 #section-KXkdUwGx-b > .inner > .c-row > .inner,
 #section-KXkdUwGx-b > .c-row > .inner{display:flex !important;align-items:center !important}
-/* text colors on the dark background (#sub-heading-2vsMPXH4w0 is left out, so it keeps its own GHL styling) */
-#section-KXkdUwGx-b :is(h1,h2,h3):where(:not(#sub-heading-2vsMPXH4w0, #sub-heading-2vsMPXH4w0 *)){color:#FFFFFF !important}
-#section-KXkdUwGx-b p:where(:not(#sub-heading-2vsMPXH4w0, #sub-heading-2vsMPXH4w0 *)){color:rgba(255,255,255,.85) !important}
+/* text colors on the dark background (#sub-heading-2vsMPXH4w0 and #sub-heading-Dj7k1vwzMLx are left out, so they keep their own GHL styling) */
+#section-KXkdUwGx-b :is(h1,h2,h3):where(:not(#sub-heading-2vsMPXH4w0, #sub-heading-2vsMPXH4w0 *, #sub-heading-Dj7k1vwzMLx, #sub-heading-Dj7k1vwzMLx *)){color:#FFFFFF !important}
+#section-KXkdUwGx-b p:where(:not(#sub-heading-2vsMPXH4w0, #sub-heading-2vsMPXH4w0 *, #sub-heading-Dj7k1vwzMLx, #sub-heading-Dj7k1vwzMLx *)){color:rgba(255,255,255,.85) !important}
 
 /* ================= HERO EYEBROW #paragraph-zwry7ZGVfO9 ================= */
 #paragraph-zwry7ZGVfO9 .text-output{
@@ -130,8 +130,8 @@
   -webkit-mask-image:radial-gradient(ellipse at 50% 35%,#000 25%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 35%,#000 25%,transparent 75%) !important
 }
 #section-COVER-ID > div:not(.bg){position:relative !important;z-index:1 !important}
-/* text colors on the dark background (gold words you colored in GHL stay gold; #sub-heading-2vsMPXH4w0 is left out) */
-#section-COVER-ID :is(h1,h2,h3):where(:not(#sub-heading-2vsMPXH4w0, #sub-heading-2vsMPXH4w0 *)){color:#FFFFFF !important}
+/* text colors on the dark background (gold words you colored in GHL stay gold; #sub-heading-2vsMPXH4w0 and #sub-heading-Dj7k1vwzMLx are left out) */
+#section-COVER-ID :is(h1,h2,h3):where(:not(#sub-heading-2vsMPXH4w0, #sub-heading-2vsMPXH4w0 *, #sub-heading-Dj7k1vwzMLx, #sub-heading-Dj7k1vwzMLx *)){color:#FFFFFF !important}
 #section-COVER-ID .c-paragraph,#section-COVER-ID .c-paragraph p{color:rgba(255,255,255,.8) !important}
 
 /* ================= HEADLINE #heading-wTu9Gd6paCe: "Worried AI will sound robotic?" navy, "Call it." blue -> gold ================= */
@@ -287,8 +287,8 @@
     position: relative !important;
     z-index: 1 !important
 }
-/* text colors on the dark background (gold words you colored in GHL stay gold; #sub-heading-2vsMPXH4w0 is left out) */
-#section-AAA_FIH81W :is(h1,h2,h3):where(:not(#sub-heading-2vsMPXH4w0, #sub-heading-2vsMPXH4w0 *)) {
+/* text colors on the dark background (gold words you colored in GHL stay gold; #sub-heading-2vsMPXH4w0 and #sub-heading-Dj7k1vwzMLx are left out) */
+#section-AAA_FIH81W :is(h1,h2,h3):where(:not(#sub-heading-2vsMPXH4w0, #sub-heading-2vsMPXH4w0 *, #sub-heading-Dj7k1vwzMLx, #sub-heading-Dj7k1vwzMLx *)) {
     color: #FFFFFF !important
 }
 
