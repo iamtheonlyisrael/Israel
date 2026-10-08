@@ -1,0 +1,9 @@
+/* ================= "HOW WE WORK" SECTION #section-DsnKB0UTuQ: warm cream with soft gold glow top-right, faint blue glow bottom-left ================= */
+#section-DsnKB0UTuQ{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(900px 520px at 100% 0%,rgba(232,197,90,.30),rgba(232,197,90,0) 70%),
+             radial-gradient(700px 480px at 0% 100%,rgba(141,180,255,.20),rgba(141,180,255,0) 70%),
+             linear-gradient(180deg,#FFF6E0 0%,#FFFBF1 45%,#FFFFFF 100%) !important
+}
+/* stop GHL's own section colour from covering the gradient */
+#section-DsnKB0UTuQ > .bg,#section-DsnKB0UTuQ .bg-section{background:transparent !important}
