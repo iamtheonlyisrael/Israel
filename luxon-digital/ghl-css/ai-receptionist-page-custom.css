@@ -60,9 +60,9 @@
 /* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
 #section-l_Iy2VI3_z > .inner > .c-row > .inner,
 #section-l_Iy2VI3_z > .c-row > .inner{display:flex !important;align-items:center !important}
-/* text colors on the dark background (the eyebrow #sub-heading-pIxxQHNC-R is left out, so it keeps its own GHL colour) */
-#section-l_Iy2VI3_z :is(h1,h2,h3):where(:not(#sub-heading-pIxxQHNC-R, #sub-heading-pIxxQHNC-R *)){color:#FFFFFF !important}
-#section-l_Iy2VI3_z p:where(:not(#sub-heading-pIxxQHNC-R, #sub-heading-pIxxQHNC-R *)){color:rgba(255,255,255,.85) !important}
+/* text colors on the dark background (the eyebrows #sub-heading-pIxxQHNC-R and #sub-heading-S-f24mtRVzg are left out, so they keep their own GHL colour) */
+#section-l_Iy2VI3_z :is(h1,h2,h3):where(:not(#sub-heading-pIxxQHNC-R, #sub-heading-pIxxQHNC-R *, #sub-heading-S-f24mtRVzg, #sub-heading-S-f24mtRVzg *)){color:#FFFFFF !important}
+#section-l_Iy2VI3_z p:where(:not(#sub-heading-pIxxQHNC-R, #sub-heading-pIxxQHNC-R *, #sub-heading-S-f24mtRVzg, #sub-heading-S-f24mtRVzg *)){color:rgba(255,255,255,.85) !important}
 
 /* ================= HERO EYEBROW #paragraph-yb38jSpclQQ ================= */
 #paragraph-yb38jSpclQQ .text-output{
@@ -161,10 +161,10 @@
   -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important
 }
 #section-lWYX6_TggK > div:not(.bg){position:relative !important;z-index:1 !important}
-/* text colors for the dark background (the eyebrow #sub-heading-pIxxQHNC-R is left out, so it keeps its own GHL colour) */
-#section-lWYX6_TggK :is(h1,h2,h3):where(:not(#sub-heading-pIxxQHNC-R, #sub-heading-pIxxQHNC-R *)){color:#FFFFFF !important}
+/* text colors for the dark background (the eyebrows #sub-heading-pIxxQHNC-R and #sub-heading-S-f24mtRVzg are left out, so they keep their own GHL colour) */
+#section-lWYX6_TggK :is(h1,h2,h3):where(:not(#sub-heading-pIxxQHNC-R, #sub-heading-pIxxQHNC-R *, #sub-heading-S-f24mtRVzg, #sub-heading-S-f24mtRVzg *)){color:#FFFFFF !important}
 #section-lWYX6_TggK .c-paragraph,#section-lWYX6_TggK .c-paragraph *,
-#section-lWYX6_TggK .c-sub-heading:where(:not(#sub-heading-pIxxQHNC-R)),#section-lWYX6_TggK .c-sub-heading:where(:not(#sub-heading-pIxxQHNC-R)) *{color:rgba(255,255,255,.85) !important}
+#section-lWYX6_TggK .c-sub-heading:where(:not(#sub-heading-pIxxQHNC-R, #sub-heading-S-f24mtRVzg)),#section-lWYX6_TggK .c-sub-heading:where(:not(#sub-heading-pIxxQHNC-R, #sub-heading-S-f24mtRVzg)) *{color:rgba(255,255,255,.85) !important}
 /* "WHAT IT HANDLES" eyebrow text in brand gold: replace #EYEBROW-ID with the eyebrow's CSS Selector from GHL */
 #section-lWYX6_TggK #EYEBROW-ID,#section-lWYX6_TggK #EYEBROW-ID *{color:#D4AF37 !important;-webkit-text-fill-color:#D4AF37 !important}
 /* layout like the mockup: two equal columns, max 1200px wide, centered top-to-bottom (font sizes untouched) */
