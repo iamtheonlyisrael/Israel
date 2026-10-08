@@ -1,0 +1,13 @@
+/* ================= COLUMN #col-GSemQafVMQc: blue -> silver -> gold gradient border (border only) ================= */
+#col-GSemQafVMQc{position:relative !important;border-radius:24px !important}
+#col-GSemQafVMQc::after{
+  content:"" !important;position:absolute !important;inset:0 !important;z-index:2 !important;pointer-events:none !important;
+  border-radius:inherit !important;padding:10px !important;
+  background:linear-gradient(135deg,#8DB4FF 0%,#B4BCC6 45%,#C9C2A0 70%,#E3C97A 100%) !important;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0) !important;
+  -webkit-mask-composite:xor !important;mask-composite:exclude !important
+}
+@media (max-width:600px){
+  #col-GSemQafVMQc{border-radius:18px !important}
+  #col-GSemQafVMQc::after{padding:6px !important}
+}
