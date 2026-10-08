@@ -239,12 +239,14 @@
   #heading-pqPxlk-4xv :is(h1,h2,h3)::after{animation:none !important}
 }
 
-/* ================= "QUESTIONS" SECTION #section-cWJixkyXt6: white with a soft cream glow top-right and a light blue glow bottom-left ================= */
-#section-cWJixkyXt6{
+/* ================= "SOME CALLS NEED A PERSON" SECTION: white with a soft cream glow top-right and a light blue glow bottom-left =================
+   Targets #section-cWJixkyXt6 AND, as a backup, whichever section holds the headline #heading-IuyUKPuiJHJ */
+#section-cWJixkyXt6,[id^="section-"]:has(#heading-IuyUKPuiJHJ){
   position:relative !important;overflow:hidden !important;
-  background:radial-gradient(800px 560px at 100% 0%,rgba(245,225,170,.38),rgba(245,225,170,0) 70%),
-             radial-gradient(760px 520px at 0% 100%,rgba(141,180,255,.22),rgba(141,180,255,0) 70%),
-             linear-gradient(180deg,#FFFFFF 0%,#FBFCFF 55%,#F2F6FD 100%) !important
+  background:radial-gradient(900px 620px at 100% 0%,rgba(245,222,160,.55),rgba(245,222,160,0) 70%),
+             radial-gradient(820px 560px at 0% 100%,rgba(141,180,255,.32),rgba(141,180,255,0) 70%),
+             linear-gradient(180deg,#FFFFFF 0%,#FBFCFF 55%,#EFF4FD 100%) !important
 }
 /* stop GHL's own section colour from covering the gradient */
-#section-cWJixkyXt6 > .bg,#section-cWJixkyXt6 .bg-section{background:transparent !important}
+#section-cWJixkyXt6 > .bg,#section-cWJixkyXt6 .bg-section,
+[id^="section-"]:has(#heading-IuyUKPuiJHJ) > .bg,[id^="section-"]:has(#heading-IuyUKPuiJHJ) .bg-section{background:transparent !important}
