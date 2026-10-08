@@ -65,18 +65,9 @@
 /* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
 #section-WFnhUUfW7X > .inner > .c-row > .inner,
 #section-WFnhUUfW7X > .c-row > .inner{display:flex !important;align-items:center !important}
-/* two hero columns on desktop/tablet: text left (about 55%), pipeline graphic right (about 45%), 48px gap */
-@media (min-width:768px){
-  #section-WFnhUUfW7X > .inner > .c-row > .inner,
-  #section-WFnhUUfW7X > .c-row > .inner{gap:48px !important}
-  #section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column:first-child,
-  #section-WFnhUUfW7X > .c-row > .inner > .c-column:first-child{flex:1 1 55% !important;width:auto !important;max-width:none !important;min-width:0 !important}
-  #section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column:last-child:not(:first-child),
-  #section-WFnhUUfW7X > .c-row > .inner > .c-column:last-child:not(:first-child){flex:1 1 45% !important;width:auto !important;max-width:none !important;min-width:0 !important}
-}
-/* text colors on the dark background */
-#section-WFnhUUfW7X h1,#section-WFnhUUfW7X h2,#section-WFnhUUfW7X h3{color:#FFFFFF !important}
-#section-WFnhUUfW7X p{color:rgba(255,255,255,.85) !important}
+/* text colors on the dark background (#sub-heading-WEtIyGduyXd is left out, so it keeps its own GHL styling) */
+#section-WFnhUUfW7X :is(h1,h2,h3):where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *)){color:#FFFFFF !important}
+#section-WFnhUUfW7X p:where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *)){color:rgba(255,255,255,.85) !important}
 
 /* ================= HERO EYEBROW #paragraph-WLTAT6np7-l ================= */
 #paragraph-WLTAT6np7-l .text-output{
@@ -148,11 +139,11 @@
   font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
 }
 #heading-STNTzQPDTuP :is(h1,h2,h3)::before{
-  content:"The phone rings at ";content:"The phone rings at " / "";
+  content:"No more sticky notes, ";content:"No more sticky notes, " / "";
   color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
 }
 #heading-STNTzQPDTuP :is(h1,h2,h3)::after{
-  content:"the worst times.";content:"the worst times." / "";
+  content:"inboxes and voicemails.";content:"inboxes and voicemails." / "";
   background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
   -webkit-background-clip:text !important;background-clip:text !important;
   color:transparent !important;-webkit-text-fill-color:transparent !important;
@@ -175,97 +166,211 @@
   -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important
 }
 #section-RaE-BOzHt4 > div:not(.bg){position:relative !important;z-index:1 !important}
-/* text colors for the dark background */
-#section-RaE-BOzHt4 h1,#section-RaE-BOzHt4 h2,#section-RaE-BOzHt4 h3{color:#FFFFFF !important}
+/* text colors for the dark background (#sub-heading-WEtIyGduyXd is left out, so it keeps its own GHL styling) */
+#section-RaE-BOzHt4 :is(h1,h2,h3):where(:not(#sub-heading-WEtIyGduyXd, #sub-heading-WEtIyGduyXd *)){color:#FFFFFF !important}
 #section-RaE-BOzHt4 .c-paragraph,#section-RaE-BOzHt4 .c-paragraph *,
-#section-RaE-BOzHt4 .c-sub-heading,#section-RaE-BOzHt4 .c-sub-heading *{color:rgba(255,255,255,.85) !important}
+#section-RaE-BOzHt4 .c-sub-heading:where(:not(#sub-heading-WEtIyGduyXd)),#section-RaE-BOzHt4 .c-sub-heading:where(:not(#sub-heading-WEtIyGduyXd)) *{color:rgba(255,255,255,.85) !important}
 /* "WHAT IT HANDLES" eyebrow text in brand gold: replace #EYEBROW-ID with the eyebrow's CSS Selector from GHL */
-#section-RaE-BOzHt4 #EYEBROW-ID,#section-RaE-BOzHt4 #EYEBROW-ID *{color:#D4AF37 !important;-webkit-text-fill-color:#D4AF37 !important}
+#section-RaE-BOzHt4 #EYEBROW-ID,#section-RaE-BOzHt4 #EYEBROW-ID * {
+    color: #D4AF37 !important;
+    -webkit-text-fill-color: #D4AF37 !important
+}
 /* layout like the mockup: two equal columns, max 1200px wide, centered top-to-bottom (font sizes untouched) */
-#section-RaE-BOzHt4 .c-row{max-width:1200px !important;margin-left:auto !important;margin-right:auto !important}
-#section-RaE-BOzHt4 .c-row .c-row > .inner{display:flex !important;flex-wrap:nowrap !important;align-items:center !important;gap:64px !important}
-#section-RaE-BOzHt4 .c-row .c-row > .inner > .c-column{flex:1 1 0 !important;width:auto !important;max-width:none !important;min-width:0 !important}
+#section-RaE-BOzHt4 .c-row {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important
+}
+
+#section-RaE-BOzHt4 .c-row .c-row > .inner {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 64px !important
+}
+
+#section-RaE-BOzHt4 .c-row .c-row > .inner > .c-column {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important
+}
 
 /* ================= HEADLINE #heading-RMBdC9vcGyG: "Professional, friendly" white, "and always on." gold ================= */
 /* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
-#heading-RMBdC9vcGyG :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
-#heading-RMBdC9vcGyG :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
-#heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after{
-  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+#heading-RMBdC9vcGyG :is(h1,h2,h3) {
+    font-size: 0 !important;
+    line-height: 0 !important
 }
-#heading-RMBdC9vcGyG :is(h1,h2,h3)::before{
-  content:"Professional, friendly ";content:"Professional, friendly " / "";
-  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+
+#heading-RMBdC9vcGyG :is(h1,h2,h3) * {
+    font-size: 0 !important;
+    line-height: 0 !important
 }
-#heading-RMBdC9vcGyG :is(h1,h2,h3)::after{
-  content:"and always on.";content:"and always on." / "";
-  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
-  background-size:200% auto !important;background-position:0% center;
-  -webkit-background-clip:text !important;background-clip:text !important;
-  color:transparent !important;-webkit-text-fill-color:transparent !important;
-  -webkit-box-decoration-break:clone;box-decoration-break:clone;
-  animation:lxGoldShift 6s ease-in-out infinite alternate
+
+#heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after {
+    font-size: 68px !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+    letter-spacing: inherit
 }
-@media (max-width:1024px){#heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after{font-size:48px !important}}
-@media (max-width:600px){#heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after{font-size:34px !important}}
+
+#heading-RMBdC9vcGyG :is(h1,h2,h3)::before {
+    content: "Know exactly ";
+    content: "Know exactly " / "";
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important
+}
+
+#heading-RMBdC9vcGyG :is(h1,h2,h3)::after {
+    content: "where every lead stands.";
+    content: "where every lead stands." / "";
+    background-image: linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+    background-size: 200% auto !important;
+    background-position: 0% center;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: lxGoldShift 6s ease-in-out infinite alternate
+}
+
+@media (max-width:1024px) {
+    #heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after {
+        font-size: 48px !important
+    }
+}
+
+@media (max-width:600px) {
+    #heading-RMBdC9vcGyG :is(h1,h2,h3)::before,#heading-RMBdC9vcGyG :is(h1,h2,h3)::after {
+        font-size: 34px !important
+    }
+}
 
 /* ================= HEADLINE #heading-VAwUuJdel-r: "Some calls need a person." navy, "It knows which ones." blue -> gold ================= */
 /* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
-#heading-VAwUuJdel-r :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
-#heading-VAwUuJdel-r :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
-#heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after{
-  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+#heading-VAwUuJdel-r :is(h1,h2,h3) {
+    font-size: 0 !important;
+    line-height: 0 !important
 }
-#heading-VAwUuJdel-r :is(h1,h2,h3)::before{
-  content:"Some calls need a person. ";content:"Some calls need a person. " / "";
-  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+
+#heading-VAwUuJdel-r :is(h1,h2,h3) * {
+    font-size: 0 !important;
+    line-height: 0 !important
 }
-#heading-VAwUuJdel-r :is(h1,h2,h3)::after{
-  content:"It knows which ones.";content:"It knows which ones." / "";
-  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
-  -webkit-background-clip:text !important;background-clip:text !important;
-  color:transparent !important;-webkit-text-fill-color:transparent !important;
-  -webkit-box-decoration-break:slice;box-decoration-break:slice
+
+#heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after {
+    font-size: 68px !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+    letter-spacing: inherit
 }
-@media (max-width:1024px){#heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after{font-size:48px !important}}
-@media (max-width:600px){#heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after{font-size:34px !important}}
+
+#heading-VAwUuJdel-r :is(h1,h2,h3)::before {
+    content: "Some calls need a person. ";
+    content: "Some calls need a person. " / "";
+    color: #0B1F3A !important;
+    -webkit-text-fill-color: #0B1F3A !important
+}
+
+#heading-VAwUuJdel-r :is(h1,h2,h3)::after {
+    content: "It knows which ones.";
+    content: "It knows which ones." / "";
+    background-image: linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-box-decoration-break: slice;
+    box-decoration-break: slice
+}
+
+@media (max-width:1024px) {
+    #heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after {
+        font-size: 48px !important
+    }
+}
+
+@media (max-width:600px) {
+    #heading-VAwUuJdel-r :is(h1,h2,h3)::before,#heading-VAwUuJdel-r :is(h1,h2,h3)::after {
+        font-size: 34px !important
+    }
+}
 
 /* ================= PILL #sub-heading-D9RA6NLBxOj ================= */
-#sub-heading-D9RA6NLBxOj{
-  display:inline-block;position:relative;
-  padding:10px 20px !important;border-radius:999px !important;
-  border:1px solid rgba(212,175,55,.55) !important;background:rgba(255,255,255,.04);
-  box-shadow:0 6px 18px rgba(11,31,58,.08);
-  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;cursor:default
+#sub-heading-D9RA6NLBxOj {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(212,175,55,.55) !important;
+    background: rgba(255,255,255,.04);
+    box-shadow: 0 6px 18px rgba(11,31,58,.08);
+    transition: transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;
+    cursor: default
 }
-#sub-heading-D9RA6NLBxOj:hover{
-  transform:translateY(-3px);border-color:#D4AF37 !important;background:rgba(212,175,55,.08);
-  box-shadow:0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
+
+#sub-heading-D9RA6NLBxOj:hover {
+    transform: translateY(-3px);
+    border-color: #D4AF37 !important;
+    background: rgba(212,175,55,.08);
+    box-shadow: 0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
 }
 
 /* ================= TABLETS & PHONES ================= */
-@media (max-width:900px){
-  #section-RaE-BOzHt4 .c-row .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:32px !important}
-  #section-RaE-BOzHt4 .c-row .c-row > .inner > .c-column{flex:1 1 auto !important;width:100% !important}
+@media (max-width:900px) {
+    #section-RaE-BOzHt4 .c-row .c-row > .inner {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 32px !important
+    }
+
+    #section-RaE-BOzHt4 .c-row .c-row > .inner > .c-column {
+        flex: 1 1 auto !important;
+        width: 100% !important
+    }
 }
-@media (max-width:767px){
+
+@media (max-width:767px) {
   /* phones: hero grows with its content instead of filling the screen */
-  #section-WFnhUUfW7X{min-height:0 !important;padding-top:56px !important;padding-bottom:64px !important}
-  #section-WFnhUUfW7X > .inner > .c-row > .inner,
-  #section-WFnhUUfW7X > .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:40px !important}
-  #section-WFnhUUfW7X > .inner > .c-row > .inner > .c-column,
-  #section-WFnhUUfW7X > .c-row > .inner > .c-column{width:100% !important;max-width:100% !important;flex:0 0 auto !important}
-  #section-5k1pyzb2Go{padding-top:64px !important;padding-bottom:64px !important}
+    #section-WFnhUUfW7X {
+        min-height: 0 !important;
+        padding-top: 56px !important;
+        padding-bottom: 64px !important
+    }
+
+    #section-WFnhUUfW7X > .inner > .c-row > .inner,
+  #section-WFnhUUfW7X > .c-row > .inner {
+        flex-direction: column !important;
+        align-items: stretch !important
+    }
+
+    #section-5k1pyzb2Go {
+        padding-top: 64px !important;
+        padding-bottom: 64px !important
+    }
 }
-@media (max-width:480px){
-  #paragraph-WLTAT6np7-l .text-output p,#paragraph-WLTAT6np7-l .text-output span{font-size:10.5px !important;letter-spacing:.12em !important}
+
+@media (max-width:480px) {
+    #paragraph-WLTAT6np7-l .text-output p,#paragraph-WLTAT6np7-l .text-output span {
+        font-size: 10.5px !important;
+        letter-spacing: .12em !important
+    }
 }
 
 /* ================= VISITORS WHO TURN OFF MOTION ================= */
-@media (prefers-reduced-motion:reduce){
-  #section-WFnhUUfW7X::before,#section-WFnhUUfW7X::after,
+@media (prefers-reduced-motion:reduce) {
+    #section-WFnhUUfW7X::before,#section-WFnhUUfW7X::after,
   #paragraph-WLTAT6np7-l .text-output,#paragraph-WLTAT6np7-l .text-output::before,#paragraph-WLTAT6np7-l .text-output::after,
   #heading-NdNYbhs8feF :is(h1,h2,h3)::after,
-  #heading-RMBdC9vcGyG :is(h1,h2,h3)::after{animation:none !important}
-  #sub-heading-D9RA6NLBxOj,#sub-heading-D9RA6NLBxOj:hover{transition:none !important;transform:none !important}
+  #heading-RMBdC9vcGyG :is(h1,h2,h3)::after {
+        animation: none !important
+    }
+
+    #sub-heading-D9RA6NLBxOj,#sub-heading-D9RA6NLBxOj:hover {
+        transition: none !important;
+        transform: none !important
+    }
 }
