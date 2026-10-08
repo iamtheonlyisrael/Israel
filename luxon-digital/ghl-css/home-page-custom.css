@@ -270,6 +270,17 @@
 body .lxinc .card{border:1px solid rgba(212,175,55,.45) !important}
 body .lxinc .card:hover{border-color:rgba(212,175,55,.8) !important}
 
+/* ================= "WHAT'S INCLUDED" SECTION SIZE (the section holding #heading-OalYygoLtj) =================
+   Same spacing as the "How Luxon Limo AI works" section: ~100px top & bottom, content in a centred 1200px column */
+[id^="section-"]:has(#heading-OalYygoLtj){
+  min-height:0 !important;height:auto !important;
+  padding:100px 24px !important;margin:0 !important
+}
+[id^="section-"]:has(#heading-OalYygoLtj) > .inner{max-width:1200px !important;width:100% !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important}
+[id^="section-"]:has(#heading-OalYygoLtj) .c-row{max-width:1200px !important;width:100% !important;margin-left:auto !important;margin-right:auto !important}
+@media (max-width:1024px){[id^="section-"]:has(#heading-OalYygoLtj){padding:80px 24px !important}}
+@media (max-width:767px){[id^="section-"]:has(#heading-OalYygoLtj){padding:64px 16px 72px !important}}
+
 /* ================= SECTION #section-nx4VXs7wz7 ("How Luxon Limo AI works"): navy background, blue glow top-centre, faint dot grid ================= */
 #section-nx4VXs7wz7{
   position:relative !important;overflow:hidden !important;
