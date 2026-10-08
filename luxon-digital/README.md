@@ -36,8 +36,8 @@ Each page is **one Custom Code block** in `pages/`. Paste the whole file into a 
 | Pricing | `pages/pricing.html` | 3 plans: Essentials $297/mo, Growth $397/mo (+ $1,500 setup), Custom |
 | FAQ | `pages/faq.html` | Jump links + open/close questions (works without any script) |
 | Contact / Book a Demo | `pages/contact.html` | **Calendar embed spot**, what to expect, contact details |
-| Privacy Policy | `pages/privacy-policy.html` | Sticky table of contents. **Placeholder text: final legal copy needed** |
-| Terms & Conditions | `pages/terms-and-conditions.html` | Same layout. **Placeholder text: final legal copy needed** |
+| Privacy Policy | `pages/privacy-policy.html` | Sticky table of contents, "In plain words" summary, full policy incl. SMS/A2P consent wording. Have it reviewed before launch |
+| Terms & Conditions | `pages/terms-and-conditions.html` | Same layout, full terms. Confirm: setup fee refunds, 30-day cancellation, 10-day late payment, 3-month liability cap, Washington / King County law |
 
 **Where to paste embeds** (search the file for these comments):
 - `<!-- CALENDAR: ...` in `demo.html` and `contact.html` → replace the dashed box with the GHL "Book Your AI Demo" calendar embed.

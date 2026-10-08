@@ -229,6 +229,17 @@
 .lxk .doc>div{padding:0 0 32px !important;margin-bottom:32px !important;border-bottom:1px solid #E4E7EB !important;scroll-margin-top:24px !important}
 .lxk .doc h2{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:22px !important;color:#0B1F3A !important;margin-bottom:10px !important}
 .lxk .doc p{font-size:16.5px !important;line-height:1.75 !important;color:#3E4C59 !important}
+.lxk .doc p+p,.lxk .doc p+ul,.lxk .doc ul+p{margin-top:14px !important}
+.lxk .doc h3{font-family:'Montserrat',sans-serif !important;font-weight:700 !important;font-size:17px !important;color:#0B1F3A !important;margin:20px 0 6px !important}
+.lxk .doc ul{padding-left:22px !important}
+.lxk .doc li{list-style:disc !important;font-size:16.5px !important;line-height:1.7 !important;color:#3E4C59 !important;margin:6px 0 !important}
+.lxk .doc li::marker{color:#D4AF37 !important}
+.lxk .doc b{color:#0B1F3A !important;font-weight:600 !important}
+.lxk .doc a{color:#1E4FA8 !important;font-weight:600 !important;overflow-wrap:anywhere !important}
+.lxk .doc a:hover{color:#0B1F3A !important}
+.lxk .doc .sum{padding:22px 24px !important;margin-bottom:36px !important;border-radius:16px !important;background:linear-gradient(135deg,#EEF4FF,#FFF8E6) !important;border:1px solid rgba(30,79,168,.18) !important}
+.lxk .doc .sum h2{font-size:18px !important}
+.lxk .doc .sum li{margin:4px 0 !important}
 .lxk .note{padding:16px 20px !important;border-radius:14px !important;background:#FBF3D9 !important;border:1px dashed #B8962A !important;font-size:14px !important;line-height:1.55 !important;color:#5C4A0C !important;margin-bottom:32px !important}
 
 /* reveal */
