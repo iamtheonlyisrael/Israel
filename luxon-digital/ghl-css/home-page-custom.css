@@ -261,6 +261,9 @@
 }
 @media (max-width:1024px){#heading-OalYygoLtj :is(h1,h2,h3)::before,#heading-OalYygoLtj :is(h1,h2,h3)::after{font-size:48px !important}}
 @media (max-width:600px){#heading-OalYygoLtj :is(h1,h2,h3)::before,#heading-OalYygoLtj :is(h1,h2,h3)::after{font-size:34px !important}}
+/* GHL nests a second heading tag inside this one, so draw the words on the OUTER tag only (stops the duplicate line) */
+#heading-OalYygoLtj :is(h1,h2,h3) :is(h1,h2,h3)::before,#heading-OalYygoLtj :is(h1,h2,h3) :is(h1,h2,h3)::after{content:none !important;display:none !important}
+#heading-OalYygoLtj :is(h1,h2,h3) :is(h1,h2,h3){display:inline !important;margin:0 !important;padding:0 !important}
 
 /* ================= "WHAT'S INCLUDED" GRAPHIC BOXES: clear 1px border ================= */
 body .lxinc .card{border:1px solid rgba(212,175,55,.45) !important}
