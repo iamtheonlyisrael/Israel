@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+/* ================= HERO SECTION #section-nbZfBmNuMl ================= */
+#section-nbZfBmNuMl {
+    position: relative !important;
+    overflow: hidden !important;
+    display: block !important;
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+    min-height: 0 !important;
+    height: auto !important;
+    background: radial-gradient(900px 600px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 60%),
+             radial-gradient(700px 520px at 100% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 60%),
+             linear-gradient(135deg,#061226 0%,#0B1F3A 45%,#0E2B5E 100%) !important
+}
+
+#section-nbZfBmNuMl > .bg,#section-nbZfBmNuMl .bg-section {
+    background: transparent !important
+}
+/* slow drifting blue and gold glows */
+#section-nbZfBmNuMl::before,#section-nbZfBmNuMl::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 520px !important;
+    height: 520px !important;
+    border-radius: 50% !important;
+    filter: blur(90px) !important;
+    pointer-events: none !important;
+    z-index: 0 !important
+}
+
+#section-nbZfBmNuMl::before {
+    left: -160px;
+    top: -140px;
+    background: #2F6FE4 !important;
+    opacity: .35;
+    animation: lxSecFloat 14s ease-in-out infinite
+}
+
+#section-nbZfBmNuMl::after {
+    right: -180px;
+    bottom: -200px;
+    background: #E8C55A !important;
+    opacity: .13;
+    animation: lxSecFloat 18s ease-in-out infinite reverse
+}
+
+@keyframes lxSecFloat {
+    0%,100% {
+        transform: translate(0,0)
+    }
+
+    50% {
+        transform: translate(60px,40px)
+    }
+}
+/* keep GHL's background layer behind and out of the layout; lift only the content above the glows */
+#section-nbZfBmNuMl > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-nbZfBmNuMl > div:not(.bg){position:relative !important;z-index:1 !important}
+/* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
+#section-nbZfBmNuMl > .inner > .c-row > .inner,
+#section-nbZfBmNuMl > .c-row > .inner{display:flex !important;align-items:center !important}
+/* text colors on the dark background (#sub-heading-BiALYLAe0j9 is left out, so it keeps its own GHL styling) */
+#section-nbZfBmNuMl :is(h1,h2,h3):where(:not(#sub-heading-BiALYLAe0j9, #sub-heading-BiALYLAe0j9 *)){color:#FFFFFF !important}
+#section-nbZfBmNuMl p:where(:not(#sub-heading-BiALYLAe0j9, #sub-heading-BiALYLAe0j9 *)){color:rgba(255,255,255,.85) !important}
+
+/* ================= HERO EYEBROW #paragraph-pX9Zq_i8fes ================= */
+#paragraph-pX9Zq_i8fes .text-output{
+  position:relative !important;display:inline-flex !important;align-items:center !important;gap:10px !important;
+  width:auto !important;max-width:100% !important;padding:8px 18px 8px 14px !important;border-radius:999px !important;
+  background:rgba(255,255,255,.06) !important;border:1px solid rgba(212,175,55,.5) !important;overflow:hidden !important;
+  box-shadow:0 0 0 0 rgba(212,175,55,0);
+  animation:lxEyeIn .8s ease both,lxEyeGlow 4s ease-in-out 1s infinite
+}
+#paragraph-pX9Zq_i8fes .text-output::before{
+  content:'' !important;flex:0 0 8px !important;width:8px !important;height:8px !important;border-radius:50% !important;
+  background:#3DDC97 !important;animation:lxEyePing 2s ease-out infinite
+}
+#paragraph-pX9Zq_i8fes .text-output::after{
+  content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:0 !important;width:35% !important;
+  background:linear-gradient(100deg,transparent,rgba(245,220,133,.28),transparent) !important;pointer-events:none !important;
+  transform:translateX(-120%);animation:lxEyeSweep 5s ease-in-out 1.2s infinite
+}
+#paragraph-pX9Zq_i8fes .text-output p,#paragraph-pX9Zq_i8fes .text-output span,#paragraph-pX9Zq_i8fes .text-output div{
+  margin:0 !important;padding:0 !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;
+  font-size:12px !important;line-height:1.35 !important;letter-spacing:.16em !important;text-transform:uppercase !important;
+  color:#F5DC85 !important;text-align:left !important;background:none !important;border:0 !important
+}
+@keyframes lxEyeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lxEyeGlow{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 18px 0 rgba(212,175,55,.28)}}
+@keyframes lxEyePing{0%{box-shadow:0 0 0 0 rgba(61,220,151,.7)}100%{box-shadow:0 0 0 9px rgba(61,220,151,0)}}
+@keyframes lxEyeSweep{0%,55%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+/* ================= HERO HEADLINE #heading-FIkurE0ObCQ: "Answer every call." white, "Even when you can't." gold ================= */
+/* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
+   SIZE: 64px desktop, 46px tablet, 34px phone */
+#heading-FIkurE0ObCQ :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-FIkurE0ObCQ :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-FIkurE0ObCQ :is(h1,h2,h3)::before,#heading-FIkurE0ObCQ :is(h1,h2,h3)::after{
+  font-size:64px !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-FIkurE0ObCQ :is(h1,h2,h3)::before{
+  content:"Your AI automation partner for";content:"Your AI automation partner for" / "";
+  display:block;
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-FIkurE0ObCQ :is(h1,h2,h3)::after{
+  content:"transportation.";content:"transportation." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@keyframes lxGoldShift{to{background-position:100% center}}
+@media (max-width:1024px){#heading-FIkurE0ObCQ :is(h1,h2,h3)::before,#heading-FIkurE0ObCQ :is(h1,h2,h3)::after{font-size:46px !important}}
+@media (max-width:600px){#heading-FIkurE0ObCQ :is(h1,h2,h3)::before,#heading-FIkurE0ObCQ :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= "SOUND FAMILIAR" SECTION #section-s0xogb_XEQ: light blue -> white -> soft gold ================= */
+#section-s0xogb_XEQ{
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),
+             radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 70%),
+             linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 55%,#FFF8E6 100%) !important;
+  padding-top:96px !important;padding-bottom:96px !important
+}
+#section-s0xogb_XEQ > .bg,#section-s0xogb_XEQ .bg-section{background:transparent !important}
+
+/* ================= HEADLINE #heading--TPM-4kkwKT: "The phone rings at" navy, "the worst times." blue -> gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading--TPM-4kkwKT :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading--TPM-4kkwKT :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading--TPM-4kkwKT :is(h1,h2,h3)::before,#heading--TPM-4kkwKT :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading--TPM-4kkwKT :is(h1,h2,h3)::before{
+  content:"The phone rings at ";content:"The phone rings at " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading--TPM-4kkwKT :is(h1,h2,h3)::after{
+  content:"the worst times.";content:"the worst times." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading--TPM-4kkwKT :is(h1,h2,h3)::before,#heading--TPM-4kkwKT :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading--TPM-4kkwKT :is(h1,h2,h3)::before,#heading--TPM-4kkwKT :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= "WHAT IT HANDLES" SECTION #section-vSCUBc6Yug: dark navy gradient + soft dot grid ================= */
+#section-vSCUBc6Yug{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(700px 400px at 50% 0%,rgba(47,111,228,.35),rgba(47,111,228,0) 70%),
+             linear-gradient(160deg,#071528 0%,#0B1F3A 50%,#0E2B5E 100%) !important
+}
+#section-vSCUBc6Yug > .bg,#section-vSCUBc6Yug .bg-section{background:transparent !important}
+#section-vSCUBc6Yug > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-vSCUBc6Yug::before{
+  content:'' !important;position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:0 !important;
+  background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px) !important;background-size:26px 26px !important;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important
+}
+#section-vSCUBc6Yug > div:not(.bg){position:relative !important;z-index:1 !important}
+/* text colors for the dark background (#sub-heading-BiALYLAe0j9 is left out, so it keeps its own GHL styling) */
+#section-vSCUBc6Yug :is(h1,h2,h3):where(:not(#sub-heading-BiALYLAe0j9, #sub-heading-BiALYLAe0j9 *)){color:#FFFFFF !important}
+#section-vSCUBc6Yug .c-paragraph,#section-vSCUBc6Yug .c-paragraph *,
+#section-vSCUBc6Yug .c-sub-heading:where(:not(#sub-heading-BiALYLAe0j9)),#section-vSCUBc6Yug .c-sub-heading:where(:not(#sub-heading-BiALYLAe0j9)) *{color:rgba(255,255,255,.85) !important}
+/* "WHAT IT HANDLES" eyebrow text in brand gold: replace #EYEBROW-ID with the eyebrow's CSS Selector from GHL */
+#section-vSCUBc6Yug #EYEBROW-ID,#section-vSCUBc6Yug #EYEBROW-ID *{color:#D4AF37 !important;-webkit-text-fill-color:#D4AF37 !important}
+/* layout like the mockup: two equal columns, max 1200px wide, centered top-to-bottom (font sizes untouched) */
+#section-vSCUBc6Yug .c-row{max-width:1200px !important;margin-left:auto !important;margin-right:auto !important}
+#section-vSCUBc6Yug .c-row .c-row > .inner{display:flex !important;flex-wrap:nowrap !important;align-items:center !important;gap:64px !important}
+#section-vSCUBc6Yug .c-row .c-row > .inner > .c-column{flex:1 1 0 !important;width:auto !important;max-width:none !important;min-width:0 !important}
+
+/* ================= HEADLINE #heading-7Wsegr1CxST: "Professional, friendly" white, "and always on." gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-7Wsegr1CxST :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-7Wsegr1CxST :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-7Wsegr1CxST :is(h1,h2,h3)::before,#heading-7Wsegr1CxST :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-7Wsegr1CxST :is(h1,h2,h3)::before{
+  content:"Five principles behind ";content:"Five principles behind " / "";
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-7Wsegr1CxST :is(h1,h2,h3)::after{
+  content:"every build.";content:"every build." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@media (max-width:1024px){#heading-7Wsegr1CxST :is(h1,h2,h3)::before,#heading-7Wsegr1CxST :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-7Wsegr1CxST :is(h1,h2,h3)::before,#heading-7Wsegr1CxST :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= HEADLINE #heading-pdfiWH3fOy7: "Some calls need a person." navy, "It knows which ones." blue -> gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-pdfiWH3fOy7 :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-pdfiWH3fOy7 :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-pdfiWH3fOy7 :is(h1,h2,h3)::before,#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-pdfiWH3fOy7 :is(h1,h2,h3)::before{
+  content:"Built around your industry, ";content:"Built around your industry, " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{
+  content:"not retrofitted from another one";content:"not retrofitted from another one." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-pdfiWH3fOy7 :is(h1,h2,h3)::before,#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-pdfiWH3fOy7 :is(h1,h2,h3)::before,#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= PILL #sub-heading-ULxb-syhQq5 ================= */
+#sub-heading-ULxb-syhQq5{
+  display:inline-block;position:relative;
+  padding:10px 20px !important;border-radius:999px !important;
+  border:1px solid rgba(212,175,55,.55) !important;background:rgba(255,255,255,.04);
+  box-shadow:0 6px 18px rgba(11,31,58,.08);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;cursor:default
+}
+#sub-heading-ULxb-syhQq5:hover{
+  transform:translateY(-3px);border-color:#D4AF37 !important;background:rgba(212,175,55,.08);
+  box-shadow:0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
+}
+
+/* ================= TABLETS & PHONES ================= */
+@media (max-width:900px){
+  #section-vSCUBc6Yug .c-row .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:32px !important}
+  #section-vSCUBc6Yug .c-row .c-row > .inner > .c-column{flex:1 1 auto !important;width:100% !important}
+}
+@media (max-width:767px){
+  #section-nbZfBmNuMl{padding-top:56px !important;padding-bottom:64px !important}
+  #section-nbZfBmNuMl > .inner > .c-row > .inner,
+  #section-nbZfBmNuMl > .c-row > .inner{flex-direction:column !important;align-items:stretch !important}
+  #section-s0xogb_XEQ{padding-top:64px !important;padding-bottom:64px !important}
+}
+@media (max-width:480px){
+  #paragraph-pX9Zq_i8fes .text-output p,#paragraph-pX9Zq_i8fes .text-output span{font-size:10.5px !important;letter-spacing:.12em !important}
+}
+
+/* ================= VISITORS WHO TURN OFF MOTION ================= */
+@media (prefers-reduced-motion:reduce){
+  #section-nbZfBmNuMl::before,#section-nbZfBmNuMl::after,
+  #paragraph-pX9Zq_i8fes .text-output,#paragraph-pX9Zq_i8fes .text-output::before,#paragraph-pX9Zq_i8fes .text-output::after,
+  #heading-FIkurE0ObCQ :is(h1,h2,h3)::after,
+  #heading-7Wsegr1CxST :is(h1,h2,h3)::after{animation:none !important}
+  #sub-heading-ULxb-syhQq5,#sub-heading-ULxb-syhQq5:hover{transition:none !important;transform:none !important}
+}
+
+/* ================= "HOW WE WORK" SECTION #section-DsnKB0UTuQ: warm cream with soft gold glow top-right, faint blue glow bottom-left ================= */
+#section-DsnKB0UTuQ{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(900px 520px at 100% 0%,rgba(232,197,90,.30),rgba(232,197,90,0) 70%),
+             radial-gradient(700px 480px at 0% 100%,rgba(141,180,255,.20),rgba(141,180,255,0) 70%),
+             linear-gradient(180deg,#FFF6E0 0%,#FFFBF1 45%,#FFFFFF 100%) !important
+}
+/* stop GHL's own section colour from covering the gradient */
+#section-DsnKB0UTuQ > .bg,#section-DsnKB0UTuQ .bg-section{background:transparent !important}
+
+/* ================= "WHY TRANSPORTATION-SPECIFIC" SECTION #section-HNbxQp56St: white with a soft cream glow top-right and a light blue glow bottom-left ================= */
+#section-HNbxQp56St{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(900px 620px at 100% 0%,rgba(245,222,160,.55),rgba(245,222,160,0) 70%),
+             radial-gradient(820px 560px at 0% 100%,rgba(141,180,255,.32),rgba(141,180,255,0) 70%),
+             linear-gradient(180deg,#FFFFFF 0%,#FBFCFF 55%,#EFF4FD 100%) !important
+}
+/* stop GHL's own section colour from covering the gradient */
+#section-HNbxQp56St > .bg,#section-HNbxQp56St .bg-section{background:transparent !important}
