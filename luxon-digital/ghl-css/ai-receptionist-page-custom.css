@@ -239,12 +239,12 @@
   #heading-pqPxlk-4xv :is(h1,h2,h3)::after{animation:none !important}
 }
 
-/* ================= "QUESTIONS" SECTION #section-cWJixkyXt6: warm cream with soft gold glow top-right, faint blue glow bottom-left ================= */
+/* ================= "QUESTIONS" SECTION #section-cWJixkyXt6: white with a soft cream glow top-right and a light blue glow bottom-left ================= */
 #section-cWJixkyXt6{
   position:relative !important;overflow:hidden !important;
-  background:radial-gradient(900px 520px at 100% 0%,rgba(232,197,90,.30),rgba(232,197,90,0) 70%),
-             radial-gradient(700px 480px at 0% 100%,rgba(141,180,255,.20),rgba(141,180,255,0) 70%),
-             linear-gradient(180deg,#FFF6E0 0%,#FFFBF1 45%,#FFFFFF 100%) !important
+  background:radial-gradient(800px 560px at 100% 0%,rgba(245,225,170,.38),rgba(245,225,170,0) 70%),
+             radial-gradient(760px 520px at 0% 100%,rgba(141,180,255,.22),rgba(141,180,255,0) 70%),
+             linear-gradient(180deg,#FFFFFF 0%,#FBFCFF 55%,#F2F6FD 100%) !important
 }
 /* stop GHL's own section colour from covering the gradient */
 #section-cWJixkyXt6 > .bg,#section-cWJixkyXt6 .bg-section{background:transparent !important}
