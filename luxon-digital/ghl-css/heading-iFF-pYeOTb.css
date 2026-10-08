@@ -1,0 +1,22 @@
+/* ================= HEADLINE #heading-iFF-pYeOTb: "From first ring to" white, "booked ride." gold -> blue gradient ================= */
+/* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
+   SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-iFF-pYeOTb :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-iFF-pYeOTb :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-iFF-pYeOTb :is(h1,h2,h3)::before,#heading-iFF-pYeOTb :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-iFF-pYeOTb :is(h1,h2,h3)::before{
+  content:"From first ring to ";content:"From first ring to " / "";
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+/* one gradient runs across "booked ride." as if it were one line: gold on "booked", fading to soft blue on "ride." */
+#heading-iFF-pYeOTb :is(h1,h2,h3)::after{
+  content:"booked ride.";content:"booked ride." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#E2C15A 30%,#D4AF37 48%,#B9B08A 66%,#9DB3E0 84%,#8DB4FF 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-iFF-pYeOTb :is(h1,h2,h3)::before,#heading-iFF-pYeOTb :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-iFF-pYeOTb :is(h1,h2,h3)::before,#heading-iFF-pYeOTb :is(h1,h2,h3)::after{font-size:34px !important}}
