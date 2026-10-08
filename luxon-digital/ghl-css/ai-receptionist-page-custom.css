@@ -216,16 +216,16 @@
 @media (max-width:1024px){#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:48px !important}}
 @media (max-width:600px){#heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:34px !important}}
 
-/* ================= PILL #sub-heading-S-f24mtRVzg ================= */
+/* ================= PILL #sub-heading-S-f24mtRVzg (no border from this CSS; it uses GHL's own) ================= */
 #sub-heading-S-f24mtRVzg{
   display:inline-block;position:relative;
   padding:10px 20px !important;border-radius:999px !important;
-  border:1px solid rgba(212,175,55,.55) !important;background:rgba(255,255,255,.04);
+  background:rgba(255,255,255,.04);
   box-shadow:0 6px 18px rgba(11,31,58,.08);
   transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;cursor:default
 }
 #sub-heading-S-f24mtRVzg:hover{
-  transform:translateY(-3px);border-color:#D4AF37 !important;background:rgba(212,175,55,.08);
+  transform:translateY(-3px);background:rgba(212,175,55,.08);
   box-shadow:0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
 }
 
