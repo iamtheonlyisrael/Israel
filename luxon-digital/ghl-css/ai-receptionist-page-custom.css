@@ -238,6 +238,7 @@
   #heading-5hAFf2b_drg :is(h1,h2,h3)::after,
   #heading-pqPxlk-4xv :is(h1,h2,h3)::after{animation:none !important}
 }
+
 /* ================= "QUESTIONS" SECTION #section-x58JArUvyz: warm cream with soft gold glow top-right, faint blue glow bottom-left ================= */
 #section-x58JArUvyz{
   position:relative !important;overflow:hidden !important;
@@ -247,4 +248,3 @@
 }
 /* stop GHL's own section colour from covering the gradient */
 #section-x58JArUvyz > .bg,#section-x58JArUvyz .bg-section{background:transparent !important}
-
