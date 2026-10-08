@@ -369,3 +369,37 @@
         transform: none !important
     }
 }
+
+/* ================= "QUESTIONS" SECTION #section-t4INJtfh-K: warm cream with soft gold glow top-right, faint blue glow bottom-left ================= */
+#section-t4INJtfh-K{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(900px 520px at 100% 0%,rgba(232,197,90,.30),rgba(232,197,90,0) 70%),
+             radial-gradient(700px 480px at 0% 100%,rgba(141,180,255,.20),rgba(141,180,255,0) 70%),
+             linear-gradient(180deg,#FFF6E0 0%,#FFFBF1 45%,#FFFFFF 100%) !important
+}
+/* stop GHL's own section colour from covering the gradient */
+#section-t4INJtfh-K > .bg,#section-t4INJtfh-K .bg-section{background:transparent !important}
+
+/* ================= HEADLINE #heading-PIWaK1TjJ_: "About" navy, "follow-up" blue -> gold ================= */
+/* The words are drawn ONCE on the headline element itself, so it can't show twice.
+   If you change the wording in GHL, change the two "content" lines too.
+   SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-PIWaK1TjJ_{display:block !important;font-size:0 !important;line-height:0 !important;text-align:center !important}
+#heading-PIWaK1TjJ_ *{display:inline !important;font-size:0 !important;line-height:0 !important;margin:0 !important;padding:0 !important;border:0 !important}
+#heading-PIWaK1TjJ_ *::before,#heading-PIWaK1TjJ_ *::after{content:none !important;display:none !important}
+#heading-PIWaK1TjJ_::before,#heading-PIWaK1TjJ_::after{
+  display:inline !important;font-family:'Montserrat',sans-serif;font-size:68px !important;font-weight:900 !important;line-height:1.1 !important
+}
+#heading-PIWaK1TjJ_::before{
+  content:"About ";content:"About " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-PIWaK1TjJ_::after{
+  content:"follow-up";content:"follow-up" / "";
+  white-space:nowrap;
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important
+}
+@media (max-width:1024px){#heading-PIWaK1TjJ_::before,#heading-PIWaK1TjJ_::after{font-size:48px !important}}
+@media (max-width:600px){#heading-PIWaK1TjJ_::before,#heading-PIWaK1TjJ_::after{font-size:34px !important}}
