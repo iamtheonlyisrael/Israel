@@ -420,3 +420,45 @@
   #heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after,
   #heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:30px !important}
 }
+
+/* ================= HERO FIX (phones): text uses the full width, nothing squeezed into one letter per line ================= */
+@media (max-width:767px){
+  #section-1T_ti8nH1T .c-row > .inner{display:flex !important;flex-direction:column !important;align-items:stretch !important}
+  #section-1T_ti8nH1T .c-column{width:100% !important;max-width:100% !important;min-width:0 !important;flex:0 0 auto !important}
+  #section-1T_ti8nH1T :is([id^="heading-"],[id^="paragraph-"],[id^="sub-heading-"],[id^="button-"]){max-width:100% !important;min-width:0 !important}
+  #section-1T_ti8nH1T :is([id^="heading-"],[id^="paragraph-"]){width:100% !important}
+  #section-1T_ti8nH1T :is([id^="heading-"],[id^="paragraph-"]) :is(.text-output,h1,h2,h3,p,span){
+    word-break:normal !important;overflow-wrap:normal !important;white-space:normal !important;max-width:100% !important
+  }
+  #section-1T_ti8nH1T [id^="paragraph-"] :is(.text-output,p){width:auto !important;min-width:0 !important}
+  /* hero headline: sized for phones so long words like "business" stay whole */
+  #heading-sdweA4P_CT :is(h1,h2,h3){font-size:40px !important;line-height:1.1 !important}
+}
+@media (max-width:480px){#heading-sdweA4P_CT :is(h1,h2,h3){font-size:34px !important}}
+@media (max-width:380px){#heading-sdweA4P_CT :is(h1,h2,h3){font-size:30px !important}}
+
+/* ================= HEADER (phones): logo on top, "Book" button centred with the ☰ menu on the same line ================= */
+@media (max-width:767px){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{
+    display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;justify-content:center !important;
+    position:relative !important;row-gap:10px !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  /* button: centred on its line */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+    order:1 !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:auto !important;margin:0 auto !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]) [id^="button-"] :is(a,button){
+    display:inline-flex !important;align-items:center !important;justify-content:center !important;
+    height:42px !important;min-height:0 !important;padding:0 18px !important;font-size:14px !important;line-height:1 !important;white-space:nowrap !important;box-sizing:border-box !important
+  }
+  /* ☰ menu: pinned to the right, exactly level with the button */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    order:2 !important;position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:42px !important;
+    flex:0 0 auto !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]) :is(.c-nav-menu,[id^="nav-menu-"]){margin:0 !important;padding:0 !important}
+}
