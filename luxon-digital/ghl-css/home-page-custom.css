@@ -472,3 +472,32 @@ body :is(h1,h2,h3,h4,h5,h6,p,span,a,li,div,button,input,select,textarea,label,st
 
 /* ================= EYEBROWS (GHL sub-heading elements, e.g. "WHAT'S INCLUDED"): Poppins, 14px, weight 700 ================= */
 [id^="sub-heading-"],[id^="sub-heading-"] *{font-size:14px !important;font-weight:700 !important;line-height:1.35 !important}
+
+/* ================= MOBILE POLISH (phones & tablets) ================= */
+@media (max-width:767px){
+  /* breathing room on the left and right, so text never touches the screen edge */
+  #section-MtESZcWKLs,#section-FDnnDrmCik{padding-left:16px !important;padding-right:16px !important}
+  /* hero: stacked columns use the full width */
+  #section-MtESZcWKLs > .inner > .c-row > .inner > .c-column,
+  #section-MtESZcWKLs > .c-row > .inner > .c-column{width:100% !important;max-width:100% !important;flex:0 0 auto !important}
+  /* smaller, lighter glows on small screens */
+  #section-MtESZcWKLs::before,#section-MtESZcWKLs::after{width:340px !important;height:340px !important;filter:blur(70px) !important}
+  /* hero headline: when the gradient words wrap, every line keeps the full gradient */
+  #heading-5Vqia78ZKS span[style*="color"],#heading-5Vqia78ZKS strong,#heading-5Vqia78ZKS b,#heading-5Vqia78ZKS font[color]{-webkit-box-decoration-break:clone !important;box-decoration-break:clone !important}
+  /* hero eyebrow pill wraps neatly instead of spilling out */
+  #paragraph-5uHXiGIeBw .text-output p,#paragraph-5uHXiGIeBw .text-output span{min-width:0 !important;overflow-wrap:anywhere !important}
+  /* long words in any headline never push the page sideways */
+  [id^="heading-"],[id^="heading-"] :is(h1,h2,h3){max-width:100% !important;overflow-wrap:break-word !important}
+}
+@media (max-width:600px){
+  /* body text: 16px on phones (18px on desktop) */
+  [id^="paragraph-"]:not(#paragraph-5uHXiGIeBw) :is(.text-output,p){font-size:16px !important}
+}
+@media (max-width:380px){
+  /* very small phones: headlines 30px */
+  [id^="heading-"] :is(h1,h2,h3){font-size:30px !important}
+  #heading-OalYygoLtj::before,#heading-OalYygoLtj::after,
+  #heading-iFF-pYeOTb :is(h1,h2,h3)::before,#heading-iFF-pYeOTb :is(h1,h2,h3)::after{font-size:30px !important}
+  #paragraph-5uHXiGIeBw .text-output{padding:7px 14px 7px 12px !important}
+  #paragraph-5uHXiGIeBw .text-output p,#paragraph-5uHXiGIeBw .text-output span{font-size:12px !important;letter-spacing:.1em !important}
+}
