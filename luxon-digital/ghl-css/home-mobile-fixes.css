@@ -80,8 +80,6 @@
   font-size:18px !important;font-weight:500 !important;line-height:1.6 !important;letter-spacing:0 !important;text-transform:none !important;
   color:#3E4C59 !important;text-align:center !important;white-space:normal !important;text-wrap:pretty
 }
-/* line breaks typed in GHL are ignored, so the text flows as one paragraph */
-#sub-heading-R9Qhn6mX-_ br{display:none !important}
 @media (max-width:600px){
   #sub-heading-R9Qhn6mX-_,#sub-heading-R9Qhn6mX-_ *{font-size:16px !important;line-height:1.65 !important}
 }
