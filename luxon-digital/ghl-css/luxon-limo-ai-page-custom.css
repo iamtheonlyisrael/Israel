@@ -462,3 +462,23 @@
   }
   [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]) :is(.c-nav-menu,[id^="nav-menu-"]){margin:0 !important;padding:0 !important}
 }
+
+/* ================= HERO SUB-HEADLINE #sub-heading-U09dyDmQ95: normal paragraph, full width (no more one letter per line) ================= */
+#sub-heading-U09dyDmQ95{
+  display:block !important;width:100% !important;max-width:100% !important;min-width:0 !important;flex:1 1 100% !important;
+  height:auto !important;padding-left:0 !important;padding-right:0 !important;box-sizing:border-box !important
+}
+#sub-heading-U09dyDmQ95 > *,
+#sub-heading-U09dyDmQ95 :is(.text-output,h1,h2,h3,h4,h5,h6,p,div){
+  display:block !important;width:100% !important;max-width:100% !important;min-width:0 !important;height:auto !important;
+  margin-left:0 !important;margin-right:0 !important;padding-left:0 !important;padding-right:0 !important;box-sizing:border-box !important
+}
+#sub-heading-U09dyDmQ95,#sub-heading-U09dyDmQ95 *{
+  writing-mode:horizontal-tb !important;word-break:normal !important;overflow-wrap:normal !important;white-space:normal !important;
+  letter-spacing:0 !important;text-transform:none !important;
+  font-size:18px !important;font-weight:500 !important;line-height:1.6 !important;color:rgba(255,255,255,.85) !important
+}
+@media (max-width:767px){
+  #sub-heading-U09dyDmQ95{max-width:560px !important;margin-left:auto !important;margin-right:auto !important}
+  #sub-heading-U09dyDmQ95,#sub-heading-U09dyDmQ95 *{font-size:16px !important;line-height:1.65 !important;text-align:center !important}
+}
