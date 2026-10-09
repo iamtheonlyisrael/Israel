@@ -501,3 +501,98 @@ body :is(h1,h2,h3,h4,h5,h6,p,span,a,li,div,button,input,select,textarea,label,st
   #paragraph-5uHXiGIeBw .text-output{padding:7px 14px 7px 12px !important}
   #paragraph-5uHXiGIeBw .text-output p,#paragraph-5uHXiGIeBw .text-output span{font-size:12px !important;letter-spacing:.1em !important}
 }
+
+/* ================= FORCE-SHOW: "Missed call" + "How Luxon Limo AI works" content on phones ================= */
+@media (max-width:767px){
+  #section-FDnnDrmCik .c-row,#section-nx4VXs7wz7 .c-row,
+  #section-FDnnDrmCik .c-column,#section-nx4VXs7wz7 .c-column{display:block !important;width:100% !important;max-width:100% !important;visibility:visible !important;opacity:1 !important}
+  #section-FDnnDrmCik .c-row > .inner,#section-nx4VXs7wz7 .c-row > .inner{display:flex !important;flex-direction:column !important}
+  #section-FDnnDrmCik :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  #section-nx4VXs7wz7 :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]){display:block !important;visibility:visible !important;opacity:1 !important}
+}
+
+/* ================= HOME: MOBILE FIXES (phones only) ================= */
+@media (max-width:767px){
+
+  /* ---------- 1. HEADER: "Book" button on the same line as the ☰ menu ----------
+     logo on its own line, then the button (left) and the menu (right) side by side */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{
+    display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;
+    align-items:center !important;justify-content:space-between !important;row-gap:10px !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+    width:auto !important;flex:0 1 auto !important;order:1 !important;min-width:0 !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    width:auto !important;flex:0 0 auto !important;order:2 !important;margin-left:auto !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:is(:has([id^="button-"]),:has(.c-nav-menu,[id^="nav-menu-"])) :is([id^="button-"],.c-nav-menu,[id^="nav-menu-"]){
+    margin-top:0 !important;margin-bottom:0 !important
+  }
+  /* slightly smaller button so it fits next to the menu */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]) [id^="button-"] :is(a,button){
+    min-height:0 !important;padding:10px 16px !important;font-size:14px !important;line-height:1.2 !important;white-space:nowrap !important
+  }
+
+  /* ---------- 2. HERO: both buttons first, then ONE tidy checklist underneath ----------
+     (the buttons/checklist row of the hero, not the headline row) */
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) > .inner{
+    display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:10px !important
+  }
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) .c-column,
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) .c-column > .inner{display:contents !important}
+  /* buttons on top, centred, same width */
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) [id^="button-"]{
+    order:1 !important;width:100% !important;max-width:340px !important;margin:0 auto !important;box-sizing:border-box !important
+  }
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) [id^="button-"] :is(a,button){width:100% !important;box-sizing:border-box !important;justify-content:center !important}
+  /* checklist items below, all starting on the same left edge */
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) [id]:not([id^="button-"]):not([id^="row-"]):not([id^="col-"]){
+    order:2 !important;width:100% !important;max-width:340px !important;margin:0 auto !important;
+    padding-left:0 !important;padding-right:0 !important;text-align:left !important
+  }
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) [id]:not([id^="button-"]):not([id^="row-"]):not([id^="col-"]) *{text-align:left !important}
+
+  /* ---------- 3. "You can't answer every call..." paragraph: full width, even lines ---------- */
+  #section-FDnnDrmCik [id^="paragraph-"],
+  #section-FDnnDrmCik [id^="paragraph-"] :is(.text-output,p){
+    width:100% !important;max-width:100% !important;margin-left:0 !important;margin-right:0 !important;
+    padding-left:0 !important;padding-right:0 !important;text-align:center !important
+  }
+  #section-FDnnDrmCik [id^="paragraph-"] :is(.text-output,p){
+    font-size:16px !important;font-weight:500 !important;line-height:1.65 !important;text-wrap:pretty
+  }
+
+  /* ---------- 4. "AI you can trust..." pill: sits right above "It never guesses." ---------- */
+  .lxg .lx-pill{display:table !important;margin:0 0 12px !important}
+  .lxg .lx-pill + h2,.lxg h2{margin-top:0 !important}
+}
+
+/* ================= HEADER BUTTON CENTRED (phones): button in the middle, ☰ menu stays on the right, same line ================= */
+@media (max-width:767px){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{position:relative !important}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+    width:100% !important;flex:0 0 100% !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{display:flex !important;justify-content:center !important;width:auto !important;margin-left:auto !important;margin-right:auto !important}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:var(--lx-btn-h,40px) !important;
+    display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important
+  }
+}
+
+/* ================= SUB-HEADLINE #sub-heading-R9Qhn6mX-_ ("You can't answer every call..."): one full-width paragraph ================= */
+#sub-heading-R9Qhn6mX-_,
+#sub-heading-R9Qhn6mX-_ > *,
+#sub-heading-R9Qhn6mX-_ :is(.text-output,h1,h2,h3,h4,p,div){
+  display:block !important;width:100% !important;max-width:680px !important;min-width:0 !important;flex:1 1 100% !important;
+  margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important;box-sizing:border-box !important
+}
+#sub-heading-R9Qhn6mX-_,#sub-heading-R9Qhn6mX-_ *{
+  font-size:18px !important;font-weight:500 !important;line-height:1.6 !important;letter-spacing:0 !important;text-transform:none !important;
+  color:#3E4C59 !important;text-align:center !important;white-space:normal !important;text-wrap:pretty
+}
+@media (max-width:600px){
+  #sub-heading-R9Qhn6mX-_,#sub-heading-R9Qhn6mX-_ *{font-size:16px !important;line-height:1.65 !important}
+}
