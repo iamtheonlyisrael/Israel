@@ -55,3 +55,26 @@
   .lxg .lx-pill{display:table !important;margin:0 0 12px !important}
   .lxg .lx-pill + h2,.lxg h2{margin-top:0 !important}
 }
+
+/* ================= HEADER BUTTON CENTRED (phones): button in the middle, ☰ menu stays on the right, same line ================= */
+@media (max-width:767px){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{position:relative !important}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+    width:100% !important;flex:0 0 100% !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{display:flex !important;justify-content:center !important;width:auto !important;margin-left:auto !important;margin-right:auto !important}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:var(--lx-btn-h,40px) !important;
+    display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important
+  }
+}
+
+/* ================= SUB-HEADLINE #sub-heading-R9Qhn6mX-_ ("You can't answer every call..."): even, readable lines ================= */
+#sub-heading-R9Qhn6mX-_{width:100% !important;max-width:680px !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important;text-align:center !important}
+#sub-heading-R9Qhn6mX-_,#sub-heading-R9Qhn6mX-_ *{
+  font-size:18px !important;font-weight:500 !important;line-height:1.6 !important;letter-spacing:0 !important;text-transform:none !important;
+  color:#3E4C59 !important;text-align:center !important;max-width:100% !important;text-wrap:pretty
+}
+@media (max-width:600px){
+  #sub-heading-R9Qhn6mX-_,#sub-heading-R9Qhn6mX-_ *{font-size:16px !important;line-height:1.65 !important}
+}
