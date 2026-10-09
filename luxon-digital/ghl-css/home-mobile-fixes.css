@@ -1,0 +1,57 @@
+/* ================= HOME: MOBILE FIXES (phones only) ================= */
+@media (max-width:767px){
+
+  /* ---------- 1. HEADER: "Book" button on the same line as the ☰ menu ----------
+     logo on its own line, then the button (left) and the menu (right) side by side */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{
+    display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;
+    align-items:center !important;justify-content:space-between !important;row-gap:10px !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+    width:auto !important;flex:0 1 auto !important;order:1 !important;min-width:0 !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    width:auto !important;flex:0 0 auto !important;order:2 !important;margin-left:auto !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:is(:has([id^="button-"]),:has(.c-nav-menu,[id^="nav-menu-"])) :is([id^="button-"],.c-nav-menu,[id^="nav-menu-"]){
+    margin-top:0 !important;margin-bottom:0 !important
+  }
+  /* slightly smaller button so it fits next to the menu */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]) [id^="button-"] :is(a,button){
+    min-height:0 !important;padding:10px 16px !important;font-size:14px !important;line-height:1.2 !important;white-space:nowrap !important
+  }
+
+  /* ---------- 2. HERO: both buttons first, then ONE tidy checklist underneath ----------
+     (the buttons/checklist row of the hero, not the headline row) */
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) > .inner{
+    display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:10px !important
+  }
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) .c-column,
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) .c-column > .inner{display:contents !important}
+  /* buttons on top, centred, same width */
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) [id^="button-"]{
+    order:1 !important;width:100% !important;max-width:340px !important;margin:0 auto !important;box-sizing:border-box !important
+  }
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) [id^="button-"] :is(a,button){width:100% !important;box-sizing:border-box !important;justify-content:center !important}
+  /* checklist items below, all starting on the same left edge */
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) [id]:not([id^="button-"]):not([id^="row-"]):not([id^="col-"]){
+    order:2 !important;width:100% !important;max-width:340px !important;margin:0 auto !important;
+    padding-left:0 !important;padding-right:0 !important;text-align:left !important
+  }
+  #section-MtESZcWKLs .c-row:has([id^="button-"]):not(:has(#heading-5Vqia78ZKS)) [id]:not([id^="button-"]):not([id^="row-"]):not([id^="col-"]) *{text-align:left !important}
+
+  /* ---------- 3. "You can't answer every call..." paragraph: full width, even lines ---------- */
+  #section-FDnnDrmCik [id^="paragraph-"],
+  #section-FDnnDrmCik [id^="paragraph-"] :is(.text-output,p){
+    width:100% !important;max-width:100% !important;margin-left:0 !important;margin-right:0 !important;
+    padding-left:0 !important;padding-right:0 !important;text-align:center !important
+  }
+  #section-FDnnDrmCik [id^="paragraph-"] :is(.text-output,p){
+    font-size:16px !important;font-weight:500 !important;line-height:1.65 !important;text-wrap:pretty
+  }
+
+  /* ---------- 4. "AI you can trust..." pill: sits right above "It never guesses." ---------- */
+  .lxg .lx-pill{display:table !important;margin:0 0 12px !important}
+  .lxg .lx-pill + h2,.lxg h2{margin-top:0 !important}
+}
