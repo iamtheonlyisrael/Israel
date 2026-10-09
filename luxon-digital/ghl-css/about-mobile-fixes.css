@@ -1,0 +1,67 @@
+/* ================= HEADER (phones): logo on top, "Book" button centred with the ☰ menu on the same line ================= */
+@media (max-width:767px){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{
+    display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;justify-content:center !important;
+    position:relative !important;row-gap:10px !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  /* button: centred on its line */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+    order:1 !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:auto !important;margin:0 auto !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]) [id^="button-"] :is(a,button){
+    display:inline-flex !important;align-items:center !important;justify-content:center !important;
+    height:42px !important;min-height:0 !important;padding:0 18px !important;font-size:14px !important;line-height:1 !important;white-space:nowrap !important;box-sizing:border-box !important
+  }
+  /* ☰ menu: pinned to the right, exactly level with the button */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    order:2 !important;position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:42px !important;
+    flex:0 0 auto !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important;
+    background:transparent !important;overflow:visible !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]) :is(.c-nav-menu,[id^="nav-menu-"]){margin:0 !important;padding:0 !important}
+}
+
+/* ================= ABOUT PAGE: MOBILE FIXES (phones only) ================= */
+@media (max-width:767px){
+  /* breathing room on the left and right */
+  #section-nbZfBmNuMl,#section-s0xogb_XEQ,#section-vSCUBc6Yug,#section-DsnKB0UTuQ,#section-HNbxQp56St{padding-left:16px !important;padding-right:16px !important}
+  #section-nbZfBmNuMl::before,#section-nbZfBmNuMl::after{width:340px !important;height:340px !important;filter:blur(70px) !important}
+
+  /* ---------- 2. HERO BUTTONS: both centred, same width, one under the other ---------- */
+  #section-nbZfBmNuMl .c-row:has([id^="button-"]):not(:has(.c-row)) > .inner{display:flex !important;flex-direction:column !important;flex-wrap:nowrap !important;align-items:stretch !important;gap:12px !important}
+  #section-nbZfBmNuMl .c-row:has([id^="button-"]) .c-column:has([id^="button-"]){width:100% !important;max-width:100% !important;flex:0 0 auto !important}
+  #section-nbZfBmNuMl [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:100% !important;max-width:340px !important;
+    margin-left:auto !important;margin-right:auto !important;float:none !important;text-align:center !important;box-sizing:border-box !important
+  }
+  #section-nbZfBmNuMl [id^="button-"] :is(a,button){
+    width:100% !important;box-sizing:border-box !important;justify-content:center !important;text-align:center !important;
+    margin-left:0 !important;margin-right:0 !important
+  }
+  #section-nbZfBmNuMl [id^="button-"] + [id^="button-"]{margin-top:12px !important}
+
+  /* ---------- 3. EMPTY SECTIONS (light, navy "principles", cream "how we work", white "why transportation"): show their content on phones ---------- */
+  #section-s0xogb_XEQ .c-row,#section-vSCUBc6Yug .c-row,#section-DsnKB0UTuQ .c-row,#section-HNbxQp56St .c-row,
+  #section-s0xogb_XEQ .c-column,#section-vSCUBc6Yug .c-column,#section-DsnKB0UTuQ .c-column,#section-HNbxQp56St .c-column{display:block !important;width:100% !important;max-width:100% !important;visibility:visible !important;opacity:1 !important}
+  #section-s0xogb_XEQ .c-row > .inner,#section-vSCUBc6Yug .c-row > .inner,#section-DsnKB0UTuQ .c-row > .inner,#section-HNbxQp56St .c-row > .inner{display:flex !important;flex-direction:column !important}
+  #section-s0xogb_XEQ :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  #section-vSCUBc6Yug :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  #section-DsnKB0UTuQ :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  #section-HNbxQp56St :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]){display:block !important;visibility:visible !important;opacity:1 !important}
+
+  /* ---------- 4. HEADLINES (all native headlines on this page): phone size, whole words only ---------- */
+  [id^="heading-"] :is(h1,h2,h3){font-size:34px !important;line-height:1.12 !important}
+  [id^="heading-"] :is(h1,h2,h3) *{font-size:inherit !important;line-height:inherit !important}
+  [id^="heading-"],[id^="heading-"] *{word-break:normal !important;overflow-wrap:normal !important;hyphens:none !important;max-width:100% !important}
+}
+@media (max-width:380px){
+  [id^="heading-"] :is(h1,h2,h3){font-size:30px !important}
+  #heading-FIkurE0ObCQ :is(h1,h2,h3)::before,#heading-FIkurE0ObCQ :is(h1,h2,h3)::after,
+  #heading--TPM-4kkwKT :is(h1,h2,h3)::before,#heading--TPM-4kkwKT :is(h1,h2,h3)::after,
+  #heading-7Wsegr1CxST :is(h1,h2,h3)::before,#heading-7Wsegr1CxST :is(h1,h2,h3)::after,
+  #heading-pdfiWH3fOy7 :is(h1,h2,h3)::before,#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{font-size:30px !important}
+}
