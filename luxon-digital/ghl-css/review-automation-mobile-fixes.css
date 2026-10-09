@@ -1,0 +1,38 @@
+/* ================= REVIEW AUTOMATION PAGE: MOBILE FIXES (phones only) ================= */
+@media (max-width:767px){
+  /* breathing room on the left and right */
+  #section-PlQCzksevD,#section-1ztsVhYw-g,#section-vw3FA7PYAd{padding-left:16px !important;padding-right:16px !important}
+  #section-PlQCzksevD::before,#section-PlQCzksevD::after{width:340px !important;height:340px !important;filter:blur(70px) !important}
+
+  /* ---------- 2. HERO BUTTONS: both centred, same width, one under the other ---------- */
+  #section-PlQCzksevD .c-row:has([id^="button-"]):not(:has(.c-row)) > .inner{display:flex !important;flex-direction:column !important;flex-wrap:nowrap !important;align-items:stretch !important;gap:12px !important}
+  #section-PlQCzksevD .c-row:has([id^="button-"]) .c-column:has([id^="button-"]){width:100% !important;max-width:100% !important;flex:0 0 auto !important}
+  #section-PlQCzksevD [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:100% !important;max-width:340px !important;
+    margin-left:auto !important;margin-right:auto !important;float:none !important;text-align:center !important;box-sizing:border-box !important
+  }
+  #section-PlQCzksevD [id^="button-"] :is(a,button){
+    width:100% !important;box-sizing:border-box !important;justify-content:center !important;text-align:center !important;
+    margin-left:0 !important;margin-right:0 !important
+  }
+  #section-PlQCzksevD [id^="button-"] + [id^="button-"]{margin-top:12px !important}
+
+  /* ---------- 3. "SOUND FAMILIAR" + "WHAT IT HANDLES": show their content on phones ---------- */
+  #section-1ztsVhYw-g .c-row,#section-vw3FA7PYAd .c-row,
+  #section-1ztsVhYw-g .c-column,#section-vw3FA7PYAd .c-column{display:block !important;width:100% !important;max-width:100% !important;visibility:visible !important;opacity:1 !important}
+  #section-1ztsVhYw-g .c-row > .inner,#section-vw3FA7PYAd .c-row > .inner{display:flex !important;flex-direction:column !important}
+  #section-1ztsVhYw-g :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  #section-vw3FA7PYAd :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]){display:block !important;visibility:visible !important;opacity:1 !important}
+
+  /* ---------- 4. HEADLINES (all native headlines on this page): phone size, whole words only ---------- */
+  [id^="heading-"] :is(h1,h2,h3){font-size:34px !important;line-height:1.12 !important}
+  [id^="heading-"] :is(h1,h2,h3) *{font-size:inherit !important;line-height:inherit !important}
+  [id^="heading-"],[id^="heading-"] *{word-break:normal !important;overflow-wrap:normal !important;hyphens:none !important;max-width:100% !important}
+}
+@media (max-width:380px){
+  [id^="heading-"] :is(h1,h2,h3){font-size:30px !important}
+  #heading-9HJmDPolDwv :is(h1,h2,h3)::before,#heading-9HJmDPolDwv :is(h1,h2,h3)::after,
+  #heading-n1ZilFaR_wI :is(h1,h2,h3)::before,#heading-n1ZilFaR_wI :is(h1,h2,h3)::after,
+  #heading-96vpGDH18Sv :is(h1,h2,h3)::before,#heading-96vpGDH18Sv :is(h1,h2,h3)::after,
+  #heading-YdhIAZqGf3Q :is(h1,h2,h3)::before,#heading-YdhIAZqGf3Q :is(h1,h2,h3)::after{font-size:30px !important}
+}
