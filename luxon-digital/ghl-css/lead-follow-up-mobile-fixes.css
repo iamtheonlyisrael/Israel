@@ -25,7 +25,7 @@
   #section-vXkNektqEi :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
   #section-t4INJtfh-K :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]){display:block !important;visibility:visible !important;opacity:1 !important}
 
-  /* ---------- 4. HEADLINES ("About the AI Receptionist" and others): phone size, whole words only ---------- */
+  /* ---------- 4. HEADLINES (all native headlines on this page): phone size, whole words only ---------- */
   [id^="heading-"] :is(h1,h2,h3){font-size:34px !important;line-height:1.12 !important}
   [id^="heading-"] :is(h1,h2,h3) *{font-size:inherit !important;line-height:inherit !important}
   [id^="heading-"],[id^="heading-"] *{word-break:normal !important;overflow-wrap:normal !important;hyphens:none !important;max-width:100% !important}
