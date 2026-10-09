@@ -1,0 +1,38 @@
+/* ================= AI RECEPTIONIST PAGE: MOBILE FIXES (phones only) ================= */
+@media (max-width:767px){
+  /* breathing room on the left and right */
+  #section-l_Iy2VI3_z,#section-zqZgH5slcO,#section-lWYX6_TggK{padding-left:16px !important;padding-right:16px !important}
+  #section-l_Iy2VI3_z::before,#section-l_Iy2VI3_z::after{width:340px !important;height:340px !important;filter:blur(70px) !important}
+
+  /* ---------- 2. HERO BUTTONS: both centred, same width, one under the other ---------- */
+  #section-l_Iy2VI3_z .c-row:has([id^="button-"]):not(:has(.c-row)) > .inner{display:flex !important;flex-direction:column !important;flex-wrap:nowrap !important;align-items:stretch !important;gap:12px !important}
+  #section-l_Iy2VI3_z .c-row:has([id^="button-"]) .c-column:has([id^="button-"]){width:100% !important;max-width:100% !important;flex:0 0 auto !important}
+  #section-l_Iy2VI3_z [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:100% !important;max-width:340px !important;
+    margin-left:auto !important;margin-right:auto !important;float:none !important;text-align:center !important;box-sizing:border-box !important
+  }
+  #section-l_Iy2VI3_z [id^="button-"] :is(a,button){
+    width:100% !important;box-sizing:border-box !important;justify-content:center !important;text-align:center !important;
+    margin-left:0 !important;margin-right:0 !important
+  }
+  #section-l_Iy2VI3_z [id^="button-"] + [id^="button-"]{margin-top:12px !important}
+
+  /* ---------- 3. "SOUND FAMILIAR" + "WHAT IT HANDLES": show their content on phones ---------- */
+  #section-zqZgH5slcO .c-row,#section-lWYX6_TggK .c-row,
+  #section-zqZgH5slcO .c-column,#section-lWYX6_TggK .c-column{display:block !important;width:100% !important;max-width:100% !important;visibility:visible !important;opacity:1 !important}
+  #section-zqZgH5slcO .c-row > .inner,#section-lWYX6_TggK .c-row > .inner{display:flex !important;flex-direction:column !important}
+  #section-zqZgH5slcO :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  #section-lWYX6_TggK :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]){display:block !important;visibility:visible !important;opacity:1 !important}
+
+  /* ---------- 4. HEADLINES ("About the AI Receptionist" and others): phone size, whole words only ---------- */
+  [id^="heading-"] :is(h1,h2,h3){font-size:34px !important;line-height:1.12 !important}
+  [id^="heading-"] :is(h1,h2,h3) *{font-size:inherit !important;line-height:inherit !important}
+  [id^="heading-"],[id^="heading-"] *{word-break:normal !important;overflow-wrap:normal !important;hyphens:none !important;max-width:100% !important}
+}
+@media (max-width:380px){
+  [id^="heading-"] :is(h1,h2,h3){font-size:30px !important}
+  #heading-5hAFf2b_drg :is(h1,h2,h3)::before,#heading-5hAFf2b_drg :is(h1,h2,h3)::after,
+  #heading-mYw65cJCjI2 :is(h1,h2,h3)::before,#heading-mYw65cJCjI2 :is(h1,h2,h3)::after,
+  #heading-pqPxlk-4xv :is(h1,h2,h3)::before,#heading-pqPxlk-4xv :is(h1,h2,h3)::after,
+  #heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:30px !important}
+}
