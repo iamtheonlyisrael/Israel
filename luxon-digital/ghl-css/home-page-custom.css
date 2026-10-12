@@ -642,3 +642,12 @@ html body .lxfs h2 .lx-gt{display:block !important;background:linear-gradient(18
 html body .lxfs h2{font-size:min(68px,10.2cqi) !important}
 @media (max-width:1024px){html body .lxfs h2{font-size:min(48px,10.2cqi) !important}}
 @media (max-width:600px){html body .lxfs h2{font-size:min(34px,10.2cqi) !important}}
+
+/* ================= "IT NEVER GUESSES. IT HANDS OFF." IN TWO LINES =================
+   Line 1 "It never guesses.", line 2 "It hands off." The size follows the column width (up to 68px)
+   so each phrase always fits on its own line. */
+html body .lxg .lx-grid > div:first-child{container-type:inline-size !important}
+html body .lxg h2 .lx-gt{display:block !important;width:fit-content !important}
+html body .lxg h2{font-size:min(68px,10.4cqi) !important}
+@media (max-width:1024px){html body .lxg h2{font-size:min(48px,10.4cqi) !important}}
+@media (max-width:600px){html body .lxg h2{font-size:min(34px,10.4cqi) !important}}
