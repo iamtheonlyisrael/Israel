@@ -1,7 +1,9 @@
 <div class="lxsoc">
 <style>
 .lxsoc,.lxsoc *{box-sizing:border-box !important}
-.lxsoc{display:flex !important;flex-wrap:wrap !important;justify-content:center !important;gap:12px !important;margin:0 auto !important;padding:0 !important}
+.lxsoc{display:flex !important;flex-wrap:wrap !important;justify-content:flex-start !important;gap:12px !important;width:100% !important;margin:0 !important;padding:0 !important}
+/* the GHL element around the icons: no centring, no extra indent, so the icons start at the same left edge as the text above */
+:has(> .lxsoc){width:100% !important;max-width:100% !important;margin-left:0 !important;padding-left:0 !important;text-align:left !important;justify-content:flex-start !important;align-items:flex-start !important}
 .lxsoc a{display:flex !important;align-items:center !important;justify-content:center !important;width:44px !important;height:44px !important;border-radius:12px !important;
   border:1px solid rgba(255,255,255,.18) !important;background:rgba(255,255,255,.02) !important;color:#D4AF37 !important;text-decoration:none !important;
   transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease !important}
