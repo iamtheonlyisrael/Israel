@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
 
 /* ================= HERO SECTION #section-nbZfBmNuMl ================= */
 #section-nbZfBmNuMl {
@@ -366,3 +366,34 @@ html body .lxfs h2 .lx-gt{display:block !important;background:linear-gradient(18
 html body .lxfs h2{font-size:min(68px,10.2cqi) !important}
 @media (max-width:1024px){html body .lxfs h2{font-size:min(48px,10.2cqi) !important}}
 @media (max-width:600px){html body .lxfs h2{font-size:min(34px,10.2cqi) !important}}
+
+/* ================= ALL HEADLINES ON THIS PAGE: 68px, weight 900, flexible on every device =================
+   Desktop and laptop (wider than 1024px): every headline is exactly 68px, weight 900.
+   Tablets and phones: the size shrinks smoothly with the screen (about 43px on a tablet, about 34px on a phone,
+   never below 28px) so the words always fit. Lines are balanced, words are never split, and any size set in GHL is overridden. */
+/* normal GHL headlines */
+[id^="heading-"]:not(#heading--TPM-4kkwKT):not(#heading-7Wsegr1CxST):not(#heading-FIkurE0ObCQ):not(#heading-pdfiWH3fOy7) :is(h1,h2,h3,h4,h5,h6){
+  font-size:clamp(28px,5.6vw,68px) !important;line-height:1.08 !important;font-weight:900 !important;
+  text-wrap:balance !important;word-break:normal !important;overflow-wrap:normal !important;hyphens:none !important;max-width:100% !important
+}
+[id^="heading-"]:not(#heading--TPM-4kkwKT):not(#heading-7Wsegr1CxST):not(#heading-FIkurE0ObCQ):not(#heading-pdfiWH3fOy7) :is(h1,h2,h3,h4,h5,h6) *{font-size:inherit !important;line-height:inherit !important;font-weight:900 !important}
+@media (min-width:1025px){[id^="heading-"]:not(#heading--TPM-4kkwKT):not(#heading-7Wsegr1CxST):not(#heading-FIkurE0ObCQ):not(#heading-pdfiWH3fOy7) :is(h1,h2,h3,h4,h5,h6){font-size:68px !important}}
+@media (max-width:600px){[id^="heading-"]:not(#heading--TPM-4kkwKT):not(#heading-7Wsegr1CxST):not(#heading-FIkurE0ObCQ):not(#heading-pdfiWH3fOy7) :is(h1,h2,h3,h4,h5,h6){font-size:clamp(28px,8.6vw,40px) !important}}
+/* the headlines drawn by this CSS (their real text stays hidden at size 0) */
+#heading--TPM-4kkwKT :is(h1,h2,h3)::before,#heading--TPM-4kkwKT :is(h1,h2,h3)::after,
+  #heading-7Wsegr1CxST :is(h1,h2,h3)::before,#heading-7Wsegr1CxST :is(h1,h2,h3)::after,
+  #heading-FIkurE0ObCQ :is(h1,h2,h3)::before,#heading-FIkurE0ObCQ :is(h1,h2,h3)::after,
+  #heading-pdfiWH3fOy7 :is(h1,h2,h3)::before,#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{font-size:clamp(28px,5.6vw,68px) !important;line-height:1.08 !important;font-weight:900 !important}
+#heading--TPM-4kkwKT :is(h1,h2,h3),#heading-7Wsegr1CxST :is(h1,h2,h3),#heading-FIkurE0ObCQ :is(h1,h2,h3),#heading-pdfiWH3fOy7 :is(h1,h2,h3){text-wrap:balance !important}
+@media (min-width:1025px){
+  #heading--TPM-4kkwKT :is(h1,h2,h3)::before,#heading--TPM-4kkwKT :is(h1,h2,h3)::after,
+  #heading-7Wsegr1CxST :is(h1,h2,h3)::before,#heading-7Wsegr1CxST :is(h1,h2,h3)::after,
+  #heading-FIkurE0ObCQ :is(h1,h2,h3)::before,#heading-FIkurE0ObCQ :is(h1,h2,h3)::after,
+  #heading-pdfiWH3fOy7 :is(h1,h2,h3)::before,#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{font-size:68px !important}
+}
+@media (max-width:600px){
+  #heading--TPM-4kkwKT :is(h1,h2,h3)::before,#heading--TPM-4kkwKT :is(h1,h2,h3)::after,
+  #heading-7Wsegr1CxST :is(h1,h2,h3)::before,#heading-7Wsegr1CxST :is(h1,h2,h3)::after,
+  #heading-FIkurE0ObCQ :is(h1,h2,h3)::before,#heading-FIkurE0ObCQ :is(h1,h2,h3)::after,
+  #heading-pdfiWH3fOy7 :is(h1,h2,h3)::before,#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{font-size:clamp(28px,8.6vw,40px) !important}
+}

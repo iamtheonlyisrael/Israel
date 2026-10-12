@@ -535,3 +535,10 @@
   #heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after,
   #heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:clamp(28px,8.6vw,40px) !important}
 }
+
+/* ================= DESKTOP: EVERY HEADLINE EXACTLY 68px, WEIGHT 900 (wider than 1024px) ================= */
+@media (min-width:1025px){
+  [id^="heading-"]:not(#heading-aWfrB5ZTKz):not(#heading-dedkB9mjG9) :is(h1,h2,h3,h4,h5,h6){font-size:68px !important;font-weight:900 !important}
+  #heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after,
+  #heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:68px !important;font-weight:900 !important}
+}

@@ -651,3 +651,28 @@ html body .lxg h2 .lx-gt{display:block !important;width:fit-content !important}
 html body .lxg h2{font-size:min(68px,10.4cqi) !important}
 @media (max-width:1024px){html body .lxg h2{font-size:min(48px,10.4cqi) !important}}
 @media (max-width:600px){html body .lxg h2{font-size:min(34px,10.4cqi) !important}}
+
+/* ================= ALL HEADLINES ON THIS PAGE: 68px, weight 900, flexible on every device =================
+   Desktop and laptop (wider than 1024px): every headline is exactly 68px, weight 900.
+   Tablets and phones: the size shrinks smoothly with the screen (about 43px on a tablet, about 34px on a phone,
+   never below 28px) so the words always fit. Lines are balanced, words are never split, and any size set in GHL is overridden. */
+/* normal GHL headlines */
+[id^="heading-"]:not(#heading-iFF-pYeOTb):not(#heading-OalYygoLtj) :is(h1,h2,h3,h4,h5,h6){
+  font-size:clamp(28px,5.6vw,68px) !important;line-height:1.08 !important;font-weight:900 !important;
+  text-wrap:balance !important;word-break:normal !important;overflow-wrap:normal !important;hyphens:none !important;max-width:100% !important
+}
+[id^="heading-"]:not(#heading-iFF-pYeOTb):not(#heading-OalYygoLtj) :is(h1,h2,h3,h4,h5,h6) *{font-size:inherit !important;line-height:inherit !important;font-weight:900 !important}
+@media (min-width:1025px){[id^="heading-"]:not(#heading-iFF-pYeOTb):not(#heading-OalYygoLtj) :is(h1,h2,h3,h4,h5,h6){font-size:68px !important}}
+@media (max-width:600px){[id^="heading-"]:not(#heading-iFF-pYeOTb):not(#heading-OalYygoLtj) :is(h1,h2,h3,h4,h5,h6){font-size:clamp(28px,8.6vw,40px) !important}}
+/* the headlines drawn by this CSS (their real text stays hidden at size 0) */
+#heading-iFF-pYeOTb :is(h1,h2,h3)::before,#heading-iFF-pYeOTb :is(h1,h2,h3)::after,
+  #heading-OalYygoLtj::before,#heading-OalYygoLtj::after{font-size:clamp(28px,5.6vw,68px) !important;line-height:1.08 !important;font-weight:900 !important}
+#heading-iFF-pYeOTb :is(h1,h2,h3),#heading-OalYygoLtj{text-wrap:balance !important}
+@media (min-width:1025px){
+  #heading-iFF-pYeOTb :is(h1,h2,h3)::before,#heading-iFF-pYeOTb :is(h1,h2,h3)::after,
+  #heading-OalYygoLtj::before,#heading-OalYygoLtj::after{font-size:68px !important}
+}
+@media (max-width:600px){
+  #heading-iFF-pYeOTb :is(h1,h2,h3)::before,#heading-iFF-pYeOTb :is(h1,h2,h3)::after,
+  #heading-OalYygoLtj::before,#heading-OalYygoLtj::after{font-size:clamp(28px,8.6vw,40px) !important}
+}
