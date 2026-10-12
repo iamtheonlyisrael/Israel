@@ -604,3 +604,16 @@ body :is(h1,h2,h3,h4,h5,h6,p,span,a,li,div,button,input,select,textarea,label,st
   [id^="section-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="section-"]:has(.lxsoc))),
   [id^="row-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="row-"]:has(.lxsoc))){display:none !important}
 }
+
+/* ================= ALL HEADLINES: 68px, weight 900 (desktop) =================
+   Every GHL headline on this page (#heading-...), including the ones drawn by CSS (::before / ::after).
+   Tablets and phones keep smaller sizes so the words fit the screen (48px tablet, 34px phone, 30px small phone). */
+@media (min-width:1025px){
+  [id^="heading-"] :is(h1,h2,h3,h4,h5,h6),
+  [id^="heading-"] :is(h1,h2,h3,h4,h5,h6)::before,[id^="heading-"] :is(h1,h2,h3,h4,h5,h6)::after,
+  [id^="heading-"]::before,[id^="heading-"]::after{font-size:68px !important;font-weight:900 !important;line-height:1.1 !important}
+  [id^="heading-"] :is(h1,h2,h3,h4,h5,h6) *{font-size:inherit !important;font-weight:900 !important;line-height:inherit !important}
+}
+[id^="heading-"] :is(h1,h2,h3,h4,h5,h6),[id^="heading-"] :is(h1,h2,h3,h4,h5,h6) *,
+[id^="heading-"] :is(h1,h2,h3,h4,h5,h6)::before,[id^="heading-"] :is(h1,h2,h3,h4,h5,h6)::after,
+[id^="heading-"]::before,[id^="heading-"]::after{font-weight:900 !important}
