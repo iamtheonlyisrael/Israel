@@ -1,0 +1,66 @@
+/* ================= HEADER (phones): logo on top, "Book" button centred with the ☰ menu on the same line ================= */
+@media (max-width:767px){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{
+    display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;justify-content:center !important;
+    position:relative !important;row-gap:10px !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  /* button: centred on its line */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+    order:1 !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:auto !important;margin:0 auto !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]) [id^="button-"] :is(a,button){
+    display:inline-flex !important;align-items:center !important;justify-content:center !important;
+    height:42px !important;min-height:0 !important;padding:0 18px !important;font-size:14px !important;line-height:1 !important;white-space:nowrap !important;box-sizing:border-box !important
+  }
+  /* ☰ menu: pinned to the right, exactly level with the button, no white box */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    order:2 !important;position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:42px !important;
+    flex:0 0 auto !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important;
+    background:transparent !important;overflow:visible !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]) :is(.c-nav-menu,[id^="nav-menu-"]){
+    margin:0 !important;padding:0 !important;background:transparent !important;height:auto !important;min-height:0 !important
+  }
+}
+
+/* ================= CONTACT HERO (phones): "Pick a time that works..." sub-headline full width, centred ================= */
+@media (max-width:767px){
+  #section-NuhM9FyhwI{padding-left:16px !important;padding-right:16px !important}
+  #section-NuhM9FyhwI::before,#section-NuhM9FyhwI::after{width:340px !important;height:340px !important;filter:blur(70px) !important}
+  /* rows and columns in the hero stack and use the full width */
+  #section-NuhM9FyhwI .c-row > .inner{display:flex !important;flex-direction:column !important;flex-wrap:nowrap !important;align-items:stretch !important}
+  #section-NuhM9FyhwI .c-column,#section-NuhM9FyhwI .c-column > .inner{
+    width:100% !important;max-width:100% !important;min-width:0 !important;flex:1 1 auto !important;
+    flex-direction:column !important;align-items:stretch !important;margin-left:0 !important;margin-right:0 !important;left:auto !important;transform:none !important
+  }
+  /* every sub-headline and paragraph in the hero (not the "CONTACT" pill): no offset, no fixed width */
+  #section-NuhM9FyhwI :is([id^="sub-heading-"],[id^="paragraph-"]:not(#paragraph-0Rp5u5_BUYs)),#sub-heading-yyJcZnoLhqZ{
+    position:relative !important;left:auto !important;right:auto !important;transform:none !important;float:none !important;
+    display:block !important;width:100% !important;max-width:560px !important;min-width:0 !important;height:auto !important;
+    margin:16px auto 0 !important;padding-left:0 !important;padding-right:0 !important;box-sizing:border-box !important
+  }
+  #section-NuhM9FyhwI :is([id^="sub-heading-"],[id^="paragraph-"]:not(#paragraph-0Rp5u5_BUYs)) > *,
+  #section-NuhM9FyhwI :is([id^="sub-heading-"],[id^="paragraph-"]:not(#paragraph-0Rp5u5_BUYs)) :is(.text-output,h1,h2,h3,h4,h5,h6,p,div),
+  #sub-heading-yyJcZnoLhqZ > *,#sub-heading-yyJcZnoLhqZ :is(.text-output,h1,h2,h3,h4,h5,h6,p,div){
+    display:block !important;width:100% !important;max-width:100% !important;min-width:0 !important;height:auto !important;
+    margin-left:0 !important;margin-right:0 !important;padding-left:0 !important;padding-right:0 !important;
+    position:static !important;transform:none !important;float:none !important;box-sizing:border-box !important
+  }
+  #section-NuhM9FyhwI :is([id^="sub-heading-"],[id^="paragraph-"]:not(#paragraph-0Rp5u5_BUYs)),
+  #section-NuhM9FyhwI :is([id^="sub-heading-"],[id^="paragraph-"]:not(#paragraph-0Rp5u5_BUYs)) *,
+  #sub-heading-yyJcZnoLhqZ,#sub-heading-yyJcZnoLhqZ *{
+    writing-mode:horizontal-tb !important;text-align:center !important;word-break:normal !important;overflow-wrap:normal !important;white-space:normal !important;
+    letter-spacing:0 !important;font-size:16px !important;line-height:1.65 !important
+  }
+  /* headlines: whole words only */
+  [id^="heading-"],[id^="heading-"] *{word-break:normal !important;overflow-wrap:normal !important;hyphens:none !important;max-width:100% !important}
+}
+@media (max-width:380px){
+  #heading-eR5t5A2TRMA :is(h1,h2,h3)::before,#heading-eR5t5A2TRMA :is(h1,h2,h3)::after,
+  #heading-xaSPQeedL16 :is(h1,h2,h3)::before,#heading-xaSPQeedL16 :is(h1,h2,h3)::after,
+  #heading-cFvGPq9e9hk :is(h1,h2,h3)::before,#heading-cFvGPq9e9hk :is(h1,h2,h3)::after{font-size:30px !important}
+}
