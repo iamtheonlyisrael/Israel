@@ -40,8 +40,4 @@
   [id^="custom-code-"]:has(.lxlg){display:block !important;visibility:visible !important;opacity:1 !important;height:auto !important}
   .lxlg{display:grid !important;grid-template-columns:1fr !important;gap:28px !important;visibility:visible !important;opacity:1 !important}
   .lxlg .toc{position:static !important}
-
-  /* ---------- FOOTER SOCIAL ICONS: line up with the text above them ---------- */
-  .lxsoc{justify-content:flex-start !important;margin-left:0 !important;margin-right:0 !important;padding-left:0 !important}
-  [id^="custom-code-"]:has(.lxsoc){margin-left:0 !important;padding-left:0 !important;width:100% !important}
 }
