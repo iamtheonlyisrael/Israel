@@ -1,0 +1,47 @@
+/* ================= TERMS PAGE: MOBILE FIXES (phones only) ================= */
+@media (max-width:767px){
+  /* ---------- stop sideways overflow ---------- */
+  html,body{overflow-x:hidden !important;max-width:100% !important}
+  [id^="custom-code-"],.lxlg,img,iframe,video{max-width:100% !important;box-sizing:border-box !important}
+
+  /* ---------- HEADER: logo on top, "Book" button centred with the ☰ menu on the same line ---------- */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{
+    display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;justify-content:center !important;
+    position:relative !important;row-gap:10px !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+    order:1 !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:auto !important;margin:0 auto !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]) [id^="button-"] :is(a,button){
+    display:inline-flex !important;align-items:center !important;justify-content:center !important;
+    height:42px !important;min-height:0 !important;padding:0 18px !important;font-size:14px !important;line-height:1 !important;white-space:nowrap !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    order:2 !important;position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:42px !important;
+    flex:0 0 auto !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important;
+    background:transparent !important;overflow:visible !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]) > .inner,
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]) :is(.c-nav-menu,[id^="nav-menu-"]){
+    margin:0 !important;padding:0 !important;background:transparent !important;height:auto !important;min-height:0 !important
+  }
+
+  /* ---------- SECTION BELOW THE HEADLINE: show the Terms content ---------- */
+  #section-olAFO802wO,#section-vjYIhsSs0D,[id^="section-"]:has(.lxlg){padding-left:16px !important;padding-right:16px !important}
+  #section-olAFO802wO .c-row,#section-vjYIhsSs0D .c-row,[id^="section-"]:has(.lxlg) .c-row,
+  #section-olAFO802wO .c-column,#section-vjYIhsSs0D .c-column,[id^="section-"]:has(.lxlg) .c-column{display:block !important;width:100% !important;max-width:100% !important;visibility:visible !important;opacity:1 !important;height:auto !important}
+  #section-olAFO802wO .c-row > .inner,#section-vjYIhsSs0D .c-row > .inner,[id^="section-"]:has(.lxlg) .c-row > .inner{display:flex !important;flex-direction:column !important}
+  #section-olAFO802wO :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  #section-vjYIhsSs0D :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  [id^="custom-code-"]:has(.lxlg){display:block !important;visibility:visible !important;opacity:1 !important;height:auto !important}
+  .lxlg{display:grid !important;grid-template-columns:1fr !important;gap:28px !important;visibility:visible !important;opacity:1 !important}
+  .lxlg .toc{position:static !important}
+
+  /* ---------- FOOTER SOCIAL ICONS: line up with the text above them ---------- */
+  .lxsoc{justify-content:flex-start !important;margin-left:0 !important;margin-right:0 !important;padding-left:0 !important}
+  [id^="custom-code-"]:has(.lxsoc){margin-left:0 !important;padding-left:0 !important;width:100% !important}
+}
