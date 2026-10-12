@@ -490,3 +490,13 @@
   [id^="section-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="section-"]:has(.lxsoc))),
   [id^="row-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="row-"]:has(.lxsoc))){display:none !important}
 }
+
+/* ================= "EVERYTHING INCLUDED" SECTION #section-tuvZ4FT-_q: eyebrow + headline centred =================
+   The "EVERYTHING INCLUDED" pill and "Done for you, from setup to support." sit in the middle of the section. */
+#section-tuvZ4FT-_q .c-column:has(#heading-aWfrB5ZTKz) :is([id^="sub-heading-"],[id^="paragraph-"],[id^="heading-"]),
+#section-tuvZ4FT-_q .c-column:has(#heading-aWfrB5ZTKz) :is([id^="sub-heading-"],[id^="paragraph-"],[id^="heading-"]) > div:not(.text-output),
+#section-tuvZ4FT-_q .c-column:has(#heading-aWfrB5ZTKz) :is([id^="sub-heading-"],[id^="paragraph-"],[id^="heading-"]) :is(h1,h2,h3,h4,h5,h6,p){
+  text-align:center !important;margin-left:auto !important;margin-right:auto !important;float:none !important;left:auto !important;transform:none !important
+}
+#section-tuvZ4FT-_q .c-column:has(#heading-aWfrB5ZTKz) :is([id^="sub-heading-"],[id^="paragraph-"]) .text-output{margin-left:auto !important;margin-right:auto !important}
+#heading-aWfrB5ZTKz{width:100% !important;max-width:100% !important}
