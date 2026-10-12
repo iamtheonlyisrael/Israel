@@ -516,22 +516,22 @@ body :is(h1,h2,h3,h4,h5,h6,p,span,a,li,div,button,input,select,textarea,label,st
 
   /* ---------- 1. HEADER: "Book" button on the same line as the ☰ menu ----------
      logo on its own line, then the button (left) and the menu (right) side by side */
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-row > .inner{
     display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;
     align-items:center !important;justify-content:space-between !important;row-gap:10px !important
   }
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has([id^="button-"]){
     width:auto !important;flex:0 1 auto !important;order:1 !important;min-width:0 !important
   }
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
     width:auto !important;flex:0 0 auto !important;order:2 !important;margin-left:auto !important
   }
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:is(:has([id^="button-"]),:has(.c-nav-menu,[id^="nav-menu-"])) :is([id^="button-"],.c-nav-menu,[id^="nav-menu-"]){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:is(:has([id^="button-"]),:has(.c-nav-menu,[id^="nav-menu-"])) :is([id^="button-"],.c-nav-menu,[id^="nav-menu-"]){
     margin-top:0 !important;margin-bottom:0 !important
   }
   /* slightly smaller button so it fits next to the menu */
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]) [id^="button-"] :is(a,button){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)) [id^="button-"] :is(a,button){
     min-height:0 !important;padding:10px 16px !important;font-size:14px !important;line-height:1.2 !important;white-space:nowrap !important
   }
 
@@ -571,12 +571,12 @@ body :is(h1,h2,h3,h4,h5,h6,p,span,a,li,div,button,input,select,textarea,label,st
 
 /* ================= HEADER BUTTON CENTRED (phones): button in the middle, ☰ menu stays on the right, same line ================= */
 @media (max-width:767px){
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-row > .inner{position:relative !important}
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-row > .inner{position:relative !important}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has([id^="button-"]){
     width:100% !important;flex:0 0 100% !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
   }
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{display:flex !important;justify-content:center !important;width:auto !important;margin-left:auto !important;margin-right:auto !important}
-  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{display:flex !important;justify-content:center !important;width:auto !important;margin-left:auto !important;margin-right:auto !important}
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
     position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:var(--lx-btn-h,40px) !important;
     display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important
   }
@@ -595,4 +595,12 @@ body :is(h1,h2,h3,h4,h5,h6,p,span,a,li,div,button,input,select,textarea,label,st
 }
 @media (max-width:600px){
   #sub-heading-R9Qhn6mX-_,#sub-heading-R9Qhn6mX-_ *{font-size:16px !important;line-height:1.65 !important}
+}
+
+/* ================= FOOTER: ONLY ONE FOOTER ON PHONES =================
+   The footer is the part with the social icons (.lxsoc). The header rules above skip it (:not(:has(.lxsoc))).
+   If two copies still show on a phone, hide the upper copy and keep the lower (tidy) one. */
+@media (max-width:767px){
+  [id^="section-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="section-"]:has(.lxsoc))),
+  [id^="row-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="row-"]:has(.lxsoc))){display:none !important}
 }
