@@ -7,7 +7,20 @@
 .lxfs a{text-decoration:none !important}
 .lxfs .lx-wrap{max-width:1200px !important;margin:0 auto !important}
 .lxfs .lx-grid{display:grid !important;grid-template-columns:.85fr 1.15fr !important;gap:64px !important;align-items:center !important}
-.lxfs .lx-photo{position:relative !important;aspect-ratio:4 / 5 !important;max-width:440px !important;width:100% !important;border-radius:24px !important;background:linear-gradient(150deg,#0E2B5E,#0B1F3A 60%,#071528) !important;box-shadow:0 30px 70px rgba(11,31,58,.3) !important;overflow:hidden !important}
+/* PHOTO FRAME EFFECT: slow gold/blue light ring (always-on AI), navy "road" plate with gold lane markings behind, live call chip */
+.lxfs .lx-pwrap{position:relative !important;max-width:440px !important;width:100% !important;isolation:isolate !important}
+.lxfs .lx-plate{position:absolute !important;z-index:-2 !important;right:-22px !important;bottom:-22px !important;width:72% !important;height:62% !important;border-radius:24px !important;background:linear-gradient(150deg,#0E2B5E,#0B1F3A 70%) !important;overflow:hidden !important;box-shadow:0 24px 50px rgba(11,31,58,.25) !important}
+.lxfs .lx-plate::before{content:'' !important;position:absolute !important;left:0 !important;right:0 !important;bottom:9px !important;height:3px !important;background:repeating-linear-gradient(90deg,#D4AF37 0 26px,rgba(212,175,55,0) 26px 46px) !important;opacity:.9 !important;animation:lxRoad 2.4s linear infinite !important}
+.lxfs .lx-plate::after{content:'' !important;position:absolute !important;inset:0 !important;background:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,rgba(255,255,255,0) 1px 22px),radial-gradient(260px 160px at 100% 100%,rgba(47,111,228,.45),rgba(47,111,228,0) 70%) !important}
+.lxfs .lx-ring{position:absolute !important;z-index:-1 !important;inset:-4px !important;border-radius:28px !important;overflow:hidden !important}
+.lxfs .lx-ring::before{content:'' !important;position:absolute !important;left:50% !important;top:50% !important;width:200% !important;aspect-ratio:1 / 1 !important;transform:translate(-50%,-50%) rotate(0deg) !important;background:conic-gradient(from 0deg,#D4AF37,#F5DC85 12%,#2F6FE4 30%,#0B1F3A 50%,#2F6FE4 70%,#D4AF37 88%,#D4AF37) !important;animation:lxSpin 9s linear infinite !important}
+.lxfs .lx-glow{position:absolute !important;z-index:-3 !important;inset:8% !important;border-radius:40px !important;background:radial-gradient(closest-side,rgba(212,175,55,.45),rgba(47,111,228,.25) 60%,rgba(47,111,228,0)) !important;filter:blur(40px) !important;transform:scale(1.15) !important}
+.lxfs .lx-photo{position:relative !important;aspect-ratio:4 / 5 !important;width:100% !important;max-width:100% !important;border-radius:24px !important;background:linear-gradient(150deg,#0E2B5E,#0B1F3A 60%,#071528) !important;box-shadow:0 30px 70px rgba(11,31,58,.3) !important;overflow:hidden !important}
+.lxfs .lx-live{position:absolute !important;top:18px !important;right:18px !important;z-index:2 !important;display:flex !important;align-items:center !important;gap:8px !important;padding:8px 12px !important;border-radius:999px !important;background:rgba(11,31,58,.86) !important;border:1px solid rgba(212,175,55,.45) !important;color:#FFFFFF !important;font-family:'Montserrat',sans-serif !important;font-weight:600 !important;font-size:12px !important;line-height:1 !important;box-shadow:0 10px 24px rgba(0,0,0,.25) !important;white-space:nowrap !important}
+.lxfs .lx-live i{width:8px !important;height:8px !important;border-radius:50% !important;background:#3DDC84 !important;box-shadow:0 0 0 0 rgba(61,220,132,.6) !important;animation:lxPulse 1.8s ease-out infinite !important}
+@keyframes lxSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes lxRoad{to{background-position:-46px 0}}
+@keyframes lxPulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.6)}100%{box-shadow:0 0 0 9px rgba(61,220,132,0)}}
 .lxfs .lx-photo img{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;max-width:none !important;object-fit:cover !important;object-position:50% 25% !important;display:block !important;border-radius:0 !important}
 .lxfs .lx-badge{position:absolute !important;left:20px !important;bottom:20px !important;z-index:2 !important;background:#FFFFFF !important;border-radius:14px !important;padding:12px 16px !important;box-shadow:0 18px 40px rgba(0,0,0,.25) !important;border-left:4px solid #D4AF37 !important;text-align:left !important}
 .lxfs .lx-badge b{display:block !important;font-family:'Montserrat',sans-serif !important;font-size:15px !important;color:#0B1F3A !important}
@@ -25,16 +38,22 @@
 .lxfs .lx-t p{font-size:15px !important;line-height:1.6 !important;color:#3E4C59 !important}
 .lxfs .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .lxfs .rv.in{opacity:1;transform:none}
-@media (max-width:900px){.lxfs .lx-grid{grid-template-columns:1fr !important;gap:40px !important}.lxfs .lx-photo{margin:0 auto !important}.lxfs .lx-tech{grid-template-columns:1fr !important}}
-@media (max-width:600px){.lxfs{padding:56px 16px !important}.lxfs .lx-copy p{font-size:16px !important}.lxfs blockquote{font-size:17px !important}.lxfs .lx-tech{margin-top:44px !important}}
-@media (prefers-reduced-motion:reduce){.lxfs .rv{opacity:1 !important;transform:none !important;transition:none !important}}
+@media (max-width:900px){.lxfs .lx-grid{grid-template-columns:1fr !important;gap:40px !important}.lxfs .lx-pwrap{margin:0 auto !important}.lxfs .lx-tech{grid-template-columns:1fr !important}}
+@media (max-width:600px){.lxfs .lx-pwrap{width:calc(100% - 16px) !important;margin:0 auto 0 0 !important}.lxfs .lx-plate{right:-14px !important;bottom:-14px !important}.lxfs .lx-plate::before{bottom:5px !important}.lxfs .lx-live{top:14px !important;right:14px !important;font-size:11px !important}.lxfs{padding:56px 16px !important}.lxfs .lx-copy p{font-size:16px !important}.lxfs blockquote{font-size:17px !important}.lxfs .lx-tech{margin-top:44px !important}}
+@media (prefers-reduced-motion:reduce){.lxfs .rv{opacity:1 !important;transform:none !important;transition:none !important}.lxfs .lx-ring::before,.lxfs .lx-plate::before,.lxfs .lx-live i{animation:none !important}}
 </style>
 <div class="lx-wrap">
   <div class="lx-grid">
-    <div class="lx-photo rv">
+    <div class="lx-pwrap rv">
+     <span class="lx-glow" aria-hidden="true"></span>
+     <span class="lx-plate" aria-hidden="true"></span>
+     <span class="lx-ring" aria-hidden="true"></span>
+     <div class="lx-photo">
+      <div class="lx-live"><i aria-hidden="true"></i>Answering calls 24/7</div>
       <!-- FOUNDER PHOTO: to use a GHL media link instead, replace everything inside src="..." with that link -->
       <img src="PASTE-GHL-PHOTO-LINK-HERE" alt="Abdurhaman Shifa, Founder of Luxon Digital" loading="lazy">
       <div class="lx-badge"><b>Abdurhaman Shifa</b><span>Founder, Luxon Digital</span></div>
+     </div>
     </div>
     <div class="lx-copy rv">
       <span class="lx-eye">Why Luxon exists</span>
