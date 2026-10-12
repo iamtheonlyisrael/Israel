@@ -348,3 +348,11 @@
   [id^="section-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="section-"]:has(.lxsoc))),
   [id^="row-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="row-"]:has(.lxsoc))){display:none !important}
 }
+
+/* ================= FOUNDER STORY HEADLINE ("Built from inside the transportation business."): 68px, weight 900 =================
+   Tablets and phones keep smaller sizes so the words fit the screen. */
+html body .lxfs h2{font-size:68px !important;font-weight:900 !important;line-height:1.08 !important}
+html body .lxfs h2 *{font-size:inherit !important;font-weight:900 !important;line-height:inherit !important}
+@media (max-width:1024px){html body .lxfs h2{font-size:48px !important}}
+@media (max-width:600px){html body .lxfs h2{font-size:34px !important}}
+@media (max-width:380px){html body .lxfs h2{font-size:30px !important}}

@@ -617,3 +617,13 @@ body :is(h1,h2,h3,h4,h5,h6,p,span,a,li,div,button,input,select,textarea,label,st
 [id^="heading-"] :is(h1,h2,h3,h4,h5,h6),[id^="heading-"] :is(h1,h2,h3,h4,h5,h6) *,
 [id^="heading-"] :is(h1,h2,h3,h4,h5,h6)::before,[id^="heading-"] :is(h1,h2,h3,h4,h5,h6)::after,
 [id^="heading-"]::before,[id^="heading-"]::after{font-weight:900 !important}
+
+/* ================= CUSTOM CODE SECTION HEADLINES: 68px, weight 900 =================
+   The headlines inside the Custom Code blocks: hero, "Missed call...", "From first ring...", "Simple AI...",
+   "Made for limo, black-car and chauffeur companies.", "It never guesses. It hands off." and the founder story.
+   Tablets and phones keep smaller sizes so the words fit the screen. */
+html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2){font-size:68px !important;font-weight:900 !important;line-height:1.08 !important}
+html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2) *{font-size:inherit !important;font-weight:900 !important;line-height:inherit !important}
+@media (max-width:1024px){html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2){font-size:48px !important}}
+@media (max-width:600px){html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2){font-size:34px !important}}
+@media (max-width:380px){html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2){font-size:30px !important}}
