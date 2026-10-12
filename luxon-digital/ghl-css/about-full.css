@@ -397,3 +397,18 @@ html body .lxfs h2{font-size:min(68px,10.2cqi) !important}
   #heading-FIkurE0ObCQ :is(h1,h2,h3)::before,#heading-FIkurE0ObCQ :is(h1,h2,h3)::after,
   #heading-pdfiWH3fOy7 :is(h1,h2,h3)::before,#heading-pdfiWH3fOy7 :is(h1,h2,h3)::after{font-size:clamp(28px,8.6vw,40px) !important}
 }
+
+/* ================= "FIVE PRINCIPLES BEHIND EVERY BUILD." (#heading-7Wsegr1CxST): centred under its eyebrow (tablets & phones) =================
+   The headline uses the full width of its column and every line is centred on the same middle line as the
+   "WHAT WE VALUE" eyebrow and the paragraph below: "Five principles behind" on top, "every build." underneath. */
+@media (max-width:1024px){
+  .c-row:has(#heading-7Wsegr1CxST) > .inner,.c-column:has(#heading-7Wsegr1CxST),.c-column:has(#heading-7Wsegr1CxST) > .inner{
+    width:100% !important;max-width:100% !important;margin-left:0 !important;margin-right:0 !important;padding-left:0 !important;padding-right:0 !important;
+    left:auto !important;transform:none !important;float:none !important;box-sizing:border-box !important
+  }
+  #heading-7Wsegr1CxST{width:100% !important;max-width:100% !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important;left:auto !important;transform:none !important;float:none !important;text-align:center !important}
+  #heading-7Wsegr1CxST > *,#heading-7Wsegr1CxST :is(h1,h2,h3){width:100% !important;max-width:100% !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important;text-align:center !important}
+  #heading-7Wsegr1CxST :is(h1,h2,h3)::before,#heading-7Wsegr1CxST :is(h1,h2,h3)::after{display:block !important;text-align:center !important;text-wrap:balance !important}
+  #heading-7Wsegr1CxST :is(h1,h2,h3)::before{content:"Five principles behind";content:"Five principles behind" / ""}
+  #heading-7Wsegr1CxST :is(h1,h2,h3)::after{width:fit-content !important;margin-left:auto !important;margin-right:auto !important}
+}
