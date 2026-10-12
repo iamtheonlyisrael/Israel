@@ -346,3 +346,14 @@
 #heading-pqPxlk-4xv :is(h1,h2,h3)::before,#heading-pqPxlk-4xv :is(h1,h2,h3)::after,
 #heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:clamp(28px,8.6vw,40px) !important}
 }
+
+/* ================= DESKTOP: EVERY HEADLINE EXACTLY 68px, WEIGHT 900 =================
+   On desktop and laptop screens (wider than 1024px) all headlines are a fixed 68px.
+   Tablets and phones keep the flexible sizes above so the words fit the screen. */
+@media (min-width:1025px){
+  [id^="heading-"]:not(#heading-5hAFf2b_drg):not(#heading-mYw65cJCjI2):not(#heading-pqPxlk-4xv):not(#heading-IuyUKPuiJHJ) :is(h1,h2,h3,h4,h5,h6){font-size:68px !important;font-weight:900 !important}
+  #heading-5hAFf2b_drg :is(h1,h2,h3)::before,#heading-5hAFf2b_drg :is(h1,h2,h3)::after,
+  #heading-mYw65cJCjI2 :is(h1,h2,h3)::before,#heading-mYw65cJCjI2 :is(h1,h2,h3)::after,
+  #heading-pqPxlk-4xv :is(h1,h2,h3)::before,#heading-pqPxlk-4xv :is(h1,h2,h3)::after,
+  #heading-IuyUKPuiJHJ :is(h1,h2,h3)::before,#heading-IuyUKPuiJHJ :is(h1,h2,h3)::after{font-size:68px !important;font-weight:900 !important}
+}
