@@ -627,3 +627,18 @@ html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2) *{font-
 @media (max-width:1024px){html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2){font-size:48px !important}}
 @media (max-width:600px){html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2){font-size:34px !important}}
 @media (max-width:380px){html body :is(.lxh h1,.lxm h2,.lxw2 h2,.lxf h2,.lxp h2,.lxg h2,.lxfs h2){font-size:30px !important}}
+
+/* ================= "MADE FOR LIMO, BLACK-CAR AND CHAUFFEUR COMPANIES." SECTION: heading centred =================
+   The pill, headline and paragraph sit in the middle; the three cards below keep their layout. */
+html body .lxp .lx-top{max-width:980px !important;margin-left:auto !important;margin-right:auto !important;text-align:center !important}
+html body .lxp .lx-lead{max-width:720px !important;margin-left:auto !important;margin-right:auto !important}
+
+/* ================= FOUNDER HEADLINE: "the transportation" on one line =================
+   "the transportation business." starts on its own line, and the headline size follows the text column's width
+   (up to 68px) so "the transportation" always fits on one line; "business." goes to the next line.
+   The gradient runs top to bottom: blue on "the transportation", slate into gold on "business." */
+html body .lxfs .lx-copy{container-type:inline-size !important}
+html body .lxfs h2 .lx-gt{display:block !important;background:linear-gradient(180deg,#1E4FA8 0%,#2F6FE4 46%,#7D7A62 58%,#B8922A 80%) !important;-webkit-background-clip:text !important;background-clip:text !important}
+html body .lxfs h2{font-size:min(68px,10.2cqi) !important}
+@media (max-width:1024px){html body .lxfs h2{font-size:min(48px,10.2cqi) !important}}
+@media (max-width:600px){html body .lxfs h2{font-size:min(34px,10.2cqi) !important}}

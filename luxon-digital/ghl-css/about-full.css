@@ -356,3 +356,13 @@ html body .lxfs h2 *{font-size:inherit !important;font-weight:900 !important;lin
 @media (max-width:1024px){html body .lxfs h2{font-size:48px !important}}
 @media (max-width:600px){html body .lxfs h2{font-size:34px !important}}
 @media (max-width:380px){html body .lxfs h2{font-size:30px !important}}
+
+/* ================= FOUNDER HEADLINE: "the transportation" on one line =================
+   "the transportation business." starts on its own line, and the headline size follows the text column's width
+   (up to 68px) so "the transportation" always fits on one line; "business." goes to the next line.
+   The gradient runs top to bottom: blue on "the transportation", slate into gold on "business." */
+html body .lxfs .lx-copy{container-type:inline-size !important}
+html body .lxfs h2 .lx-gt{display:block !important;background:linear-gradient(180deg,#1E4FA8 0%,#2F6FE4 46%,#7D7A62 58%,#B8922A 80%) !important;-webkit-background-clip:text !important;background-clip:text !important}
+html body .lxfs h2{font-size:min(68px,10.2cqi) !important}
+@media (max-width:1024px){html body .lxfs h2{font-size:min(48px,10.2cqi) !important}}
+@media (max-width:600px){html body .lxfs h2{font-size:min(34px,10.2cqi) !important}}
