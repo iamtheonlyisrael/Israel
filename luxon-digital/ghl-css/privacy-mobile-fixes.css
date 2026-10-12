@@ -1,0 +1,15 @@
+/* ================= PRIVACY PAGE: SHOW THE POLICY CONTENT ON PHONES ================= */
+@media (max-width:767px){
+  #section-olAFO802wO,#section-vjYIhsSs0D{padding-left:16px !important;padding-right:16px !important}
+  #section-olAFO802wO .c-row,#section-vjYIhsSs0D .c-row,
+  #section-olAFO802wO .c-column,#section-vjYIhsSs0D .c-column{display:block !important;width:100% !important;max-width:100% !important;visibility:visible !important;opacity:1 !important;height:auto !important}
+  #section-olAFO802wO .c-row > .inner,#section-vjYIhsSs0D .c-row > .inner{display:flex !important;flex-direction:column !important}
+  #section-olAFO802wO :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]),
+  #section-vjYIhsSs0D :is([id^="heading-"],[id^="sub-heading-"],[id^="paragraph-"],[id^="custom-code-"],[id^="image-"],[id^="button-"]){display:block !important;visibility:visible !important;opacity:1 !important;height:auto !important}
+  /* the Privacy Policy body block itself, wherever it sits */
+  [id^="custom-code-"]:has(.lxlg){display:block !important;visibility:visible !important;opacity:1 !important;height:auto !important;width:100% !important}
+  .c-column:has(.lxlg),.c-row:has(.lxlg),[id^="section-"]:has(.lxlg){display:block !important;visibility:visible !important;opacity:1 !important;height:auto !important}
+  .lxlg{display:grid !important;grid-template-columns:1fr !important;visibility:visible !important;opacity:1 !important}
+  /* header: no white box under the ☰ menu */
+  .c-column:has(.c-nav-menu,[id^="nav-menu-"]) > .inner{background:transparent !important}
+}
