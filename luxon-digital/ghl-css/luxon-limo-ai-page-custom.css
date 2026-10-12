@@ -513,3 +513,25 @@
 #heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-size:clamp(30px,5.6vw,68px) !important;line-height:1.1 !important}
 @media (max-width:1024px){#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-size:clamp(30px,5.6vw,68px) !important}}
 @media (max-width:600px){#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-size:clamp(30px,8.6vw,40px) !important}}
+
+/* ================= ALL HEADLINES ON THIS PAGE: flexible size on every screen =================
+   Every headline grows and shrinks smoothly with the screen: up to 68px on wide desktops, about 34px on a normal phone,
+   never below 28px. Lines are balanced, words are never split, and any size set inside GHL is overridden.
+   Covers the hero ("Luxon Limo AI: AI that works for your business"), "Four tools. One simple system.",
+   "Keep your booking software.", "Done for you, from setup to support." and any other headline on the page. */
+/* normal GHL headlines */
+[id^="heading-"]:not(#heading-aWfrB5ZTKz):not(#heading-dedkB9mjG9) :is(h1,h2,h3,h4,h5,h6){
+  font-size:clamp(28px,5.6vw,68px) !important;line-height:1.08 !important;font-weight:900 !important;
+  text-wrap:balance !important;word-break:normal !important;overflow-wrap:normal !important;hyphens:none !important;max-width:100% !important
+}
+[id^="heading-"]:not(#heading-aWfrB5ZTKz):not(#heading-dedkB9mjG9) :is(h1,h2,h3,h4,h5,h6) *{font-size:inherit !important;line-height:inherit !important;font-weight:900 !important}
+/* the headlines drawn by this CSS (their real text stays hidden at size 0) */
+#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after,
+#heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:clamp(28px,5.6vw,68px) !important;line-height:1.08 !important;font-weight:900 !important}
+#heading-aWfrB5ZTKz :is(h1,h2,h3),#heading-dedkB9mjG9 :is(h1,h2,h3){text-wrap:balance !important}
+/* phones: a little larger than the plain screen-width rule so the headline still reads boldly */
+@media (max-width:600px){
+  [id^="heading-"]:not(#heading-aWfrB5ZTKz):not(#heading-dedkB9mjG9) :is(h1,h2,h3,h4,h5,h6){font-size:clamp(28px,8.6vw,40px) !important}
+  #heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after,
+  #heading-dedkB9mjG9 :is(h1,h2,h3)::before,#heading-dedkB9mjG9 :is(h1,h2,h3)::after{font-size:clamp(28px,8.6vw,40px) !important}
+}
