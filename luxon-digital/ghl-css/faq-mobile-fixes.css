@@ -1,0 +1,61 @@
+/* ================= HEADER (phones): logo on top, "Book" button centred with the ☰ menu on the same line ================= */
+@media (max-width:767px){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-row > .inner{
+    display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;justify-content:center !important;
+    position:relative !important;row-gap:10px !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  /* button: centred on its line */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has([id^="button-"]){
+    order:1 !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:auto !important;margin:0 auto !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)) [id^="button-"] :is(a,button){
+    display:inline-flex !important;align-items:center !important;justify-content:center !important;
+    height:42px !important;min-height:0 !important;padding:0 18px !important;font-size:14px !important;line-height:1 !important;white-space:nowrap !important;box-sizing:border-box !important
+  }
+  /* ☰ menu: pinned to the right, exactly level with the button */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    order:2 !important;position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:42px !important;
+    flex:0 0 auto !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important;
+    background:transparent !important;overflow:visible !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]) :is(.c-nav-menu,[id^="nav-menu-"]){margin:0 !important;padding:0 !important}
+}
+
+/* ================= HERO PARAGRAPH #paragraph-EDKpNau0h2J ("Everything operators..."): full width, centred (phones) ================= */
+@media (max-width:767px){
+  /* the column and row that hold it use the full width */
+  .c-row:has(#paragraph-EDKpNau0h2J) > .inner{display:flex !important;flex-direction:column !important;flex-wrap:nowrap !important;align-items:stretch !important}
+  .c-column:has(#paragraph-EDKpNau0h2J),.c-column:has(#paragraph-EDKpNau0h2J) > .inner{
+    width:100% !important;max-width:100% !important;min-width:0 !important;flex:1 1 100% !important;
+    margin-left:0 !important;margin-right:0 !important;left:auto !important;right:auto !important;transform:none !important
+  }
+  /* the paragraph itself: no offset, no fixed width */
+  #paragraph-EDKpNau0h2J{
+    position:relative !important;left:auto !important;right:auto !important;top:auto !important;transform:none !important;float:none !important;
+    display:block !important;width:100% !important;max-width:560px !important;min-width:0 !important;
+    margin:16px auto 0 !important;padding-left:0 !important;padding-right:0 !important;box-sizing:border-box !important
+  }
+  #paragraph-EDKpNau0h2J > *,#paragraph-EDKpNau0h2J :is(.text-output,p,div){
+    display:block !important;width:100% !important;max-width:100% !important;min-width:0 !important;
+    margin-left:0 !important;margin-right:0 !important;padding-left:0 !important;padding-right:0 !important;
+    position:static !important;transform:none !important;float:none !important;box-sizing:border-box !important
+  }
+  #paragraph-EDKpNau0h2J,#paragraph-EDKpNau0h2J *{
+    text-align:center !important;word-break:normal !important;overflow-wrap:normal !important;white-space:normal !important;
+    font-size:16px !important;line-height:1.65 !important
+  }
+  /* header: the ☰ menu has no white box hanging over the hero */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)) :is(.c-nav-menu,[id^="nav-menu-"]){background:transparent !important;height:auto !important;min-height:0 !important}
+}
+
+/* ================= FOOTER: ONLY ONE FOOTER ON PHONES =================
+   The footer is the part with the social icons (.lxsoc). The header rules above skip it (:not(:has(.lxsoc))).
+   If two copies still show on a phone, hide the upper copy and keep the lower (tidy) one. */
+@media (max-width:767px){
+  [id^="section-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="section-"]:has(.lxsoc))),
+  [id^="row-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="row-"]:has(.lxsoc))){display:none !important}
+}
