@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+/* ================= HERO SECTION #section-KqonQYQUah ================= */
+#section-KqonQYQUah {
+    position: relative !important;
+    overflow: hidden !important;
+    display: block !important;
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+    min-height: 0 !important;
+    height: auto !important;
+    background: radial-gradient(900px 600px at 0% 0%,rgba(47,111,228,.55),rgba(47,111,228,0) 60%),
+             radial-gradient(700px 520px at 100% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 60%),
+             linear-gradient(135deg,#061226 0%,#0B1F3A 45%,#0E2B5E 100%) !important
+}
+
+#section-KqonQYQUah > .bg,#section-KqonQYQUah .bg-section {
+    background: transparent !important
+}
+/* slow drifting blue and gold glows */
+#section-KqonQYQUah::before,#section-KqonQYQUah::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 520px !important;
+    height: 520px !important;
+    border-radius: 50% !important;
+    filter: blur(90px) !important;
+    pointer-events: none !important;
+    z-index: 0 !important
+}
+
+#section-KqonQYQUah::before {
+    left: -160px;
+    top: -140px;
+    background: #2F6FE4 !important;
+    opacity: .35;
+    animation: lxSecFloat 14s ease-in-out infinite
+}
+
+#section-KqonQYQUah::after {
+    right: -180px;
+    bottom: -200px;
+    background: #E8C55A !important;
+    opacity: .13;
+    animation: lxSecFloat 18s ease-in-out infinite reverse
+}
+
+@keyframes lxSecFloat {
+    0%,100% {
+        transform: translate(0,0)
+    }
+
+    50% {
+        transform: translate(60px,40px)
+    }
+}
+/* keep GHL's background layer behind and out of the layout; lift only the content above the glows */
+#section-KqonQYQUah > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-KqonQYQUah > div:not(.bg){position:relative !important;z-index:1 !important}
+/* MAIN row only: text column and graphic side by side, centered (button rows are not touched) */
+#section-KqonQYQUah > .inner > .c-row > .inner,
+#section-KqonQYQUah > .c-row > .inner{display:flex !important;align-items:center !important}
+/* text colors on the dark background */
+#section-KqonQYQUah h1,#section-KqonQYQUah h2,#section-KqonQYQUah h3{color:#FFFFFF !important}
+#section-KqonQYQUah p{color:rgba(255,255,255,.85) !important}
+
+/* ================= HERO EYEBROW #paragraph-tB8E-eTwiQV ================= */
+#paragraph-tB8E-eTwiQV .text-output{
+  position:relative !important;display:inline-flex !important;align-items:center !important;gap:10px !important;
+  width:auto !important;max-width:100% !important;padding:8px 18px 8px 14px !important;border-radius:999px !important;
+  background:rgba(255,255,255,.06) !important;border:1px solid rgba(212,175,55,.5) !important;overflow:hidden !important;
+  box-shadow:0 0 0 0 rgba(212,175,55,0);
+  animation:lxEyeIn .8s ease both,lxEyeGlow 4s ease-in-out 1s infinite
+}
+#paragraph-tB8E-eTwiQV .text-output::before{
+  content:'' !important;flex:0 0 8px !important;width:8px !important;height:8px !important;border-radius:50% !important;
+  background:#3DDC97 !important;animation:lxEyePing 2s ease-out infinite
+}
+#paragraph-tB8E-eTwiQV .text-output::after{
+  content:'' !important;position:absolute !important;top:0 !important;bottom:0 !important;left:0 !important;width:35% !important;
+  background:linear-gradient(100deg,transparent,rgba(245,220,133,.28),transparent) !important;pointer-events:none !important;
+  transform:translateX(-120%);animation:lxEyeSweep 5s ease-in-out 1.2s infinite
+}
+#paragraph-tB8E-eTwiQV .text-output p,#paragraph-tB8E-eTwiQV .text-output span,#paragraph-tB8E-eTwiQV .text-output div{
+  margin:0 !important;padding:0 !important;font-family:'Montserrat',sans-serif !important;font-weight:700 !important;
+  font-size:12px !important;line-height:1.35 !important;letter-spacing:.16em !important;text-transform:uppercase !important;
+  color:#F5DC85 !important;text-align:left !important;background:none !important;border:0 !important
+}
+@keyframes lxEyeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lxEyeGlow{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 18px 0 rgba(212,175,55,.28)}}
+@keyframes lxEyePing{0%{box-shadow:0 0 0 0 rgba(61,220,151,.7)}100%{box-shadow:0 0 0 9px rgba(61,220,151,0)}}
+@keyframes lxEyeSweep{0%,55%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
+
+/* ================= HERO HEADLINE #heading-mnyQSPsXNlo: "Answer every call." white, "Even when you can't." gold ================= */
+/* CSS draws the headline itself. If you change the wording in GHL, change the two "content" lines too.
+   SIZE: 64px desktop, 46px tablet, 34px phone */
+#heading-mnyQSPsXNlo :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-mnyQSPsXNlo :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-mnyQSPsXNlo :is(h1,h2,h3)::before,#heading-mnyQSPsXNlo :is(h1,h2,h3)::after{
+  font-size:64px !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-mnyQSPsXNlo :is(h1,h2,h3)::before{
+  content:"Questions,";content:"Questions," / "";
+  display:block;
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-mnyQSPsXNlo :is(h1,h2,h3)::after{
+  content:"answered simply.";content:"answered simply." / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@keyframes lxGoldShift{to{background-position:100% center}}
+@media (max-width:1024px){#heading-mnyQSPsXNlo :is(h1,h2,h3)::before,#heading-mnyQSPsXNlo :is(h1,h2,h3)::after{font-size:46px !important}}
+@media (max-width:600px){#heading-mnyQSPsXNlo :is(h1,h2,h3)::before,#heading-mnyQSPsXNlo :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= "SOUND FAMILIAR" SECTION #section-eJiycrG_X4: light blue -> white -> soft gold ================= */
+#section-eJiycrG_X4{
+  background:radial-gradient(800px 420px at 10% 0%,rgba(47,111,228,.12),rgba(47,111,228,0) 70%),
+             radial-gradient(700px 420px at 95% 100%,rgba(212,175,55,.16),rgba(212,175,55,0) 70%),
+             linear-gradient(180deg,#EEF4FF 0%,#FFFFFF 55%,#FFF8E6 100%) !important;
+  padding-top:96px !important;padding-bottom:96px !important
+}
+#section-eJiycrG_X4 > .bg,#section-eJiycrG_X4 .bg-section{background:transparent !important}
+
+/* ================= HEADLINE #heading-xVr82CM4Zoq: "The phone rings at" navy, "the worst times." blue -> gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-xVr82CM4Zoq :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-xVr82CM4Zoq :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-xVr82CM4Zoq :is(h1,h2,h3)::before,#heading-xVr82CM4Zoq :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-xVr82CM4Zoq :is(h1,h2,h3)::before{
+  content:"The phone rings at ";content:"The phone rings at " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-xVr82CM4Zoq :is(h1,h2,h3)::after{
+  content:"the worst times.";content:"the worst times." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-xVr82CM4Zoq :is(h1,h2,h3)::before,#heading-xVr82CM4Zoq :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-xVr82CM4Zoq :is(h1,h2,h3)::before,#heading-xVr82CM4Zoq :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= "WHAT IT HANDLES" SECTION #section-JBLn09MPuQ: dark navy gradient + soft dot grid ================= */
+#section-JBLn09MPuQ{
+  position:relative !important;overflow:hidden !important;
+  background:radial-gradient(700px 400px at 50% 0%,rgba(47,111,228,.35),rgba(47,111,228,0) 70%),
+             linear-gradient(160deg,#071528 0%,#0B1F3A 50%,#0E2B5E 100%) !important
+}
+#section-JBLn09MPuQ > .bg,#section-JBLn09MPuQ .bg-section{background:transparent !important}
+#section-JBLn09MPuQ > .bg{position:absolute !important;inset:0 !important;z-index:0 !important}
+#section-JBLn09MPuQ::before{
+  content:'' !important;position:absolute !important;inset:0 !important;pointer-events:none !important;z-index:0 !important;
+  background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px) !important;background-size:26px 26px !important;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important;mask-image:radial-gradient(ellipse at 50% 40%,#000 30%,transparent 75%) !important
+}
+#section-JBLn09MPuQ > div:not(.bg){position:relative !important;z-index:1 !important}
+/* text colors for the dark background */
+#section-JBLn09MPuQ h1,#section-JBLn09MPuQ h2,#section-JBLn09MPuQ h3{color:#FFFFFF !important}
+#section-JBLn09MPuQ .c-paragraph,#section-JBLn09MPuQ .c-paragraph *,
+#section-JBLn09MPuQ .c-sub-heading,#section-JBLn09MPuQ .c-sub-heading *{color:rgba(255,255,255,.85) !important}
+/* "WHAT IT HANDLES" eyebrow text in brand gold: replace #EYEBROW-ID with the eyebrow's CSS Selector from GHL */
+#section-JBLn09MPuQ #EYEBROW-ID,#section-JBLn09MPuQ #EYEBROW-ID *{color:#D4AF37 !important;-webkit-text-fill-color:#D4AF37 !important}
+/* layout like the mockup: two equal columns, max 1200px wide, centered top-to-bottom (font sizes untouched) */
+#section-JBLn09MPuQ .c-row{max-width:1200px !important;margin-left:auto !important;margin-right:auto !important}
+#section-JBLn09MPuQ .c-row .c-row > .inner{display:flex !important;flex-wrap:nowrap !important;align-items:center !important;gap:64px !important}
+#section-JBLn09MPuQ .c-row .c-row > .inner > .c-column{flex:1 1 0 !important;width:auto !important;max-width:none !important;min-width:0 !important}
+
+/* ================= HEADLINE #heading-WOt3qtwvJhz: "Professional, friendly" white, "and always on." gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-WOt3qtwvJhz :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-WOt3qtwvJhz :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-WOt3qtwvJhz :is(h1,h2,h3)::before,#heading-WOt3qtwvJhz :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-WOt3qtwvJhz :is(h1,h2,h3)::before{
+  content:"What does one missed reservation ";content:"What does one missed reservation " / "";
+  color:#FFFFFF !important;-webkit-text-fill-color:#FFFFFF !important
+}
+#heading-WOt3qtwvJhz :is(h1,h2,h3)::after{
+  content:"cost you? ";content:"cost you? " / "";
+  background-image:linear-gradient(90deg,#F5DC85 0%,#D4AF37 35%,#B8922A 65%,#F5DC85 100%) !important;
+  background-size:200% auto !important;background-position:0% center;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+  animation:lxGoldShift 6s ease-in-out infinite alternate
+}
+@media (max-width:1024px){#heading-WOt3qtwvJhz :is(h1,h2,h3)::before,#heading-WOt3qtwvJhz :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-WOt3qtwvJhz :is(h1,h2,h3)::before,#heading-WOt3qtwvJhz :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= HEADLINE #heading-i26rctT0lvZ: "Some calls need a person." navy, "It knows which ones." blue -> gold ================= */
+/* SIZE: 68px desktop, 48px tablet, 34px phone. WEIGHT: 900 */
+#heading-i26rctT0lvZ :is(h1,h2,h3){font-size:0 !important;line-height:0 !important}
+#heading-i26rctT0lvZ :is(h1,h2,h3) *{font-size:0 !important;line-height:0 !important}
+#heading-i26rctT0lvZ :is(h1,h2,h3)::before,#heading-i26rctT0lvZ :is(h1,h2,h3)::after{
+  font-size:68px !important;font-weight:900 !important;line-height:1.1 !important;letter-spacing:inherit
+}
+#heading-i26rctT0lvZ :is(h1,h2,h3)::before{
+  content:"Good to ";content:"Good to " / "";
+  color:#0B1F3A !important;-webkit-text-fill-color:#0B1F3A !important
+}
+#heading-i26rctT0lvZ :is(h1,h2,h3)::after{
+  content:"know.";content:"know." / "";
+  background-image:linear-gradient(90deg,#1E4FA8 0%,#2F6FE4 40%,#6B7A90 70%,#B8922A 100%) !important;
+  -webkit-background-clip:text !important;background-clip:text !important;
+  color:transparent !important;-webkit-text-fill-color:transparent !important;
+  -webkit-box-decoration-break:slice;box-decoration-break:slice
+}
+@media (max-width:1024px){#heading-i26rctT0lvZ :is(h1,h2,h3)::before,#heading-i26rctT0lvZ :is(h1,h2,h3)::after{font-size:48px !important}}
+@media (max-width:600px){#heading-i26rctT0lvZ :is(h1,h2,h3)::before,#heading-i26rctT0lvZ :is(h1,h2,h3)::after{font-size:34px !important}}
+
+/* ================= PILL #sub-heading-NRV9NCnDNRD ================= */
+#sub-heading-NRV9NCnDNRD{
+  display:inline-block;position:relative;
+  padding:10px 20px !important;border-radius:999px !important;
+  border:1px solid rgba(212,175,55,.55) !important;background:rgba(255,255,255,.04);
+  box-shadow:0 6px 18px rgba(11,31,58,.08);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background .25s ease;cursor:default
+}
+#sub-heading-NRV9NCnDNRD:hover{
+  transform:translateY(-3px);border-color:#D4AF37 !important;background:rgba(212,175,55,.08);
+  box-shadow:0 14px 30px rgba(11,31,58,.14),0 0 0 4px rgba(212,175,55,.15)
+}
+
+/* ================= TABLETS & PHONES ================= */
+@media (max-width:900px){
+  #section-JBLn09MPuQ .c-row .c-row > .inner{flex-direction:column !important;align-items:stretch !important;gap:32px !important}
+  #section-JBLn09MPuQ .c-row .c-row > .inner > .c-column{flex:1 1 auto !important;width:100% !important}
+}
+@media (max-width:767px){
+  #section-KqonQYQUah{padding-top:56px !important;padding-bottom:64px !important}
+  #section-KqonQYQUah > .inner > .c-row > .inner,
+  #section-KqonQYQUah > .c-row > .inner{flex-direction:column !important;align-items:stretch !important}
+  #section-eJiycrG_X4{padding-top:64px !important;padding-bottom:64px !important}
+}
+@media (max-width:480px){
+  #paragraph-tB8E-eTwiQV .text-output p,#paragraph-tB8E-eTwiQV .text-output span{font-size:10.5px !important;letter-spacing:.12em !important}
+}
+
+/* ================= VISITORS WHO TURN OFF MOTION ================= */
+@media (prefers-reduced-motion:reduce){
+  #section-KqonQYQUah::before,#section-KqonQYQUah::after,
+  #paragraph-tB8E-eTwiQV .text-output,#paragraph-tB8E-eTwiQV .text-output::before,#paragraph-tB8E-eTwiQV .text-output::after,
+  #heading-mnyQSPsXNlo :is(h1,h2,h3)::after,
+  #heading-WOt3qtwvJhz :is(h1,h2,h3)::after{animation:none !important}
+  #sub-heading-NRV9NCnDNRD,#sub-heading-NRV9NCnDNRD:hover{transition:none !important;transform:none !important}
+}
+
+/* ================= CENTER THE HERO EYEBROW #paragraph-tB8E-eTwiQV ("FAQ") ================= */
+#paragraph-tB8E-eTwiQV,#paragraph-tB8E-eTwiQV > div:not(.text-output){text-align:center !important}
+#paragraph-tB8E-eTwiQV .text-output{margin-left:auto !important;margin-right:auto !important}
+
+/* ================= HEADER (phones): logo on top, "Book" button centred with the ☰ menu on the same line ================= */
+@media (max-width:767px){
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-row > .inner{
+    display:flex !important;flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;justify-content:center !important;
+    position:relative !important;row-gap:10px !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column{width:100% !important;flex:0 0 100% !important;order:0}
+  /* button: centred on its line */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has([id^="button-"]){
+    order:1 !important;display:flex !important;justify-content:center !important;padding-left:48px !important;padding-right:48px !important;box-sizing:border-box !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has([id^="button-"]) [id^="button-"]{
+    display:flex !important;justify-content:center !important;width:auto !important;margin:0 auto !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)) [id^="button-"] :is(a,button){
+    display:inline-flex !important;align-items:center !important;justify-content:center !important;
+    height:42px !important;min-height:0 !important;padding:0 18px !important;font-size:14px !important;line-height:1 !important;white-space:nowrap !important;box-sizing:border-box !important
+  }
+  /* ☰ menu: pinned to the right, exactly level with the button */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]){
+    order:2 !important;position:absolute !important;right:0 !important;bottom:0 !important;width:44px !important;height:42px !important;
+    flex:0 0 auto !important;display:flex !important;align-items:center !important;justify-content:center !important;margin:0 !important;padding:0 !important;z-index:5 !important;
+    background:transparent !important;overflow:visible !important
+  }
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)):has([id^="button-"]) .c-column:has(.c-nav-menu,[id^="nav-menu-"]) :is(.c-nav-menu,[id^="nav-menu-"]){margin:0 !important;padding:0 !important}
+}
+
+/* ================= HERO PARAGRAPH #paragraph-EDKpNau0h2J ("Everything operators..."): full width, centred (phones) ================= */
+@media (max-width:767px){
+  /* the column and row that hold it use the full width */
+  .c-row:has(#paragraph-EDKpNau0h2J) > .inner{display:flex !important;flex-direction:column !important;flex-wrap:nowrap !important;align-items:stretch !important}
+  .c-column:has(#paragraph-EDKpNau0h2J),.c-column:has(#paragraph-EDKpNau0h2J) > .inner{
+    width:100% !important;max-width:100% !important;min-width:0 !important;flex:1 1 100% !important;
+    margin-left:0 !important;margin-right:0 !important;left:auto !important;right:auto !important;transform:none !important
+  }
+  /* the paragraph itself: no offset, no fixed width */
+  #paragraph-EDKpNau0h2J{
+    position:relative !important;left:auto !important;right:auto !important;top:auto !important;transform:none !important;float:none !important;
+    display:block !important;width:100% !important;max-width:560px !important;min-width:0 !important;
+    margin:16px auto 0 !important;padding-left:0 !important;padding-right:0 !important;box-sizing:border-box !important
+  }
+  #paragraph-EDKpNau0h2J > *,#paragraph-EDKpNau0h2J :is(.text-output,p,div){
+    display:block !important;width:100% !important;max-width:100% !important;min-width:0 !important;
+    margin-left:0 !important;margin-right:0 !important;padding-left:0 !important;padding-right:0 !important;
+    position:static !important;transform:none !important;float:none !important;box-sizing:border-box !important
+  }
+  #paragraph-EDKpNau0h2J,#paragraph-EDKpNau0h2J *{
+    text-align:center !important;word-break:normal !important;overflow-wrap:normal !important;white-space:normal !important;
+    font-size:16px !important;line-height:1.65 !important
+  }
+  /* header: the ☰ menu has no white box hanging over the hero */
+  [id^="section-"]:has(.c-nav-menu,[id^="nav-menu-"]):not(:has(.lxsoc)) :is(.c-nav-menu,[id^="nav-menu-"]){background:transparent !important;height:auto !important;min-height:0 !important}
+}
+
+/* ================= FOOTER: ONLY ONE FOOTER ON PHONES =================
+   The footer is the part with the social icons (.lxsoc). The header rules above skip it (:not(:has(.lxsoc))).
+   If two copies still show on a phone, hide the upper copy and keep the lower (tidy) one. */
+@media (max-width:767px){
+  [id^="section-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="section-"]:has(.lxsoc))),
+  [id^="row-"]:has(.lxsoc):not(:nth-last-child(1 of [id^="row-"]:has(.lxsoc))){display:none !important}
+}
