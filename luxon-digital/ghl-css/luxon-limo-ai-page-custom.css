@@ -505,3 +505,11 @@
 /* ================= "DONE FOR YOU, FROM SETUP TO SUPPORT.": font weight 900 =================
    (Poppins 900 is loaded by the @import at the top of this CSS.) */
 #heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-family:'Poppins',sans-serif !important;font-weight:900 !important}
+
+/* ================= "DONE FOR YOU, FROM SETUP TO SUPPORT.": flexible size on every screen =================
+   The size grows and shrinks smoothly with the screen width: about 30px on small phones up to 68px on wide desktops.
+   The lines are balanced so a single word is never left alone on the last line. */
+#heading-aWfrB5ZTKz :is(h1,h2,h3){text-wrap:balance !important;max-width:1000px !important;margin-left:auto !important;margin-right:auto !important}
+#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-size:clamp(30px,5.6vw,68px) !important;line-height:1.1 !important}
+@media (max-width:1024px){#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-size:clamp(30px,5.6vw,68px) !important}}
+@media (max-width:600px){#heading-aWfrB5ZTKz :is(h1,h2,h3)::before,#heading-aWfrB5ZTKz :is(h1,h2,h3)::after{font-size:clamp(30px,8.6vw,40px) !important}}
